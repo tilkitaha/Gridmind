@@ -1,0 +1,58 @@
+[
+  {
+    "article_id": 25927315,
+    "file": "README.md",
+    "size": 2989,
+    "sha256": "0ff3b8a3814be9ea92f8838f316953a4c4cdc028d13189af979aee796ab8734d",
+    "url": "https://ndownloader.figshare.com/files/46659082",
+    "license": "CC0"
+  },
+  {
+    "article_id": 25927228,
+    "file": "H1_W.csv",
+    "size": 25712485,
+    "sha256": "5f1aecbcba4a9c41c8c42c8a07ac490958607646f93ec9796d19178acf1ee21c",
+    "url": "https://ndownloader.figshare.com/files/46657426",
+    "license": "CC0"
+  },
+  {
+    "article_id": 25927210,
+    "file": "H2_W.csv",
+    "size": 26311199,
+    "sha256": "9a6c0b4e87f156d71a7f2e97954dcc6835468917caadf06e688356d9ed926b8f",
+    "url": "https://ndownloader.figshare.com/files/46657432",
+    "license": "CC0"
+  },
+  {
+    "article_id": 25927234,
+    "file": "H3_W.csv",
+    "size": 26285261,
+    "sha256": "a1e06f05ead2e2d171d7344569ca8e1333af065a88be59c1f9bc7d4c966a3a89",
+    "url": "https://ndownloader.figshare.com/files/46657441",
+    "license": "CC0"
+  },
+  {
+    "article_id": 25927198,
+    "file": "H4_W.csv",
+    "size": 29035442,
+    "sha256": "ff7a73a9b544cd4c204709f09b59986a8eb4bbf2cd35ef197d7f59f143b4517b",
+    "url": "https://ndownloader.figshare.com/files/46657246",
+    "license": "CC0"
+  },
+  {
+    "article_id": 25927243,
+    "file": "H5_W.csv",
+    "size": 26436037,
+    "sha256": "3b7ac29afe378cc4f4f03ac366ead46850d4b3edb3a06aa4baf72fcbdb263ad5",
+    "url": "https://ndownloader.figshare.com/files/46657450",
+    "license": "CC0"
+  },
+  {
+    "article_id": 25927201,
+    "file": "H6_W.csv",
+    "size": 25652496,
+    "sha256": "cb2a94e2641fa5abae90df37b42bb7bdb923715aa09bc3d7c35f94e39bdad2c5",
+    "url": "https://ndownloader.figshare.com/files/46657243",
+    "license": "CC0"
+  }
+]

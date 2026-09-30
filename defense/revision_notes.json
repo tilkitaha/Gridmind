@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-17",
+  "manuscript_pages": 61,
+  "guide_pages": 17,
+  "text_and_table_characters_including_spaces": 121181,
+  "count_scope": "Main document paragraphs and table cells; includes cover, abstracts, references and appendices. Not an official university count.",
+  "added_analysis": "Episode coverage, concentration of MPC gains, seed variability, household losses, fixed-dispatch throughput-charge sensitivity, read-only verification of 64 retained signatures.",
+  "new_training": false,
+  "fresh_evm_run": false,
+  "formal_approval": "Pending supervisor and faculty procedures",
+  "revision_2026_09_21": {
+    "scope": "Evidence and claims revision; no new training or confirmatory test",
+    "characters_including_frontmatter_tables_references_appendices": 120476,
+    "manuscript_pages": 61,
+    "presentation_and_guide": "Unchanged 17 September versions",
+    "protocol": "Proposed, not frozen or executed"
+  },
+  "revision_2026_09_25": {
+    "manuscript_pages": 72,
+    "guide_pages": 18,
+    "slides": 18,
+    "new_training_runs": 60,
+    "total_checkpoints": 70,
+    "forecast_control_arms": 4,
+    "research_tests_passed": 37,
+    "scope": "Executed exploratory reward, action-budget and forecast-to-MPC experiments; Polish MILP scheduling and timestamp-validation components analytically tested.",
+    "independent_test": false,
+    "polish_market_data_acquired": false,
+    "fresh_evm_run": false,
+    "formal_approval": "Pending supervisor review, official cover and individual contribution declarations",
+    "characters_including_frontmatter_tables_references_appendices": 142726
+  }
+}

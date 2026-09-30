@@ -1,0 +1,7 @@
+{
+  "verified_signatures": 64,
+  "payload_and_identifier_match": true,
+  "reconstructed_balance_parity": true,
+  "total_accounting_units": 6000000000,
+  "scope": "Read-only verification of the delivered database against the delivered public key and stream. Operator identity and meter truth remain external."
+}

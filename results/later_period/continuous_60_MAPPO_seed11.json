@@ -1,0 +1,9 @@
+{
+  "method": "continuous_60_MAPPO_seed11",
+  "cost_eur": 2098.1290343569276,
+  "saving_eur": -150.62931602148495,
+  "throughput_kwh": 3132.989044168562,
+  "energy_residual": 8.881784197001252e-16,
+  "terminal_residual": 0.0,
+  "losing_households": 6
+}

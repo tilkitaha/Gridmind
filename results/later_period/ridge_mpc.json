@@ -1,0 +1,12 @@
+{
+  "method": "ridge_mpc",
+  "cost_eur": 1939.3432126943549,
+  "saving_eur": 8.156505641087639,
+  "throughput_kwh": 307.59368260254695,
+  "energy_residual": 4.440892098500626e-16,
+  "terminal_residual": 0.0,
+  "losing_households": 0,
+  "first_step_mae_kwh": 0.0809251529402344,
+  "horizon_mae_kwh": 0.12220971932415163,
+  "daily_fallback_slots": 3706
+}

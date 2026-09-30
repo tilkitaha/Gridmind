@@ -1,0 +1,14 @@
+{
+  "status": "Reconstructed frozen-model temporal extension; exploratory, not confirmatory",
+  "reconstruction_date": "2026-09-28",
+  "prior_access": "A 25 September temporary run inspected the July-December eligibility and evaluated frozen policies and at least two baselines. Its complete artifacts were lost during workspace maintenance. The retained conversation reports 501 eligible episodes, idle cost 1947.499718 and rule cost 2065.342499. All outcomes in this deliverable are freshly recomputed. This is not a previously untouched test or an externally preregistered study.",
+  "period": ["2020-07-01 00:00", "2020-12-31 23:45"],
+  "eligibility": "All six homes have 16 complete 15-minute intervals and one preceding complete interval; six fixed four-hour windows per source day; no imputation or outcome-based filtering",
+  "models": "All 60 saved ablation checkpoints; no retraining, reselection or hyperparameter changes",
+  "primary": "Five-seed mean discrete_300_IPPO minus persistence_mpc daily community cost; family chosen from June development results",
+  "baselines": ["idle", "rule", "persistence_mpc", "daily_mpc", "ridge_mpc"],
+  "ridge": "alpha 1, January-April only; coefficients must match saved model at 1e-12",
+  "inference": "Sum six household costs per retained source day; average seeds before contrasts; 10000 circular moving-block bootstrap draws, seed 25092026; primary block 7 eligible days, sensitivity 1,2,3,14; gaps in calendar coverage disclosed; conditional exploratory intervals",
+  "decision": "No superiority claim from a selected secondary contrast; preserve losses and all seeds",
+  "scenario": "Unchanged battery.py constants, tariff, source clock, initial and terminal SOC; no Polish market interpretation"
+}

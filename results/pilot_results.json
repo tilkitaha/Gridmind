@@ -1,0 +1,525 @@
+{
+  "evidence": "measured_load_and_pv_with_assumed_tariffs_counterfactual_allocation",
+  "not_live_trading": true,
+  "not_marl_evaluation": true,
+  "cohort": "H1-H6",
+  "period": "2020-06-01 through 2020-06-14 in source clock",
+  "expected_intervals": 1344,
+  "retained_intervals": 1189,
+  "household_scale_eur_per_day": [
+    3.6139632636840364,
+    3.773968605610383,
+    4.294684091853224,
+    7.129347145577584,
+    2.096334212516739,
+    5.068082725566874
+  ],
+  "scenarios": {
+    "homogeneous": {
+      "buy": [
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "sell": [
+        0.08,
+        0.08,
+        0.08,
+        0.08,
+        0.08,
+        0.08
+      ],
+      "fee": 0.02
+    },
+    "heterogeneous": {
+      "buy": [
+        0.22,
+        0.26,
+        0.3,
+        0.34,
+        0.38,
+        0.42
+      ],
+      "sell": [
+        0.08,
+        0.08,
+        0.08,
+        0.08,
+        0.08,
+        0.08
+      ],
+      "fee": 0.02
+    }
+  },
+  "savings_relative_to": "grid-only without battery, same measured load and PV",
+  "fairness_objective": "regularized log cumulative daily savings / fixed training scale",
+  "epsilon": 0.01,
+  "summaries": [
+    {
+      "scenario": "homogeneous",
+      "policy": "proportional",
+      "benefits": {
+        "total": 18.63168333344088,
+        "minimum": 1.7818886074464944,
+        "negative_fraction": 0.0,
+        "jain": 0.9068243322118618,
+        "gini": 0.1803361019951231,
+        "nash_geometric": 2.9445025613488425,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 4.430199351695237,
+        "minimum": 0.5442268984324692,
+        "negative_fraction": 0.0,
+        "jain": 0.9688807426211473,
+        "gini": 0.10079886392881843,
+        "nash_geometric": 0.7263858906263525,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        3.3955817046997456,
+        2.500146816160142,
+        2.3372826030565457,
+        4.667648013695015,
+        1.7818886074464944,
+        3.949135588382936
+      ],
+      "mean_daily_normalized_jain": 0.8796748371685571,
+      "daily_cost_cvar95_eur": 26.178039332739697,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "proportional": 509
+      },
+      "runtime_seconds": 1.7486227749996033
+    },
+    {
+      "scenario": "homogeneous",
+      "policy": "welfare_lp",
+      "benefits": {
+        "total": 18.63168333344088,
+        "minimum": 1.6037650000388999,
+        "negative_fraction": 0.0,
+        "jain": 0.8754804151593649,
+        "gini": 0.2102738972394295,
+        "nash_geometric": 2.8782541716354526,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 4.3847601356155375,
+        "minimum": 0.5453552073255065,
+        "negative_fraction": 0.0,
+        "jain": 0.9401686519304916,
+        "gini": 0.13111552679472424,
+        "nash_geometric": 0.7100429279146886,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        3.9670983333300693,
+        2.08536666668623,
+        2.3421283333101695,
+        4.897243333354719,
+        1.6037650000388999,
+        3.7360816667207906
+      ],
+      "mean_daily_normalized_jain": 0.8227430811444354,
+      "daily_cost_cvar95_eur": 26.178039332739697,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "optimal_lp": 509
+      },
+      "runtime_seconds": 1.6323494950001987
+    },
+    {
+      "scenario": "homogeneous",
+      "policy": "nash_guarded_0.00",
+      "benefits": {
+        "total": 18.631683333440904,
+        "minimum": 2.601540702650883,
+        "negative_fraction": 0.0,
+        "jain": 0.9716768453494715,
+        "gini": 0.09124642229619637,
+        "nash_geometric": 3.0624618229580185,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 4.699621536863289,
+        "minimum": 0.5538248565699756,
+        "negative_fraction": 0.0,
+        "jain": 0.9232205325684237,
+        "gini": 0.14639854883073036,
+        "nash_geometric": 0.7554855234221745,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        2.9758771669079436,
+        2.78379287495628,
+        2.601540702650883,
+        3.94840966033707,
+        2.6153618654926443,
+        3.706701063096083
+      ],
+      "mean_daily_normalized_jain": 0.8412887856225357,
+      "daily_cost_cvar95_eur": 26.178039332739697,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "converged_nash": 509
+      },
+      "runtime_seconds": 1.9820414870000604
+    },
+    {
+      "scenario": "homogeneous",
+      "policy": "nash_guarded_0.05",
+      "benefits": {
+        "total": 18.631683333440904,
+        "minimum": 2.601540702650883,
+        "negative_fraction": 0.0,
+        "jain": 0.9716768453494715,
+        "gini": 0.09124642229619637,
+        "nash_geometric": 3.0624618229580185,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 4.699621536863289,
+        "minimum": 0.5538248565699756,
+        "negative_fraction": 0.0,
+        "jain": 0.9232205325684237,
+        "gini": 0.14639854883073036,
+        "nash_geometric": 0.7554855234221745,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        2.9758771669079436,
+        2.78379287495628,
+        2.601540702650883,
+        3.94840966033707,
+        2.6153618654926443,
+        3.706701063096083
+      ],
+      "mean_daily_normalized_jain": 0.8412887856225357,
+      "daily_cost_cvar95_eur": 26.178039332739697,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "converged_nash": 509
+      },
+      "runtime_seconds": 2.0479943549999007
+    },
+    {
+      "scenario": "homogeneous",
+      "policy": "nash_guarded_0.10",
+      "benefits": {
+        "total": 18.631683333440904,
+        "minimum": 2.601540702650883,
+        "negative_fraction": 0.0,
+        "jain": 0.9716768453494715,
+        "gini": 0.09124642229619637,
+        "nash_geometric": 3.0624618229580185,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 4.699621536863289,
+        "minimum": 0.5538248565699756,
+        "negative_fraction": 0.0,
+        "jain": 0.9232205325684237,
+        "gini": 0.14639854883073036,
+        "nash_geometric": 0.7554855234221745,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        2.9758771669079436,
+        2.78379287495628,
+        2.601540702650883,
+        3.94840966033707,
+        2.6153618654926443,
+        3.706701063096083
+      ],
+      "mean_daily_normalized_jain": 0.8412887856225357,
+      "daily_cost_cvar95_eur": 26.178039332739697,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "converged_nash": 509
+      },
+      "runtime_seconds": 2.062508011000318
+    },
+    {
+      "scenario": "heterogeneous",
+      "policy": "proportional",
+      "benefits": {
+        "total": 24.675458070446346,
+        "minimum": 2.353513256995316,
+        "negative_fraction": 0.0,
+        "jain": 0.8815248402207818,
+        "gini": 0.20210259380381823,
+        "nash_geometric": 3.84065923301387,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 5.850893111651683,
+        "minimum": 0.6833399902062899,
+        "negative_fraction": 0.0,
+        "jain": 0.9472443756006221,
+        "gini": 0.1289150664908392,
+        "nash_geometric": 0.947460774592476,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        4.437891861487199,
+        2.8831593830259585,
+        2.934729385266091,
+        5.7475472422590865,
+        2.353513256995316,
+        6.318616941412698
+      ],
+      "mean_daily_normalized_jain": 0.8641823640750438,
+      "daily_cost_cvar95_eur": 26.639501059049117,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "proportional": 509
+      },
+      "runtime_seconds": 1.6795286160004252
+    },
+    {
+      "scenario": "heterogeneous",
+      "policy": "welfare_lp",
+      "benefits": {
+        "total": 26.095362666791626,
+        "minimum": 2.088946333367474,
+        "negative_fraction": 0.0,
+        "jain": 0.8043700354365017,
+        "gini": 0.2695550921700895,
+        "nash_geometric": 3.8391139545320723,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 6.081433462672325,
+        "minimum": 0.5619182938905235,
+        "negative_fraction": 0.0,
+        "jain": 0.87970787625468,
+        "gini": 0.20378559401662366,
+        "nash_geometric": 0.9470795664043765,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        5.072603666716576,
+        2.1206620000609844,
+        3.1997129999514597,
+        5.464267000033435,
+        2.088946333367474,
+        8.149170666661696
+      ],
+      "mean_daily_normalized_jain": 0.7740995809664364,
+      "daily_cost_cvar95_eur": 26.556087999521633,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "optimal_lp": 509
+      },
+      "runtime_seconds": 1.642445943999519
+    },
+    {
+      "scenario": "heterogeneous",
+      "policy": "nash_guarded_0.00",
+      "benefits": {
+        "total": 26.095362666791715,
+        "minimum": 2.8068039349706435,
+        "negative_fraction": 0.0,
+        "jain": 0.8462430253669586,
+        "gini": 0.21426634233444763,
+        "nash_geometric": 4.034974111392784,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 6.372202421854843,
+        "minimum": 0.6535530611657779,
+        "negative_fraction": 0.0,
+        "jain": 0.8844376053748734,
+        "gini": 0.1972049722690829,
+        "nash_geometric": 0.9953967444387923,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        3.9293131823291705,
+        2.984801864300275,
+        2.8068039349706435,
+        5.021669808418098,
+        3.203603210111819,
+        8.149170666661709
+      ],
+      "mean_daily_normalized_jain": 0.800450765949244,
+      "daily_cost_cvar95_eur": 26.55608799952163,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "converged_nash": 509
+      },
+      "runtime_seconds": 2.170427622000716
+    },
+    {
+      "scenario": "heterogeneous",
+      "policy": "nash_guarded_0.05",
+      "benefits": {
+        "total": 25.8715589441085,
+        "minimum": 2.8928327857197456,
+        "negative_fraction": 0.0,
+        "jain": 0.873206973502049,
+        "gini": 0.19374088057103447,
+        "nash_geometric": 4.056615816886238,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 6.399010007120246,
+        "minimum": 0.673584534705891,
+        "negative_fraction": 0.0,
+        "jain": 0.8855111632021838,
+        "gini": 0.19618226962084045,
+        "nash_geometric": 1.0007355849362969,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        3.910954021047674,
+        3.0301100312524576,
+        2.8928327857197456,
+        4.954450929098141,
+        3.426932833579396,
+        7.656278343411083
+      ],
+      "mean_daily_normalized_jain": 0.8186592043383426,
+      "daily_cost_cvar95_eur": 26.56022466618915,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "converged_nash": 509
+      },
+      "runtime_seconds": 2.1730964819998917
+    },
+    {
+      "scenario": "heterogeneous",
+      "policy": "nash_guarded_0.10",
+      "benefits": {
+        "total": 25.756123037689537,
+        "minimum": 2.9330001817375053,
+        "negative_fraction": 0.0,
+        "jain": 0.8857662097262679,
+        "gini": 0.18388089880214634,
+        "nash_geometric": 4.063392088570818,
+        "domain": "nonnegative_benefits"
+      },
+      "normalized_benefits": {
+        "total": 6.407222376246103,
+        "minimum": 0.6829373520863253,
+        "negative_fraction": 0.0,
+        "jain": 0.8850251854879705,
+        "gini": 0.1970523398415088,
+        "nash_geometric": 1.0024072384805465,
+        "domain": "nonnegative_benefits"
+      },
+      "per_household_eur": [
+        3.9080971446652946,
+        3.049093357269595,
+        2.9330001817375053,
+        4.931861969043319,
+        3.5242332788656574,
+        7.409837106108167
+      ],
+      "mean_daily_normalized_jain": 0.8089201896281951,
+      "daily_cost_cvar95_eur": 26.561287999523106,
+      "cvar_tail_days": 0.7000000000000001,
+      "nash_fallback_intervals": 0,
+      "solver_status_counts": {
+        "no_trade": 680,
+        "converged_nash": 509
+      },
+      "runtime_seconds": 2.5838830160000725
+    }
+  ],
+  "exploratory_paired_intervals": {
+    "homogeneous": {
+      "benefit_eur": {
+        "mean_difference": 1.8948136710455238e-15,
+        "ci95_low": 1.426438332531786e-15,
+        "ci95_high": 2.3468330453571948e-15,
+        "block_days": 7,
+        "n_days": 14,
+        "interpretation": "exploratory_interval_not_confirmatory"
+      },
+      "normalized_jain": {
+        "mean_difference": 0.018545704478100156,
+        "ci95_low": -0.0015065021094868211,
+        "ci95_high": 0.03859791106568713,
+        "block_days": 7,
+        "n_days": 14,
+        "interpretation": "exploratory_interval_not_confirmatory"
+      }
+    },
+    "heterogeneous": {
+      "benefit_eur": {
+        "mean_difference": -0.01598598019165212,
+        "ci95_low": -0.019265193027578512,
+        "ci95_high": -0.012706767355725731,
+        "block_days": 7,
+        "n_days": 14,
+        "interpretation": "exploratory_interval_not_confirmatory"
+      },
+      "normalized_jain": {
+        "mean_difference": 0.04455962337190633,
+        "ci95_low": 0.02806449916556433,
+        "ci95_high": 0.06105474757824834,
+        "block_days": 7,
+        "n_days": 14,
+        "interpretation": "exploratory_interval_not_confirmatory"
+      }
+    }
+  },
+  "forecasts": {
+    "task": "one-step 15-minute aggregate net-energy forecast",
+    "not_day_ahead": true,
+    "not_used_by_clearing": true,
+    "train_end": "2020-04-30",
+    "validation_month": "2020-05",
+    "test_start": "2020-06-01",
+    "test_end": "2020-06-14",
+    "selected_alpha": 0.1,
+    "train_n": 8027,
+    "validation_n": 2327,
+    "test_n": 883,
+    "methods": {
+      "persistence": {
+        "mae_kwh": 0.27180577576911924,
+        "rmse_kwh": 0.3907363040403193
+      },
+      "previous_day": {
+        "mae_kwh": 0.546685881466693,
+        "rmse_kwh": 0.7338680817014847
+      },
+      "ridge": {
+        "mae_kwh": 0.2635466631960093,
+        "rmse_kwh": 0.36908891082433093
+      }
+    }
+  },
+  "data_sha256": "a55b18dd44b61cfe8ffa827ff33059826ff1637ae0bac4bf5a9ee1be192f1791",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0"
+  }
+}

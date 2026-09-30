@@ -1,0 +1,9 @@
+{
+  "method": "continuous_60_IPPO_seed33",
+  "cost_eur": 2042.915751531925,
+  "saving_eur": -95.41603319648257,
+  "throughput_kwh": 2106.5257988259364,
+  "energy_residual": 8.881784197001252e-16,
+  "terminal_residual": 0.0,
+  "losing_households": 6
+}

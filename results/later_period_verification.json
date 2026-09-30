@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "arms": 65,
+  "household_episode_rows": 195390,
+  "source_and_model_hashes": true,
+  "cost_counterfactual_identity": true,
+  "all_discrete_300_idle": true,
+  "eligibility": true
+}

@@ -1,0 +1,9 @@
+{
+  "method": "fairness_weight01_MAPPO_seed11",
+  "cost_eur": 2001.1055599005233,
+  "saving_eur": -53.60584156508082,
+  "throughput_kwh": 1015.7136565096952,
+  "energy_residual": 8.881784197001252e-16,
+  "terminal_residual": 0.0,
+  "losing_households": 2
+}

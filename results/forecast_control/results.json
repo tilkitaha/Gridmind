@@ -1,0 +1,61 @@
+{
+  "status": "exploratory_reused_June",
+  "protocol_sha256": "8e2a954d9d35beb467f0d00f041987261c03415591874c2fd8156ab3eba87f18",
+  "data_sha256": "a55b18dd44b61cfe8ffa827ff33059826ff1637ae0bac4bf5a9ee1be192f1791",
+  "training_rows": 9442,
+  "episodes": 44,
+  "summaries": [
+    {
+      "method": "persistence",
+      "cost_eur": 159.1604270830443,
+      "saving_eur": 0.24783091689462436,
+      "throughput_kwh": 10.164514680538206,
+      "first_step_mae_kwh": 0.08294939235906695,
+      "horizon_mae_kwh": 0.1494782772573012,
+      "first_step_values": 4224,
+      "horizon_values": 35904,
+      "daily_fallback_forecast_slots": 0,
+      "energy_residual": 4.440892098500626e-16,
+      "terminal_residual": 0.0
+    },
+    {
+      "method": "daily",
+      "cost_eur": 160.3050594467226,
+      "saving_eur": -0.8968014467836289,
+      "throughput_kwh": 76.44947748082461,
+      "first_step_mae_kwh": 0.17319099194916976,
+      "horizon_mae_kwh": 0.18046266293358051,
+      "first_step_values": 4224,
+      "horizon_values": 35904,
+      "daily_fallback_forecast_slots": 473,
+      "energy_residual": 4.440892098500626e-16,
+      "terminal_residual": 0.0
+    },
+    {
+      "method": "ridge",
+      "cost_eur": 158.8618484783982,
+      "saving_eur": 0.5464095215407577,
+      "throughput_kwh": 30.82668417491799,
+      "first_step_mae_kwh": 0.0842447862167249,
+      "horizon_mae_kwh": 0.1277038171540369,
+      "first_step_values": 4224,
+      "horizon_values": 35904,
+      "daily_fallback_forecast_slots": 473,
+      "energy_residual": 4.440892098500626e-16,
+      "terminal_residual": 0.0
+    },
+    {
+      "method": "oracle",
+      "cost_eur": 153.76137853250805,
+      "saving_eur": 5.646879467430871,
+      "throughput_kwh": 77.07516906311201,
+      "first_step_mae_kwh": 0.0,
+      "horizon_mae_kwh": 0.0,
+      "first_step_values": 4224,
+      "horizon_values": 35904,
+      "daily_fallback_forecast_slots": 0,
+      "energy_residual": 4.440892098500626e-16,
+      "terminal_residual": 0.0
+    }
+  ]
+}

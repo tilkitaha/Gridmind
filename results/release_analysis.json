@@ -1,0 +1,91 @@
+{
+  "source": "results/later_period/summary.csv",
+  "source_sha256": "1cc071d4c97cd61ace3a8827399f4c67ea6c7651e0b96d12f8be627da6be13f0",
+  "scope": "Descriptive reanalysis of retained exploratory results. No new training or independent test.",
+  "ridge_cost_reduction_eur": 7.332170686712743,
+  "ridge_cost_reduction_percent": 0.3766509172154795,
+  "ridge_horizon_mae_reduction_percent": 13.666032867208566,
+  "ridge_first_step_mae_increase_percent": 2.2323476609661386,
+  "families": [
+    {
+      "algorithm": "IPPO",
+      "action": "discrete",
+      "updates": 60,
+      "seeds": 5,
+      "mean_cost_eur": 2096.054491868203,
+      "min_cost_eur": 1947.4997183354426,
+      "max_cost_eur": 2453.1985263883807,
+      "mean_excess_over_persistence_eur": 149.37910848713545
+    },
+    {
+      "algorithm": "IPPO",
+      "action": "discrete",
+      "updates": 300,
+      "seeds": 5,
+      "mean_cost_eur": 1947.4997183354426,
+      "min_cost_eur": 1947.4997183354426,
+      "max_cost_eur": 1947.4997183354426,
+      "mean_excess_over_persistence_eur": 0.82433495437499
+    },
+    {
+      "algorithm": "IPPO",
+      "action": "continuous",
+      "updates": 60,
+      "seeds": 5,
+      "mean_cost_eur": 2095.74896976318,
+      "min_cost_eur": 2042.915751531925,
+      "max_cost_eur": 2164.4723706470068,
+      "mean_excess_over_persistence_eur": 149.07358638211235
+    },
+    {
+      "algorithm": "IPPO",
+      "action": "continuous",
+      "updates": 300,
+      "seeds": 5,
+      "mean_cost_eur": 2031.580896622878,
+      "min_cost_eur": 1987.5747912120198,
+      "max_cost_eur": 2065.587352035144,
+      "mean_excess_over_persistence_eur": 84.90551324181047
+    },
+    {
+      "algorithm": "MAPPO",
+      "action": "discrete",
+      "updates": 60,
+      "seeds": 5,
+      "mean_cost_eur": 2198.6064645371243,
+      "min_cost_eur": 1978.5323897444266,
+      "max_cost_eur": 2453.1985263883807,
+      "mean_excess_over_persistence_eur": 251.93108115605673
+    },
+    {
+      "algorithm": "MAPPO",
+      "action": "discrete",
+      "updates": 300,
+      "seeds": 5,
+      "mean_cost_eur": 1947.4997183354426,
+      "min_cost_eur": 1947.4997183354426,
+      "max_cost_eur": 1947.4997183354426,
+      "mean_excess_over_persistence_eur": 0.82433495437499
+    },
+    {
+      "algorithm": "MAPPO",
+      "action": "continuous",
+      "updates": 60,
+      "seeds": 5,
+      "mean_cost_eur": 2114.101847303131,
+      "min_cost_eur": 2048.903055327513,
+      "max_cost_eur": 2190.7182559175885,
+      "mean_excess_over_persistence_eur": 167.42646392206325
+    },
+    {
+      "algorithm": "MAPPO",
+      "action": "continuous",
+      "updates": 300,
+      "seeds": 5,
+      "mean_cost_eur": 2082.3080882750837,
+      "min_cost_eur": 2013.9907598686505,
+      "max_cost_eur": 2119.2844314733484,
+      "mean_excess_over_persistence_eur": 135.63270489401611
+    }
+  ]
+}

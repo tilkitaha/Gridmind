@@ -1,0 +1,32 @@
+{
+  "stream_count": 64,
+  "exact_balance_parity": true,
+  "balances": [
+    1000096809,
+    999935294,
+    1000060865,
+    999885135,
+    1000036467,
+    999962991,
+    22439
+  ],
+  "deployment_gas": 641807,
+  "settlement_gas_total": 4424772,
+  "gas_median": 68917.0,
+  "evm_local_median_ms": 21.457438000027196,
+  "sqlite_local_median_ms": 0.21708149998289628,
+  "tests": {
+    "duplicate": true,
+    "unauthorized": true,
+    "insufficient_funds": true,
+    "self_trade": true,
+    "zero_energy": true,
+    "zero_amount": true,
+    "failed_id_not_consumed": true,
+    "sqlite_duplicate": true,
+    "sqlite_overspend_rollback": true,
+    "signature_tamper": true
+  },
+  "compiler": "0.8.30+commit.73712a01.Emscripten.clang",
+  "scope": "Local single-process PyEVM; no distributed consensus or real money. Operator remains trusted for metering. Signatures need a separately trusted public key. Timings are one local pass, not public-chain finality or throughput."
+}

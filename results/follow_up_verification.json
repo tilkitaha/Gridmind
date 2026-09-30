@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "sixty_unique_runs": true,
+    "fixed_protocol_hash": true,
+    "same_input_hash": true,
+    "all_checkpoint_hashes": true,
+    "same_replay_inputs": true,
+    "saved_model_replay_costs": true,
+    "original_reference_reproduced": true,
+    "household_rows": true,
+    "household_aggregation": true,
+    "physical_residuals": true,
+    "forecast_control_protocol": true,
+    "forecast_control_rows": true,
+    "mpc_default_unchanged": true,
+    "forecast_control_aggregation": true
+  },
+  "all_passed": true,
+  "max_replay_cost_difference_eur": 0.0,
+  "max_original_cost_difference_eur": 2.842170943040401e-14,
+  "scope": "Existing exploratory data, saved checkpoint hashes and actual replay records. No independent test or Polish-market performance."
+}

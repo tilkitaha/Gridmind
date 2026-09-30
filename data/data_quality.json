@@ -1,0 +1,63 @@
+{
+  "source": "StoreNet Figshare collection 6829134",
+  "source_doi": "10.1038/s41597-024-03454-2",
+  "households": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6"
+  ],
+  "clock": "source clock retained; UTC offset not independently verified",
+  "resampling": "15 complete one-minute W samples summed / 60000 = kWh",
+  "missing_policy": "no interpolation; drop a pilot interval for all methods if any house is missing",
+  "pilot_start": "2020-06-01",
+  "pilot_end": "2020-06-14",
+  "pilot_expected_intervals": 1344,
+  "pilot_retained_intervals": 1189,
+  "quality": [
+    {
+      "household": "H1",
+      "source_rows": 527040,
+      "invalid_minutes": 1956,
+      "complete_15min_intervals": 34489,
+      "source_sha256": "5f1aecbcba4a9c41c8c42c8a07ac490958607646f93ec9796d19178acf1ee21c"
+    },
+    {
+      "household": "H2",
+      "source_rows": 527040,
+      "invalid_minutes": 1345,
+      "complete_15min_intervals": 34541,
+      "source_sha256": "9a6c0b4e87f156d71a7f2e97954dcc6835468917caadf06e688356d9ed926b8f"
+    },
+    {
+      "household": "H3",
+      "source_rows": 398452,
+      "invalid_minutes": 816,
+      "complete_15min_intervals": 26112,
+      "source_sha256": "977473b0fa9d3e1506883defd93071047d997ee990bbb818c52c321e2b112f0a"
+    },
+    {
+      "household": "H4",
+      "source_rows": 333732,
+      "invalid_minutes": 2178,
+      "complete_15min_intervals": 21852,
+      "source_sha256": "78e30cb3bd0eb180cc2191bffb54d931afaeaa3493e63fc79fd1f42f685ff4b4"
+    },
+    {
+      "household": "H5",
+      "source_rows": 375197,
+      "invalid_minutes": 1606,
+      "complete_15min_intervals": 24503,
+      "source_sha256": "57b9d558723576f05117a4f8ff41b973ea27578dad18e3170271bf60371d60eb"
+    },
+    {
+      "household": "H6",
+      "source_rows": 527040,
+      "invalid_minutes": 4935,
+      "complete_15min_intervals": 34104,
+      "source_sha256": "cb2a94e2641fa5abae90df37b42bb7bdb923715aa09bc3d7c35f94e39bdad2c5"
+    }
+  ]
+}

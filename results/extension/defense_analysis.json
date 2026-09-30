@@ -1,0 +1,758 @@
+{
+  "retained_episodes_by_start_hour": {
+    "08": 11,
+    "12": 9,
+    "16": 12,
+    "20": 10,
+    "04": 2
+  },
+  "positive_mpc_episodes": {
+    "2020-06-02 04:00:00": 0.15086304986484092,
+    "2020-06-03 04:00:00": 0.09696786702978344
+  },
+  "scope": "Post hoc descriptive analysis of retained records. Fee sensitivity holds dispatch fixed; it is not policy retraining or MPC reoptimization. No inferential confidence interval is claimed.",
+  "input_sha256": "604a092ac1ac099f63503a866284784fa9541cd4ede57e0fa1b901a70a9378fb",
+  "controllers": [
+    {
+      "method": "IPPO",
+      "seed": 11,
+      "cost_eur": 159.40825799993894,
+      "saving_eur": 0.0,
+      "throughput_kwh": 0.0,
+      "degradation_eur": 0.0,
+      "saving_excluding_recorded_degradation_eur": 0.0,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": null,
+      "positive_episodes": 0,
+      "negative_episodes": 0,
+      "zero_episodes": 44,
+      "minimum_episode_saving_eur": 0.0,
+      "maximum_episode_saving_eur": 0.0,
+      "negative_households": 0,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 8.658651782213107,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 2,
+          "cost_eur": 25.19311540389453,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 3,
+          "cost_eur": 19.73242606529346,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 4,
+          "cost_eur": 39.60802028470918,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 5,
+          "cost_eur": 9.069960358152528,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 6,
+          "cost_eur": 57.14608410567611,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        }
+      ]
+    },
+    {
+      "method": "IPPO",
+      "seed": 22,
+      "cost_eur": 169.461748952616,
+      "saving_eur": -10.053490952677071,
+      "throughput_kwh": 152.68089508310248,
+      "degradation_eur": 1.526808950831025,
+      "saving_excluding_recorded_degradation_eur": -8.526682001846046,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.05584642398909876,
+      "positive_episodes": 0,
+      "negative_episodes": 41,
+      "zero_episodes": 3,
+      "minimum_episode_saving_eur": -0.5882120263110694,
+      "maximum_episode_saving_eur": 0.0,
+      "negative_households": 4,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 13.930405079536552,
+          "saving_eur": -5.271753297323442,
+          "throughput_kwh": 50.719279778393364
+        },
+        {
+          "household": 2,
+          "cost_eur": 27.377354926583468,
+          "saving_eur": -2.1842395226889253,
+          "throughput_kwh": 35.196250000000006
+        },
+        {
+          "household": 3,
+          "cost_eur": 20.97908279236536,
+          "saving_eur": -1.2466567270719002,
+          "throughput_kwh": 33.66924342105264
+        },
+        {
+          "household": 4,
+          "cost_eur": 42.46911703650096,
+          "saving_eur": -2.86109675179178,
+          "throughput_kwh": 33.096121883656515
+        },
+        {
+          "household": 5,
+          "cost_eur": 8.890835832628863,
+          "saving_eur": 0.17912452552366662,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 6,
+          "cost_eur": 55.814953285000804,
+          "saving_eur": 1.3311308206753059,
+          "throughput_kwh": 0.0
+        }
+      ]
+    },
+    {
+      "method": "IPPO",
+      "seed": 33,
+      "cost_eur": 159.40825799993894,
+      "saving_eur": 0.0,
+      "throughput_kwh": 0.0,
+      "degradation_eur": 0.0,
+      "saving_excluding_recorded_degradation_eur": 0.0,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": null,
+      "positive_episodes": 0,
+      "negative_episodes": 0,
+      "zero_episodes": 44,
+      "minimum_episode_saving_eur": 0.0,
+      "maximum_episode_saving_eur": 0.0,
+      "negative_households": 0,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 8.658651782213107,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 2,
+          "cost_eur": 25.19311540389453,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 3,
+          "cost_eur": 19.73242606529346,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 4,
+          "cost_eur": 39.60802028470918,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 5,
+          "cost_eur": 9.069960358152528,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 6,
+          "cost_eur": 57.14608410567611,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        }
+      ]
+    },
+    {
+      "method": "IPPO",
+      "seed": 44,
+      "cost_eur": 206.7534673507941,
+      "saving_eur": -47.345209350855136,
+      "throughput_kwh": 422.9557894736842,
+      "degradation_eur": 4.229557894736842,
+      "saving_excluding_recorded_degradation_eur": -43.11565145611829,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.10193890834257252,
+      "positive_episodes": 0,
+      "negative_episodes": 44,
+      "zero_episodes": 0,
+      "minimum_episode_saving_eur": -1.8435755789480281,
+      "maximum_episode_saving_eur": -0.21083645613794422,
+      "negative_households": 6,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 17.66743338058384,
+          "saving_eur": -9.008781598370726,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 2,
+          "cost_eur": 33.21793360292649,
+          "saving_eur": -8.024818199031953,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 3,
+          "cost_eur": 27.67412715082802,
+          "saving_eur": -7.941701085534568,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 4,
+          "cost_eur": 46.485598915778006,
+          "saving_eur": -6.877578631068818,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 5,
+          "cost_eur": 17.994423910181535,
+          "saving_eur": -8.924463552029001,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 6,
+          "cost_eur": 63.71395039049621,
+          "saving_eur": -6.567866284820072,
+          "throughput_kwh": 70.49263157894738
+        }
+      ]
+    },
+    {
+      "method": "IPPO",
+      "seed": 55,
+      "cost_eur": 171.52114126448564,
+      "saving_eur": -12.112883264546698,
+      "throughput_kwh": 187.13274584487533,
+      "degradation_eur": 1.8713274584487534,
+      "saving_excluding_recorded_degradation_eur": -10.241555806097944,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.05472882770922271,
+      "positive_episodes": 2,
+      "negative_episodes": 42,
+      "zero_episodes": 0,
+      "minimum_episode_saving_eur": -0.9476934912281768,
+      "maximum_episode_saving_eur": 0.01618208772703158,
+      "negative_households": 5,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 11.603887460093182,
+          "saving_eur": -2.9452356778800706,
+          "throughput_kwh": 36.848421052631586
+        },
+        {
+          "household": 2,
+          "cost_eur": 26.61391756419299,
+          "saving_eur": -1.4208021602984586,
+          "throughput_kwh": 22.83263504155125
+        },
+        {
+          "household": 3,
+          "cost_eur": 25.63887480099648,
+          "saving_eur": -5.906448735703021,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 4,
+          "cost_eur": 40.87337891488981,
+          "saving_eur": -1.2653586301806354,
+          "throughput_kwh": 36.13168975069252
+        },
+        {
+          "household": 5,
+          "cost_eur": 10.758097585411717,
+          "saving_eur": -1.6881372272591844,
+          "throughput_kwh": 20.827368421052636
+        },
+        {
+          "household": 6,
+          "cost_eur": 56.03298493890146,
+          "saving_eur": 1.113099166774673,
+          "throughput_kwh": 0.0
+        }
+      ]
+    },
+    {
+      "method": "MAPPO",
+      "seed": 11,
+      "cost_eur": 206.7534673507941,
+      "saving_eur": -47.345209350855136,
+      "throughput_kwh": 422.9557894736842,
+      "degradation_eur": 4.229557894736842,
+      "saving_excluding_recorded_degradation_eur": -43.11565145611829,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.10193890834257252,
+      "positive_episodes": 0,
+      "negative_episodes": 44,
+      "zero_episodes": 0,
+      "minimum_episode_saving_eur": -1.8435755789480281,
+      "maximum_episode_saving_eur": -0.21083645613794422,
+      "negative_households": 6,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 17.66743338058384,
+          "saving_eur": -9.008781598370726,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 2,
+          "cost_eur": 33.21793360292649,
+          "saving_eur": -8.024818199031953,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 3,
+          "cost_eur": 27.67412715082802,
+          "saving_eur": -7.941701085534568,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 4,
+          "cost_eur": 46.485598915778006,
+          "saving_eur": -6.877578631068818,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 5,
+          "cost_eur": 17.994423910181535,
+          "saving_eur": -8.924463552029001,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 6,
+          "cost_eur": 63.71395039049621,
+          "saving_eur": -6.567866284820072,
+          "throughput_kwh": 70.49263157894738
+        }
+      ]
+    },
+    {
+      "method": "MAPPO",
+      "seed": 22,
+      "cost_eur": 162.69875762599747,
+      "saving_eur": -3.2904996260585233,
+      "throughput_kwh": 81.33319252077563,
+      "degradation_eur": 0.8133319252077563,
+      "saving_excluding_recorded_degradation_eur": -2.477167700850767,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.030457032658812735,
+      "positive_episodes": 0,
+      "negative_episodes": 22,
+      "zero_episodes": 22,
+      "minimum_episode_saving_eur": -0.4914311579008108,
+      "maximum_episode_saving_eur": 0.0,
+      "negative_households": 4,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 9.759718991169036,
+          "saving_eur": -1.1010672089559237,
+          "throughput_kwh": 16.02105263157895
+        },
+        {
+          "household": 2,
+          "cost_eur": 25.967623443495423,
+          "saving_eur": -0.7745080396008971,
+          "throughput_kwh": 16.02105263157895
+        },
+        {
+          "household": 3,
+          "cost_eur": 21.76606430240262,
+          "saving_eur": -2.03363823710916,
+          "throughput_kwh": 28.4637188365651
+        },
+        {
+          "household": 4,
+          "cost_eur": 39.02411329170041,
+          "saving_eur": 0.5839069930087695,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 5,
+          "cost_eur": 10.139317633895695,
+          "saving_eur": -1.0693572757431649,
+          "throughput_kwh": 16.02105263157895
+        },
+        {
+          "household": 6,
+          "cost_eur": 56.04191996333426,
+          "saving_eur": 1.104164142341853,
+          "throughput_kwh": 4.806315789473684
+        }
+      ]
+    },
+    {
+      "method": "MAPPO",
+      "seed": 33,
+      "cost_eur": 162.8472977187765,
+      "saving_eur": -3.4390397188375452,
+      "throughput_kwh": 60.1553635734072,
+      "degradation_eur": 0.6015536357340721,
+      "saving_excluding_recorded_degradation_eur": -2.837486083103473,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.04716929488159285,
+      "positive_episodes": 0,
+      "negative_episodes": 13,
+      "zero_episodes": 31,
+      "minimum_episode_saving_eur": -0.46130820545456347,
+      "maximum_episode_saving_eur": 0.0,
+      "negative_households": 4,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 8.753894227930244,
+          "saving_eur": -0.09524244571713625,
+          "throughput_kwh": 1.9025
+        },
+        {
+          "household": 2,
+          "cost_eur": 25.105846097093796,
+          "saving_eur": 0.08726930680074085,
+          "throughput_kwh": 0.9512499999999999
+        },
+        {
+          "household": 3,
+          "cost_eur": 19.658480508874064,
+          "saving_eur": 0.07394555641939887,
+          "throughput_kwh": 0.9512499999999999
+        },
+        {
+          "household": 4,
+          "cost_eur": 40.7428617279605,
+          "saving_eur": -1.1348414432513232,
+          "throughput_kwh": 20.827368421052636
+        },
+        {
+          "household": 5,
+          "cost_eur": 10.446186674618271,
+          "saving_eur": -1.376226316465742,
+          "throughput_kwh": 20.827368421052636
+        },
+        {
+          "household": 6,
+          "cost_eur": 58.1400284822996,
+          "saving_eur": -0.9939443766234832,
+          "throughput_kwh": 14.695626731301939
+        }
+      ]
+    },
+    {
+      "method": "MAPPO",
+      "seed": 44,
+      "cost_eur": 206.7534673507941,
+      "saving_eur": -47.345209350855136,
+      "throughput_kwh": 422.9557894736842,
+      "degradation_eur": 4.229557894736842,
+      "saving_excluding_recorded_degradation_eur": -43.11565145611829,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.10193890834257252,
+      "positive_episodes": 0,
+      "negative_episodes": 44,
+      "zero_episodes": 0,
+      "minimum_episode_saving_eur": -1.8435755789480281,
+      "maximum_episode_saving_eur": -0.21083645613794422,
+      "negative_households": 6,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 17.66743338058384,
+          "saving_eur": -9.008781598370726,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 2,
+          "cost_eur": 33.21793360292649,
+          "saving_eur": -8.024818199031953,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 3,
+          "cost_eur": 27.67412715082802,
+          "saving_eur": -7.941701085534568,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 4,
+          "cost_eur": 46.485598915778006,
+          "saving_eur": -6.877578631068818,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 5,
+          "cost_eur": 17.994423910181535,
+          "saving_eur": -8.924463552029001,
+          "throughput_kwh": 70.49263157894738
+        },
+        {
+          "household": 6,
+          "cost_eur": 63.71395039049621,
+          "saving_eur": -6.567866284820072,
+          "throughput_kwh": 70.49263157894738
+        }
+      ]
+    },
+    {
+      "method": "MAPPO",
+      "seed": 55,
+      "cost_eur": 175.04546974649284,
+      "saving_eur": -15.63721174655389,
+      "throughput_kwh": 234.84280817174513,
+      "degradation_eur": 2.348428081717451,
+      "saving_excluding_recorded_degradation_eur": -13.288783664836439,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.05658586595983,
+      "positive_episodes": 4,
+      "negative_episodes": 32,
+      "zero_episodes": 8,
+      "minimum_episode_saving_eur": -1.0142908310249705,
+      "maximum_episode_saving_eur": 0.1277087562314269,
+      "negative_households": 6,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 12.65555812784102,
+          "saving_eur": -3.996906345627906,
+          "throughput_kwh": 44.247617728531864
+        },
+        {
+          "household": 2,
+          "cost_eur": 27.846075623504433,
+          "saving_eur": -2.6529602196099016,
+          "throughput_kwh": 37.35434903047092
+        },
+        {
+          "household": 3,
+          "cost_eur": 23.971474781206155,
+          "saving_eur": -4.239048715912696,
+          "throughput_kwh": 50.99595914127425
+        },
+        {
+          "household": 4,
+          "cost_eur": 39.90907347746106,
+          "saving_eur": -0.3010531927518715,
+          "throughput_kwh": 26.44000692520776
+        },
+        {
+          "household": 5,
+          "cost_eur": 12.630529452665284,
+          "saving_eur": -3.560569094512749,
+          "throughput_kwh": 38.45052631578948
+        },
+        {
+          "household": 6,
+          "cost_eur": 58.0327582838149,
+          "saving_eur": -0.8866741781387661,
+          "throughput_kwh": 37.35434903047092
+        }
+      ]
+    },
+    {
+      "method": "MPC",
+      "seed": -1,
+      "cost_eur": 159.1604270830443,
+      "saving_eur": 0.24783091689462436,
+      "throughput_kwh": 10.164514680538206,
+      "degradation_eur": 0.10164514680538206,
+      "saving_excluding_recorded_degradation_eur": 0.3494760637000064,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": 0.034381972448634585,
+      "positive_episodes": 2,
+      "negative_episodes": 0,
+      "zero_episodes": 42,
+      "minimum_episode_saving_eur": 0.0,
+      "maximum_episode_saving_eur": 0.15086304986484092,
+      "negative_households": 1,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 8.68436768439132,
+          "saving_eur": -0.025715902178212166,
+          "throughput_kwh": 1.0395063250258947
+        },
+        {
+          "household": 2,
+          "cost_eur": 25.15451160064769,
+          "saving_eur": 0.03860380324683998,
+          "throughput_kwh": 1.706979917361274
+        },
+        {
+          "household": 3,
+          "cost_eur": 19.62733249535095,
+          "saving_eur": 0.10509356994251104,
+          "throughput_kwh": 2.0894825484764534
+        },
+        {
+          "household": 4,
+          "cost_eur": 39.57395464709002,
+          "saving_eur": 0.034065637619159574,
+          "throughput_kwh": 1.9025000000000003
+        },
+        {
+          "household": 5,
+          "cost_eur": 9.065865176689737,
+          "saving_eur": 0.004095181462793845,
+          "throughput_kwh": 1.3107048000382948
+        },
+        {
+          "household": 6,
+          "cost_eur": 57.054395478874575,
+          "saving_eur": 0.09168862680153207,
+          "throughput_kwh": 2.1153410896362885
+        }
+      ]
+    },
+    {
+      "method": "idle",
+      "seed": -1,
+      "cost_eur": 159.40825799993894,
+      "saving_eur": 0.0,
+      "throughput_kwh": 0.0,
+      "degradation_eur": 0.0,
+      "saving_excluding_recorded_degradation_eur": 0.0,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": null,
+      "positive_episodes": 0,
+      "negative_episodes": 0,
+      "zero_episodes": 44,
+      "minimum_episode_saving_eur": 0.0,
+      "maximum_episode_saving_eur": 0.0,
+      "negative_households": 0,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 8.658651782213107,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 2,
+          "cost_eur": 25.19311540389453,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 3,
+          "cost_eur": 19.73242606529346,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 4,
+          "cost_eur": 39.60802028470918,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 5,
+          "cost_eur": 9.069960358152528,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        },
+        {
+          "household": 6,
+          "cost_eur": 57.14608410567611,
+          "saving_eur": 0.0,
+          "throughput_kwh": 0.0
+        }
+      ]
+    },
+    {
+      "method": "self_consumption",
+      "seed": -1,
+      "cost_eur": 171.1106690854827,
+      "saving_eur": -11.702411085543762,
+      "throughput_kwh": 412.7432515106383,
+      "degradation_eur": 4.127432515106383,
+      "saving_excluding_recorded_degradation_eur": -7.574978570437379,
+      "fixed_dispatch_break_even_degradation_eur_per_kwh": -0.018352761777964858,
+      "positive_episodes": 2,
+      "negative_episodes": 42,
+      "zero_episodes": 0,
+      "minimum_episode_saving_eur": -0.6231751218643351,
+      "maximum_episode_saving_eur": 0.30424260441756057,
+      "negative_households": 6,
+      "households": [
+        {
+          "household": 1,
+          "cost_eur": 9.571097800271037,
+          "saving_eur": -0.9124460180579174,
+          "throughput_kwh": 49.114647861620455
+        },
+        {
+          "household": 2,
+          "cost_eur": 27.435597780376284,
+          "saving_eur": -2.2424823764817465,
+          "throughput_kwh": 74.28430714071771
+        },
+        {
+          "household": 3,
+          "cost_eur": 21.649917535188695,
+          "saving_eur": -1.9174914698952379,
+          "throughput_kwh": 72.47222595503638
+        },
+        {
+          "household": 4,
+          "cost_eur": 41.800846475334794,
+          "saving_eur": -2.192826190625613,
+          "throughput_kwh": 81.83184066905392
+        },
+        {
+          "household": 5,
+          "cost_eur": 11.129346005893336,
+          "saving_eur": -2.0593856477408057,
+          "throughput_kwh": 64.55248191565329
+        },
+        {
+          "household": 6,
+          "cost_eur": 59.52386348841855,
+          "saving_eur": -2.3777793827424403,
+          "throughput_kwh": 70.48774796855655
+        }
+      ]
+    }
+  ],
+  "seed_summary": {
+    "IPPO": {
+      "mean": 173.31057471355473,
+      "sample_sd": 19.512761335623374,
+      "median": 169.461748952616,
+      "minimum": 159.40825799993894,
+      "maximum": 206.7534673507941
+    },
+    "MAPPO": {
+      "mean": 182.819691958571,
+      "sample_sd": 22.415609907713026,
+      "median": 175.04546974649284,
+      "minimum": 162.69875762599747,
+      "maximum": 206.7534673507941
+    }
+  },
+  "paired_seed_cost_differences": [
+    {
+      "seed": 11,
+      "MAPPO_minus_IPPO_cost_eur": 47.34520935085516
+    },
+    {
+      "seed": 22,
+      "MAPPO_minus_IPPO_cost_eur": -6.762991326618533
+    },
+    {
+      "seed": 33,
+      "MAPPO_minus_IPPO_cost_eur": 3.439039718837563
+    },
+    {
+      "seed": 44,
+      "MAPPO_minus_IPPO_cost_eur": 0.0
+    },
+    {
+      "seed": 55,
+      "MAPPO_minus_IPPO_cost_eur": 3.5243284820072063
+    }
+  ],
+  "mean_paired_difference_eur": 9.509117245016279
+}

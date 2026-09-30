@@ -1,0 +1,218 @@
+{
+  "methods": [
+    {
+      "method": "IPPO",
+      "cost_mean": 173.31057471355473,
+      "cost_sd": 19.512761335623374,
+      "savings_mean": -13.90231671361578
+    },
+    {
+      "method": "MAPPO",
+      "cost_mean": 182.81969195857098,
+      "cost_sd": 22.415609907713026,
+      "savings_mean": -23.411433958632045
+    },
+    {
+      "method": "MPC",
+      "cost_mean": 159.1604270830443,
+      "cost_sd": 0.0,
+      "savings_mean": 0.2478309168946243
+    },
+    {
+      "method": "idle",
+      "cost_mean": 159.40825799993894,
+      "cost_sd": 0.0,
+      "savings_mean": 0.0
+    },
+    {
+      "method": "self_consumption",
+      "cost_mean": 171.1106690854827,
+      "cost_sd": 0.0,
+      "savings_mean": -11.702411085543762
+    }
+  ],
+  "diagnostics": [
+    {
+      "method": "IPPO",
+      "seed": 11,
+      "benefit_metrics": {
+        "total": 0.0,
+        "minimum": 0.0,
+        "negative_fraction": 0.0,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": 0.0,
+        "domain": "zero_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.329477272522752
+    },
+    {
+      "method": "IPPO",
+      "seed": 22,
+      "benefit_metrics": {
+        "total": -10.053490952677071,
+        "minimum": -5.271753297323439,
+        "negative_fraction": 0.6666666666666666,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.649930026919602
+    },
+    {
+      "method": "IPPO",
+      "seed": 33,
+      "benefit_metrics": {
+        "total": 0.0,
+        "minimum": 0.0,
+        "negative_fraction": 0.0,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": 0.0,
+        "domain": "zero_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.329477272522752
+    },
+    {
+      "method": "IPPO",
+      "seed": 44,
+      "benefit_metrics": {
+        "total": -47.34520935085513,
+        "minimum": -9.008781598370724,
+        "negative_fraction": 1.0,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 11.45941267448261
+    },
+    {
+      "method": "IPPO",
+      "seed": 55,
+      "benefit_metrics": {
+        "total": -12.112883264546696,
+        "minimum": -5.90644873570302,
+        "negative_fraction": 0.8333333333333334,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.499191392812088
+    },
+    {
+      "method": "MAPPO",
+      "seed": 11,
+      "benefit_metrics": {
+        "total": -47.34520935085513,
+        "minimum": -9.008781598370724,
+        "negative_fraction": 1.0,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 11.45941267448261
+    },
+    {
+      "method": "MAPPO",
+      "seed": 22,
+      "benefit_metrics": {
+        "total": -3.290499626058525,
+        "minimum": -2.0336382371091593,
+        "negative_fraction": 0.6666666666666666,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.434128137292834
+    },
+    {
+      "method": "MAPPO",
+      "seed": 33,
+      "benefit_metrics": {
+        "total": -3.4390397188375443,
+        "minimum": -1.3762263164657416,
+        "negative_fraction": 0.6666666666666666,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.329477272522752
+    },
+    {
+      "method": "MAPPO",
+      "seed": 44,
+      "benefit_metrics": {
+        "total": -47.34520935085513,
+        "minimum": -9.008781598370724,
+        "negative_fraction": 1.0,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 11.45941267448261
+    },
+    {
+      "method": "MAPPO",
+      "seed": 55,
+      "benefit_metrics": {
+        "total": -15.637211746553884,
+        "minimum": -4.239048715912694,
+        "negative_fraction": 1.0,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.889604089744822
+    },
+    {
+      "method": "MPC",
+      "seed": -1,
+      "benefit_metrics": {
+        "total": 0.24783091689462408,
+        "minimum": -0.0257159021782121,
+        "negative_fraction": 0.16666666666666666,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.329477272522752
+    },
+    {
+      "method": "idle",
+      "seed": -1,
+      "benefit_metrics": {
+        "total": 0.0,
+        "minimum": 0.0,
+        "negative_fraction": 0.0,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": 0.0,
+        "domain": "zero_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.329477272522752
+    },
+    {
+      "method": "self_consumption",
+      "seed": -1,
+      "benefit_metrics": {
+        "total": -11.702411085543751,
+        "minimum": -2.3777793827424385,
+        "negative_fraction": 1.0,
+        "jain": null,
+        "gini": null,
+        "nash_geometric": null,
+        "domain": "negative_benefits_fairness_undefined"
+      },
+      "episode_cost_cvar95": 10.716452349030886
+    }
+  ]
+}

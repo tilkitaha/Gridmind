@@ -1,0 +1,42 @@
+test_both_action_types_preserve_terminal_and_balance (test_ablations.AblationTests.test_both_action_types_preserve_terminal_and_balance) ... ok
+test_continuous_support_and_finite_gradient (test_ablations.AblationTests.test_continuous_support_and_finite_gradient) ... ok
+test_fairness_state_is_past_only (test_ablations.AblationTests.test_fairness_state_is_past_only) ... ok
+test_potential_telescopes_with_signed_losses (test_ablations.AblationTests.test_potential_telescopes_with_signed_losses) ... ok
+test_cash_energy_identity (test_extension.BatteryTests.test_cash_energy_identity) ... ok
+test_current_target_hidden (test_extension.BatteryTests.test_current_target_hidden) ... ok
+test_idle_zero_increment (test_extension.BatteryTests.test_idle_zero_increment) ... ok
+test_mpc_episode_feasible (test_extension.BatteryTests.test_mpc_episode_feasible) ... ok
+test_mpc_future_hidden (test_extension.BatteryTests.test_mpc_future_hidden) ... ok
+test_random_constraints_terminal (test_extension.BatteryTests.test_random_constraints_terminal) ... ok
+test_terminal_recharge_cost (test_extension.BatteryTests.test_terminal_recharge_cost) ... ok
+test_actor_locality (test_extension.LearningTests.test_actor_locality) ... ok
+test_checkpoint_replay (test_extension.LearningTests.test_checkpoint_replay) ... ok
+test_gradient_both_networks (test_extension.LearningTests.test_gradient_both_networks) ... ok
+test_causal_load_forecasts_ignore_future_measurements (test_market_extension.MarketExtensionTests.test_causal_load_forecasts_ignore_future_measurements) ... ok
+test_daily_missing_rule_is_fixed_and_finite (test_market_extension.MarketExtensionTests.test_daily_missing_rule_is_fixed_and_finite) ... ok
+test_data_contract_rejects_bad_clock_and_leakage (test_market_extension.MarketExtensionTests.test_data_contract_rejects_bad_clock_and_leakage) ... ok
+test_dst_delivery_periods_and_gate (test_market_extension.MarketExtensionTests.test_dst_delivery_periods_and_gate) ... ok
+test_flat_positive_prices_leave_battery_idle (test_market_extension.MarketExtensionTests.test_flat_positive_prices_leave_battery_idle) ... ok
+test_grid_limit_and_terminal_inventory_are_enforced (test_market_extension.MarketExtensionTests.test_grid_limit_and_terminal_inventory_are_enforced) ... ok
+test_negative_prices_cannot_simultaneously_cycle (test_market_extension.MarketExtensionTests.test_negative_prices_cannot_simultaneously_cycle) ... ok
+test_two_slot_arbitrage_matches_analytic_solution (test_market_extension.MarketExtensionTests.test_two_slot_arbitrage_matches_analytic_solution) ... ok
+test_wrong_forecast_changes_realized_profit (test_market_extension.MarketExtensionTests.test_wrong_forecast_changes_realized_profit) ... ok
+test_empty_side_grid_only (test_research.ResearchTests.test_empty_side_grid_only) ... ok
+test_energy_and_money_conservation (test_research.ResearchTests.test_energy_and_money_conservation) ... ok
+test_fairness_floor_and_improvement (test_research.ResearchTests.test_fairness_floor_and_improvement) ... ok
+test_fractional_cvar (test_research.ResearchTests.test_fractional_cvar) ... ok
+test_future_measurements_cannot_change_current_features (test_research.ResearchTests.test_future_measurements_cannot_change_current_features) ... ok
+test_homogeneous_tariff_invariance (test_research.ResearchTests.test_homogeneous_tariff_invariance) ... ok
+test_invalid_input_rejected (test_research.ResearchTests.test_invalid_input_rejected) ... ok
+test_losses_not_hidden (test_research.ResearchTests.test_losses_not_hidden) ... ok
+test_negative_prices_are_allowed (test_research.ResearchTests.test_negative_prices_are_allowed) ... ok
+test_no_profitable_pair (test_research.ResearchTests.test_no_profitable_pair) ... ok
+test_paired_bootstrap_identical (test_research.ResearchTests.test_paired_bootstrap_identical) ... ok
+test_permutation_preserves_welfare (test_research.ResearchTests.test_permutation_preserves_welfare) ... ok
+test_power_conversion_and_missing_interval (test_research.ResearchTests.test_power_conversion_and_missing_interval) ... ok
+test_zero_is_not_perfect_fairness (test_research.ResearchTests.test_zero_is_not_perfect_fairness) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 1.998s
+
+OK

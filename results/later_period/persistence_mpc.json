@@ -1,0 +1,12 @@
+{
+  "method": "persistence_mpc",
+  "cost_eur": 1946.6753833810676,
+  "saving_eur": 0.8243349543749661,
+  "throughput_kwh": 73.74564307401059,
+  "energy_residual": 6.661338147750939e-16,
+  "terminal_residual": 0.0,
+  "losing_households": 2,
+  "first_step_mae_kwh": 0.0791580696245058,
+  "horizon_mae_kwh": 0.14155462025297555,
+  "daily_fallback_slots": 0
+}

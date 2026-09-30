@@ -1,0 +1,12 @@
+{
+  "method": "daily_mpc",
+  "cost_eur": 1966.235855747172,
+  "saving_eur": -18.73613741172947,
+  "throughput_kwh": 673.2192411558171,
+  "energy_residual": 8.881784197001252e-16,
+  "terminal_residual": 0.0,
+  "losing_households": 5,
+  "first_step_mae_kwh": 0.16168804439753537,
+  "horizon_mae_kwh": 0.1643485664295742,
+  "daily_fallback_slots": 3706
+}

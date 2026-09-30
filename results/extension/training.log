@@ -1,0 +1,25 @@
+Episodes {'train': 404, 'validation': 105, 'test': 44}
+IPPO 11 complete
+IPPO 22 complete
+IPPO 33 complete
+IPPO 44 complete
+IPPO 55 complete
+MAPPO 11 complete
+MAPPO 22 complete
+MAPPO 33 complete
+MAPPO 44 complete
+MAPPO 55 complete
+          method  seed   cost_eur  savings_vs_idle_eur  throughput_kwh
+            IPPO    11 159.408258             0.000000        0.000000
+            IPPO    22 169.461749           -10.053491      152.680895
+            IPPO    33 159.408258             0.000000        0.000000
+            IPPO    44 206.753467           -47.345209      422.955789
+            IPPO    55 171.521141           -12.112883      187.132746
+           MAPPO    11 206.753467           -47.345209      422.955789
+           MAPPO    22 162.698758            -3.290500       81.333193
+           MAPPO    33 162.847298            -3.439040       60.155364
+           MAPPO    44 206.753467           -47.345209      422.955789
+           MAPPO    55 175.045470           -15.637212      234.842808
+             MPC    -1 159.160427             0.247831       10.164515
+            idle    -1 159.408258             0.000000        0.000000
+self_consumption    -1 171.110669           -11.702411      412.743252

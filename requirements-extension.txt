@@ -1,0 +1,6 @@
+-r requirements-research.txt
+torch==2.14.0
+web3==8.0.0
+eth-tester==0.14.0b1
+py-evm==0.12.1b1
+cryptography==46.0.0

@@ -1,0 +1,38 @@
+{
+  "status": "Exploratory conditional sensitivity; selected and reused June data",
+  "source_sha256": "df06b5d1347c635edea0a762077b0d0544ec63addea4bc4e2f2206c8cdc02efe",
+  "ridge_minus_persistence": {
+    "total_eur": -0.2985786046461343,
+    "mean_per_retained_day_eur": -0.021327043189009593,
+    "days": 14,
+    "negative_days": 9,
+    "ties": 1,
+    "positive_days": 4,
+    "intervals": {
+      "1": [
+        -0.04785739279912925,
+        0.00019564408659089328
+      ],
+      "2": [
+        -0.046675097851000005,
+        0.0006674947425313262
+      ],
+      "3": [
+        -0.047372823384328515,
+        0.0009612185550792193
+      ],
+      "7": [
+        -0.03924887969257946,
+        -0.003405206685439723
+      ],
+      "14": [
+        -0.021327043189009593,
+        -0.021327043189009593
+      ]
+    },
+    "leave_one_day_out_mean_range": [
+      -0.026384912097027972,
+      -0.011444480473587234
+    ]
+  }
+}

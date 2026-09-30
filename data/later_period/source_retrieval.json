@@ -1,0 +1,32 @@
+[
+  {
+    "file": "H1_W.csv",
+    "sha256": "5f1aecbcba4a9c41c8c42c8a07ac490958607646f93ec9796d19178acf1ee21c",
+    "matched": true
+  },
+  {
+    "file": "H2_W.csv",
+    "sha256": "9a6c0b4e87f156d71a7f2e97954dcc6835468917caadf06e688356d9ed926b8f",
+    "matched": true
+  },
+  {
+    "file": "H3_W.csv",
+    "sha256": "a1e06f05ead2e2d171d7344569ca8e1333af065a88be59c1f9bc7d4c966a3a89",
+    "matched": true
+  },
+  {
+    "file": "H4_W.csv",
+    "sha256": "ff7a73a9b544cd4c204709f09b59986a8eb4bbf2cd35ef197d7f59f143b4517b",
+    "matched": true
+  },
+  {
+    "file": "H5_W.csv",
+    "sha256": "3b7ac29afe378cc4f4f03ac366ead46850d4b3edb3a06aa4baf72fcbdb263ad5",
+    "matched": true
+  },
+  {
+    "file": "H6_W.csv",
+    "sha256": "cb2a94e2641fa5abae90df37b42bb7bdb923715aa09bc3d7c35f94e39bdad2c5",
+    "matched": true
+  }
+]

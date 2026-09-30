@@ -1,0 +1,9 @@
+{
+  "method": "fairness_weight01_IPPO_seed55",
+  "cost_eur": 2431.413047054867,
+  "saving_eur": -483.9133287194243,
+  "throughput_kwh": 4815.928421052632,
+  "energy_residual": 8.881784197001252e-16,
+  "terminal_residual": 0.0,
+  "losing_households": 6
+}

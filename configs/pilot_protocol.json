@@ -1,0 +1,82 @@
+{
+  "version": "2026-09-14",
+  "status": "exploratory specification, not public preregistration",
+  "cohort": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6"
+  ],
+  "cohort_rule": "first six numbered households, no outcome selection",
+  "test_period": [
+    "2020-06-01",
+    "2020-06-14"
+  ],
+  "interval_minutes": 15,
+  "clock": "source labels, offset unverified",
+  "battery": "off; measured load/PV replay",
+  "network": "single bus",
+  "fee_eur_kwh": 0.02,
+  "tariffs": "assumptions, not observed prices",
+  "homogeneous_import": [
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3,
+    0.3
+  ],
+  "heterogeneous_import": [
+    0.22,
+    0.26,
+    0.3,
+    0.34,
+    0.38,
+    0.42
+  ],
+  "export": [
+    0.08,
+    0.08,
+    0.08,
+    0.08,
+    0.08,
+    0.08
+  ],
+  "welfare_tolerance": [
+    0,
+    0.05,
+    0.1
+  ],
+  "epsilon": 0.01,
+  "primary_metrics": [
+    "community bill savings",
+    "mean daily normalized Jain"
+  ],
+  "secondary_metrics": [
+    "pooled Jain",
+    "pooled Gini",
+    "household gains"
+  ],
+  "fairness_reset": "daily",
+  "bootstrap": {
+    "block_days": 7,
+    "repeats": 2000,
+    "seed": 731
+  },
+  "forecast": {
+    "task": "one-step aggregate net energy",
+    "train": "January-April",
+    "validation": "May",
+    "test": "June 1-14",
+    "year": 2020,
+    "ridge_alpha": [
+      0.1,
+      1,
+      10,
+      100
+    ]
+  },
+  "forecast_coupled_to_clearing": false
+}

@@ -1,0 +1,16 @@
+{
+  "recorded_date": "2026-09-22",
+  "status": "exploratory_on_previously_inspected_dates",
+  "methods": ["persistence", "daily", "ridge", "oracle"],
+  "fit_end": "2020-04-30 23:45:00",
+  "ridge_alpha": 1.0,
+  "selection": "Fixed alpha and methods before this run; no validation selection",
+  "features": "Six previous-interval values, six previous-day values, sine and cosine of known clock",
+  "daily_missing_rule": "If any household is missing at a daily lag, all six use last observed interval",
+  "horizon": "Remaining steps of the same 16-step episode; recursive Ridge forecasts",
+  "controller": "Same community MPC with only net-load forecast replaced",
+  "primary_outcome": "Total community cost over the same 44 eligible episodes",
+  "metrics": "First-step MAE, all-horizon-occurrence MAE, cost, throughput, household savings, physical residuals",
+  "oracle": "Uses future measurements and is non-causal; informational benchmark only",
+  "independence": "Repeated forecasts and episodes do not add households or independent test days"
+}

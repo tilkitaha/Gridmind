@@ -1,0 +1,65 @@
+{
+  "recorded_before_execution_utc": "2026-09-21T15:00:39.627257+00:00",
+  "status": "Exploratory June ablation; no untouched test; no outcome-dependent changes",
+  "algorithms": [
+    "IPPO",
+    "MAPPO"
+  ],
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "variants": [
+    {
+      "name": "discrete_60",
+      "action": "discrete",
+      "updates": 60,
+      "fairness_state": false,
+      "weight": 0
+    },
+    {
+      "name": "discrete_300",
+      "action": "discrete",
+      "updates": 300,
+      "fairness_state": false,
+      "weight": 0
+    },
+    {
+      "name": "continuous_60",
+      "action": "continuous",
+      "updates": 60,
+      "fairness_state": false,
+      "weight": 0
+    },
+    {
+      "name": "continuous_300",
+      "action": "continuous",
+      "updates": 300,
+      "fairness_state": false,
+      "weight": 0
+    },
+    {
+      "name": "fairness_control",
+      "action": "discrete",
+      "updates": 60,
+      "fairness_state": true,
+      "weight": 0
+    },
+    {
+      "name": "fairness_weight01",
+      "action": "discrete",
+      "updates": 60,
+      "fairness_state": true,
+      "weight": 0.1
+    }
+  ],
+  "selection": "maximum May community saving every 10 updates; same economic rule for all arms",
+  "fairness": "negative population variance across signed cumulative household EUR / 1 EUR; lambda .1 EUR times potential increment; gamma 1; terminal potential retained",
+  "fairness_observation": "original12 plus own cumulative savings and community mean, both reward arms",
+  "continuous": "Beta(softplus(logits)+1) mapped to [-.5,.5]; deterministic mean; same entropy coefficient .01 but different entropy scale",
+  "metric": "community total cost; mean episode signed-benefit variance; losing households; all seed outcomes",
+  "fresh_test": "No new data available in included package; original public download request returned403; no confirmatory claim"
+}

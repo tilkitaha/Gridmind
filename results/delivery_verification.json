@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-30",
+  "scope": "Read-only audit of delivered experiment records plus prior retained 37-test research log. No new training or EVM execution during packaging.",
+  "all_passed": true,
+  "manifest_files": 342,
+  "model_checkpoints": 70,
+  "research_unit_tests": 37,
+  "research_test_log": "results/revision_20260928_tests.log",
+  "checks": {
+    "verify_defense_evidence.py": {
+      "scope": "Saved records and hashes only. No fresh training, EVM run or signature verification.",
+      "checks": {
+        "manifest_hashes": true,
+        "input_matches_experiment": true,
+        "ten_checkpoints": true,
+        "all_household_records": true,
+        "aggregate_cost_and_savings": true,
+        "recorded_ledger_parity": true,
+        "ten_recorded_ledger_checks": true,
+        "recorded_test_suite": true
+      },
+      "all_passed": true
+    },
+    "verify_follow_up.py": {
+      "checks": {
+        "sixty_unique_runs": true,
+        "fixed_protocol_hash": true,
+        "same_input_hash": true,
+        "all_checkpoint_hashes": true,
+        "same_replay_inputs": true,
+        "saved_model_replay_costs": true,
+        "original_reference_reproduced": true,
+        "household_rows": true,
+        "household_aggregation": true,
+        "physical_residuals": true,
+        "forecast_control_protocol": true,
+        "forecast_control_rows": true,
+        "mpc_default_unchanged": true,
+        "forecast_control_aggregation": true
+      },
+      "all_passed": true,
+      "max_replay_cost_difference_eur": 0.0,
+      "max_original_cost_difference_eur": 2.842170943040401e-14,
+      "scope": "Existing exploratory data, saved checkpoint hashes and actual replay records. No independent test or Polish-market performance."
+    },
+    "verify_saved_ledger.py": {
+      "verified_signatures": 64,
+      "payload_and_identifier_match": true,
+      "reconstructed_balance_parity": true,
+      "total_accounting_units": 6000000000,
+      "scope": "Read-only verification of the delivered database against the delivered public key and stream. Operator identity and meter truth remain external."
+    },
+    "verify_later_period.py": {
+      "status": "pass",
+      "arms": 65,
+      "household_episode_rows": 195390,
+      "source_and_model_hashes": true,
+      "cost_counterfactual_identity": true,
+      "all_discrete_300_idle": true,
+      "eligibility": true
+    }
+  }
+}

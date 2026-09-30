@@ -1,0 +1,9 @@
+{
+  "method": "fairness_control_MAPPO_seed33",
+  "cost_eur": 1999.187833307717,
+  "saving_eur": -51.68811497227439,
+  "throughput_kwh": 1221.7844459833796,
+  "energy_residual": 8.881784197001252e-16,
+  "terminal_residual": 0.0,
+  "losing_households": 3
+}
