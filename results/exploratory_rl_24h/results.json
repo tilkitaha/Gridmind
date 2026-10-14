@@ -1,0 +1,3361 @@
+{
+  "status": "Exploratory 24-hour learners on previously inspected data; not confirmatory",
+  "inputs": {
+    "data/later_period/storenet_h1_h6_2020_15min.csv": "1b285119808dbc517afa19b777d6ea012f458c406b89909999d86ec5a0996c75",
+    "results/exploratory_mpc_24h/linear/results.json": "e62cb5ad846b6c715faacafb1836610331b74e656e4439e8a606614b1357686c"
+  },
+  "episodes": {
+    "train": 115,
+    "validation": 31,
+    "test": 164
+  },
+  "updates": 300,
+  "episodes_per_update": 12,
+  "torch": "2.14.0+cpu",
+  "reference_24h": {
+    "ridge_mpc_saving_eur": 113.54708691091314,
+    "oracle_saving_eur": 283.50629487364984
+  },
+  "runs": [
+    {
+      "name": "discrete_300_IPPO_seed11_24h",
+      "kind": "IPPO",
+      "action": "discrete",
+      "seed": 11,
+      "saving_eur": 0.0,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 0.0,
+      "losing_households": 0,
+      "checkpoint_sha256": "b5397f5908ae08137ced0a968130b901e3bd3885b7635d7200e4ae5fe3291db5",
+      "seconds": 45.312406999990344,
+      "selected_update": 220,
+      "validation_best_per_day": 0.0,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.117061531409659,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -0.2784154692521564,
+          "validation_throughput_kwh": 99.33052631578948
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        }
+      ],
+      "captured_pct_of_24h_bound": 0.0
+    },
+    {
+      "name": "discrete_300_IPPO_seed22_24h",
+      "kind": "IPPO",
+      "action": "discrete",
+      "seed": 22,
+      "saving_eur": 0.0,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 0.0,
+      "losing_households": 0,
+      "checkpoint_sha256": "61108dc215c2e24096573f724381523abcb4326c69635560f9d28d5fd9a2cbd7",
+      "seconds": 46.41792590008117,
+      "selected_update": 260,
+      "validation_best_per_day": 0.0,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.7880710159965962,
+          "validation_throughput_kwh": 234.4976177285319
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.7227645471812301,
+          "validation_throughput_kwh": 230.80855955678675
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0595777088307712,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.05822667119625,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -0.7848284472807782,
+          "validation_throughput_kwh": 237.3645429362881
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0738616980771334,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0894956711946377,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -0.2791472524063884,
+          "validation_throughput_kwh": 99.33052631578948
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        }
+      ],
+      "captured_pct_of_24h_bound": 0.0
+    },
+    {
+      "name": "discrete_300_IPPO_seed33_24h",
+      "kind": "IPPO",
+      "action": "discrete",
+      "seed": 33,
+      "saving_eur": -73.48578157887084,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "801678f01dc63db071f20c47b0802928041dc77890af68b516af4294eefb1d1c",
+      "seconds": 46.11860590009019,
+      "selected_update": 30,
+      "validation_best_per_day": -0.45590725881588584,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.4559084093535201,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.46083200867440294,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.45590725881588584,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -0.4559084093535201,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -0.45590829107395026,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -0.4559084093535201,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -0.4559084093535201,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -0.4559084093535201,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -0.4559084093535201,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -0.4559084093535201,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -0.45590840935352006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -0.4559084093535201,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -25.920335071085894
+    },
+    {
+      "name": "discrete_300_IPPO_seed44_24h",
+      "kind": "IPPO",
+      "action": "discrete",
+      "seed": 44,
+      "saving_eur": -172.74999415452862,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "65ec858aeac88d2736f02dcc619ac0c3206397e233dd01d937d62970bdb58d9c",
+      "seconds": 44.91879250004422,
+      "selected_update": 180,
+      "validation_best_per_day": -1.0571573378629084,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0741171980771118,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -60.933389232686366
+    },
+    {
+      "name": "discrete_300_IPPO_seed55_24h",
+      "kind": "IPPO",
+      "action": "discrete",
+      "seed": 55,
+      "saving_eur": 0.0,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 0.0,
+      "losing_households": 0,
+      "checkpoint_sha256": "51602d245bf652ad5978910857a0bb89bf034b0790cd575c53627f57ad4a6b3c",
+      "seconds": 45.50082970003132,
+      "selected_update": 160,
+      "validation_best_per_day": 0.0,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -1.0903496658181282,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -1.077081434636065,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -1.0655216496904916,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -0.8447632286968167,
+          "validation_throughput_kwh": 264.6635734072022
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        }
+      ],
+      "captured_pct_of_24h_bound": 0.0
+    },
+    {
+      "name": "discrete_300_MAPPO_seed11_24h",
+      "kind": "MAPPO",
+      "action": "discrete",
+      "seed": 11,
+      "saving_eur": 0.0,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 0.0,
+      "losing_households": 0,
+      "checkpoint_sha256": "1d8265d5768c4fbc3b2837ba8e2b6a7ff7ee9b5033d3d49f6da2ca75c27734bc",
+      "seconds": 44.02831490000244,
+      "selected_update": 170,
+      "validation_best_per_day": 0.0,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -0.6584825276419891,
+          "validation_throughput_kwh": 200.79016620498618
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -0.34539999038126595,
+          "validation_throughput_kwh": 120.15789473684212
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        }
+      ],
+      "captured_pct_of_24h_bound": 0.0
+    },
+    {
+      "name": "discrete_300_MAPPO_seed22_24h",
+      "kind": "MAPPO",
+      "action": "discrete",
+      "seed": 22,
+      "saving_eur": 0.0,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 0.0,
+      "losing_households": 0,
+      "checkpoint_sha256": "45a10d55c634c09312610a8c438aba1274a8bba0f450a05d0979df411f77fc33",
+      "seconds": 42.391915400046855,
+      "selected_update": 180,
+      "validation_best_per_day": 0.0,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.00131137521222411,
+          "validation_throughput_kwh": 1.6021052631578947
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.005399928513984452,
+          "validation_throughput_kwh": 2.6561218836565095
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.07314620945533523,
+          "validation_throughput_kwh": 25.549362880886424
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -0.1745496960950938,
+          "validation_throughput_kwh": 49.66526315789474
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0595777088307712,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0972672948504976,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -0.8572645127346166,
+          "validation_throughput_kwh": 248.3263157894737
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        }
+      ],
+      "captured_pct_of_24h_bound": 0.0
+    },
+    {
+      "name": "discrete_300_MAPPO_seed33_24h",
+      "kind": "MAPPO",
+      "action": "discrete",
+      "seed": 33,
+      "saving_eur": 0.0,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 0.0,
+      "losing_households": 0,
+      "checkpoint_sha256": "93f041b92313c7fb67e6ff9e101ce6fd207afc19f5c8522dede2202d43875ce9",
+      "seconds": 43.61302390007768,
+      "selected_update": 210,
+      "validation_best_per_day": 0.0,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.9221657825863864,
+          "validation_throughput_kwh": 378.08893698060945
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -1.0937716980763026,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0913076120546765,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0640122195829855,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.060523402379034,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -0.037319919073161706,
+          "validation_throughput_kwh": 99.33052631578948
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        }
+      ],
+      "captured_pct_of_24h_bound": 0.0
+    },
+    {
+      "name": "discrete_300_MAPPO_seed44_24h",
+      "kind": "MAPPO",
+      "action": "discrete",
+      "seed": 44,
+      "saving_eur": 0.0,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 0.0,
+      "losing_households": 0,
+      "checkpoint_sha256": "a359b7e637450bc6e764d158413dd5231cc0ce79360368db0bf6d63bc5eaaba5",
+      "seconds": 45.97603449993767,
+      "selected_update": 170,
+      "validation_best_per_day": 0.0,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.067333262593871,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        }
+      ],
+      "captured_pct_of_24h_bound": 0.0
+    },
+    {
+      "name": "discrete_300_MAPPO_seed55_24h",
+      "kind": "MAPPO",
+      "action": "discrete",
+      "seed": 55,
+      "saving_eur": 0.0,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 0.0,
+      "losing_households": 0,
+      "checkpoint_sha256": "01b01d865c5660baf4fde3521f68167b95ddfae6f2e2a077150e667bca437e53",
+      "seconds": 45.758894499973394,
+      "selected_update": 200,
+      "validation_best_per_day": 0.0,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -1.064609864744298,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -1.0684983701206283,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -1.069750208829854,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.1170744346354653,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0774556281844523,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.077493429259762,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0635408002281261,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0611127142067067,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0681587894754672,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0746139023780845,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0610103271099325,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0685048217335316,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.1182034668935301,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.0571573378629084,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -0.3026503599253455,
+          "validation_throughput_kwh": 99.33052631578948
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": 0.0,
+          "validation_throughput_kwh": 0.0
+        }
+      ],
+      "captured_pct_of_24h_bound": 0.0
+    },
+    {
+      "name": "continuous_300_IPPO_seed11_24h",
+      "kind": "IPPO",
+      "action": "continuous",
+      "seed": 11,
+      "saving_eur": -122.00009002957992,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "49509eaaa5eea81bbcbc544f90ccd12cf650d7f4bab4954dff78fcd4b1dfbcd6",
+      "seconds": 55.137565099983476,
+      "selected_update": 10,
+      "validation_best_per_day": -0.7598369430195007,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.7598369430195007,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8805806202123074,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9775364731654103,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0178316270264833,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.037888898595544,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0636765769306022,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.063924931315683,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0639432156979138,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0645712121664237,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0650037956298675,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0648885284002105,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.065191674679638,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0652484164744391,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.065418625732188,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0662038543179502,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0663163925376162,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0673740365877586,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.068007502236608,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0692594687957515,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0696849204966403,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.06884970049579,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.068467114073373,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0676166377798006,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0674697516973743,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0687011113784233,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.0671722915486859,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0679781274138143,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.068498433731194,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.068595853073881,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.0671054793006884,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -43.03258595508493
+    },
+    {
+      "name": "continuous_300_IPPO_seed22_24h",
+      "kind": "IPPO",
+      "action": "continuous",
+      "seed": 22,
+      "saving_eur": -128.0047855075888,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "8825fae49fcfc8a60ce85cfb8b8ba58b89f50aea873859e2abe931786b2c4c98",
+      "seconds": 53.94814170000609,
+      "selected_update": 10,
+      "validation_best_per_day": -0.7964119156731675,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.7964119156731675,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8681847659993859,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9490339156089261,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0090414871028783,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0302362601866102,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0451902929382055,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.062806647057428,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.064021059518112,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0647659283786732,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0654499809913913,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0662739058942194,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0663812691431072,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.066783834417697,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0660598630678284,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0657559418363078,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.065849767699677,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0656483136037918,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.065506801012021,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.065590549160685,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0651111623622438,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.064673599735067,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0639514881737413,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0594160177121734,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0186515246518504,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -0.9497965223031597,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -0.8211275401633644,
+          "validation_throughput_kwh": 476.3880718652592
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.474308894614658,
+          "validation_throughput_kwh": 598.1791495792563
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.5730053964722206,
+          "validation_throughput_kwh": 617.2070616953731
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.56747382694604,
+          "validation_throughput_kwh": 616.9446762044361
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.5654801779726446,
+          "validation_throughput_kwh": 628.7673793671597
+        }
+      ],
+      "captured_pct_of_24h_bound": -45.15059729613293
+    },
+    {
+      "name": "continuous_300_IPPO_seed33_24h",
+      "kind": "IPPO",
+      "action": "continuous",
+      "seed": 33,
+      "saving_eur": -115.12821955201287,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "a5a284dc58426f26a3a21dd3cff8786e1ff4b7aa757a4e3a76aba190f362d722",
+      "seconds": 54.04526409995742,
+      "selected_update": 10,
+      "validation_best_per_day": -0.716282832232975,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.716282832232975,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8572662248335656,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.961705178643749,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.017557023422737,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0532157019459065,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0639161522850293,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0640565097960184,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0644301587455418,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0646598132454022,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0651577607102298,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0652136269218824,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0656026327501853,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.065622076733217,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0652339727126146,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0649499670920275,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.064980642198499,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0654195559929696,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.06617917418153,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0658405628562098,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0656058979147374,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0651124071882057,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0651305852116442,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0640207475605574,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0640743750211519,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0639160418674247,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.063945897149527,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0639227735054488,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.0571521213044772,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.0129486564787633,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -0.940753551244756,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -40.60869957166984
+    },
+    {
+      "name": "continuous_300_IPPO_seed44_24h",
+      "kind": "IPPO",
+      "action": "continuous",
+      "seed": 44,
+      "saving_eur": -120.06528100638492,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "df6d6634e33347d07e538c11caf73682933d6c2a23731b9a9495cae85a59e60e",
+      "seconds": 53.97535920003429,
+      "selected_update": 10,
+      "validation_best_per_day": -0.7448500796467264,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.7448500796467264,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8682319609074131,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9429310911387255,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0128874711528828,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0201658255366857,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0525183327937209,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.063956965877074,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0642799284801088,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0645100774733012,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.065230540770566,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0652790079615626,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0653393075541113,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0656610271557811,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0658262568413732,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0659640755115196,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0667063558521483,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0671071778924852,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.066960510562988,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0657515421893808,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0659427391568979,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0665222391209213,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0664742418212194,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.065158361650087,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0650170890196649,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.064510698607912,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.065192045465197,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0654842017123065,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.0654814770734367,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.0643126813202728,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.0639316061889612,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -42.35012878987198
+    },
+    {
+      "name": "continuous_300_IPPO_seed55_24h",
+      "kind": "IPPO",
+      "action": "continuous",
+      "seed": 55,
+      "saving_eur": -126.9697959348691,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "6f3d803c6b78d424dc3a5b6a6483cb9f0154cedad90b585c703e0075b168c8fa",
+      "seconds": 54.70725209999364,
+      "selected_update": 10,
+      "validation_best_per_day": -0.7912553972052189,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.7912553972052189,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8655547324247886,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9620803694980854,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0180740197657296,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0550813797683989,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.063983010400237,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0639272427760962,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0640014865043343,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0642899447076115,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0651670993374835,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0652824772791831,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0652440832423902,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0650622756952834,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0658289657183788,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0672698828592917,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.066392498422341,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0662565637081318,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.065737699127571,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0661163356717736,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0667566358009934,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0662383547233174,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0660514368978793,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0662064018230464,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0660418233147142,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0670093881816403,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.0674178274703092,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.06627733747504,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.065242008520455,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.0649204102994376,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.0641137809488648,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -44.78552971511821
+    },
+    {
+      "name": "continuous_300_MAPPO_seed11_24h",
+      "kind": "MAPPO",
+      "action": "continuous",
+      "seed": 11,
+      "saving_eur": -121.60720762114917,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "8ee129c81cb1fc378a6b297fe1b6e1a7b51ba5756f7766dce7c06e3e01d955cc",
+      "seconds": 50.64826659997925,
+      "selected_update": 10,
+      "validation_best_per_day": -0.7567180742909512,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.7567180742909512,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8512962991569454,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9561208621200121,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0180485446411291,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0584685676845553,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.063939629239901,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0639121082363137,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0642575416532936,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0662691302368936,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0667102812482532,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0665558796815402,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0677485507377136,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0689094144792854,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0695822594558413,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0695749544317097,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0683129258178377,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0690503105769897,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.0703743637489946,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0698013874687577,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0690117649742221,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0685959938938694,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0684086839202493,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0671764173511193,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0673146763042298,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0658654112728447,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.0657579283473069,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0652770151639723,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.0660082341649835,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.0665643687769357,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.067316148507606,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -42.89400617201316
+    },
+    {
+      "name": "continuous_300_MAPPO_seed22_24h",
+      "kind": "MAPPO",
+      "action": "continuous",
+      "seed": 22,
+      "saving_eur": -125.98978048974988,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "ec37a22b0a80ce8e19af0437473d2f6745f115b1ca708a8ed37ba5baafea0d17",
+      "seconds": 38.351221200078726,
+      "selected_update": 10,
+      "validation_best_per_day": -0.785267756489856,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.785267756489856,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8474985380666344,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9259191359549181,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0108165603565393,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0292711265344723,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0601151600205625,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0638956560324946,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0644238662024381,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.065470265240197,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.066549798837107,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0670774960844294,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0665083674485598,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0668289710255363,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.066703467490304,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.067933306467076,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0692981704861932,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.068899663742503,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.068459747088218,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0668386213446424,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0663968957649261,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0670206766801458,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0681876113615927,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0697714779436367,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.068058377738849,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0676376521276625,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.0675888576840937,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0677114141899968,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.067512798066929,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.0679068328872232,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.0659976382448593,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -44.43985293021437
+    },
+    {
+      "name": "continuous_300_MAPPO_seed33_24h",
+      "kind": "MAPPO",
+      "action": "continuous",
+      "seed": 33,
+      "saving_eur": -112.47744223712465,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "2afba0cdf7d300bff965ed2a08ad149c48e0c693946e289fb421c5aa6cde6d52",
+      "seconds": 37.70650019997265,
+      "selected_update": 10,
+      "validation_best_per_day": -0.7036411667877064,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.7036411667877064,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8207784973020829,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9406777984132012,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0174136512230285,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0346218639275533,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0623543426319717,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0639241318092736,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0643344253308071,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0654827048347122,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0668986992531262,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0668938398008403,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0664322673509645,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0670180567489784,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0663451365281367,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.06817593149438,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0695209909116359,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.068366284950563,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.069169230276349,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.067727348873493,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.066334936040095,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0670474632376856,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.070622271822926,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.070325372079881,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0705194896085457,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0695864781275854,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.070632888409565,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0705098830877797,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.0676612769248026,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.0655752735893467,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.0640647886000933,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -39.67370187926601
+    },
+    {
+      "name": "continuous_300_MAPPO_seed44_24h",
+      "kind": "MAPPO",
+      "action": "continuous",
+      "seed": 44,
+      "saving_eur": -118.41877529434744,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "16f9e7755c8aeea37983bf62c7d577e7e06c94d3a277e19f56c39c6a47ad5841",
+      "seconds": 31.316287799971178,
+      "selected_update": 10,
+      "validation_best_per_day": -0.73141029157565,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.73141029157565,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.834224969252805,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9435959317265307,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0174662576075046,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.0439415515441666,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.0639143645254419,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0648375063500692,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0661299658597605,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.068525309890722,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0693208520003423,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.069499542035558,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.069997709632804,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0713689981562409,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0718182116262587,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0706058750662228,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0715466745175712,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.0716347991656467,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.070565658468932,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.069880161939044,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.068008205600989,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0679444380188112,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0677967066260976,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0689208433168913,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0688786626412388,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0677634176088817,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.0673753550820382,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.067131047743404,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.068255616192464,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.0653491648523314,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.064020952102548,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -41.76936365632484
+    },
+    {
+      "name": "continuous_300_MAPPO_seed55_24h",
+      "kind": "MAPPO",
+      "action": "continuous",
+      "seed": 55,
+      "saving_eur": -128.29390931704867,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1576.471578947369,
+      "losing_households": 6,
+      "checkpoint_sha256": "dd1d76d0d2d8fe4312ba38498ccb60bdb4b350b4110b1ddf85c37e7e3568fd48",
+      "seconds": 30.248578600003384,
+      "selected_update": 10,
+      "validation_best_per_day": -0.7992415365664718,
+      "checkpoints": [
+        {
+          "update": 10,
+          "validation_saving_per_day": -0.7992415365664718,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 20,
+          "validation_saving_per_day": -0.8753440479472011,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 30,
+          "validation_saving_per_day": -0.9550539981887043,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 40,
+          "validation_saving_per_day": -1.0130387001273609,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 50,
+          "validation_saving_per_day": -1.029404434333393,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 60,
+          "validation_saving_per_day": -1.062347824179645,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 70,
+          "validation_saving_per_day": -1.0639233418837848,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 80,
+          "validation_saving_per_day": -1.0640242571543144,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 90,
+          "validation_saving_per_day": -1.0642960233382976,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 100,
+          "validation_saving_per_day": -1.0647508385937743,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 110,
+          "validation_saving_per_day": -1.0656536083497126,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 120,
+          "validation_saving_per_day": -1.0661506107773575,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 130,
+          "validation_saving_per_day": -1.0667115060662782,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 140,
+          "validation_saving_per_day": -1.0678434252849318,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 150,
+          "validation_saving_per_day": -1.0675357256354363,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 160,
+          "validation_saving_per_day": -1.0691454531688422,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 170,
+          "validation_saving_per_day": -1.070734706432902,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 180,
+          "validation_saving_per_day": -1.0714409941071092,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 190,
+          "validation_saving_per_day": -1.0716047018046932,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 200,
+          "validation_saving_per_day": -1.0721337816153251,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 210,
+          "validation_saving_per_day": -1.0715424905718924,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 220,
+          "validation_saving_per_day": -1.0699992408923233,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 230,
+          "validation_saving_per_day": -1.0698460844779274,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 240,
+          "validation_saving_per_day": -1.0688472969443874,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 250,
+          "validation_saving_per_day": -1.0677751771237072,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 260,
+          "validation_saving_per_day": -1.067130466032705,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 270,
+          "validation_saving_per_day": -1.0666085727617156,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 280,
+          "validation_saving_per_day": -1.068515732495068,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 290,
+          "validation_saving_per_day": -1.0698001373532107,
+          "validation_throughput_kwh": 297.99157894736845
+        },
+        {
+          "update": 300,
+          "validation_saving_per_day": -1.066673063564542,
+          "validation_throughput_kwh": 297.99157894736845
+        }
+      ],
+      "captured_pct_of_24h_bound": -45.25257873876323
+    }
+  ]
+}

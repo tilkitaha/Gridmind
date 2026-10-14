@@ -67,3 +67,25 @@ Same 164 days and linear fill (idle 3270.23 EUR); the median fill agrees within 
 - Persistence MPC loses money at both lengths: a flat last-value forecast cannot anticipate the evening peak, so a longer horizon only adds cycling. The forecast's daily shape, not the horizon alone, carries the value.
 - Both four-hour MPC arms lose money on these days, unlike on the 501 retained episodes. These days include blocks next to night gaps: 1149 of 15,744 decisions (7.3%) used a stale latest observation because the previous interval was missing, and those blocks were excluded from the retained set.
 - One tariff, one battery, six households and inspected dates. This motivates a pre-registered 24-hour design; it does not confirm one.
+
+## Learners with 24-hour episodes
+
+```bash
+PYTHONPATH=src python scripts/explore_rl_24h.py
+```
+
+Outputs go to `results/exploratory_rl_24h/`. The script keeps the retained `AblationPolicy` architecture, PPO settings (300 updates, 12 episodes per update, 4 epochs, learning rate 3e-4, clip 0.2, entropy 0.01, gamma 1, GAE 0.95), common reward and best-May-checkpoint rule; only the episode length changes from 16 to 96 steps. Training uses 115 January–April days and selection 31 May days, all with at least 80 observed slots and linear fills; evaluation uses the same 164 July–December days as the MPC comparison. The policy's previous-interval input is the latest complete raw row. Driving this environment with the 24-hour oracle plan reproduces 283.5063 EUR and the idle cost 3270.2303 EUR. Two complete runs gave bit-identical weights for all 20 policies.
+
+| Family (5 seeds each) | Mean saving (EUR) | Range (EUR) | Seeds idle |
+| --- | --- | --- | --- |
+| Discrete IPPO | −49.25 | −172.75 to 0.00 | 3 |
+| Discrete MAPPO | 0.00 | 0.00 | 5 |
+| Continuous IPPO | −122.43 | −128.00 to −115.13 | 0 |
+| Continuous MAPPO | −121.36 | −128.29 to −112.48 | 0 |
+| *Ridge MPC, 24 h* | *113.55* | | |
+| *Perfect foresight, 24 h* | *283.51* | | |
+
+- No learner saves money. Every non-idle policy raises cost for all six households.
+- No validation checkpoint was positive. All ten continuous policies selected their first checkpoint (update 10), and validation did not improve afterwards.
+- All twelve non-idle policies have the same throughput, 1576.47 kWh. This suggests one behaviour shaped by the projection onto the terminal state-of-charge constraint rather than learned scheduling; this was not isolated.
+- The four-hour limit therefore does not explain the learner result on its own: the longer horizon opens value that Ridge MPC captures but these learners do not. Plausible causes include credit assignment over about 40 steps between night charging and the evening peak with GAE 0.95, and the unchanged 300-update budget; neither was tested.
