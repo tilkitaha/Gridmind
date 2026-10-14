@@ -1,7 +1,11 @@
 """Derived descriptive analysis of saved results; does not fit or replay policies."""
-from pathlib import Path
+import csv
+import hashlib
+import json
+import statistics
 from collections import defaultdict
-import csv,json,statistics,hashlib
+from pathlib import Path
+
 ROOT=Path(__file__).resolve().parents[1]
 def main():
  with (ROOT/'results/extension/household_episode_results.csv').open() as f: rows=list(csv.DictReader(f))

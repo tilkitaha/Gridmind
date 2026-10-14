@@ -1,7 +1,11 @@
 """Read-only verification of delivered records; does not retrain or re-run EVM."""
-from pathlib import Path
+import csv
+import hashlib
+import json
+import math
 from collections import defaultdict
-import csv,hashlib,json,math
+from pathlib import Path
+
 ROOT=Path(__file__).resolve().parents[1]
 def read(name):return json.loads((ROOT/name).read_text())
 def verify():

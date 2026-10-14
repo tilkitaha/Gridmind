@@ -1,5 +1,9 @@
+import csv
+import hashlib
+import json
+import statistics
 from pathlib import Path
-import csv,json,hashlib,statistics
+
 P=Path(__file__).resolve().parents[1]
 rows=list(csv.DictReader((P/'results/later_period/summary.csv').open())); lookup={x['method']:x for x in rows}
 base=float(lookup['persistence_mpc']['cost_eur']); ridge=float(lookup['ridge_mpc']['cost_eur'])

@@ -1,10 +1,14 @@
 """Evaluate a supplied, timestamped forecast; never download or trade."""
 import argparse
+import hashlib
+import json
 from dataclasses import asdict
 from pathlib import Path
-import hashlib,json
+
 import pandas as pd
-from gridmind_research.polish_market import BESS,validate_day,optimize_schedule,realized_profit
+
+from gridmind_research.polish_market import BESS, optimize_schedule, realized_profit, validate_day
+
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)

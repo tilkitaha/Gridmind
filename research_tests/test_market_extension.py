@@ -1,8 +1,18 @@
 import unittest
+
 import numpy as np
 import pandas as pd
-from gridmind_research.polish_market import BESS, delivery_index, gate_closure, validate_day, optimize_schedule, realized_profit, check_schedule
+
 from gridmind_research.forecast_control import predict
+from gridmind_research.polish_market import (
+    BESS,
+    check_schedule,
+    delivery_index,
+    gate_closure,
+    optimize_schedule,
+    realized_profit,
+    validate_day,
+)
 
 
 class MarketExtensionTests(unittest.TestCase):

@@ -2,9 +2,13 @@
 The bundled public key must be independently authenticated for identity assurance.
 Requires cryptography (included in requirements-extension.txt).
 """
+import hashlib
+import json
+import sqlite3
 from pathlib import Path
-import json,sqlite3,hashlib
+
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
+
 ROOT=Path(__file__).resolve().parents[1]
 def main():
  p=ROOT/'results/extension';key=Ed25519PublicKey.from_public_bytes(bytes.fromhex((p/'ledger_public_key.hex').read_text().strip()))
