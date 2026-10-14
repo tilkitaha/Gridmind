@@ -53,7 +53,7 @@ def main():
 
     processed = pd.read_csv(args.data, index_col=0, parse_dates=True)
     result = eligibility(processed, args.households)
-    (out / 'eligibility.json').write_text(json.dumps(result, indent=2))
+    (out / 'eligibility.json').write_text(json.dumps(result, indent=2), newline='\n')
     payload = {
         'created_utc': datetime.now(UTC).isoformat(),
         'dry_run': args.dry_run,
@@ -65,7 +65,7 @@ def main():
         'code': {p: sha(p) for p in CODE},
         'rules': RULES,
     }
-    with lock.open('x') as f:
+    with lock.open('x', newline='\n') as f:
         json.dump(payload, f, indent=2)
     included = [c for c in result['communities'] if c['included']]
     print(json.dumps({'eligible': result['eligible'], 'excluded_remainder': result['excluded_remainder'],

@@ -133,9 +133,9 @@ def main():
                 'stale_previous_decisions': int(f.stale), 'daily_fallback_slots': int(f.daily_fallback),
             }
             households += [{'arm': key, 'household': h, 'saving_eur': v} for h, v in house.items()]
-            df.to_csv(out / f'{key}_household_episode.csv', index=False)
+            df.to_csv(out / f'{key}_household_episode.csv', index=False, lineterminator='\n')
             print(key, json.dumps(summary[key]), flush=True)
-    pd.DataFrame(households).to_csv(out / 'household_savings.csv', index=False)
+    pd.DataFrame(households).to_csv(out / 'household_savings.csv', index=False, lineterminator='\n')
 
     result = {
         'status': 'Exploratory causal MPC on previously inspected data; not a confirmatory comparison',
@@ -146,7 +146,7 @@ def main():
         'idle_eur': bounds['idle_eur'],
         'arms': summary,
     }
-    (out / 'results.json').write_text(json.dumps(result, indent=2, allow_nan=False))
+    (out / 'results.json').write_text(json.dumps(result, indent=2, allow_nan=False), newline='\n')
 
 
 if __name__ == '__main__':

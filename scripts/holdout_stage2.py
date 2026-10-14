@@ -77,7 +77,7 @@ def main():
             else:
                 f = Forecaster(raw, method, ridge)
                 df = run_episodes(realized[how], starts, periods, f)
-            df.to_csv(out / f"{c['community']}_{name}.csv", index=False)
+            df.to_csv(out / f"{c['community']}_{name}.csv", index=False, lineterminator='\n')
             per_day[(c['community'], name, 'saving')] = daily(df, 'saving_eur')
             per_day[(c['community'], name, 'idle')] = daily(df, 'idle_eur')
             house = df.groupby('household').saving_eur.sum()
@@ -90,7 +90,7 @@ def main():
                 'daily_fallback_slots': int(f.daily_fallback) if f else 0, 'ridge_training_rows': ridge['rows'],
             }
             print(c['community'], name, summary[f"{c['community']}/{name}"], flush=True)
-    pd.DataFrame(households).to_csv(out / 'household_savings.csv', index=False)
+    pd.DataFrame(households).to_csv(out / 'household_savings.csv', index=False, lineterminator='\n')
 
     def table(name, kind):
         # Dates x communities; zero where a community-day is not eligible.
@@ -124,7 +124,7 @@ def main():
         'secondary': secondary,
         'arms': summary,
     }
-    (out / 'results.json').write_text(json.dumps(result, indent=2, allow_nan=False))
+    (out / 'results.json').write_text(json.dumps(result, indent=2, allow_nan=False), newline='\n')
     print(json.dumps({k: result[k] for k in ('primary_relative_saving', 'decision', 'secondary')}, indent=2))
 
 

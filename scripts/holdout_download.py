@@ -52,15 +52,15 @@ def main():
             raise ValueError(f"Incomplete download: {e['file']}")
         e['sha256'] = sha(target)
         e['retrieved_utc'] = datetime.now(UTC).isoformat()
-    (out / 'source_retrieval.json').write_text(json.dumps(entries, indent=2))
+    (out / 'source_retrieval.json').write_text(json.dumps(entries, indent=2), newline='\n')
 
     processed, quality = prepare_households(raw, args.households)
-    processed.to_csv(data, float_format='%.10g')
+    processed.to_csv(data, float_format='%.10g', lineterminator='\n')
     (out / 'data_quality.json').write_text(json.dumps({
         'source': 'StoreNet Figshare collection 6829134', 'source_doi': '10.1038/s41597-024-03454-2',
         'households': args.households, 'clock': 'source clock retained; UTC offset not independently verified',
         'resampling': '15 complete one-minute W samples summed / 60000 = kWh', 'output_sha256': sha(data),
-        'quality': quality}, indent=2))
+        'quality': quality}, indent=2), newline='\n')
     print(f'wrote {data} ({sha(data)})')
 
 

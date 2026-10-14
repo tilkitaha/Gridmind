@@ -32,6 +32,16 @@ The frozen-model extension adds 501 episodes from July–December 2020, across 1
 
 See [temporal reproduction](docs/LATER_PERIOD_REPRODUCTION.md), `results/later_period/` and the read-only `scripts/verify_later_period.py` audit.
 
+## Episode length (exploratory, October 2026)
+
+Every retained episode lasts four hours and ends at 1 kWh, so the 0.20 EUR night tariff and the 0.42 EUR evening peak never share an episode. On the 501 later-period episodes a perfect-foresight controller saves only 60.20 EUR (3.09% of idle); Ridge MPC captures 13.6% of that bound and the discrete learners 0%. On 164 days with at least 80 of 96 observed slots, 24-hour episodes raise the bound from 95.15 to 283.51 EUR, and causal Ridge MPC saves 113.55 EUR (3.47% of idle) with no household worse off. Persistence MPC loses money at both lengths. No 2020 day has all 96 slots; two gap fills agree within 0.6 EUR. These dates were inspected before, so the result is exploratory.
+
+See [episode-length exploration](docs/EPISODE_LENGTH_EXPLORATION.md), `scripts/explore_episode_length.py`, `scripts/explore_mpc_24h.py` and `results/exploratory_*`.
+
+## Held-out household study (draft)
+
+The StoreNet collection has twenty households; this repository uses only H1–H6. A [draft protocol](docs/PROTOCOL_24H_HOLDOUT_DRAFT.md) tests 24-hour Ridge MPC once on H7–H20. Its pipeline (`src/gridmind_research/holdout.py`, `scripts/holdout_*.py`) refuses to download or evaluate held-out households until the protocol is frozen, and locks protocol, data and code hashes between stages. A dry run on H1–H6 (`results/holdout_24h_dry_run/`) reproduces the exploratory numbers exactly. No held-out meter data have been read.
+
 ## Reproduction
 
 Python 3.12 and the pinned research dependencies are used. Included StoreNet data and saved results require no API key.
@@ -50,11 +60,13 @@ python scripts/verify_later_period.py
 
 Windows PowerShell uses `.venv\Scripts\Activate.ps1` and `$env:PYTHONPATH = "src"`.
 
+CI runs `ruff check .`, `pytest -q` and the research tests on every push, with CPU-only PyTorch.
+
 See [original reproduction](docs/EXTENSION_REPRODUCTION.md), [follow-up reproduction](docs/ABLATION_REPRODUCTION.md), [Polish study boundary](docs/POLISH_MARKET_STUDY.md), and [defense materials](defense/START_HERE.md). Training and forecast reruns replace their own result directories; preserve an unchanged archive first. Verification scripts only read retained records.
 
 ## Evidence boundary
 
-The input contains measured consumption and PV, not observed retail bills or market trades. Tariffs, batteries and the single-bus model are assumptions. Forecast/control uses the source clock without an external market-price join. The independent test, daily risk constraint and Polish forecast-conditioned PPO are unfinished. The 37 research tests establish specific invariants; they do not validate profitability or deployment.
+The input contains measured consumption and PV, not observed retail bills or market trades. Tariffs, batteries and the single-bus model are assumptions. Forecast/control uses the source clock without an external market-price join. The independent test, daily risk constraint and Polish forecast-conditioned PPO are unfinished. The 44 research tests establish specific invariants; they do not validate profitability or deployment.
 
 ## Source
 

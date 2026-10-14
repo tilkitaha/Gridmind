@@ -213,13 +213,13 @@ def main():
     assert len(later_eps) == 501
     lp = run_oracle(later, later_eps, 16)
     np.testing.assert_allclose(lp.idle_eur.sum(), LATER_IDLE_4H, rtol=1e-12)
-    lp.to_csv(OUT / 'later_oracle_4h_household.csv', index=False)
+    lp.to_csv(OUT / 'later_oracle_4h_household.csv', index=False, lineterminator='\n')
 
     # 2. Captured share of the 4 h bound on the exact 501 retained episodes.
     later_oracle_saving = float(lp.saving_eur.sum())
     arms, families = capture(later_oracle_saving)
-    arms.to_csv(OUT / 'later_captured_share_by_arm.csv', index=False)
-    families.to_csv(OUT / 'later_captured_share_by_family.csv')
+    arms.to_csv(OUT / 'later_captured_share_by_arm.csv', index=False, lineterminator='\n')
+    families.to_csv(OUT / 'later_captured_share_by_family.csv', lineterminator='\n')
 
     # 3. Episode length on identical days, under two gap fills.
     days, raw = kept_days(later, '2020-07-01', '2020-12-31')
@@ -229,10 +229,10 @@ def main():
         filled = impute(raw, method)
         assert filled[filled.index.normalize().isin(days)].notna().all().all()
         length[method], daily = compare(filled, days)
-        daily.to_csv(OUT / f'later_daily_4h_vs_24h_{method}.csv')
+        daily.to_csv(OUT / f'later_daily_4h_vs_24h_{method}.csv', lineterminator='\n')
         monthly = daily.groupby(daily.index.str[:7]).sum()
         monthly['ratio_24h_over_4h'] = monthly.saving_24h_eur / monthly.saving_4h_eur
-        monthly.to_csv(OUT / f'later_monthly_4h_vs_24h_{method}.csv')
+        monthly.to_csv(OUT / f'later_monthly_4h_vs_24h_{method}.csv', lineterminator='\n')
         print(method, monthly.round(3).to_string(), sep='\n')
 
     result = {
@@ -254,7 +254,7 @@ def main():
             'complete_96_slot_days_in_2020': 0, **length,
         },
     }
-    (OUT / 'results.json').write_text(json.dumps(result, indent=2, allow_nan=False))
+    (OUT / 'results.json').write_text(json.dumps(result, indent=2, allow_nan=False), newline='\n')
     print(json.dumps({k: v for k, v in result.items() if k != 'inputs'}, indent=2))
     print(families.round(2).to_string())
 
