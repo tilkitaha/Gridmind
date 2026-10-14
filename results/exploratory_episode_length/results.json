@@ -1,8 +1,8 @@
 {
   "status": "Exploratory perfect-foresight bound on previously inspected data; not a controller result",
   "inputs": {
-    "data\\storenet_h1_h6_15min.csv": "a55b18dd44b61cfe8ffa827ff33059826ff1637ae0bac4bf5a9ee1be192f1791",
-    "data\\later_period\\storenet_h1_h6_2020_15min.csv": "1b285119808dbc517afa19b777d6ea012f458c406b89909999d86ec5a0996c75",
+    "data/storenet_h1_h6_15min.csv": "a55b18dd44b61cfe8ffa827ff33059826ff1637ae0bac4bf5a9ee1be192f1791",
+    "data/later_period/storenet_h1_h6_2020_15min.csv": "1b285119808dbc517afa19b777d6ea012f458c406b89909999d86ec5a0996c75",
     "results/later_period/summary.csv": "1cc071d4c97cd61ace3a8827399f4c67ea6c7651e0b96d12f8be627da6be13f0",
     "results/later_period/eligibility.csv": "c7c860780a5e109bc2cd1570af0c78f950d61911fa15b1cd1a70742e1f79b279"
   },

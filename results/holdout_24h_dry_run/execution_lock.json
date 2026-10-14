@@ -1,12 +1,12 @@
 {
-  "created_utc": "2026-10-14T10:34:38.553965+00:00",
+  "created_utc": "2026-10-14T11:57:26.143100+00:00",
   "dry_run": true,
   "protocol": {
-    "path": "docs\\PROTOCOL_24H_HOLDOUT_DRAFT.md",
-    "sha256": "def02b697db6a41b5508d987bfe8b538cd97701c01ba105fb7a942851ab3e425",
+    "path": "docs/PROTOCOL_24H_HOLDOUT_DRAFT.md",
+    "sha256": "3f91289c018d64e33d37ea7d63967da84970605ce4c0cf9c58777645c2379cf1",
     "frozen": false
   },
-  "git_commit": "56cecea3044b5959cb18aa23944782049ae0d13d",
+  "git_commit": "76c69866f74d054d108d182f7d9d23e42539cef9",
   "households": [
     "H1",
     "H2",
@@ -19,13 +19,13 @@
     "path": "data/later_period/storenet_h1_h6_2020_15min.csv",
     "sha256": "1b285119808dbc517afa19b777d6ea012f458c406b89909999d86ec5a0996c75"
   },
-  "eligibility_sha256": "55f7c44ced772aac0dad687aba58d87de4a3b64b8c10a8b9cdfad528a4dce3b5",
+  "eligibility_sha256": "4d0b4b7c586f7bf1ce11d3892c1ec63d9fa69235def745eb42d41c7d6ceff920",
   "code": {
     "src/gridmind_research/holdout.py": "ed9d2a3027b6b60d3545ab290dde659c7ca3fdb0ee9cda8b2d1746a0f5f38133",
     "src/gridmind_research/battery.py": "971f495788b49bdebf765f9977050cea71000e126faabdb597b316f4553e3941",
     "src/gridmind_research/forecast_control.py": "0a294574628832d058ad8a8fb659cf9a0fa97f74878d86986aae436286bfbbe5",
-    "scripts/holdout_stage1.py": "8e11da1056a3f28dae8ccc6a5558334368149d904ce1a43badb8a1cbcf58d638",
-    "scripts/holdout_stage2.py": "0d252a9a5abeb3108f655e861614d0e7283555133ee864b442c967606a67a208"
+    "scripts/holdout_stage1.py": "773d2799dfe78b3d67340417b67adf233650c9b0aef59aca3bf9d021cffcc193",
+    "scripts/holdout_stage2.py": "941422758117bd5fe0f8d38f0aebb2dd13f94d4deb137b7fe19c1ac81b8fbdca"
   },
   "rules": {
     "test_coverage": 0.85,
