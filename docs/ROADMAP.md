@@ -8,7 +8,7 @@
 | Action and training budget intervention | Completed; forty runs, four cells, two algorithms, five seeds |
 | Matched fairness reward intervention | Completed; twenty runs; one fixed weight; no consistent improvement |
 | Forecast substitution through MPC | Completed; four arms, 44 common episodes, retained household outcomes |
-| Forecast, control and negative-price physical checks | 44 total research tests pass; CI runs them on every push |
+| Forecast, control and negative-price physical checks | 52 research tests pass; CI runs them on every push |
 | Aggregate Polish scheduling and time validation | Implemented and analytically tested |
 | Polish market dataset and historical publication audit | Not acquired; required before empirical claims |
 | Frozen-model temporal extension | Completed; 501 July–December episodes and 65 arms, with disclosed prior access |

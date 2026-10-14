@@ -26,7 +26,7 @@ python scripts/verify_later_period.py
 
 ## Bulguları doğru anlatmak
 
-Toplam 70 model kontrol noktası vardır: 10 ilk deney, 60 kontrollü ek koşu. Yeni koşular aynı Haziran tarihlerini kullanır; bağımsız test değildir. 300 güncellemede ayrık modeller boşta bataryayı taklit eder. Adalet cezası tutarlı iyileşme sağlamaz. Haziran döneminde Ridge MPC maliyeti azaltır ama iki hane kaybeder. Temmuz–Aralık değerlendirmesi 501 bölüm ve 168 günü içerir; bu dönemde Ridge bütün hanelerde toplam kazanç sağlar. Ön erişim ve eksik kapsama açıkça raporlanmıştır; bağımsız teyit iddiası yoktur. Araştırma testi sayısı 37’dir.
+Toplam 70 model kontrol noktası vardır: 10 ilk deney, 60 kontrollü ek koşu. Yeni koşular aynı Haziran tarihlerini kullanır; bağımsız test değildir. 300 güncellemede ayrık modeller boşta bataryayı taklit eder. Adalet cezası tutarlı iyileşme sağlamaz. Haziran döneminde Ridge MPC maliyeti azaltır ama iki hane kaybeder. Temmuz–Aralık değerlendirmesi 501 bölüm ve 168 günü içerir; bu dönemde Ridge bütün hanelerde toplam kazanç sağlar. Ön erişim ve eksik kapsama açıkça raporlanmıştır; bağımsız teyit iddiası yoktur. Araştırma testi sayısı Eylül sürümünde 37 idi; 14 Ekim 2026 itibarıyla 52’dir (Ekim keşifsel çalışması, H7–H20 hattı ve ENTSO-E testleri eklendi).
 
 Polonya hedefi için zaman doğrulama ve fiziksel kısıtlı MILP hazırlanmıştır. Gerçek Polonya piyasa verisi edinilmemiştir ve bu piyasa için kâr sonucu yoktur. İrlanda hane sonuçları Polonya ticaret performansı diye sunulmamalıdır.
 

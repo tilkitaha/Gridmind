@@ -66,7 +66,7 @@ See [original reproduction](docs/EXTENSION_REPRODUCTION.md), [follow-up reproduc
 
 ## Evidence boundary
 
-The input contains measured consumption and PV, not observed retail bills or market trades. Tariffs, batteries and the single-bus model are assumptions. Forecast/control uses the source clock without an external market-price join. The independent test, daily risk constraint and Polish forecast-conditioned PPO are unfinished. The 44 research tests establish specific invariants; they do not validate profitability or deployment.
+The input contains measured consumption and PV, not observed retail bills or market trades. Tariffs, batteries and the single-bus model are assumptions. Forecast/control uses the source clock without an external market-price join. The independent test, daily risk constraint and Polish forecast-conditioned PPO are unfinished. The 52 research tests establish specific invariants; they do not validate profitability or deployment.
 
 ## Source
 
