@@ -1,12 +1,12 @@
 {
-  "created_utc": "2026-10-14T11:57:26.143100+00:00",
+  "created_utc": "2026-10-14T12:38:07.554092+00:00",
   "dry_run": true,
   "protocol": {
     "path": "docs/PROTOCOL_24H_HOLDOUT_DRAFT.md",
     "sha256": "3f91289c018d64e33d37ea7d63967da84970605ce4c0cf9c58777645c2379cf1",
     "frozen": false
   },
-  "git_commit": "76c69866f74d054d108d182f7d9d23e42539cef9",
+  "git_commit": "53309376de36214646b91bd55a0988f8d4ae8c8a",
   "households": [
     "H1",
     "H2",
