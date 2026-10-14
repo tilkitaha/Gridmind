@@ -15,7 +15,7 @@
   ],
   "files": {
     ".env.example": "b8a73e80a6f30af589692318c896a0869cc95da6525fa25ece02177a0fc02c8c",
-    ".github/workflows/ci.yml": "effc92186c3715a5b79c89aaa2c5ded3a5aa6368ff3009109f84c020d3fb587c",
+    ".github/workflows/ci.yml": "6f1f12ebb57e43fa48e78b997de3f4b4eddc3111a00267b8e9f3fa60acbe0a0f",
     ".gitignore": "2f943490d2b839d21dd42a1edda967c334c6eb0e857bfc40e089b3ec74b6ee71",
     "Dockerfile": "f5886baf585440836eaf7ba90e5cb039b6f381d00af7c587b04462cbca23d48e",
     "LICENSE": "a30255220ffec733aa364d5520a4b138754760abab5d6cc57c15c3bf9dfd98ef",

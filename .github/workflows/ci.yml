@@ -14,7 +14,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: python -m pip install --upgrade pip
-      - run: pip install -e ".[dev,research]"
+      # research_tests import torch, web3 and eth-tester; CPU-only torch keeps the install small.
+      - run: pip install -e ".[dev,research]" -r requirements-extension.txt --extra-index-url https://download.pytorch.org/whl/cpu
       - run: ruff check .
       - run: pytest -q
       - run: python -m unittest discover -s research_tests -v
