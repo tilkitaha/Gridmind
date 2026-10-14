@@ -111,9 +111,9 @@ These belong to the team and supervisor, not to the analysis code:
 
 ## 12. Implementation checklist
 
-- [ ] Download and hash step writing `data/holdout/source_retrieval.json`
-- [ ] Stage 1 eligibility script with lock writer
-- [ ] Generalize `explore_mpc_24h.py` to arbitrary household groups and per-community Ridge refits
-- [ ] Bootstrap module for the ratio-of-sums endpoint, with a unit test on synthetic data
-- [ ] Dry run end to end on H1–H6, confirming the development numbers above
+- [x] Download and hash step: `scripts/holdout_download.py`. Refuses H7–H20 until the protocol is frozen and `--confirm-frozen` is passed. Dry run on H1 reproduced the source SHA-256 and the retained processed H1 values exactly.
+- [x] Stage 1 eligibility and lock writer: `scripts/holdout_stage1.py`. Without `--dry-run` it requires a frozen protocol, held-out households only, a clean tracked tree and a new lock.
+- [x] Household-count-agnostic pipeline with per-community Ridge refits: `src/gridmind_research/holdout.py`; Stage 2 in `scripts/holdout_stage2.py` verifies every locked hash and refuses to overwrite results.
+- [x] Ratio-of-sums block bootstrap with unit tests: `research_tests/test_holdout.py`, which also checks the LP against `battery.mpc_action`, the Ridge refit against the saved coefficients and forecast causality.
+- [x] Dry run end to end on H1–H6 (`results/holdout_24h_dry_run/`, marked `dry_run: true`): Stage 1 kept all six homes and 164 days; Stage 2 reproduced every exploratory arm exactly (Ridge 24 h 113.5471 EUR, R = 3.47%, 95% interval 3.26–3.69%). The dry-run lock predates the checklist edit, so its protocol hash no longer matches this file; a frozen run starts from a new lock.
 - [ ] Freeze: protocol hash, code commit, team signatures

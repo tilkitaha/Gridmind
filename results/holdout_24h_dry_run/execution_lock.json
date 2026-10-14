@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-14T10:34:38.553965+00:00",
+  "dry_run": true,
+  "protocol": {
+    "path": "docs\\PROTOCOL_24H_HOLDOUT_DRAFT.md",
+    "sha256": "def02b697db6a41b5508d987bfe8b538cd97701c01ba105fb7a942851ab3e425",
+    "frozen": false
+  },
+  "git_commit": "56cecea3044b5959cb18aa23944782049ae0d13d",
+  "households": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6"
+  ],
+  "data": {
+    "path": "data/later_period/storenet_h1_h6_2020_15min.csv",
+    "sha256": "1b285119808dbc517afa19b777d6ea012f458c406b89909999d86ec5a0996c75"
+  },
+  "eligibility_sha256": "55f7c44ced772aac0dad687aba58d87de4a3b64b8c10a8b9cdfad528a4dce3b5",
+  "code": {
+    "src/gridmind_research/holdout.py": "ed9d2a3027b6b60d3545ab290dde659c7ca3fdb0ee9cda8b2d1746a0f5f38133",
+    "src/gridmind_research/battery.py": "971f495788b49bdebf765f9977050cea71000e126faabdb597b316f4553e3941",
+    "src/gridmind_research/forecast_control.py": "0a294574628832d058ad8a8fb659cf9a0fa97f74878d86986aae436286bfbbe5",
+    "scripts/holdout_stage1.py": "8e11da1056a3f28dae8ccc6a5558334368149d904ce1a43badb8a1cbcf58d638",
+    "scripts/holdout_stage2.py": "0d252a9a5abeb3108f655e861614d0e7283555133ee864b442c967606a67a208"
+  },
+  "rules": {
+    "test_coverage": 0.85,
+    "train_coverage": 0.7,
+    "community_size": 6,
+    "min_observed_slots": 80,
+    "min_days": 60
+  }
+}

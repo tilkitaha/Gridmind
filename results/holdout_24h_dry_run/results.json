@@ -1,0 +1,149 @@
+{
+  "dry_run": true,
+  "lock_sha256": "f6d3d3e0206cfb08897a5a677b89200657572605d4a818c597ba7d5d40261168",
+  "primary_relative_saving": {
+    "estimate": 0.034721434543995906,
+    "lower95": 0.03261493938336112,
+    "upper95": 0.036897986991813056,
+    "block": 7,
+    "draws": 10000,
+    "seed": 14102026,
+    "dates": 164
+  },
+  "decision": "H1 supported: lower bound exceeds the threshold",
+  "threshold": 0.01,
+  "block_sensitivity": {
+    "7": {
+      "estimate": 0.034721434543995906,
+      "lower95": 0.03261493938336112,
+      "upper95": 0.036897986991813056,
+      "block": 7,
+      "draws": 10000,
+      "seed": 14102026,
+      "dates": 164
+    },
+    "1": {
+      "estimate": 0.034721434543995906,
+      "lower95": 0.033024901134962,
+      "upper95": 0.03651633023686317,
+      "block": 1,
+      "draws": 10000,
+      "seed": 14102026,
+      "dates": 164
+    },
+    "3": {
+      "estimate": 0.034721434543995906,
+      "lower95": 0.03278437590164173,
+      "upper95": 0.0367264993034696,
+      "block": 3,
+      "draws": 10000,
+      "seed": 14102026,
+      "dates": 164
+    },
+    "14": {
+      "estimate": 0.034721434543995906,
+      "lower95": 0.03243475064002239,
+      "upper95": 0.036975204843702196,
+      "block": 14,
+      "draws": 10000,
+      "seed": 14102026,
+      "dates": 164
+    }
+  },
+  "secondary": {
+    "ridge24_minus_ridge4_eur_per_community_day": {
+      "estimate": 0.7223673475252211,
+      "lower95": 0.6644756566122759,
+      "upper95": 0.7817591625225959,
+      "block": 7,
+      "draws": 10000,
+      "seed": 14102026,
+      "dates": 164
+    },
+    "ridge24_minus_persistence24_eur_per_community_day": {
+      "estimate": 0.9131975092439412,
+      "lower95": 0.8185912948113971,
+      "upper95": 0.9997907125512823,
+      "block": 7,
+      "draws": 10000,
+      "seed": 14102026,
+      "dates": 164
+    },
+    "ridge24_share_of_oracle24": 0.40050993210404057,
+    "median_fill_relative_saving": {
+      "estimate": 0.03467506590833961,
+      "lower95": 0.032555370834932325,
+      "upper95": 0.03690388593608325,
+      "block": 7,
+      "draws": 10000,
+      "seed": 14102026,
+      "dates": 164
+    },
+    "losing_households_ridge24": 0
+  },
+  "arms": {
+    "C1/ridge_mpc_24h": {
+      "saving_eur": 113.54708691091362,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 3118.1738603431286,
+      "losing_households": 0,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 39807,
+      "ridge_training_rows": 9442
+    },
+    "C1/ridge_mpc_4h": {
+      "saving_eur": -4.921158083222655,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1317.2254152128162,
+      "losing_households": 4,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 10975,
+      "ridge_training_rows": 9442
+    },
+    "C1/persistence_mpc_24h": {
+      "saving_eur": -36.21730460509273,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 3599.202097024365,
+      "losing_households": 4,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 39807,
+      "ridge_training_rows": 9442
+    },
+    "C1/persistence_mpc_4h": {
+      "saving_eur": -26.133398953007195,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1193.0171352274285,
+      "losing_households": 5,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 10975,
+      "ridge_training_rows": 9442
+    },
+    "C1/oracle_24h": {
+      "saving_eur": 283.50629487364984,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 4077.5083813715382,
+      "losing_households": 0,
+      "stale_previous_decisions": 0,
+      "daily_fallback_slots": 0,
+      "ridge_training_rows": 9442
+    },
+    "C1/oracle_4h": {
+      "saving_eur": 95.15257515252713,
+      "idle_eur": 3270.2302886430825,
+      "throughput_kwh": 1607.3148748247793,
+      "losing_households": 0,
+      "stale_previous_decisions": 0,
+      "daily_fallback_slots": 0,
+      "ridge_training_rows": 9442
+    },
+    "C1/ridge_mpc_24h_median_fill": {
+      "saving_eur": 112.99246358230266,
+      "idle_eur": 3258.6084733332023,
+      "throughput_kwh": 3118.1738603431286,
+      "losing_households": 0,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 39807,
+      "ridge_training_rows": 9442
+    }
+  }
+}
