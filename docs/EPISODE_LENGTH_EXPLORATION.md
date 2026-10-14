@@ -41,7 +41,29 @@ The 24-hour bound is at least as good on every day and higher for all six househ
 ## Interpretation and limits
 
 - The four-hour design leaves roughly two thirds of the perfect-foresight value outside every controller's reach. The retained discrete policies converging to idle, and the small MPC savings, should be read against a 3% ceiling rather than as a general verdict on the methods.
-- These are upper bounds. A causal controller with 24-hour episodes would capture less; whether learned policies benefit is untested.
+- These are upper bounds. Causal MPC results follow below; whether learned policies benefit is untested.
 - The gain comes almost entirely from the assumed time-of-use spread. A different tariff would change it, and no retail bill was observed.
 - Gap filling affects only the 24-hour comparison; the two fills agree to 0.05%. The captured-share table uses the retained 501 episodes without filling.
 - All dates were inspected before this analysis. Any follow-up comparison of controllers needs a protocol fixed before access to genuinely unseen data.
+
+## Causal MPC with 24-hour episodes
+
+```bash
+PYTHONPATH=src python scripts/explore_mpc_24h.py --fill linear
+PYTHONPATH=src python scripts/explore_mpc_24h.py --fill slot_median
+```
+
+Outputs go to `results/exploratory_mpc_24h/<fill>/`. The receding-horizon loop replans every 15 minutes with the same LP. Forecasts read only raw meter rows before the decision time and use the retained Ridge coefficients; the filled series is used only as the settled realized load. Before the new comparison the script reproduces the retained 501-episode persistence (1946.6754 EUR) and Ridge (1939.3432 EUR) MPC costs exactly.
+
+Same 164 days and linear fill (idle 3270.23 EUR); the median fill agrees within 0.6 EUR on every arm:
+
+| Arm | 4 h saving (EUR) | 24 h saving (EUR) | 24 h share of 24 h bound | Households losing, 24 h |
+| --- | --- | --- | --- | --- |
+| Perfect foresight | 95.15 | 283.51 | 100% | 0 |
+| Ridge MPC | −4.92 | **113.55** | **40.1%** | **0** |
+| Persistence MPC | −26.13 | −36.22 | −12.8% | 4 |
+
+- With 24-hour episodes, causal Ridge MPC saves 3.47% of idle cost, more than the four-hour perfect-foresight bound on the same days.
+- Persistence MPC loses money at both lengths: a flat last-value forecast cannot anticipate the evening peak, so a longer horizon only adds cycling. The forecast's daily shape, not the horizon alone, carries the value.
+- Both four-hour MPC arms lose money on these days, unlike on the 501 retained episodes. These days include blocks next to night gaps: 1149 of 15,744 decisions (7.3%) used a stale latest observation because the previous interval was missing, and those blocks were excluded from the retained set.
+- One tariff, one battery, six households and inspected dates. This motivates a pre-registered 24-hour design; it does not confirm one.

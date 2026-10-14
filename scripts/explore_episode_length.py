@@ -40,8 +40,8 @@ def sha(p):
     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 
-def oracle_plan(net, hours):
-    """Battery.mpc_action's LP over the whole horizon with the realized net load."""
+def oracle_plan(net, hours, soc0=None):
+    """Battery.mpc_action's LP over the whole horizon; `net` is realized load or a forecast."""
     H = len(net)
     n = N * H
 
@@ -74,7 +74,7 @@ def oracle_plan(net, hours):
             if t:
                 A[n + r, ix(6, t - 1, i)] = -1
             else:
-                rhs[n + r] = TARGET
+                rhs[n + r] = TARGET if soc0 is None else soc0[i]
             A[2 * n + t, ix(4, t, i)] = 1
             A[2 * n + t, ix(5, t, i)] = -1
             for v, c in [(0, DEGR), (1, DEGR), (2, b), (3, -0.08), (4, FEE / 2), (5, FEE / 2)]:

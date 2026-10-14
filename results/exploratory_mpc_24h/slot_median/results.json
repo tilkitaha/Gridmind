@@ -1,0 +1,68 @@
+{
+  "status": "Exploratory causal MPC on previously inspected data; not a confirmatory comparison",
+  "fill": "slot_median",
+  "days": 164,
+  "inputs": {
+    "data\\later_period\\storenet_h1_h6_2020_15min.csv": "1b285119808dbc517afa19b777d6ea012f458c406b89909999d86ec5a0996c75",
+    "results\\exploratory_episode_length\\results.json": "f0080701a515846fe35e32f68a718fdf68b139e8417a37d0be423fb37924cd81",
+    "results\\forecast_control\\ridge_coefficients.npz": "7345cc5fbc2809124865c12980f2ae4d41877dc0178dacc765531f9cc178bf84",
+    "results/later_period/eligibility.csv": "c7c860780a5e109bc2cd1570af0c78f950d61911fa15b1cd1a70742e1f79b279"
+  },
+  "reproduction_501_episodes": {
+    "persistence": {
+      "cost_eur": 1946.6753833810676,
+      "reference_eur": 1946.6753833810676
+    },
+    "ridge": {
+      "cost_eur": 1939.3432126943549,
+      "reference_eur": 1939.3432126943549
+    }
+  },
+  "idle_eur": 3258.6084733332023,
+  "arms": {
+    "persistence_mpc_4h": {
+      "cost_eur": 3284.8260408973206,
+      "saving_eur": -26.2175675641192,
+      "saving_pct_of_idle": -0.8045632907012447,
+      "oracle_saving_eur": 95.14711259551274,
+      "captured_pct_of_same_length_bound": -27.55476950264874,
+      "throughput_kwh": 1193.0171352274285,
+      "losing_households": 5,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 10975
+    },
+    "persistence_mpc_24h": {
+      "cost_eur": 3295.1741069257155,
+      "saving_eur": -36.565633592514104,
+      "saving_pct_of_idle": -1.1221241794388215,
+      "oracle_saving_eur": 283.3593856682474,
+      "captured_pct_of_same_length_bound": -12.9043311928,
+      "throughput_kwh": 3599.202097024365,
+      "losing_households": 4,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 39807
+    },
+    "ridge_mpc_4h": {
+      "cost_eur": 3263.6285983738226,
+      "saving_eur": -5.02012504062041,
+      "saving_pct_of_idle": -0.15405732482753196,
+      "oracle_saving_eur": 95.14711259551274,
+      "captured_pct_of_same_length_bound": -5.276171713125813,
+      "throughput_kwh": 1317.2254152128164,
+      "losing_households": 4,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 10975
+    },
+    "ridge_mpc_24h": {
+      "cost_eur": 3145.6160097508996,
+      "saving_eur": 112.99246358230224,
+      "saving_pct_of_idle": 3.467506590833947,
+      "oracle_saving_eur": 283.3593856682474,
+      "captured_pct_of_same_length_bound": 39.876026451649636,
+      "throughput_kwh": 3118.1738603431268,
+      "losing_households": 0,
+      "stale_previous_decisions": 1149,
+      "daily_fallback_slots": 39807
+    }
+  }
+}
