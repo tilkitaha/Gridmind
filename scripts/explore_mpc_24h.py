@@ -141,7 +141,7 @@ def main():
         'status': 'Exploratory causal MPC on previously inspected data; not a confirmatory comparison',
         'fill': args.fill,
         'days': len(days),
-        'inputs': {str(p): sha(p) for p in [LATER, BOUNDS, RIDGE, 'results/later_period/eligibility.csv']},
+        'inputs': {Path(p).as_posix(): sha(p) for p in [LATER, BOUNDS, RIDGE, 'results/later_period/eligibility.csv']},
         'reproduction_501_episodes': reproduction,
         'idle_eur': bounds['idle_eur'],
         'arms': summary,

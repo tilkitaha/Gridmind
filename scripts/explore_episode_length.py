@@ -237,7 +237,7 @@ def main():
 
     result = {
         'status': 'Exploratory perfect-foresight bound on previously inspected data; not a controller result',
-        'inputs': {str(p): sha(p) for p in [JUNE, LATER, 'results/later_period/summary.csv',
+        'inputs': {Path(p).as_posix(): sha(p) for p in [JUNE, LATER, 'results/later_period/summary.csv',
                                             'results/later_period/eligibility.csv']},
         'reproduction': {'june_oracle_4h_eur': float(j.oracle_eur.sum()), 'june_reference_eur': JUNE_ORACLE_4H,
                          'later_idle_4h_eur': float(lp.idle_eur.sum()), 'later_reference_eur': LATER_IDLE_4H},

@@ -57,10 +57,10 @@ def main():
     payload = {
         'created_utc': datetime.now(UTC).isoformat(),
         'dry_run': args.dry_run,
-        'protocol': {'path': str(PROTOCOL), 'sha256': sha(PROTOCOL), 'frozen': protocol_frozen(PROTOCOL)},
+        'protocol': {'path': PROTOCOL.as_posix(), 'sha256': sha(PROTOCOL), 'frozen': protocol_frozen(PROTOCOL)},
         'git_commit': git('rev-parse', 'HEAD'),
         'households': args.households,
-        'data': {'path': args.data, 'sha256': sha(args.data)},
+        'data': {'path': Path(args.data).as_posix(), 'sha256': sha(args.data)},
         'eligibility_sha256': sha(out / 'eligibility.json'),
         'code': {p: sha(p) for p in CODE},
         'rules': RULES,
