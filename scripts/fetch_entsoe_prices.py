@@ -20,6 +20,7 @@ import pandas as pd
 
 from gridmind_research.entsoe import API, parse_prices, query, split_days
 from gridmind_research.polish_market import delivery_index, validate_day
+from gridmind_research.polish_pilot import refuse_test_window
 
 
 def main():
@@ -31,6 +32,10 @@ def main():
     token = os.environ.get('ENTSOE_TOKEN')
     if not token:
         raise SystemExit('Set ENTSOE_TOKEN in the environment; never pass it on the command line or in a file')
+    try:
+        refuse_test_window(args.start, args.end)
+    except PermissionError as e:
+        raise SystemExit(str(e)) from None
     out = Path(args.out)
     (out / 'raw').mkdir(parents=True, exist_ok=True)
     (out / 'days').mkdir(exist_ok=True)
@@ -54,20 +59,24 @@ def main():
         record = {'month': str(month), 'query': q, 'retrieved_utc': datetime.now(UTC).isoformat(),
                   'raw_file': raw_path.name, 'raw_sha256': hashlib.sha256(body).hexdigest(), 'days': {}}
         try:
-            frame, record['resolutions'] = parse_prices(body)
+            frame, record['resolutions'], record['currency'] = parse_prices(body)
         except LookupError as e:
             record['error'] = str(e)
             records.append(record)
             continue
+        # Non-EUR prices are kept unconverted in their own folder; the contract needs EUR.
+        column = f"value_{record['currency'].lower()}_mwh"
+        folder = 'days' if record['currency'] == 'EUR' else f"days_{record['currency'].lower()}"
+        (out / folder).mkdir(exist_ok=True)
         parsed = split_days(frame)
         for day in group:
             day = str(day.date())
             try:
-                validate_day(parsed[day], day)
+                validate_day(parsed[day].rename(columns={column: 'value_eur_mwh'}), day)
             except (KeyError, ValueError) as e:
                 record['days'][day] = f'excluded: {e}'
                 continue
-            path = out / 'days' / f'{day}.csv'
+            path = out / folder / f'{day}.csv'
             parsed[day].to_csv(path, index=False, lineterminator='\n')
             record['days'][day] = hashlib.sha256(path.read_bytes()).hexdigest()
         records.append(record)

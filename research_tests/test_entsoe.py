@@ -27,7 +27,7 @@ def utc_bounds(day):
 class EntsoeTests(unittest.TestCase):
     def test_full_quarter_hour_day_passes_the_contract(self):
         s, e, n = utc_bounds('2026-07-01')
-        frame, res = parse_prices(document([(s, e, 'PT15M', {k: 50 + k for k in range(1, n + 1)})]))
+        frame, res, _ = parse_prices(document([(s, e, 'PT15M', {k: 50 + k for k in range(1, n + 1)})]))
         self.assertEqual(res, ['PT15M'])
         day = split_days(frame)['2026-07-01']
         values = validate_day(day, '2026-07-01')
@@ -38,12 +38,12 @@ class EntsoeTests(unittest.TestCase):
         for day, n in [('2026-03-29', 92), ('2026-10-25', 100)]:
             s, e, m = utc_bounds(day)
             self.assertEqual(m, n)
-            frame, _ = parse_prices(document([(s, e, 'PT15M', {k: 1.0 for k in range(1, n + 1)})]))
+            frame, _, _ = parse_prices(document([(s, e, 'PT15M', {k: 1.0 for k in range(1, n + 1)})]))
             self.assertEqual(len(validate_day(split_days(frame)[day], day)), n)
 
     def test_a03_repeats_omitted_prices(self):
         s, e, _ = utc_bounds('2026-07-01')
-        frame, _ = parse_prices(document([(s, e, 'PT15M', {1: 10.0, 5: -3.5, 90: 7.0})], curve='A03'))
+        frame, _, _ = parse_prices(document([(s, e, 'PT15M', {1: 10.0, 5: -3.5, 90: 7.0})], curve='A03'))
         v = validate_day(split_days(frame)['2026-07-01'], '2026-07-01')
         self.assertEqual(list(v[:6]), [10, 10, 10, 10, -3.5, -3.5])
         self.assertEqual(v[-1], 7.0)
@@ -52,7 +52,7 @@ class EntsoeTests(unittest.TestCase):
 
     def test_hourly_prices_are_not_split_into_quarter_hours(self):
         s, e, _ = utc_bounds('2025-07-01')
-        frame, res = parse_prices(document([(s, e, 'PT60M', {k: 1.0 for k in range(1, 25)})]))
+        frame, res, _ = parse_prices(document([(s, e, 'PT60M', {k: 1.0 for k in range(1, 25)})]))
         self.assertEqual(res, ['PT60M'])
         self.assertEqual(len(frame), 24)
         with self.assertRaises(ValueError):
@@ -60,8 +60,13 @@ class EntsoeTests(unittest.TestCase):
 
     def test_rejects_units_conflicts_and_acknowledgements(self):
         s, e, _ = utc_bounds('2026-07-01')
+        frame, _, currency = parse_prices(document([(s, e, 'PT15M', {1: 400.0})], curve='A03', currency='PLN'))
+        self.assertEqual(currency, 'PLN')
+        self.assertEqual(list(frame.columns), ['timestamp_utc', 'value_pln_mwh'])  # kept, never converted
         with self.assertRaises(ValueError):
-            parse_prices(document([(s, e, 'PT15M', {1: 1.0})], curve='A03', currency='PLN'))
+            parse_prices(document([(s, e, 'PT15M', {1: 1.0})], curve='A03', unit='KWH'))
+        with self.assertRaises(ValueError):
+            parse_prices(document([(s, e, 'PT15M', {1: -650.0})], curve='A03'))  # below the SDAC floor
         twice = document([(s, e, 'PT15M', {1: 1.0}), (s, e, 'PT15M', {1: 2.0})], curve='A03')
         with self.assertRaises(ValueError):
             parse_prices(twice)

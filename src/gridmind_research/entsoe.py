@@ -12,6 +12,8 @@ import pandas as pd
 
 API = 'https://web-api.tp.entsoe.eu/api'
 PL = '10YPL-AREA-----S'
+# Harmonised SDAC clearing-price limits; the floor is -600 EUR/MWh from the 28 May 2026 trading date.
+PRICE_LIMITS_EUR_MWH = (-600.0, 4000.0)
 RESOLUTION = {'PT15M': pd.Timedelta(minutes=15), 'PT30M': pd.Timedelta(minutes=30), 'PT60M': pd.Timedelta(hours=1)}
 
 
@@ -41,19 +43,26 @@ def _all(node, name):
 
 
 def parse_prices(xml_bytes):
-    """Return (frame, resolutions); raise on acknowledgements, foreign units or conflicts."""
+    """Return (frame, resolutions, currency); raise on acknowledgements, mixed units or conflicts.
+
+    EUR prices come as value_eur_mwh, the realized-price contract. Any other currency is kept
+    as value_<currency>_mwh, never converted here: a conversion needs a recorded FX source.
+    """
     root = ET.fromstring(xml_bytes)
     if _local(root.tag) == 'Acknowledgement_MarketDocument':
         text = ' '.join(t.text or '' for t in _all(root, 'text'))
         raise LookupError(f'ENTSO-E acknowledgement: {text.strip()}')
     if _local(root.tag) != 'Publication_MarketDocument':
         raise ValueError(f'Unexpected document {_local(root.tag)}')
-    values, resolutions = {}, set()
+    values, resolutions, currencies = {}, set(), set()
     for series in _all(root, 'TimeSeries'):
         currency = _find(series, 'currency_Unit.name')
         unit = _find(series, 'price_Measure_Unit.name')
-        if currency is None or currency.text != 'EUR' or unit is None or unit.text != 'MWH':
-            raise ValueError('Expected EUR per MWh')
+        if currency is None or not currency.text or unit is None or unit.text != 'MWH':
+            raise ValueError('Expected a currency per MWh')
+        currencies.add(currency.text)
+        if len(currencies) > 1:
+            raise ValueError(f'Mixed currencies {sorted(currencies)}')
         curve = _find(series, 'curveType')
         curve = curve.text if curve is not None else 'A01'
         if curve not in ('A01', 'A03'):
@@ -91,9 +100,15 @@ def parse_prices(xml_bytes):
                 values[t] = current
     if not values:
         raise LookupError('No price points in response')
+    (currency,) = currencies
+    prices = [values[t] for t in sorted(values)]
+    if currency == 'EUR':
+        low, high = PRICE_LIMITS_EUR_MWH
+        if min(prices) < low or max(prices) > high:
+            raise ValueError('Price outside the harmonised SDAC limits')
     frame = pd.DataFrame({'timestamp_utc': [t.isoformat() for t in sorted(values)],
-                          'value_eur_mwh': [values[t] for t in sorted(values)]})
-    return frame, sorted(resolutions)
+                          f'value_{currency.lower()}_mwh': prices})
+    return frame, sorted(resolutions), currency
 
 
 def split_days(frame, zone='Europe/Warsaw'):
