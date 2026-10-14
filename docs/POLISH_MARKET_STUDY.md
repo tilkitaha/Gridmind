@@ -18,6 +18,10 @@ PYTHONPATH=src python scripts/evaluate_polish_day.py --day YYYY-MM-DD --forecast
 
 The command fixes the forecast-based schedule before reading realized prices. It refuses to overwrite an existing output. Inputs are required; no invented market data are bundled. Evaluated profit assumes full order acceptance, no imbalance settlement and no network/exchange charges. The default zero ledger monetary charge is an explicit assumption; local gas has not been converted to a market fee.
 
+## Price download (added 14 October 2026)
+
+`src/gridmind_research/entsoe.py` parses ENTSO-E A44 day-ahead responses into the realized-price contract above: A01 and A03 curves (A03 omits repeated prices), 15/30/60-minute resolutions, EUR/MWh only, conflicting duplicates rejected, and hourly periods never split into quarter-hours, so pre-15-minute days fail `validate_day` instead of being silently converted. `scripts/fetch_entsoe_prices.py` reads the token only from `ENTSOE_TOKEN`, stores every raw response with its SHA-256, retrieval time and token-free query in `provenance.json`, and writes per-day CSVs only for complete delivery days. Synthetic XML tests are in `research_tests/test_entsoe.py`. The parser has not yet seen a live response; check the first download by hand. It records the version published at retrieval time and does not audit earlier publication versions.
+
 ## Data and sources
 
 ENTSO-E zone `10YPL-AREA-----S`, energy prices 12.1.D, is the proposed source. Candidate training: 2025-10-01 to 2026-05-31; validation: June 2026; candidate test: July-August 2026. No raw data, published-version audit or independent-test access audit has been completed. The proposed protocol is therefore not data-frozen. API access requires registration and a security token; do not put tokens in source files or the archive.
