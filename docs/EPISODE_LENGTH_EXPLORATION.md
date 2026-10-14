@@ -89,3 +89,25 @@ Outputs go to `results/exploratory_rl_24h/`. The script keeps the retained `Abla
 - No validation checkpoint was positive. All ten continuous policies selected their first checkpoint (update 10), and validation did not improve afterwards.
 - All twelve non-idle policies have the same throughput, 1576.47 kWh (1.602 kWh per battery-day, one full swing out and back). The action trace (`scripts/trace_rl_24h.py`, `action_trace.json`) explains why: no policy conditions on time of day. Eleven request a discharge at every step, so the battery empties between 00:00 and 04:00 at the 0.20 EUR tariff, sits at 0.2 kWh through the 16:00–20:00 peak, and is recharged by the terminal projection after 23:00 at 0.30 EUR. One (discrete IPPO, seed 33) requests a charge at every step and holds a full battery through the peak. In both cases the schedule is set by the state-of-charge bounds and the terminal projection, not by the policy.
 - The four-hour limit therefore does not explain the learner result on its own: the longer horizon opens value that Ridge MPC captures but these learners do not. The constant discharge is consistent with myopic credit assignment: a discharge lowers the current bill at once, while the forced recharge that pays it back arrives up to about 90 steps later, beyond what GAE 0.95 propagates. The unchanged 300-update budget may also contribute. This is a diagnosis from the trace, not a tested cause; a one-variable follow-up (for example GAE 1.0, or a terminal state-of-charge value in the reward) would test it.
+
+## Follow-up: GAE λ = 1.0
+
+```bash
+PYTHONPATH=src python scripts/explore_rl_24h.py --gae-lambda 1.0 --out results/exploratory_rl_24h_lambda1
+PYTHONPATH=src:scripts python scripts/trace_rl_24h.py --dir results/exploratory_rl_24h_lambda1
+```
+
+One variable changes: the GAE λ in the advantage estimate, from 0.95 to 1.0 (Monte Carlo returns), to test the myopic credit-assignment diagnosis above. Everything else, including seeds, data, architecture, budget and the May selection rule, is identical. **This λ was chosen after seeing the λ = 0.95 test results on the same days**, so this is a post hoc diagnostic, not a tuned or confirmed result.
+
+| Family (5 seeds each) | λ = 0.95 mean (EUR) | λ = 1.0 mean (EUR) | λ = 1.0 range (EUR) | λ = 1.0 idle seeds |
+| --- | --- | --- | --- | --- |
+| Discrete IPPO | −49.25 | 0.73 | −2.58 to 3.98 | 2 |
+| Discrete MAPPO | 0.00 | 0.86 | 0.00 to 4.31 | 4 |
+| Continuous IPPO | −122.43 | 16.40 | −120.58 to 100.70 | 0 |
+| Continuous MAPPO | −121.36 | −14.11 | −117.72 to 99.99 | 0 |
+| *Ridge MPC, 24 h* | *113.55* | | | |
+
+- Five of ten continuous policies now save 65.78–100.70 EUR, compared with none at λ = 0.95. Their trace shows the expected time-of-day pattern: charge between 00:00 and 04:00 at 0.20 EUR, hold, discharge between 17:00 and 20:00 at 0.42 EUR. The other five keep the constant-discharge pattern and lose 43.61–120.58 EUR.
+- The May validation score has the same sign as the test saving for 19 of 20 policies. All 9 policies with positive validation are non-idle; 8 of them save money in the test (mean 49.34 EUR), and all 5 with negative validation lose.
+- Even the best learners stay below Ridge MPC (113.55 EUR). Four of the five winners leave one or two households worse off than idle; Ridge MPC leaves none.
+- The result supports credit assignment as a major cause of the earlier failure but does not establish it. Seed variance is large (−120.58 to 100.70 EUR within one family), and the comparison rests on inspected days, six households and one tariff.

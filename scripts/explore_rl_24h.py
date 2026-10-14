@@ -104,7 +104,7 @@ def evaluate(model, eps):
 
 def train(job):
     """ablations.train with T steps, no fairness term."""
-    kind, action, seed, train_eps, validation = job
+    kind, action, seed, train_eps, validation, lam = job
     torch.set_num_threads(1)
     torch.manual_seed(seed)
     rng = np.random.default_rng(seed)
@@ -129,7 +129,7 @@ def train(job):
         val, rew = torch.stack(vs), torch.stack(rs)
         adv, gae, nextv = torch.zeros_like(rew), torch.zeros_like(rew[0]), torch.zeros_like(val[0])
         for t in reversed(range(T)):
-            gae = rew[t] + nextv - val[t] + .95 * gae
+            gae = rew[t] + nextv - val[t] + lam * gae
             adv[t] = gae
             nextv = val[t]
         ret = adv + val
@@ -164,8 +164,14 @@ def main():
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument('--smoke', help='write a 10-update, one-seed check to this directory instead')
+    ap.add_argument('--gae-lambda', type=float, default=0.95, help='ablations.py uses 0.95')
+    ap.add_argument('--out', help='result directory; required when --gae-lambda differs from 0.95')
     args = ap.parse_args()
     global OUT, UPDATES, SEEDS, VARIANTS
+    if args.gae_lambda != 0.95:
+        if not args.out:
+            raise SystemExit('A changed GAE lambda must write to its own --out directory')
+        OUT = Path(args.out)
     if args.smoke:
         OUT, UPDATES, SEEDS, VARIANTS = Path(args.smoke), 10, [11], [('IPPO', 'discrete'), ('MAPPO', 'continuous')]
     OUT.mkdir(parents=True, exist_ok=True)
@@ -178,7 +184,7 @@ def main():
               'test': ('2020-07-01', '2020-12-31')}.items()}
     assert len(split['test']) == 164
 
-    jobs = [(kind, action, seed, split['train'], split['validation']) for kind, action in VARIANTS for seed in SEEDS]
+    jobs = [(kind, action, seed, split['train'], split['validation'], args.gae_lambda) for kind, action in VARIANTS for seed in SEEDS]
     with Pool(8) as pool:
         trained = pool.map(train, jobs)
 
@@ -217,7 +223,7 @@ def main():
     result = {
         'status': 'Exploratory 24-hour learners on previously inspected data; not confirmatory',
         'inputs': {p.as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in [DATA, MPC]},
-        'episodes': {k: len(v) for k, v in split.items()}, 'updates': UPDATES, 'episodes_per_update': 12,
+        'episodes': {k: len(v) for k, v in split.items()}, 'updates': UPDATES, 'episodes_per_update': 12, 'gae_lambda': args.gae_lambda,
         'torch': torch.__version__,
         'reference_24h': {'ridge_mpc_saving_eur': mpc['ridge_mpc_24h']['saving_eur'], 'oracle_saving_eur': bound},
         'runs': runs,

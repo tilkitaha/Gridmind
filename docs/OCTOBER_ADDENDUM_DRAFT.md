@@ -13,7 +13,7 @@ The thesis concludes that the retained learners do not beat MPC and that the dis
 | 1 | On the 501 retained July–December episodes, perfect foresight saves only 60.20 EUR (3.09% of idle). Ridge MPC captures 13.6% of that bound, persistence MPC 1.4%, the 300-update discrete learners 0%. | `docs/EPISODE_LENGTH_EXPLORATION.md`, `results/exploratory_episode_length/` |
 | 2 | On 164 days with at least 80 of 96 observed slots, 24-hour episodes raise the perfect-foresight saving from 95.15 to 283.51 EUR (2.98 times). | same |
 | 3 | Causal Ridge MPC with 24-hour episodes saves 113.55 EUR (3.47% of idle, 40% of the bound) with no household worse off. Persistence MPC loses money at both lengths. | `results/exploratory_mpc_24h/` |
-| 4 | The retained IPPO/MAPPO learners with 24-hour episodes and otherwise unchanged settings do not exploit the larger value: 8 of 10 discrete policies stay idle, and the other 2 and all 10 continuous policies lose 73 to 173 EUR. No validation checkpoint was positive. Two runs are bit-identical. | `results/exploratory_rl_24h/` |
+| 4 | The retained IPPO/MAPPO learners with 24-hour episodes and otherwise unchanged settings do not exploit the larger value: 8 of 10 discrete policies stay idle, and the other 2 and all 10 continuous policies lose 73 to 173 EUR. No validation checkpoint was positive. Two runs are bit-identical. A post hoc change of GAE λ from 0.95 to 1.0 lets 5 of 10 continuous policies learn night charging and peak discharge and save 65.78–100.70 EUR, still below Ridge MPC and with up to two households worse off. | `results/exploratory_rl_24h/` |
 | 5 | No 2020 day has all 96 quarter-hours for H1–H6; gaps concentrate between 00:00 and 05:00. Two gap fills agree within 0.6 EUR on every arm. | data audit in the exploration document |
 
 Every new pipeline first reproduces retained numbers exactly (June oracle 153.7614 EUR; later-period idle 1947.4997, persistence MPC 1946.6754 and Ridge MPC 1939.3432 EUR).
@@ -22,7 +22,7 @@ Every new pipeline first reproduces retained numbers exactly (June oracle 153.76
 
 - It reframes the negative learner result: under four-hour resets the attainable value is about 3% of the bill, so near-idle behaviour is close to what the design allows.
 - It shows that horizon and forecast shape interact: a longer horizon helps only with a forecast that anticipates the evening peak.
-- It shows that the learner result is not only a design artefact: with the larger value available, MPC captures 40% of it and the learners none.
+- It shows that the learner result is not only a design artefact: with the larger value available, MPC captures 40% of it and the retained learners none. A post hoc change to credit assignment (GAE λ = 1.0) lets half of the continuous learners capture up to 36%, which points to the training setup rather than the method family.
 - It does not establish 24-hour superiority on unseen data, other tariffs, other batteries or the Polish market.
 
 ## 4. Proposed next step: held-out households

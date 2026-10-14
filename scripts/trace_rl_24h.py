@@ -4,6 +4,7 @@ Read-only on results/exploratory_rl_24h/models. Run from project root with
 PYTHONPATH=src:scripts (src;scripts on Windows).
 """
 import json
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -16,12 +17,16 @@ from gridmind_research.holdout import fill, net_load
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--dir', default=str(OUT), help='result directory holding models/')
+    root = Path(ap.parse_args().dir)
     houses = [f'H{i}' for i in range(1, 7)]
     raw = net_load(pd.read_csv(DATA, index_col=0, parse_dates=True), houses)
     test = episodes(raw, fill(raw, 'linear'), days(raw, '2020-07-01', '2020-12-31'))
     hours = np.arange(T) / 4
     out = {}
-    for path in sorted((OUT / 'models').glob('*.pt')):
+    for path in sorted((root / 'models').glob('*.pt')):
         s = torch.load(path, weights_only=False)
         m = AblationPolicy(s['kind'], s['action'], False)
         m.load_state_dict(s['state_dict'])
@@ -47,7 +52,7 @@ def main():
             'applied_by_hour_kwh': [float(applied[h * 4:(h + 1) * 4].sum()) for h in range(24)],
         }
     out['_tariff_by_hour_eur'] = [float(tariff(h)) for h in range(24)]
-    (OUT / 'action_trace.json').write_text(json.dumps(out, indent=2), newline='\n')
+    (root / 'action_trace.json').write_text(json.dumps(out, indent=2), newline='\n')
     for k, v in out.items():
         if not k.startswith('_'):
             print(k, {x: round(y, 3) for x, y in v.items() if not isinstance(y, list)})
