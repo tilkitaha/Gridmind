@@ -1,0 +1,203 @@
+{
+  "status": "Development days Jan-Jun 2026; rule setting chosen on Jan-May; June is validation, not a test; test window not read",
+  "forecast": "LEAR-style LASSO walk-forward, prices only (results/polish_rl/lear_forecasts.csv)",
+  "days": 180,
+  "june_days": 30,
+  "controllers": {
+    "june": {
+      "oracle": {
+        "eur_per_day": 274.3224682675439,
+        "captured_pct_of_oracle": 100.0,
+        "losing_days": 0
+      },
+      "milp_lear": {
+        "eur_per_day": 236.08298164589115,
+        "captured_pct_of_oracle": 86.06038839503361,
+        "losing_days": 1
+      },
+      "rule_lear_k10": {
+        "eur_per_day": 167.75203464450604,
+        "captured_pct_of_oracle": 61.151401744059534,
+        "losing_days": 1
+      },
+      "do_nothing": {
+        "eur_per_day": 0.0,
+        "captured_pct_of_oracle": 0.0,
+        "losing_days": 0
+      }
+    },
+    "jan_may": {
+      "oracle": {
+        "eur_per_day": 217.3900024933057,
+        "captured_pct_of_oracle": 100.0,
+        "losing_days": 0
+      },
+      "milp_lear": {
+        "eur_per_day": 163.5347798979687,
+        "captured_pct_of_oracle": 75.22644924897342,
+        "losing_days": 16
+      },
+      "rule_lear_k10": {
+        "eur_per_day": 111.88355780701754,
+        "captured_pct_of_oracle": 51.46674480141417,
+        "losing_days": 16
+      },
+      "do_nothing": {
+        "eur_per_day": 0.0,
+        "captured_pct_of_oracle": 0.0,
+        "losing_days": 0
+      }
+    },
+    "june_rule_minus_milp": {
+      "eur_per_day": -68.3309470013851,
+      "ci95": [
+        -94.1715336946417,
+        -46.30864179791382
+      ]
+    },
+    "rule_jan_may_by_slots": {
+      "2": 54.556915235457076,
+      "4": 95.61320887626965,
+      "6": 108.73875545925672,
+      "8": 111.29658482375346,
+      "10": 111.88355780701754,
+      "12": 109.75010684856883,
+      "16": 105.38562445071564,
+      "20": 96.54381078289475,
+      "24": 87.1116947980148,
+      "32": 56.884825737303814
+    },
+    "rule_selected_slots": 10
+  },
+  "sensitivity": {
+    "days": 180,
+    "oracle_eur_per_day": 226.87874678901207,
+    "milp_lear_eur_per_day": 175.62614685595574,
+    "lear_error_scaled": [
+      {
+        "scale": 0.0,
+        "mae_eur_mwh": 0.0,
+        "eur_per_day": 226.87874678901207,
+        "captured_pct_of_oracle": 100.0
+      },
+      {
+        "scale": 0.25,
+        "mae_eur_mwh": 6.300943642944597,
+        "eur_per_day": 223.52615477041027,
+        "captured_pct_of_oracle": 98.52229789433756
+      },
+      {
+        "scale": 0.5,
+        "mae_eur_mwh": 12.601887285889195,
+        "eur_per_day": 215.0422169240536,
+        "captured_pct_of_oracle": 94.78288291323912
+      },
+      {
+        "scale": 0.75,
+        "mae_eur_mwh": 18.902830928833794,
+        "eur_per_day": 200.8534140531703,
+        "captured_pct_of_oracle": 88.52896840088584
+      },
+      {
+        "scale": 1.0,
+        "mae_eur_mwh": 25.20377457177839,
+        "eur_per_day": 175.62614685595574,
+        "captured_pct_of_oracle": 77.40969541729744
+      },
+      {
+        "scale": 1.25,
+        "mae_eur_mwh": 31.504718214722985,
+        "eur_per_day": 109.86915430834493,
+        "captured_pct_of_oracle": 48.426375702136056
+      },
+      {
+        "scale": 1.5,
+        "mae_eur_mwh": 37.80566185766759,
+        "eur_per_day": 28.365794610649516,
+        "captured_pct_of_oracle": 12.502623102475326
+      },
+      {
+        "scale": 2.0,
+        "mae_eur_mwh": 50.40754914355678,
+        "eur_per_day": -85.94286939202438,
+        "captured_pct_of_oracle": -37.880528964640185
+      }
+    ],
+    "independent_noise": [
+      {
+        "sigma_eur_mwh": 5.0,
+        "mae_eur_mwh": 3.9825795070930767,
+        "eur_per_day": 220.9982021196587,
+        "eur_per_day_by_seed": [
+          221.0176792552517,
+          221.0003637888582,
+          220.9765633148662
+        ],
+        "captured_pct_of_oracle": 97.40806719334446
+      },
+      {
+        "sigma_eur_mwh": 10.0,
+        "mae_eur_mwh": 7.9651590141861535,
+        "eur_per_day": 200.7546017560853,
+        "eur_per_day_by_seed": [
+          200.76120004684142,
+          200.658967175381,
+          200.84363804603348
+        ],
+        "captured_pct_of_oracle": 88.4854154905831
+      },
+      {
+        "sigma_eur_mwh": 20.0,
+        "mae_eur_mwh": 15.930318028372307,
+        "eur_per_day": 123.10539254097428,
+        "eur_per_day_by_seed": [
+          124.25074412905906,
+          122.39617052016017,
+          122.6692629737036
+        ],
+        "captured_pct_of_oracle": 54.26043394688585
+      },
+      {
+        "sigma_eur_mwh": 30.0,
+        "mae_eur_mwh": 23.895477042558458,
+        "eur_per_day": 56.07492159866513,
+        "eur_per_day_by_seed": [
+          57.418828755097884,
+          55.55065941241552,
+          55.25527662848199
+        ],
+        "captured_pct_of_oracle": 24.71581071047281
+      },
+      {
+        "sigma_eur_mwh": 40.0,
+        "mae_eur_mwh": 31.860636056744614,
+        "eur_per_day": 4.095376071804309,
+        "eur_per_day_by_seed": [
+          5.786685163512008,
+          2.201442360822724,
+          4.298000691078195
+        ],
+        "captured_pct_of_oracle": 1.8050946286356389
+      },
+      {
+        "sigma_eur_mwh": 60.0,
+        "mae_eur_mwh": 47.790954085116915,
+        "eur_per_day": -63.47484442562436,
+        "eur_per_day_by_seed": [
+          -61.95043548890025,
+          -64.47954601608168,
+          -63.99455177189116
+        ],
+        "captured_pct_of_oracle": -27.977430818874083
+      }
+    ],
+    "noise_seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "inputs_sha256": {
+    "lear_forecasts.csv": "c8176b5309f46ad4076fd3f708af043c12776537fb75376c9f61c2d2f13de055"
+  }
+}

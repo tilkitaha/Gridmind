@@ -41,6 +41,18 @@ def step_profit(ac, price):
     return (-price * ac - SPEC.degradation_eur_mwh * np.abs(ac)) * DT
 
 
+def rule_profit(forecast, price, k):
+    """Threshold rule: full charge in the k cheapest forecast slots, full discharge in the k dearest, clipped to physics."""
+    order = np.argsort(forecast, kind='stable')
+    want = np.zeros(T)
+    want[order[:k]], want[order[len(order) - k:]] = P, -P
+    energy, total = np.array([E0]), 0.0
+    for t in range(T):
+        energy, ac = project(energy, np.array([want[t]]), T - t)
+        total += step_profit(ac, price[t])[0]
+    return total
+
+
 def observe(forecast, energy, t):
     """Battery state, time left and the forecast from now to the end of the day, scaled per day."""
     f = np.asarray(forecast)

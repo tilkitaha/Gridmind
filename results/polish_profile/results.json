@@ -1,0 +1,136 @@
+{
+  "status": "Exploratory: designed after the June PPO results; development days Jan-Jun 2026; test window not read",
+  "days": 180,
+  "oracle_eur_per_day": 226.87874678901207,
+  "methods": {
+    "lear": {
+      "mae_eur_mwh": 25.20377457177839,
+      "eur_per_day": 175.62614685595574,
+      "captured_pct_of_oracle": 77.40969541729744,
+      "losing_days": 17,
+      "eur_per_day_by_month": {
+        "1": 114.49520664931653,
+        "2": 65.94617778059464,
+        "3": 227.15935316482006,
+        "4": 213.38452291378124,
+        "5": 190.90504252747752,
+        "6": 236.08298164589115
+      },
+      "june_eur_per_day": 236.08298164589115
+    },
+    "naive_d1": {
+      "mae_eur_mwh": 31.16849016203704,
+      "eur_per_day": 155.12959446127664,
+      "captured_pct_of_oracle": 68.375551547603,
+      "losing_days": 23,
+      "eur_per_day_by_month": {
+        "1": 86.30187452808072,
+        "2": 51.62221394316389,
+        "3": 208.73506275046176,
+        "4": 204.35122106532788,
+        "5": 164.53847659503182,
+        "6": 210.3088537777009
+      },
+      "june_eur_per_day": 210.3088537777009,
+      "minus_lear_eur_per_day": -20.496552394679135,
+      "minus_lear_ci95": [
+        -28.92116694124875,
+        -12.315190426835661
+      ],
+      "months_above_lear": 0,
+      "mae_dm_vs_lear": [
+        5.866002826795073,
+        4.464261871361105e-09
+      ]
+    },
+    "profile_7d": {
+      "mae_eur_mwh": 31.29206183862434,
+      "eur_per_day": 177.16166356667446,
+      "captured_pct_of_oracle": 78.08649601340912,
+      "losing_days": 18,
+      "eur_per_day_by_month": {
+        "1": 108.91764683506847,
+        "2": 59.67397171052638,
+        "3": 230.88235199503697,
+        "4": 223.64185016447377,
+        "5": 196.4348133003083,
+        "6": 237.21919683748854
+      },
+      "june_eur_per_day": 237.21919683748854,
+      "minus_lear_eur_per_day": 1.5355167107186742,
+      "minus_lear_ci95": [
+        -3.2654394625822434,
+        6.186488731172085
+      ],
+      "months_above_lear": 4,
+      "mae_dm_vs_lear": [
+        6.002795892236101,
+        1.9394836911183007e-09
+      ]
+    },
+    "profile_14d": {
+      "mae_eur_mwh": 31.6958949239418,
+      "eur_per_day": 175.95050794946533,
+      "captured_pct_of_oracle": 77.55266213326367,
+      "losing_days": 20,
+      "eur_per_day_by_month": {
+        "1": 102.64166875726042,
+        "2": 54.4209634033687,
+        "3": 229.9199046525855,
+        "4": 221.42276597818562,
+        "5": 201.58685209040752,
+        "6": 239.19800634695295
+      },
+      "june_eur_per_day": 239.19800634695295,
+      "minus_lear_eur_per_day": 0.324361093509535,
+      "minus_lear_ci95": [
+        -5.997634581551541,
+        6.404306593420563
+      ],
+      "months_above_lear": 4,
+      "mae_dm_vs_lear": [
+        5.952902910724344,
+        2.6342758651413323e-09
+      ]
+    },
+    "profile_28d": {
+      "mae_eur_mwh": 32.42186334738757,
+      "eur_per_day": 172.07134940231617,
+      "captured_pct_of_oracle": 75.84286842096121,
+      "losing_days": 18,
+      "eur_per_day_by_month": {
+        "1": 104.9371246537397,
+        "2": 44.68941959833803,
+        "3": 219.98219681671293,
+        "4": 212.33503530355497,
+        "5": 200.56676702707537,
+        "6": 242.71338459833802
+      },
+      "june_eur_per_day": 242.71338459833802,
+      "minus_lear_eur_per_day": -3.5547974536395923,
+      "minus_lear_ci95": [
+        -10.89021298276874,
+        3.4452741876755133
+      ],
+      "months_above_lear": 2,
+      "mae_dm_vs_lear": [
+        6.708955713604665,
+        1.9602214312747054e-11
+      ]
+    }
+  },
+  "june_fixed_schedule": {
+    "may_mean": {
+      "eur_per_day": 243.3384533333334,
+      "losing_days": 0
+    },
+    "jan_may_mean": {
+      "eur_per_day": 156.9588429547554,
+      "losing_days": 2
+    }
+  },
+  "june_fixed_schedule_note": "One schedule, planned once on the mean price per quarter-hour of May (or January-May), repeated every June day",
+  "inputs_sha256": {
+    "lear_forecasts.csv": "c8176b5309f46ad4076fd3f708af043c12776537fb75376c9f61c2d2f13de055"
+  }
+}

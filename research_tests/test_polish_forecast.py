@@ -12,6 +12,7 @@ from gridmind_research.polish_forecast import (
     local_slots,
     naive,
     price_matrix,
+    profile,
 )
 from gridmind_research.polish_market import delivery_index
 
@@ -48,6 +49,8 @@ class PolishForecastTests(unittest.TestCase):
         np.testing.assert_array_equal(naive(m, day, 1), naive(changed, day, 1))
         np.testing.assert_allclose(lear(m, day), lear(changed, day))
         np.testing.assert_allclose(GBM()(m, day), GBM()(changed, day))
+        np.testing.assert_array_equal(profile(m, day, 7), profile(changed, day, 7))
+        np.testing.assert_allclose(profile(m, day, 2), m.iloc[78:80].mean(0).to_numpy())
 
     def test_exogenous_models_use_only_inputs_available_at_the_gate(self):
         m = synthetic_matrix()

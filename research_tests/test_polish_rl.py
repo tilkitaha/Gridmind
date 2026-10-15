@@ -11,6 +11,7 @@ from gridmind_research.polish_rl import (
     T,
     observe,
     project,
+    rule_profit,
     run_days,
     step_profit,
     train,
@@ -53,6 +54,15 @@ class PolishRLTests(unittest.TestCase):
         b, tb = run_days(m, f, np.stack([prices(6), prices(7)]))
         np.testing.assert_array_equal(ta, tb)
         self.assertFalse(np.allclose(a, b))
+
+    def test_threshold_rule_is_bounded_by_the_milp_and_idles_with_no_slots(self):
+        for seed in range(3):
+            p = prices(seed)
+            best = realized_profit(optimize_schedule(p), p)
+            self.assertEqual(rule_profit(p, p, 0), 0.0)
+            for k in (4, 10, 24):
+                self.assertLessEqual(rule_profit(p, p, k), best + 1e-6)
+            self.assertGreater(rule_profit(p, p, 10), 0.0)
 
     def test_short_training_runs_and_selects_a_checkpoint(self):
         f = np.stack([prices(s) for s in range(12)])

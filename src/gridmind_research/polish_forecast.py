@@ -81,6 +81,12 @@ def naive(m, day, lag):
     return m.loc[prev].to_numpy() if prev in m.index else None
 
 
+def profile(m, day, window):
+    """Mean price per slot over the `window` calendar days before `day` (D-1 is known at the gate)."""
+    hist = m.loc[(m.index < day) & (m.index >= day - pd.Timedelta(days=window))].dropna()
+    return hist.mean(0).to_numpy() if len(hist) else None
+
+
 def _lags(m, days, ks):
     """Array days x len(ks) x 96 of the prices k days earlier."""
     return np.stack([np.stack([m.loc[d - pd.Timedelta(days=k)].to_numpy() for k in ks]) for d in days])
