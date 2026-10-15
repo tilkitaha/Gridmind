@@ -1,0 +1,751 @@
+{
+  "status": "Development days; PPO selected on June, so June is validation, not a test; test window not read",
+  "forecast": "LEAR-style LASSO, walk-forward, prices only (results/polish_forecast)",
+  "train_days": 150,
+  "june_days": 30,
+  "ppo_config": {
+    "updates": 300,
+    "days_per_update": 16,
+    "epochs": 4,
+    "lr": 0.0003,
+    "clip": 0.2,
+    "entropy": 0.01,
+    "gamma": 1.0,
+    "gae_lambda": 1.0,
+    "grad_clip": 0.5,
+    "hidden": 64,
+    "reward_scale": 0.01
+  },
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "baselines_june": {
+    "oracle": {
+      "eur_per_day": 274.3224682675439,
+      "captured_pct_of_oracle": 100.0,
+      "losing_days": 0
+    },
+    "milp_lear": {
+      "eur_per_day": 236.08298164589115,
+      "captured_pct_of_oracle": 86.06038839503361,
+      "losing_days": 1
+    },
+    "milp_naive_d1": {
+      "eur_per_day": 210.3088537777009,
+      "captured_pct_of_oracle": 76.6648299375131,
+      "losing_days": 2
+    }
+  },
+  "baselines_train": {
+    "oracle": {
+      "eur_per_day": 217.3900024933057,
+      "captured_pct_of_oracle": 100.0,
+      "losing_days": 0
+    },
+    "milp_lear": {
+      "eur_per_day": 163.5347798979687,
+      "captured_pct_of_oracle": 75.22644924897342,
+      "losing_days": 16
+    },
+    "milp_naive_d1": {
+      "eur_per_day": 144.09374259799176,
+      "captured_pct_of_oracle": 66.28351853596808,
+      "losing_days": 21
+    }
+  },
+  "ppo_mean_june_eur_per_day": 194.828518262741,
+  "runs": [
+    {
+      "seed": 11,
+      "june_eur_per_day": 198.55011194393276,
+      "train_eur_per_day": 123.81818131718799,
+      "june_captured_pct_of_oracle": 72.37836302576895,
+      "june_minus_milp_eur_per_day": -37.53286970195836,
+      "june_minus_milp_ci95": [
+        -59.16880380221667,
+        -17.1986370146305
+      ],
+      "june_losing_days": 1,
+      "june_throughput_mwh_per_day": 4.5913883614613935,
+      "selected_update": 280,
+      "checkpoint_sha256": "012bd6db940e0913bbfee24d2d2d82fc1e41b4581c47575e97e99f7565d1a222",
+      "history": [
+        {
+          "update": 10,
+          "validation_eur_per_day": 34.594458719889786
+        },
+        {
+          "update": 20,
+          "validation_eur_per_day": 103.33342255147903
+        },
+        {
+          "update": 30,
+          "validation_eur_per_day": 112.85516957948842
+        },
+        {
+          "update": 40,
+          "validation_eur_per_day": 137.3445318605481
+        },
+        {
+          "update": 50,
+          "validation_eur_per_day": 140.09228162836143
+        },
+        {
+          "update": 60,
+          "validation_eur_per_day": 133.94992850801606
+        },
+        {
+          "update": 70,
+          "validation_eur_per_day": 138.6214789214449
+        },
+        {
+          "update": 80,
+          "validation_eur_per_day": 149.8490455808146
+        },
+        {
+          "update": 90,
+          "validation_eur_per_day": 150.79149183031458
+        },
+        {
+          "update": 100,
+          "validation_eur_per_day": 144.5155697634385
+        },
+        {
+          "update": 110,
+          "validation_eur_per_day": 139.87916731365993
+        },
+        {
+          "update": 120,
+          "validation_eur_per_day": 140.06977262584604
+        },
+        {
+          "update": 130,
+          "validation_eur_per_day": 151.21619799924503
+        },
+        {
+          "update": 140,
+          "validation_eur_per_day": 145.34469798424067
+        },
+        {
+          "update": 150,
+          "validation_eur_per_day": 138.28912823431332
+        },
+        {
+          "update": 160,
+          "validation_eur_per_day": 152.47055307875138
+        },
+        {
+          "update": 170,
+          "validation_eur_per_day": 158.100034699571
+        },
+        {
+          "update": 180,
+          "validation_eur_per_day": 165.21575181465127
+        },
+        {
+          "update": 190,
+          "validation_eur_per_day": 167.03911298464632
+        },
+        {
+          "update": 200,
+          "validation_eur_per_day": 171.86804664884895
+        },
+        {
+          "update": 210,
+          "validation_eur_per_day": 179.49413967512967
+        },
+        {
+          "update": 220,
+          "validation_eur_per_day": 184.44099210091161
+        },
+        {
+          "update": 230,
+          "validation_eur_per_day": 184.57926753239607
+        },
+        {
+          "update": 240,
+          "validation_eur_per_day": 183.704595042635
+        },
+        {
+          "update": 250,
+          "validation_eur_per_day": 181.36317858999186
+        },
+        {
+          "update": 260,
+          "validation_eur_per_day": 191.98963850307615
+        },
+        {
+          "update": 270,
+          "validation_eur_per_day": 195.34784466554635
+        },
+        {
+          "update": 280,
+          "validation_eur_per_day": 198.5501120323283
+        },
+        {
+          "update": 290,
+          "validation_eur_per_day": 194.43937731325568
+        },
+        {
+          "update": 300,
+          "validation_eur_per_day": 192.76679745194062
+        }
+      ]
+    },
+    {
+      "seed": 22,
+      "june_eur_per_day": 204.10372436001413,
+      "train_eur_per_day": 127.15299204684547,
+      "june_captured_pct_of_oracle": 74.40284627395296,
+      "june_minus_milp_eur_per_day": -31.979257285877004,
+      "june_minus_milp_ci95": [
+        -48.065752997110025,
+        -16.648630908440392
+      ],
+      "june_losing_days": 1,
+      "june_throughput_mwh_per_day": 4.932503128131951,
+      "selected_update": 300,
+      "checkpoint_sha256": "d2354b904c5551dce132132c30bb2206ada6d146fcc344986d8908c014ee7996",
+      "history": [
+        {
+          "update": 10,
+          "validation_eur_per_day": 53.98027600111042
+        },
+        {
+          "update": 20,
+          "validation_eur_per_day": 89.82350156609564
+        },
+        {
+          "update": 30,
+          "validation_eur_per_day": 107.62638905797722
+        },
+        {
+          "update": 40,
+          "validation_eur_per_day": 114.10669852055865
+        },
+        {
+          "update": 50,
+          "validation_eur_per_day": 121.09393498273182
+        },
+        {
+          "update": 60,
+          "validation_eur_per_day": 112.97270012696157
+        },
+        {
+          "update": 70,
+          "validation_eur_per_day": 124.52102317950701
+        },
+        {
+          "update": 80,
+          "validation_eur_per_day": 152.2570496821621
+        },
+        {
+          "update": 90,
+          "validation_eur_per_day": 162.6887733846585
+        },
+        {
+          "update": 100,
+          "validation_eur_per_day": 176.57023797786536
+        },
+        {
+          "update": 110,
+          "validation_eur_per_day": 185.81268483214788
+        },
+        {
+          "update": 120,
+          "validation_eur_per_day": 185.87058409417105
+        },
+        {
+          "update": 130,
+          "validation_eur_per_day": 197.51849821030223
+        },
+        {
+          "update": 140,
+          "validation_eur_per_day": 195.2315262529204
+        },
+        {
+          "update": 150,
+          "validation_eur_per_day": 201.79619489707858
+        },
+        {
+          "update": 160,
+          "validation_eur_per_day": 200.96345173851685
+        },
+        {
+          "update": 170,
+          "validation_eur_per_day": 193.26523550591526
+        },
+        {
+          "update": 180,
+          "validation_eur_per_day": 192.85776265399102
+        },
+        {
+          "update": 190,
+          "validation_eur_per_day": 180.39582551571038
+        },
+        {
+          "update": 200,
+          "validation_eur_per_day": 183.8482015885875
+        },
+        {
+          "update": 210,
+          "validation_eur_per_day": 176.55836141668502
+        },
+        {
+          "update": 220,
+          "validation_eur_per_day": 177.3414203440833
+        },
+        {
+          "update": 230,
+          "validation_eur_per_day": 170.56973730660192
+        },
+        {
+          "update": 240,
+          "validation_eur_per_day": 183.00392999924506
+        },
+        {
+          "update": 250,
+          "validation_eur_per_day": 194.19820459841213
+        },
+        {
+          "update": 260,
+          "validation_eur_per_day": 197.21640777178885
+        },
+        {
+          "update": 270,
+          "validation_eur_per_day": 200.7125349146421
+        },
+        {
+          "update": 280,
+          "validation_eur_per_day": 199.27628817904267
+        },
+        {
+          "update": 290,
+          "validation_eur_per_day": 202.6093527333816
+        },
+        {
+          "update": 300,
+          "validation_eur_per_day": 204.10372428611606
+        }
+      ]
+    },
+    {
+      "seed": 33,
+      "june_eur_per_day": 208.5226606987383,
+      "train_eur_per_day": 123.83308312964235,
+      "june_captured_pct_of_oracle": 76.01370096136938,
+      "june_minus_milp_eur_per_day": -27.56032094715283,
+      "june_minus_milp_ci95": [
+        -43.90736501906561,
+        -12.134698917273415
+      ],
+      "june_losing_days": 1,
+      "june_throughput_mwh_per_day": 4.5964208132122994,
+      "selected_update": 260,
+      "checkpoint_sha256": "fbc9ba479e56fcd8539588ec435b73399896585891b771d568b8d5ca986602ce",
+      "history": [
+        {
+          "update": 10,
+          "validation_eur_per_day": 74.82310745472063
+        },
+        {
+          "update": 20,
+          "validation_eur_per_day": 107.80315978607145
+        },
+        {
+          "update": 30,
+          "validation_eur_per_day": 116.15566554532073
+        },
+        {
+          "update": 40,
+          "validation_eur_per_day": 114.969942241767
+        },
+        {
+          "update": 50,
+          "validation_eur_per_day": 130.7471254209908
+        },
+        {
+          "update": 60,
+          "validation_eur_per_day": 146.05725275060055
+        },
+        {
+          "update": 70,
+          "validation_eur_per_day": 160.30688851828108
+        },
+        {
+          "update": 80,
+          "validation_eur_per_day": 167.80729875683647
+        },
+        {
+          "update": 90,
+          "validation_eur_per_day": 188.7930705705561
+        },
+        {
+          "update": 100,
+          "validation_eur_per_day": 192.70682787493396
+        },
+        {
+          "update": 110,
+          "validation_eur_per_day": 192.84582014628887
+        },
+        {
+          "update": 120,
+          "validation_eur_per_day": 194.11397440489998
+        },
+        {
+          "update": 130,
+          "validation_eur_per_day": 193.54890476928765
+        },
+        {
+          "update": 140,
+          "validation_eur_per_day": 186.43615898352402
+        },
+        {
+          "update": 150,
+          "validation_eur_per_day": 190.10544713754098
+        },
+        {
+          "update": 160,
+          "validation_eur_per_day": 193.79963921684174
+        },
+        {
+          "update": 170,
+          "validation_eur_per_day": 186.15378860892235
+        },
+        {
+          "update": 180,
+          "validation_eur_per_day": 187.56012021866218
+        },
+        {
+          "update": 190,
+          "validation_eur_per_day": 179.585403249028
+        },
+        {
+          "update": 200,
+          "validation_eur_per_day": 173.6036002080935
+        },
+        {
+          "update": 210,
+          "validation_eur_per_day": 179.24884836825944
+        },
+        {
+          "update": 220,
+          "validation_eur_per_day": 183.06656530787987
+        },
+        {
+          "update": 230,
+          "validation_eur_per_day": 182.7873444630479
+        },
+        {
+          "update": 240,
+          "validation_eur_per_day": 174.4264388018184
+        },
+        {
+          "update": 250,
+          "validation_eur_per_day": 197.290297627556
+        },
+        {
+          "update": 260,
+          "validation_eur_per_day": 208.52266105764656
+        },
+        {
+          "update": 270,
+          "validation_eur_per_day": 208.33971371663102
+        },
+        {
+          "update": 280,
+          "validation_eur_per_day": 202.5422706765324
+        },
+        {
+          "update": 290,
+          "validation_eur_per_day": 201.06042625554434
+        },
+        {
+          "update": 300,
+          "validation_eur_per_day": 199.9030854308499
+        }
+      ]
+    },
+    {
+      "seed": 44,
+      "june_eur_per_day": 160.55652672139706,
+      "train_eur_per_day": 121.6558751873336,
+      "june_captured_pct_of_oracle": 58.52839096096493,
+      "june_minus_milp_eur_per_day": -75.52645492449409,
+      "june_minus_milp_ci95": [
+        -126.64052469062413,
+        -28.750934845739412
+      ],
+      "june_losing_days": 1,
+      "june_throughput_mwh_per_day": 3.870349695416417,
+      "selected_update": 270,
+      "checkpoint_sha256": "58acbc1da50a06652113143d5f7fccbdce63f54dfa00209034c0746b56e2f1ff",
+      "history": [
+        {
+          "update": 10,
+          "validation_eur_per_day": 42.48780937435781
+        },
+        {
+          "update": 20,
+          "validation_eur_per_day": 83.51232409468163
+        },
+        {
+          "update": 30,
+          "validation_eur_per_day": 86.3016800510363
+        },
+        {
+          "update": 40,
+          "validation_eur_per_day": 85.47015160730908
+        },
+        {
+          "update": 50,
+          "validation_eur_per_day": 102.42594107235794
+        },
+        {
+          "update": 60,
+          "validation_eur_per_day": 108.52740472898668
+        },
+        {
+          "update": 70,
+          "validation_eur_per_day": 98.74044962010849
+        },
+        {
+          "update": 80,
+          "validation_eur_per_day": 101.39416993884558
+        },
+        {
+          "update": 90,
+          "validation_eur_per_day": 93.83964983298746
+        },
+        {
+          "update": 100,
+          "validation_eur_per_day": 106.86503251974463
+        },
+        {
+          "update": 110,
+          "validation_eur_per_day": 110.9783363029498
+        },
+        {
+          "update": 120,
+          "validation_eur_per_day": 109.84029510700907
+        },
+        {
+          "update": 130,
+          "validation_eur_per_day": 118.33790489446693
+        },
+        {
+          "update": 140,
+          "validation_eur_per_day": 104.9991926727219
+        },
+        {
+          "update": 150,
+          "validation_eur_per_day": 115.9701685158404
+        },
+        {
+          "update": 160,
+          "validation_eur_per_day": 116.69262792880848
+        },
+        {
+          "update": 170,
+          "validation_eur_per_day": 115.16348559432224
+        },
+        {
+          "update": 180,
+          "validation_eur_per_day": 125.41706373104186
+        },
+        {
+          "update": 190,
+          "validation_eur_per_day": 136.47186563324937
+        },
+        {
+          "update": 200,
+          "validation_eur_per_day": 124.50924293439924
+        },
+        {
+          "update": 210,
+          "validation_eur_per_day": 129.01166121191153
+        },
+        {
+          "update": 220,
+          "validation_eur_per_day": 120.17268316813373
+        },
+        {
+          "update": 230,
+          "validation_eur_per_day": 129.35695026335026
+        },
+        {
+          "update": 240,
+          "validation_eur_per_day": 133.71962401034926
+        },
+        {
+          "update": 250,
+          "validation_eur_per_day": 126.79814059413403
+        },
+        {
+          "update": 260,
+          "validation_eur_per_day": 138.9624345130985
+        },
+        {
+          "update": 270,
+          "validation_eur_per_day": 160.55652701062544
+        },
+        {
+          "update": 280,
+          "validation_eur_per_day": 157.38903155314463
+        },
+        {
+          "update": 290,
+          "validation_eur_per_day": 140.98894531985746
+        },
+        {
+          "update": 300,
+          "validation_eur_per_day": 117.9219076733171
+        }
+      ]
+    },
+    {
+      "seed": 55,
+      "june_eur_per_day": 202.40956758962278,
+      "train_eur_per_day": 128.79895894776195,
+      "june_captured_pct_of_oracle": 73.7852677062583,
+      "june_minus_milp_eur_per_day": -33.67341405626839,
+      "june_minus_milp_ci95": [
+        -51.744109746178275,
+        -16.733356965573112
+      ],
+      "june_losing_days": 1,
+      "june_throughput_mwh_per_day": 4.805592660224212,
+      "selected_update": 210,
+      "checkpoint_sha256": "36843a851e645691f454766d4ddfd3bd68e63deaba6f67b8655315ad2460a2de",
+      "history": [
+        {
+          "update": 10,
+          "validation_eur_per_day": 56.549136841340285
+        },
+        {
+          "update": 20,
+          "validation_eur_per_day": 134.92888902548881
+        },
+        {
+          "update": 30,
+          "validation_eur_per_day": 135.82696479297599
+        },
+        {
+          "update": 40,
+          "validation_eur_per_day": 136.22082482842117
+        },
+        {
+          "update": 50,
+          "validation_eur_per_day": 157.79780880697317
+        },
+        {
+          "update": 60,
+          "validation_eur_per_day": 165.62084773080747
+        },
+        {
+          "update": 70,
+          "validation_eur_per_day": 174.07569713806592
+        },
+        {
+          "update": 80,
+          "validation_eur_per_day": 191.62202151551932
+        },
+        {
+          "update": 90,
+          "validation_eur_per_day": 191.27834773457076
+        },
+        {
+          "update": 100,
+          "validation_eur_per_day": 199.57112490797672
+        },
+        {
+          "update": 110,
+          "validation_eur_per_day": 184.55489605847575
+        },
+        {
+          "update": 120,
+          "validation_eur_per_day": 193.92704727860865
+        },
+        {
+          "update": 130,
+          "validation_eur_per_day": 196.01599850904552
+        },
+        {
+          "update": 140,
+          "validation_eur_per_day": 195.8560292118853
+        },
+        {
+          "update": 150,
+          "validation_eur_per_day": 195.25265242848803
+        },
+        {
+          "update": 160,
+          "validation_eur_per_day": 197.99804137323963
+        },
+        {
+          "update": 170,
+          "validation_eur_per_day": 201.6337192642607
+        },
+        {
+          "update": 180,
+          "validation_eur_per_day": 201.80520821640954
+        },
+        {
+          "update": 190,
+          "validation_eur_per_day": 199.31076948272093
+        },
+        {
+          "update": 200,
+          "validation_eur_per_day": 201.7321795941887
+        },
+        {
+          "update": 210,
+          "validation_eur_per_day": 202.4095674704759
+        },
+        {
+          "update": 220,
+          "validation_eur_per_day": 200.30686899156538
+        },
+        {
+          "update": 230,
+          "validation_eur_per_day": 200.79865676468975
+        },
+        {
+          "update": 240,
+          "validation_eur_per_day": 200.8872876504111
+        },
+        {
+          "update": 250,
+          "validation_eur_per_day": 197.2215543249978
+        },
+        {
+          "update": 260,
+          "validation_eur_per_day": 191.81848833276416
+        },
+        {
+          "update": 270,
+          "validation_eur_per_day": 196.04817476745524
+        },
+        {
+          "update": 280,
+          "validation_eur_per_day": 196.228871845536
+        },
+        {
+          "update": 290,
+          "validation_eur_per_day": 192.760777356208
+        },
+        {
+          "update": 300,
+          "validation_eur_per_day": 194.07303683205603
+        }
+      ]
+    }
+  ],
+  "inputs_sha256": {
+    "lear_forecasts.csv": "c8176b5309f46ad4076fd3f708af043c12776537fb75376c9f61c2d2f13de055"
+  }
+}

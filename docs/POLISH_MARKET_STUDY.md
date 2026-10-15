@@ -71,6 +71,22 @@ The perfect-foresight profit is at least the naive-forecast profit on every comp
 - The exogenous inputs lower LEAR's error by 6% (Diebold–Mariano p = 0.01) but add only 1.16 EUR/day (95% interval −3.74 to 5.67), which is not distinguishable from zero.
 - A schedule depends on when prices are low and high, not on their level; better level forecasts do not necessarily change the schedule. Forecast accuracy alone is therefore not the right criterion for choosing a forecaster, which matches the horizon-versus-one-step finding of the Irish study.
 
+## PPO against MILP on the same forecast (15 October 2026)
+
+`scripts/polish_rl_eval.py` (environment and PPO in `src/gridmind_research/polish_rl.py`) trains a single-battery PPO policy on whole delivery days. The policy observes only the LEAR walk-forward forecast for the day (scaled per day), the battery level and the time left; the reward is the realized profit of each step and is used only for training. Physics follow `BESS`; a unit test shows that the environment reproduces the MILP schedule’s profit exactly. Settings fixed before the run, carrying the Irish lessons: one day per episode, GAE λ = 1.0, five seeds, 300 updates of 16 days. PPO trains on 150 January–May days and selects its checkpoint on June, so June is a validation month, not a test.
+
+| June 2026, 30 days (`results/polish_rl`) | EUR/day | Share of perfect foresight | PPO minus MILP, 95% interval |
+| --- | --- | --- | --- |
+| Perfect foresight | 274.32 | 100% | – |
+| MILP on LEAR forecast | **236.08** | 86.1% | – |
+| MILP on yesterday’s prices | 210.31 | 76.7% | – |
+| PPO on LEAR forecast, mean of 5 seeds | 194.83 | 71.0% | – |
+| PPO seeds 11, 22, 33, 44, 55 | 198.55, 204.10, 208.52, 160.56, 202.41 | 58.5–76.0% | −27.6 to −75.5 EUR/day; every interval below zero |
+
+- PPO learns real arbitrage: validation profit rises from about 40 to about 200 EUR/day, and it cycles about as much as MILP (3.9–4.9 versus 4.87 MWh/day). It does not idle as in the Irish study.
+- It does not reach MILP with the same forecast: all five seeds are lower, with intervals that exclude zero, and the seed mean is below MILP planned on yesterday’s prices. The best seed beats MILP on 5 of 30 days.
+- Selected checkpoints come late (updates 210–300), so the training budget may be binding. A longer budget is a candidate for the protocol; it would have to be fixed before the test, not tuned on June.
+
 ## Data and sources
 
 ENTSO-E zone `10YPL-AREA-----S`, energy prices 12.1.D, is the proposed source. Candidate training: 2025-10-01 to 2026-05-31; validation: June 2026; candidate test: July-August 2026. No raw data, published-version audit or independent-test access audit has been completed. The proposed protocol is therefore not data-frozen. API access requires registration and a security token; do not put tokens in source files or the archive.
