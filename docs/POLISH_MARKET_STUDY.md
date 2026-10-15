@@ -40,6 +40,23 @@ ENTSO-E prices for 1 October 2025 to 30 June 2026 were downloaded with `scripts/
 
 The perfect-foresight profit is at least the naive-forecast profit on every comparable day. Thirteen days lack a comparable D−1 or D−7 day (the first week and the days around clock changes). This is a description of the development period, not a test of any controller.
 
+## Walk-forward forecast comparison (15 October 2026)
+
+`scripts/polish_forecast_eval.py` (models in `src/gridmind_research/polish_forecast.py`) forecasts every delivery day from 1 January to 30 June 2026 using only earlier days, refitting as the window grows, and scores both the forecast and the realized profit of the MILP schedule built from it. History starts on 1 October 2025; one clock-change day is not scored; the candidate test window is not read. Model settings were fixed before the run and were not tuned on these results.
+
+| 180 days, Jan–Jun 2026 | MAE (EUR/MWh) | MAE relative to D−1 | MILP profit (EUR/day) | Share of perfect foresight | Losing days |
+| --- | --- | --- | --- | --- | --- |
+| Naive D−1 | 31.17 | 1.000 | 155.13 | 68.4% | 23 |
+| Naive D−7 | 38.25 | 1.227 | 148.20 | 65.3% | 27 |
+| LEAR-style LASSO | **25.20** | **0.809** | **175.63** | **77.4%** | 17 |
+| Gradient boosting | 28.74 | 0.922 | 168.33 | 74.2% | 14 |
+| Perfect foresight | – | – | 226.88 | 100% | – |
+
+- LEAR has lower error than naive D−1 (Diebold–Mariano p < 0.001) and earns 20.50 EUR/day more (7-day block bootstrap 95% interval 12.32 to 28.92). Gradient boosting earns 13.20 EUR/day more (5.68 to 20.84); LEAR also beats it on error (p < 0.001).
+- LEAR earns more than naive D−1 in every one of the six months. In the June validation month alone, LEAR reaches 86.1% of perfect foresight.
+- Better forecasts turn into money: the ranking by error matches the ranking by profit. This is the first measurement of the forecast-to-trading coupling (E1 and E3 of the design) on Polish data.
+- Limits: development period, price and calendar inputs only (no load or generation forecasts yet), one battery configuration, full acceptance at the zonal price.
+
 ## Data and sources
 
 ENTSO-E zone `10YPL-AREA-----S`, energy prices 12.1.D, is the proposed source. Candidate training: 2025-10-01 to 2026-05-31; validation: June 2026; candidate test: July-August 2026. No raw data, published-version audit or independent-test access audit has been completed. The proposed protocol is therefore not data-frozen. API access requires registration and a security token; do not put tokens in source files or the archive.
