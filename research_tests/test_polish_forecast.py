@@ -49,6 +49,24 @@ class PolishForecastTests(unittest.TestCase):
         np.testing.assert_allclose(lear(m, day), lear(changed, day))
         np.testing.assert_allclose(GBM()(m, day), GBM()(changed, day))
 
+    def test_exogenous_models_use_only_inputs_available_at_the_gate(self):
+        m = synthetic_matrix()
+        rng = np.random.default_rng(3)
+        idx = m.index
+        exog = {'load_fc': pd.DataFrame(rng.normal(19000, 800, (len(idx), 96)), index=idx),
+                'load_act': pd.DataFrame(rng.normal(19000, 800, (len(idx), 96)), index=idx),
+                'res': pd.DataFrame({'solar': rng.normal(2000, 300, len(idx)), 'wind': rng.normal(2500, 400, len(idx))}, index=idx)}
+        day = idx[80]
+        changed = {k: v.copy() for k, v in exog.items()}
+        # Actual load and generation of D-1 and later are not yet complete at the D-1 gate.
+        changed['load_act'].loc[day - pd.Timedelta(days=1):] = -1.0
+        changed['res'].loc[day - pd.Timedelta(days=1):] = -1.0
+        changed['load_fc'].loc[day + pd.Timedelta(days=1):] = -1.0
+        m2 = m.copy()
+        m2.loc[day:] = 9999.0
+        np.testing.assert_allclose(lear(m, day, exog=exog), lear(m2, day, exog=changed))
+        np.testing.assert_allclose(GBM(exog=exog)(m, day), GBM(exog=changed)(m2, day))
+
     def test_lear_learns_a_stable_daily_shape(self):
         m = synthetic_matrix(seed=1)
         f = lear(m, m.index[85])

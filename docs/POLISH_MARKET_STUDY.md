@@ -57,6 +57,20 @@ The perfect-foresight profit is at least the naive-forecast profit on every comp
 - Better forecasts turn into money: the ranking by error matches the ranking by profit. This is the first measurement of the forecast-to-trading coupling (E1 and E3 of the design) on Polish data.
 - Limits: development period, price and calendar inputs only (no load or generation forecasts yet), one battery configuration, full acceptance at the zonal price.
 
+## Exogenous inputs (15 October 2026)
+
+`scripts/fetch_entsoe_features.py` downloaded the day-ahead total load forecast (6.1.B), actual total load (6.1.A) and actual generation per production type (16.1.B&C) for 20 September 2025 to 30 June 2026: PT15M, 284 complete days, consumption series (pumped storage) dropped. Load is 18.9 GW on average (peak 27.7 GW); the published load forecast misses actual load by 2.27% on average. Inputs available at the D-1 12:00 gate: the load forecast for D, D-1 and D-7, and D-2 daily means of solar, wind and actual load; scaling statistics also stop at D-2 (a unit test caught an earlier version that used D-1).
+
+| 180 days, Jan–Jun 2026 (`results/polish_forecast_exog`) | MAE (EUR/MWh) | MILP profit (EUR/day) | Losing days |
+| --- | --- | --- | --- |
+| LEAR-style LASSO, prices only | 25.20 | 175.63 | 17 |
+| LEAR-X, with exogenous inputs | **23.71** | **176.79** | 14 |
+| Gradient boosting, prices only | 28.74 | 168.33 | 14 |
+| Gradient boosting with exogenous inputs | 29.40 | 171.73 | 14 |
+
+- The exogenous inputs lower LEAR's error by 6% (Diebold–Mariano p = 0.01) but add only 1.16 EUR/day (95% interval −3.74 to 5.67), which is not distinguishable from zero.
+- A schedule depends on when prices are low and high, not on their level; better level forecasts do not necessarily change the schedule. Forecast accuracy alone is therefore not the right criterion for choosing a forecaster, which matches the horizon-versus-one-step finding of the Irish study.
+
 ## Data and sources
 
 ENTSO-E zone `10YPL-AREA-----S`, energy prices 12.1.D, is the proposed source. Candidate training: 2025-10-01 to 2026-05-31; validation: June 2026; candidate test: July-August 2026. No raw data, published-version audit or independent-test access audit has been completed. The proposed protocol is therefore not data-frozen. API access requires registration and a security token; do not put tokens in source files or the archive.
