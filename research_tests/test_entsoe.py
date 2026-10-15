@@ -2,7 +2,14 @@ import unittest
 
 import pandas as pd
 
-from gridmind_research.entsoe import parse_prices, query, split_days
+from gridmind_research.entsoe import (
+    feature_query,
+    parse_prices,
+    parse_quantities,
+    query,
+    split_days,
+    to_quarter_hours,
+)
 from gridmind_research.polish_market import delivery_index, validate_day
 
 NS = 'urn:iec62325.351:tc57wg16:451-3:publicationdocument:7:3'
@@ -81,6 +88,53 @@ class EntsoeTests(unittest.TestCase):
         self.assertNotIn('securityToken', q)
         with self.assertRaises(ValueError):
             query(pd.Timestamp('2026-06-30 22:00'), pd.Timestamp('2026-07-01 22:00'))
+
+
+GL = 'urn:iec62325.351:tc57wg16:451-6:generationloaddocument:3:0'
+
+
+def gl_series(points, res='PT15M', psr=None, zone_tag='outBiddingZone_Domain.mRID', unit='MAW', start='2026-06-30T22:00Z', end='2026-07-01T22:00Z'):
+    psr_xml = f'<MktPSRType><psrType>{psr}</psrType></MktPSRType>' if psr else ''
+    pts = ''.join(f'<Point><position>{k}</position><quantity>{v}</quantity></Point>' for k, v in points.items())
+    return (f'<TimeSeries><{zone_tag} codingScheme="A01">10YPL-AREA-----S</{zone_tag}>'
+            f'<quantity_Measure_Unit.name>{unit}</quantity_Measure_Unit.name><curveType>A01</curveType>{psr_xml}'
+            f'<Period><timeInterval><start>{start}</start><end>{end}</end></timeInterval><resolution>{res}</resolution>{pts}</Period></TimeSeries>')
+
+
+def gl_document(*series):
+    return f'<GL_MarketDocument xmlns="{GL}">{"".join(series)}</GL_MarketDocument>'.encode()
+
+
+class EntsoeFeatureTests(unittest.TestCase):
+    def test_load_series_and_hourly_levels(self):
+        f = parse_quantities(gl_document(gl_series({k: 15000 + k for k in range(1, 97)})))
+        self.assertEqual(set(f.key), {'total'})
+        self.assertEqual(len(f), 96)
+        hourly = parse_quantities(gl_document(gl_series({k: 100.0 * k for k in range(1, 25)}, res='PT60M')))
+        q = to_quarter_hours(hourly)
+        self.assertEqual(len(q), 96)
+        self.assertEqual(list(q.value_mw[:5]), [100.0, 100.0, 100.0, 100.0, 200.0])
+
+    def test_generation_keeps_production_and_drops_consumption(self):
+        doc = gl_document(gl_series({k: 50.0 for k in range(1, 97)}, psr='B16', zone_tag='inBiddingZone_Domain.mRID'),
+                          gl_series({k: 70.0 for k in range(1, 97)}, psr='B19', zone_tag='inBiddingZone_Domain.mRID'),
+                          gl_series({k: 9.0 for k in range(1, 97)}, psr='B10', zone_tag='outBiddingZone_Domain.mRID'))
+        f = parse_quantities(doc)
+        self.assertEqual(set(f.key), {'B16', 'B19'})
+
+    def test_rejects_wrong_units_and_prices_documents(self):
+        with self.assertRaises(ValueError):
+            parse_quantities(gl_document(gl_series({1: 1.0}, unit='MWH')))
+        s, e, n = utc_bounds('2026-07-01')
+        with self.assertRaises(ValueError):
+            parse_quantities(document([(s, e, 'PT15M', {k: 1.0 for k in range(1, n + 1)})]))
+
+    def test_feature_queries_name_the_right_domain(self):
+        start, end = pd.Timestamp('2026-06-30T22:00Z'), pd.Timestamp('2026-07-01T22:00Z')
+        self.assertEqual(feature_query('load_forecast', start, end)['outBiddingZone_Domain'], '10YPL-AREA-----S')
+        self.assertEqual(feature_query('load_forecast', start, end)['processType'], 'A01')
+        self.assertEqual(feature_query('generation', start, end)['in_Domain'], '10YPL-AREA-----S')
+        self.assertNotIn('securityToken', feature_query('load_actual', start, end))
 
 
 if __name__ == '__main__':

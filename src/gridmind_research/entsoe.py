@@ -1,10 +1,11 @@
-"""ENTSO-E Transparency day-ahead prices (12.1.D, documentType A44) for the Polish study.
+"""ENTSO-E Transparency data for the Polish study.
 
-Parses the XML response into the canonical realized-price contract of
-polish_market.validate_day: timestamp_utc,value_eur_mwh. Hourly periods are
-kept hourly, never split into quarter-hours. The security token is read from
-the environment by the caller and must never be written to disk or logs.
-Untested against a live response until a token is available.
+Day-ahead prices (12.1.D, A44) are parsed into the realized-price contract of
+polish_market.validate_day: timestamp_utc,value_eur_mwh; hourly price periods are
+never split into quarter-hours. Load (6.1.A/B, A65) and generation per type
+(16.1.B&C, A75) are parsed as MW levels. The security token is read from the
+environment by the caller and must never be written to disk or logs. The price
+parser was checked against live responses for October 2025 to June 2026.
 """
 import xml.etree.ElementTree as ET
 
@@ -115,3 +116,84 @@ def split_days(frame, zone='Europe/Warsaw'):
     """Group a parsed frame by local delivery date."""
     local = pd.to_datetime(frame.timestamp_utc, utc=True).dt.tz_convert(zone).dt.date
     return {str(day): part.reset_index(drop=True) for day, part in frame.groupby(local)}
+
+
+# Feature series; all are MW levels. Only the day-ahead load forecast is published before
+# the D-1 12:00 gate for day D; actual load and generation are used with a two-day lag.
+FEATURES = {
+    'load_forecast': {'documentType': 'A65', 'processType': 'A01', 'domain': 'outBiddingZone_Domain'},
+    'load_actual': {'documentType': 'A65', 'processType': 'A16', 'domain': 'outBiddingZone_Domain'},
+    'generation': {'documentType': 'A75', 'processType': 'A16', 'domain': 'in_Domain'},
+}
+
+
+def feature_query(kind, start_utc, end_utc, zone=PL):
+    """Request parameters for a feature series, without the token."""
+    spec = FEATURES[kind]
+    q = query(start_utc, end_utc, zone)
+    return {'documentType': spec['documentType'], 'processType': spec['processType'], spec['domain']: zone,
+            'periodStart': q['periodStart'], 'periodEnd': q['periodEnd']}
+
+
+def parse_quantities(xml_bytes):
+    """Return a frame timestamp_utc, key, value_mw, resolution from an A65 or A75 document.
+
+    key is the production type (B16 solar, B19 wind onshore, ...) or 'total' for load.
+    Generation series that belong to consumption (outBiddingZone only, e.g. pumping) are dropped.
+    """
+    root = ET.fromstring(xml_bytes)
+    if _local(root.tag) == 'Acknowledgement_MarketDocument':
+        text = ' '.join(t.text or '' for t in _all(root, 'text'))
+        raise LookupError(f'ENTSO-E acknowledgement: {text.strip()}')
+    if _local(root.tag) != 'GL_MarketDocument':
+        raise ValueError(f'Unexpected document {_local(root.tag)}')
+    values = {}
+    for series in _all(root, 'TimeSeries'):
+        unit = _find(series, 'quantity_Measure_Unit.name')
+        if unit is None or unit.text != 'MAW':
+            raise ValueError('Expected MW (MAW)')
+        psr = next((x.text for x in _all(series, 'psrType')), None)
+        if psr is not None and _find(series, 'inBiddingZone_Domain.mRID') is None:
+            continue
+        key = psr or 'total'
+        curve = _find(series, 'curveType')
+        curve = curve.text if curve is not None else 'A01'
+        if curve not in ('A01', 'A03'):
+            raise ValueError(f'Unsupported curve type {curve}')
+        for period in _all(series, 'Period'):
+            interval = _find(period, 'timeInterval')
+            start = pd.Timestamp(_find(interval, 'start').text).tz_convert('UTC')
+            end = pd.Timestamp(_find(interval, 'end').text).tz_convert('UTC')
+            res = _find(period, 'resolution').text
+            if res not in RESOLUTION:
+                raise ValueError(f'Unsupported resolution {res}')
+            step = RESOLUTION[res]
+            n = int((end - start) / step)
+            points = {int(_find(p, 'position').text): float(_find(p, 'quantity').text) for p in _all(period, 'Point')}
+            if 1 not in points or max(points) > n:
+                raise ValueError('Bad positions in period')
+            current = None
+            for pos in range(1, n + 1):
+                if pos in points:
+                    current = points[pos]
+                elif curve == 'A01':
+                    raise ValueError(f'Missing position {pos} in an A01 curve')
+                t = start + (pos - 1) * step
+                if (key, t) in values and values[(key, t)][0] != current:
+                    raise ValueError(f'Conflicting values for {key} at {t}')
+                values[(key, t)] = (current, res)
+    if not values:
+        raise LookupError('No points in response')
+    rows = [{'timestamp_utc': t.isoformat(), 'key': k, 'value_mw': v, 'resolution': r} for (k, t), (v, r) in sorted(values.items())]
+    return pd.DataFrame(rows)
+
+
+def to_quarter_hours(frame):
+    """Spread coarser MW levels onto 15-minute stamps (a level holds for each quarter of its period)."""
+    out = []
+    for _, r in frame.iterrows():
+        n = int(RESOLUTION[r.resolution] / RESOLUTION['PT15M'])
+        start = pd.Timestamp(r.timestamp_utc)
+        out += [{'timestamp_utc': (start + k * RESOLUTION['PT15M']).isoformat(), 'key': r.key, 'value_mw': r.value_mw}
+                for k in range(n)]
+    return pd.DataFrame(out).drop_duplicates(['timestamp_utc', 'key'])
