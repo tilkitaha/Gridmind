@@ -26,6 +26,20 @@ Prices published in another currency are kept unconverted as `value_<currency>_m
 
 `scripts/polish_pilot.py` (logic in `src/gridmind_research/polish_pilot.py`) is a descriptive development-period pilot: daily spreads, negative-price intervals, the perfect-foresight MILP profit, and the realized profit of MILP schedules built from two naive forecasts that are published before the D-1 gate (same quarter-hours on D-1 and D-7). It compares no controller and claims no trading result.
 
+## Development-period pilot (15 October 2026)
+
+ENTSO-E prices for 1 October 2025 to 30 June 2026 were downloaded with `scripts/fetch_entsoe_prices.py`: nine monthly A44 responses, EUR/MWh, PT15M, A03 curves, all 273 delivery days complete, including the 100-interval day (26 October 2025) and the 92-interval day (29 March 2026). An independent re-parse of the raw XML matched every day exactly. July and August 2026 were not requested.
+
+| Measure (`results/polish_pilot/results.json`) | Value |
+| --- | --- |
+| Mean daily price spread | 172.3 EUR/MWh |
+| Perfect-foresight MILP profit | 199.26 EUR/day (≈ 72,700 EUR per MW-year) |
+| MILP on D−1 prices: share of the bound, comparable days | 62.9% (123.63 EUR/day; loses money on 52 of 260 days) |
+| MILP on D−7 prices: share of the bound | 61.6% |
+| Negative-price quarter-hours | 900, on 59 days; minimum −490 EUR/MWh |
+
+The perfect-foresight profit is at least the naive-forecast profit on every comparable day. Thirteen days lack a comparable D−1 or D−7 day (the first week and the days around clock changes). This is a description of the development period, not a test of any controller.
+
 ## Data and sources
 
 ENTSO-E zone `10YPL-AREA-----S`, energy prices 12.1.D, is the proposed source. Candidate training: 2025-10-01 to 2026-05-31; validation: June 2026; candidate test: July-August 2026. No raw data, published-version audit or independent-test access audit has been completed. The proposed protocol is therefore not data-frozen. API access requires registration and a security token; do not put tokens in source files or the archive.

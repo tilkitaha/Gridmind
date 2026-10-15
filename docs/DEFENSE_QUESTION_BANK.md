@@ -60,7 +60,7 @@
 **Kanıt.** `polish_market.validate_day`; `scripts/evaluate_polish_day.py`; `polish_pilot.py`. **Sorumlu:** Cem
 
 ### 34. What is the best possible arbitrage profit, and how close do simple forecasts get?
-**Answer.** *[Pilot sonucu gelince doldurulacak: oracle EUR/gün, D-1 ve D-7 naive tahminle yakalanan pay, negatif fiyatlı aralık sayısı.]* This is a development-period description, not a test of any controller.
+**Answer.** On real Polish prices for October 2025 to June 2026 (273 complete days), a MILP that knows the realized prices earns about 199 EUR per day for the 1 MW / 2 MWh battery, roughly 73,000 EUR per MW-year. Planning with yesterday’s prices captures 63% of that on comparable days but loses money on 52 of 260 days; the remaining 37%, about 73 EUR a day, is what a better forecast and policy can win. Prices were negative in 900 quarter-hours on 59 days. This describes the development period only; the July–August test months were not downloaded.
 **Kanıt.** `results/polish_pilot/results.json`. **Sorumlu:** Cem, Serhat
 
 ### 35. Why a MILP with a binary variable?
