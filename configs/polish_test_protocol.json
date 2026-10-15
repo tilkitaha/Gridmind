@@ -1,0 +1,49 @@
+{
+  "version": "0.3",
+  "date": "2026-10-15",
+  "status": "DRAFT_NOT_FROZEN",
+  "freeze_instructions": "Set margin_eur_per_day and sign access_declaration, then set status to FROZEN_<date> in one commit; see docs/PROTOCOL_POLISH_TEST_DRAFT.md",
+  "record_of_proposal": "configs/polish_market_protocol.json (22 September 2026, as shown to the supervisor) is kept unchanged; this file carries the test plan",
+  "zone": "10YPL-AREA-----S",
+  "source": "ENTSO-E Transparency Platform, day-ahead prices 12.1.D (A44), EUR/MWh, published values at retrieval",
+  "development": ["2025-10-01", "2026-06-30"],
+  "candidate_test": ["2026-07-01", "2026-08-31"],
+  "fallback_test": {"window": ["2026-09-01", "2026-10-31"], "use_if": "any signer of access_declaration has looked at July-August 2026 Polish day-ahead prices"},
+  "battery": "polish_market.BESS defaults: 1 MW, 2 MWh, 10-90 percent, start and end 50 percent, 0.95 and 0.95, 10 EUR/MWh wear, binary MILP",
+  "decision": "One full daily schedule fixed before 12:00 on D-1; prices up to and including D-1 are known at that time",
+  "eligible_days": "Test days with 96 market time units that pass polish_market.validate_day; every method is scored on the same days; excluded days are listed",
+  "forecast": {
+    "primary": "polish_forecast.lear, prices only, walk-forward from 2025-10-01, refit for every day on all earlier days, min_days 56",
+    "why_prices_only": "Exogenous inputs gave +1.16 EUR/day with an interval containing zero, and earlier versions of the load forecast cannot be audited"
+  },
+  "controllers": {
+    "treatment": "PPO, the five checkpoints in treatment_checkpoints, deterministic action (Beta mean), observing the LEAR forecast only",
+    "comparator": "polish_market.optimize_schedule on the same LEAR forecast",
+    "secondary": ["MILP on the 7-day mean profile (polish_forecast.profile, window 7)", "MILP on D-1 prices", "threshold rule, 10 slots per side, on the LEAR forecast", "do nothing"],
+    "bound": "MILP on the realized prices"
+  },
+  "treatment_checkpoints": {
+    "results/polish_rl_ablation/models/forecast_2000_seed11.pt": "7b7662152163ef939a23ca64e8314aba1ed5ebf3d2795c65a8a56a1c4097d357",
+    "results/polish_rl_ablation/models/forecast_2000_seed22.pt": "b1a62cfe5cdddae32a4c357312eda79357b61736abe4e42f3b4ba83eb418e9fb",
+    "results/polish_rl_ablation/models/forecast_2000_seed33.pt": "c9917aa24e4eb27098f0f86cbe9f4c4029b5141dd0802136a8d828b22004c49e",
+    "results/polish_rl_ablation/models/forecast_2000_seed44.pt": "5e78c8874b65e8c97d576b5ff588c2cf529241c533e4eed374cfe4929b1c98ba",
+    "results/polish_rl_ablation/models/forecast_2000_seed55.pt": "d921c9810a1808efe7a63ed8fc7b7fb95e7ed0c989391932a1432b615b3c55d3"
+  },
+  "treatment_choice": "2000-update arm, highest June validation mean (214.37 EUR/day against 210.01 for 1000 and 194.83 for 300). Chosen on June, which is what the validation month is for; no retraining after the freeze",
+  "primary_endpoint": "Mean over eligible test days of (PPO daily profit averaged over the five checkpoints) minus (MILP daily profit), EUR/day, realized prices",
+  "inference": {"method": "circular moving-block bootstrap over test days", "block_days": 7, "draws": 10000, "seed": 15102026, "interval": "95 percent percentile"},
+  "margin_eur_per_day": null,
+  "decision_rule": {
+    "ppo_better": "lower 95 percent bound above margin_eur_per_day",
+    "ppo_worse": "upper 95 percent bound below zero",
+    "no_demonstrated_gain": "otherwise"
+  },
+  "secondary_endpoints": ["each checkpoint minus MILP with the same bootstrap", "share of the realized-price bound", "losing days", "battery throughput MWh/day", "result by month", "all secondary controllers against MILP"],
+  "multiplicity": "One primary contrast; everything else is labelled exploratory",
+  "access_declaration": {"question": "Have you looked at Polish day-ahead prices for July-August 2026 (any source) or at any result computed on them?", "Serhat Yigit": null, "Cem Yilmaz": null, "Taha Can Tilkioglu": null},
+  "execution": "scripts/polish_test_run.py: lock (hashes of this file, code commit, checkpoints and test data) then run once; both refuse to overwrite",
+  "development_reference": {
+    "june_2026_eur_per_day": {"bound": 274.32, "milp_lear": 236.08, "milp_profile_7d": 237.22, "milp_naive_d1": 210.31, "ppo_2000_mean": 214.37, "rule_k10": 167.75, "do_nothing": 0.0},
+    "note": "Validation values, not test results; the test can differ"
+  }
+}

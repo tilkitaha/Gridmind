@@ -1,6 +1,6 @@
 """Descriptive pilot on downloaded Polish day-ahead prices, development period only.
 
-Refuses the candidate test window of configs/polish_market_protocol.json until
+Refuses the candidate test window of configs/polish_test_protocol.json until
 that protocol is frozen. Run from project root with PYTHONPATH=src:
   python scripts/polish_pilot.py --days data/polish/prices/days --start 2025-10-01 --end 2026-06-30 --out results/polish_pilot
 """

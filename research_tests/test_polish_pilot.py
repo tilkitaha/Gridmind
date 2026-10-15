@@ -27,7 +27,7 @@ class PolishPilotTests(unittest.TestCase):
             refuse_test_window('2026-06-20', '2026-07-02')
         refuse_test_window('2025-10-01', '2026-06-30')
         with tempfile.TemporaryDirectory() as d:
-            p = json.loads(Path('configs/polish_market_protocol.json').read_text(encoding='utf-8'))
+            p = json.loads(Path('configs/polish_test_protocol.json').read_text(encoding='utf-8'))
             p['status'] = 'FROZEN_2026-11-01'
             frozen = Path(d) / 'protocol.json'
             frozen.write_text(json.dumps(p))

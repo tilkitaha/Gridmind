@@ -1,6 +1,6 @@
 # Polish market study boundary and reproducible interface
 
-22 September 2026. Intended application: a price-taking BESS trader in the PL bidding zone. No Polish empirical market performance has been computed.
+22 September 2026. Intended application: a price-taking BESS trader in the PL bidding zone. Updated 15 October 2026: the sections below report development-period results (October 2025 to June 2026). No test result exists; the test plan is `configs/polish_test_protocol.json` and `docs/PROTOCOL_POLISH_TEST_DRAFT.md`.
 
 ## Implemented
 
@@ -54,7 +54,7 @@ The perfect-foresight profit is at least the naive-forecast profit on every comp
 
 - LEAR has lower error than naive D−1 (Diebold–Mariano p < 0.001) and earns 20.50 EUR/day more (7-day block bootstrap 95% interval 12.32 to 28.92). Gradient boosting earns 13.20 EUR/day more (5.68 to 20.84); LEAR also beats it on error (p < 0.001).
 - LEAR earns more than naive D−1 in every one of the six months. In the June validation month alone, LEAR reaches 86.1% of perfect foresight.
-- Better forecasts turn into money: the ranking by error matches the ranking by profit. This is the first measurement of the forecast-to-trading coupling (E1 and E3 of the design) on Polish data.
+- Among these four models, the ranking by error matches the ranking by profit. This is the first measurement of the forecast-to-trading coupling (E1 and E3 of the design) on Polish data. **Correction (same day):** a rolling 7-day mean profile, added later, has higher error than naive D−1 but earns as much as LEAR, so the error ranking does not carry over to profit in general; see “Mean-profile forecasts” below.
 - Limits: development period, price and calendar inputs only (no load or generation forecasts yet), one battery configuration, full acceptance at the zonal price.
 
 ## Exogenous inputs (15 October 2026)
@@ -87,10 +87,72 @@ The perfect-foresight profit is at least the naive-forecast profit on every comp
 - It does not reach MILP with the same forecast: all five seeds are lower, with intervals that exclude zero, and the seed mean is below MILP planned on yesterday’s prices. The best seed beats MILP on 5 of 30 days.
 - Selected checkpoints come late (updates 210–300), so the training budget may be binding. A longer budget is a candidate for the protocol; it would have to be fixed before the test, not tuned on June.
 
+## Simple controllers and forecast-error sensitivity (15 October 2026)
+
+`scripts/polish_controls_eval.py` adds the two simplest controllers on the same LEAR forecast: doing nothing, and a threshold rule (`polish_rl.rule_profit`) that charges at full power in the k cheapest forecast quarter-hours and discharges in the k dearest, clipped to the battery limits. k = 10 was chosen on January–May from {2, …, 32}; June is reported separately (`results/polish_controls`).
+
+| June 2026, 30 days | EUR/day | Share of perfect foresight |
+| --- | --- | --- |
+| Perfect foresight | 274.32 | 100% |
+| MILP on LEAR | 236.08 | 86.1% |
+| PPO on LEAR, 300 updates, mean of 5 seeds | 194.83 | 71.0% |
+| Threshold rule on LEAR, k = 10 | 167.75 | 61.2% |
+| Do nothing | 0 | 0% |
+
+The rule trails MILP by 68.33 EUR/day (95% interval −94.17 to −46.31). PPO (300 updates, seed mean) beats the rule by 27.08 EUR/day (19.53 to 34.14); four of five seeds beat it.
+
+The same script measures how forecast error turns into lost profit, over all 180 days: MILP plans on the real prices plus a scaled copy of the actual LEAR error, or plus independent normal noise.
+
+| Forecast given to MILP | MAE (EUR/MWh) | EUR/day |
+| --- | --- | --- |
+| Real prices | 0 | 226.88 |
+| Real + 0.5 × LEAR error | 12.60 | 215.04 |
+| Real + 0.75 × LEAR error | 18.90 | 200.85 |
+| LEAR (real + 1 × error) | 25.20 | 175.63 |
+| Real + independent noise, σ = 10 | 7.97 | 200.75 |
+| Real + independent noise, σ = 20 | 15.93 | 123.11 |
+| Real + independent noise, σ = 30 | 23.90 | 56.07 |
+
+- Halving LEAR's error would be worth about 39 EUR/day; about half of the loss comes in the last quarter of the error.
+- At nearly the same MAE, LEAR's errors cost 51 EUR/day and independent noise costs 171 EUR/day. LEAR's errors keep the daily shape, while independent noise moves the cheap and dear quarter-hours. Error size alone does not predict lost profit. Scaling the LEAR error beyond 1 is an extrapolation and is left in the results file only.
+
+## PPO follow-ups: training budget and no forecast (15 October 2026)
+
+`scripts/polish_rl_ablation.py` reruns PPO with the same forecasts, split, seeds and settings, changing one thing at a time (`results/polish_rl_ablation`). Checkpoints are again selected on June, so June remains validation.
+
+| June 2026 | PPO mean of 5 seeds (EUR/day) | Each seed minus MILP on LEAR | Selected updates |
+| --- | --- | --- | --- |
+| 300 updates (original run) | 194.83 | −27.6 to −75.5, every interval below zero | 210–300 |
+| 1,000 updates | 210.01 | −22.6 to −30.3, every interval below zero | 550–990 |
+| 2,000 updates | **214.37** | −17.4 to −29.7, every interval below zero | 710–1,750 |
+| 300 updates, no forecast | −12.09 | −228 to −262 | 10–20 |
+
+- A longer budget helps, with diminishing returns: +15.2 EUR/day from 300 to 1,000 updates, +4.4 from 1,000 to 2,000. The weakest seed of the original run (seed 44, 160.56) reaches 214.84. No seed reaches MILP with the same forecast.
+- Without the forecast, PPO sees only the battery level and the time of day and loses money; its best checkpoints are the first ones. The information was not the problem: one fixed schedule, planned once on the January–May mean price per quarter-hour and repeated every June day, earns 156.96 EUR/day, and one planned on the May mean earns 243.34 (`results/polish_profile`). With this reward and budget PPO did not find a profitable fixed pattern; this is a learning failure, so the arm does not measure the value of the forecast.
+
+## Mean-profile forecasts (15 October 2026, exploratory)
+
+Added after the no-forecast result: `scripts/polish_profile_eval.py` forecasts day D by the mean price per quarter-hour over the last 7, 14 or 28 days (`polish_forecast.profile`, D−1 included, published before the gate). Same 180 days and scoring; designed after seeing the June results, so exploratory (`results/polish_profile`).
+
+| 180 days, Jan–Jun 2026 | MAE (EUR/MWh) | MILP profit (EUR/day) | Minus LEAR, 95% interval | Months above LEAR | June (EUR/day) |
+| --- | --- | --- | --- | --- | --- |
+| LEAR-style LASSO | **25.20** | 175.63 | – | – | 236.08 |
+| Mean of last 7 days | 31.29 | **177.16** | +1.54 (−3.27 to 6.19) | 4 of 6 | 237.22 |
+| Mean of last 14 days | 31.70 | 175.95 | +0.32 (−6.00 to 6.40) | 4 of 6 | 239.20 |
+| Mean of last 28 days | 32.42 | 172.07 | −3.55 (−10.89 to 3.45) | 2 of 6 | 242.71 |
+| Naive D−1 | 31.17 | 155.13 | −20.50 (−28.92 to −12.32) | 0 of 6 | 210.31 |
+
+- The 7-day mean profile has 24% more error than LEAR (Diebold–Mariano p < 0.001) and slightly more than naive D−1, yet earns as much as LEAR. What LEAR adds over yesterday's prices, an average of recent days adds too: both remove day-specific noise and keep the timing.
+- This corrects the earlier reading that better forecasts earn more. Forecasters should be compared by the profit of the schedule they produce, and any forecaster must beat a recent-mean profile, not only naive D−1.
+- The test protocol keeps LEAR as the forecast (fixed before these results) and adds the 7-day profile as a secondary comparator.
+
 ## Data and sources
 
-ENTSO-E zone `10YPL-AREA-----S`, energy prices 12.1.D, is the proposed source. Candidate training: 2025-10-01 to 2026-05-31; validation: June 2026; candidate test: July-August 2026. No raw data, published-version audit or independent-test access audit has been completed. The proposed protocol is therefore not data-frozen. API access requires registration and a security token; do not put tokens in source files or the archive.
+ENTSO-E zone `10YPL-AREA-----S`: day-ahead prices 12.1.D, load forecast 6.1.B, actual load 6.1.A, generation per type 16.1.B&C. Downloaded for 2025-09-20 to 2026-06-30; July–August 2026 not requested. API access requires registration and a security token; the token is read only from `ENTSOE_TOKEN` and never stored.
 
+Redistribution: ENTSO-E's “List of data available for free re-use” (version 18 October 2023) puts the listed items under CC-BY 4.0. The day-ahead load forecast (6.1.b) is on the list; day-ahead prices (12.1.d), actual load (6.1.a) and generation per type (16.1.b&c) are not, so re-using them needs the primary owner's agreement. The repository therefore keeps only `data/polish/*/provenance.json` (queries, retrieval times and SHA-256 of every raw response and day file). After a fresh download with the fetch scripts, `scripts/verify_polish_data.py` shows whether the files match those the results were computed from; a mismatch means a value was republished. Later downloads are appended to the provenance, never replace it.
+
+- [ENTSO-E Transparency Platform legal terms and open-data list](https://transparencyplatform.zendesk.com/hc/en-us/articles/40921911218961-Legal-Terms-and-Conditions)
 - [ENTSO-E market design](https://www.entsoe.eu/network_codes/cacm/implementation/sdac/)
 - [PSE 15-minute launch announcement](https://www.pse.pl/-/pomyslne-uruchomienie-projektu-15-mtu-na-rynku-dnia-nastepnego)
 - [ENTSO-E API access](https://transparencyplatform.zendesk.com/hc/en-us/articles/12845911031188-How-to-get-security-token)
@@ -98,6 +160,6 @@ ENTSO-E zone `10YPL-AREA-----S`, energy prices 12.1.D, is the proposed source. C
 
 ## Remaining research
 
-LEAR/boosting/Transformer forecasts, forecast-conditioned Polish PPO, risk-constrained optimization, partial order acceptance, imbalance charges and ten-owner physical disaggregation are unimplemented. Synthetic analytical tests of the scheduling module are not backtests. A future daily policy must not consume realized intraday prices when scoring a schedule that was supposedly fixed on D-1.
+Done on development data: price download, pilot, naive/LEAR/boosting forecasts with and without exogenous inputs, mean-profile forecasts, threshold rule, forecast-conditioned PPO with budget and no-forecast arms, and the test pipeline (`scripts/polish_test_run.py`, rehearsed on June). Not done: the test itself (needs the freeze), audit of earlier publication versions of the load forecast, Transformer forecast, risk-constrained optimization, partial order acceptance and imbalance charges, ten-owner physical disaggregation and settlement, escrow and validator governance. Synthetic analytical tests of the scheduling module are not backtests. A daily policy must not consume realized intraday prices when scoring a schedule that was fixed on D-1.
 
 The original Irish data evaluate a different community and tariff model. Do not join their unverified source clock to Polish prices or rescale their savings to the 1 MW system.

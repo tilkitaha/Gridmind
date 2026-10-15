@@ -12,3 +12,7 @@ build/
 .idea/
 .vscode/
 data_raw/
+
+# ENTSO-E downloads: only the provenance (hashes) is committed, see scripts/verify_polish_data.py
+/data/polish/*/*
+!/data/polish/*/provenance.json

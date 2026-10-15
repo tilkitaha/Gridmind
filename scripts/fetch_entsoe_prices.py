@@ -81,10 +81,13 @@ def main():
             record['days'][day] = hashlib.sha256(path.read_bytes()).hexdigest()
         records.append(record)
         print(month, sum(not str(v).startswith('excluded') for v in record['days'].values()), 'complete days', flush=True)
-    (out / 'provenance.json').write_text(json.dumps({
+    # A later download (for example the test months) is added to the record, never replaces it.
+    prov = out / 'provenance.json'
+    earlier = json.loads(prov.read_text(encoding='utf-8'))['requests'] if prov.exists() else []
+    prov.write_text(json.dumps({
         'source': 'ENTSO-E Transparency Platform, day-ahead prices 12.1.D (A44)',
         'note': 'Published values at retrieval time; earlier publication versions are not audited by this script.',
-        'requests': records}, indent=2), newline='\n')
+        'requests': earlier + records}, indent=2), newline='\n')
 
 
 if __name__ == '__main__':

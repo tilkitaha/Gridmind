@@ -1,0 +1,756 @@
+{
+  "source": "ENTSO-E Transparency Platform: 6.1.B load forecast, 6.1.A actual load, 16.1.B&C generation per type",
+  "note": "MW levels; coarser periods are held for each quarter-hour. Published values at retrieval time.",
+  "requests": [
+    {
+      "kind": "load_forecast",
+      "month": "2025-09",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202509192200",
+        "periodEnd": "202509302200"
+      },
+      "retrieved_utc": "2026-10-15T10:38:28.316520+00:00",
+      "raw_file": "load_forecast_2025-09.xml",
+      "raw_sha256": "229c43ba5a772829ae03af7feb4463589c04c12d97ea1865ae49e27dbd3f85fa",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 1056
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2025-10",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202509302200",
+        "periodEnd": "202510312300"
+      },
+      "retrieved_utc": "2026-10-15T10:38:30.731300+00:00",
+      "raw_file": "load_forecast_2025-10.xml",
+      "raw_sha256": "1ce7263cd786d22a9096655f3d98cb2a6ad9afa35bb1a3f5f1e0ba632ff34ba7",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2980
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2025-11",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202510312300",
+        "periodEnd": "202511302300"
+      },
+      "retrieved_utc": "2026-10-15T10:38:33.873174+00:00",
+      "raw_file": "load_forecast_2025-11.xml",
+      "raw_sha256": "e2b3e348b5149062cbc553e884136df2d829584e2473e1041dc1f01652742577",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2880
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2025-12",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202511302300",
+        "periodEnd": "202512312300"
+      },
+      "retrieved_utc": "2026-10-15T10:38:38.993962+00:00",
+      "raw_file": "load_forecast_2025-12.xml",
+      "raw_sha256": "3dd18a0b462f7df756a3fede972438e93db922e92f7a7865b71f5ecef04404f3",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2976
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2026-01",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202512312300",
+        "periodEnd": "202601312300"
+      },
+      "retrieved_utc": "2026-10-15T10:38:44.710529+00:00",
+      "raw_file": "load_forecast_2026-01.xml",
+      "raw_sha256": "0009f463a57a5ed900cc62c681c6e6ed411bc6352e37981a1dc2e1c386bfae9d",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2976
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2026-02",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202601312300",
+        "periodEnd": "202602282300"
+      },
+      "retrieved_utc": "2026-10-15T10:38:51.406174+00:00",
+      "raw_file": "load_forecast_2026-02.xml",
+      "raw_sha256": "f932d270bf906aee6f818381ec5868b364c24dd26eaf69ed4565077e50d90292",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2688
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2026-03",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202602282300",
+        "periodEnd": "202603312200"
+      },
+      "retrieved_utc": "2026-10-15T10:38:53.046280+00:00",
+      "raw_file": "load_forecast_2026-03.xml",
+      "raw_sha256": "c0c0541ebfbd4e68a20c0f62af677bd4af9af3f27f6b3967e5d7df704e60c4d6",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2972
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2026-04",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202603312200",
+        "periodEnd": "202604302200"
+      },
+      "retrieved_utc": "2026-10-15T10:38:54.220126+00:00",
+      "raw_file": "load_forecast_2026-04.xml",
+      "raw_sha256": "96e050729c0bede5d5f7fd7c7fe78b1b16e6cbb627ab9099e7c5cde476e4890c",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2880
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2026-05",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202604302200",
+        "periodEnd": "202605312200"
+      },
+      "retrieved_utc": "2026-10-15T10:39:02.447814+00:00",
+      "raw_file": "load_forecast_2026-05.xml",
+      "raw_sha256": "979153ec1af1fdf17334c012d772a82cfdcaeaa8f52a9ee2ec1c6a79724656c9",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2976
+    },
+    {
+      "kind": "load_forecast",
+      "month": "2026-06",
+      "query": {
+        "documentType": "A65",
+        "processType": "A01",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202605312200",
+        "periodEnd": "202606302200"
+      },
+      "retrieved_utc": "2026-10-15T10:39:03.156931+00:00",
+      "raw_file": "load_forecast_2026-06.xml",
+      "raw_sha256": "eaf5ac5d19c373374091bdb20dcea65b71bc1b6d96afbd6ca6b40b9c3c07ca38",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2880
+    },
+    {
+      "kind": "load_actual",
+      "month": "2025-09",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202509192200",
+        "periodEnd": "202509302200"
+      },
+      "retrieved_utc": "2026-10-15T10:39:10.346066+00:00",
+      "raw_file": "load_actual_2025-09.xml",
+      "raw_sha256": "f3aa47986c94c1aec66824166d1db11783f4f99386809a01de6a88b162021ba5",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 1056
+    },
+    {
+      "kind": "load_actual",
+      "month": "2025-10",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202509302200",
+        "periodEnd": "202510312300"
+      },
+      "retrieved_utc": "2026-10-15T10:39:11.258944+00:00",
+      "raw_file": "load_actual_2025-10.xml",
+      "raw_sha256": "45fe9dd6915608a029e29fd6df2e33845444ebcce3b1ae060b1d465c38b7fb55",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2980
+    },
+    {
+      "kind": "load_actual",
+      "month": "2025-11",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202510312300",
+        "periodEnd": "202511302300"
+      },
+      "retrieved_utc": "2026-10-15T10:39:12.603790+00:00",
+      "raw_file": "load_actual_2025-11.xml",
+      "raw_sha256": "20c57f463124531c1293179eb18fc303bbd04d670a3df2cfebeb0a55fbb7860c",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2880
+    },
+    {
+      "kind": "load_actual",
+      "month": "2025-12",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202511302300",
+        "periodEnd": "202512312300"
+      },
+      "retrieved_utc": "2026-10-15T10:39:13.701221+00:00",
+      "raw_file": "load_actual_2025-12.xml",
+      "raw_sha256": "bdaaf3f7aa3e6f13d3c27812b3b6e6f0c569ec8e1d0ec0ae6ad17a103e3099ca",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2976
+    },
+    {
+      "kind": "load_actual",
+      "month": "2026-01",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202512312300",
+        "periodEnd": "202601312300"
+      },
+      "retrieved_utc": "2026-10-15T10:39:14.412455+00:00",
+      "raw_file": "load_actual_2026-01.xml",
+      "raw_sha256": "cd8ae400e36c54a73d08bedd0c167a50cc77d2fcb445de84451ab86d87bdfcc6",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2976
+    },
+    {
+      "kind": "load_actual",
+      "month": "2026-02",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202601312300",
+        "periodEnd": "202602282300"
+      },
+      "retrieved_utc": "2026-10-15T10:39:20.508321+00:00",
+      "raw_file": "load_actual_2026-02.xml",
+      "raw_sha256": "5e12c61b81561bf91a6398cb2b2dd70c75cd46d83a8748b547718d4680bfdfd9",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2688
+    },
+    {
+      "kind": "load_actual",
+      "month": "2026-03",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202602282300",
+        "periodEnd": "202603312200"
+      },
+      "retrieved_utc": "2026-10-15T10:39:26.104694+00:00",
+      "raw_file": "load_actual_2026-03.xml",
+      "raw_sha256": "aabe01afa8abed4f12ab3866e2578adecfdbb221c6f3fde4c0078b01398250ab",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2972
+    },
+    {
+      "kind": "load_actual",
+      "month": "2026-04",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202603312200",
+        "periodEnd": "202604302200"
+      },
+      "retrieved_utc": "2026-10-15T10:39:27.099818+00:00",
+      "raw_file": "load_actual_2026-04.xml",
+      "raw_sha256": "74028c5bb12348b65c4d10a1db86e30137c169485738aa862c5d935dcbb14e34",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2880
+    },
+    {
+      "kind": "load_actual",
+      "month": "2026-05",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202604302200",
+        "periodEnd": "202605312200"
+      },
+      "retrieved_utc": "2026-10-15T10:39:28.168228+00:00",
+      "raw_file": "load_actual_2026-05.xml",
+      "raw_sha256": "fe61afa056886c733796332cbf1aa15a726bf939026a74af04a3eb6f12e54b84",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2976
+    },
+    {
+      "kind": "load_actual",
+      "month": "2026-06",
+      "query": {
+        "documentType": "A65",
+        "processType": "A16",
+        "outBiddingZone_Domain": "10YPL-AREA-----S",
+        "periodStart": "202605312200",
+        "periodEnd": "202606302200"
+      },
+      "retrieved_utc": "2026-10-15T10:39:29.473306+00:00",
+      "raw_file": "load_actual_2026-06.xml",
+      "raw_sha256": "a6340cc4cd0fc7118e8fbab2822af7a89dddf749494d3453444d065b225b674f",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "total"
+      ],
+      "points": 2880
+    },
+    {
+      "kind": "generation",
+      "month": "2025-09",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202509192200",
+        "periodEnd": "202509302200"
+      },
+      "retrieved_utc": "2026-10-15T10:39:35.639567+00:00",
+      "raw_file": "generation_2025-09.xml",
+      "raw_sha256": "11ded4f333444d9cf96b3240102a64bfb3b5df1b82cf574399c1860e3488559b",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 13728
+    },
+    {
+      "kind": "generation",
+      "month": "2025-10",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202509302200",
+        "periodEnd": "202510312300"
+      },
+      "retrieved_utc": "2026-10-15T10:39:39.730323+00:00",
+      "raw_file": "generation_2025-10.xml",
+      "raw_sha256": "bc20f8fce23bbaa3888c91614b5b8b677ebf814431bddf917e5ebcace48bf97c",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 38740
+    },
+    {
+      "kind": "generation",
+      "month": "2025-11",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202510312300",
+        "periodEnd": "202511302300"
+      },
+      "retrieved_utc": "2026-10-15T10:39:50.706858+00:00",
+      "raw_file": "generation_2025-11.xml",
+      "raw_sha256": "4245b9e0ac4e06f266814a74d0be057f06c8b1c7839f9e23954988c48c7830cc",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 37440
+    },
+    {
+      "kind": "generation",
+      "month": "2025-12",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202511302300",
+        "periodEnd": "202512312300"
+      },
+      "retrieved_utc": "2026-10-15T10:39:59.114733+00:00",
+      "raw_file": "generation_2025-12.xml",
+      "raw_sha256": "d182e3928ff55315cc8e3dcc796bb9617ada374f86548a6d140213955c141dd4",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 38688
+    },
+    {
+      "kind": "generation",
+      "month": "2026-01",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202512312300",
+        "periodEnd": "202601312300"
+      },
+      "retrieved_utc": "2026-10-15T10:40:05.400106+00:00",
+      "raw_file": "generation_2026-01.xml",
+      "raw_sha256": "497534aa2fab872b053521fa5f68a1555c10ddc437abba6c7a1ed3a6d44ab8b7",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 38688
+    },
+    {
+      "kind": "generation",
+      "month": "2026-02",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202601312300",
+        "periodEnd": "202602282300"
+      },
+      "retrieved_utc": "2026-10-15T10:40:13.210985+00:00",
+      "raw_file": "generation_2026-02.xml",
+      "raw_sha256": "32b10e8b1b38e3d491a228eeb7a8770acf2f0da3baf0afe7620ce5481420e435",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 34944
+    },
+    {
+      "kind": "generation",
+      "month": "2026-03",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202602282300",
+        "periodEnd": "202603312200"
+      },
+      "retrieved_utc": "2026-10-15T10:40:25.093995+00:00",
+      "raw_file": "generation_2026-03.xml",
+      "raw_sha256": "238011a7c29e19f03b51ff120622d81c7a399ad56a9200fe27c7f9308aa10c69",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 38636
+    },
+    {
+      "kind": "generation",
+      "month": "2026-04",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202603312200",
+        "periodEnd": "202604302200"
+      },
+      "retrieved_utc": "2026-10-15T10:40:36.026643+00:00",
+      "raw_file": "generation_2026-04.xml",
+      "raw_sha256": "be68bb201211a84ce2a9da8d5c3f19e6a48b262ead26377cafe4b790c2f707bb",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 37440
+    },
+    {
+      "kind": "generation",
+      "month": "2026-05",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202604302200",
+        "periodEnd": "202605312200"
+      },
+      "retrieved_utc": "2026-10-15T10:40:50.380814+00:00",
+      "raw_file": "generation_2026-05.xml",
+      "raw_sha256": "ad38413eb3525735a5627acb5de0df03b1e35c89e5ee1319c444e1ca68235662",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 38688
+    },
+    {
+      "kind": "generation",
+      "month": "2026-06",
+      "query": {
+        "documentType": "A75",
+        "processType": "A16",
+        "in_Domain": "10YPL-AREA-----S",
+        "periodStart": "202605312200",
+        "periodEnd": "202606302200"
+      },
+      "retrieved_utc": "2026-10-15T10:41:05.838669+00:00",
+      "raw_file": "generation_2026-06.xml",
+      "raw_sha256": "3d5ae847df58ef5ca47a02ecb2d78f32063680b461a5d485279052d8fd516f09",
+      "resolutions": [
+        "PT15M"
+      ],
+      "keys": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B10",
+        "B11",
+        "B12",
+        "B15",
+        "B16",
+        "B19",
+        "B20"
+      ],
+      "points": 37440
+    }
+  ]
+}

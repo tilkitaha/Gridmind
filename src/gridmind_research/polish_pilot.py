@@ -1,6 +1,6 @@
 """Descriptive pilot on Polish day-ahead prices for the proposed BESS-trader study.
 
-Uses only the development period of configs/polish_market_protocol.json; the
+Uses only the development period of configs/polish_test_protocol.json; the
 candidate test window stays closed until that protocol is frozen. Schedules come
 from polish_market.optimize_schedule; profits from polish_market.realized_profit.
 Units: EUR/MWh prices, MW power, MWh energy, EUR profit.
@@ -13,7 +13,7 @@ import pandas as pd
 
 from .polish_market import BESS, optimize_schedule, realized_profit, validate_day
 
-PROTOCOL = Path('configs/polish_market_protocol.json')
+PROTOCOL = Path('configs/polish_test_protocol.json')
 
 
 def candidate_test_window(protocol=PROTOCOL):

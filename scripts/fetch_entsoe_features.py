@@ -80,11 +80,17 @@ def main():
             print(kind, month, record['resolutions'], len(record['keys']), 'series', flush=True)
         if frames:
             wide = pd.concat(frames).pivot_table(index='timestamp_utc', columns='key', values='value_mw', aggfunc='first')
-            wide.sort_index().to_csv(out / f'{kind}.csv', lineterminator='\n')
-    (out / 'provenance.json').write_text(json.dumps({
+            path = out / f'{kind}.csv'
+            if path.exists():  # keep earlier downloads; a timestamp already present keeps its first value
+                old = pd.read_csv(path, index_col=0)
+                wide = pd.concat([old, wide[~wide.index.isin(old.index)]])
+            wide.sort_index().to_csv(path, lineterminator='\n')
+    prov = out / 'provenance.json'
+    earlier = json.loads(prov.read_text(encoding='utf-8'))['requests'] if prov.exists() else []
+    prov.write_text(json.dumps({
         'source': 'ENTSO-E Transparency Platform: 6.1.B load forecast, 6.1.A actual load, 16.1.B&C generation per type',
         'note': 'MW levels; coarser periods are held for each quarter-hour. Published values at retrieval time.',
-        'requests': records}, indent=2), newline='\n')
+        'requests': earlier + records}, indent=2), newline='\n')
 
 
 if __name__ == '__main__':
