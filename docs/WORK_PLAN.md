@@ -8,12 +8,16 @@
 | --- | --- | --- |
 | İrlanda topluluk çalışması | Tamamlandı, keşifsel; sayılar kayıtlara bağlı | 4 doğrulama betiği, `results/` |
 | Ekim keşifsel bulguları | 24 saatlik dönem, MPC ve RL teşhisi; doğrulanmadı | `docs/EPISODE_LENGTH_EXPLORATION.md` |
-| Polonya tasarımı (22 Eylül, danışmana sunulan) | Fiziksel model, MILP ve veri sözleşmesi hazır; 7 deneyin hiçbiri tam değil | `configs/polish_market_protocol.json` |
-| ENTSO-E erişimi | Hesap açıldı, API izni istendi (14 Ekim), en geç 3 iş günü | Onay e-postası |
+| Polonya tasarımı (22 Eylül, danışmana sunulan) | 15 Ekim: geliştirme verisinde pilot, tahminler, kural, MILP ve PPO çalıştı; test protokolü taslağı ve tek seferlik test betiği hazır; test yapılmadı | `docs/POLISH_MARKET_STUDY.md`, `configs/polish_test_protocol.json` |
+| ENTSO-E erişimi | Token alındı; Ekim 2025–Haziran 2026 fiyat ve özellik verisi indirildi (15 Ekim). Ham veri lisans gereği repoda değil, yalnızca hash'leri var | `data/polish/*/provenance.json` |
 | Konu onayı | **Yok**; danışman bu sunumdan sonra karar verecek | – |
 | Fakülte format kuralları | 10 eksik | `docs/THESIS_FORMAT_REVIEW.md` |
 | Ekibin projeye hâkimiyeti | Cem ve Taha projenin ayrıntılarını bilmiyor | – |
 | CI | Yeşil | GitHub Actions |
+
+## 15 Ekim güncellemesi
+
+Faz 0'daki 0.1 ve 0.2 bitti. Faz 2'nin Polonya kolunda 2.1–2.3 geliştirme verisinde yapıldı, 2.4 için taslak hazır (`docs/PROTOCOL_POLISH_TEST_DRAFT.md`). Dondurmadan önce ekibin karar vermesi gerekenler: başarı eşiği (€/gün), üç kişinin yazılı erişim beyanı, PPO kolunun seçimi. Önemli bir düzeltme: 7 günlük ortalama fiyat profili, LEAR'dan yüksek hataya rağmen aynı kârı getiriyor; tahminciler hatayla değil kârla karşılaştırılır.
 
 ## Sorumluluk alanları (öneri)
 

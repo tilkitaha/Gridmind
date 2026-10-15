@@ -1,4 +1,4 @@
-# Savunma soru bankası (ek sorular 25–44)
+# Savunma soru bankası (ek sorular 25–48)
 
 14 Ekim 2026. `defense/GridMind_Defense_Guide.docx` içindeki 1–24 numaralı jüri sorularının devamıdır. İş planındaki 1.4 maddesi.
 
@@ -16,7 +16,7 @@
 ## A · Kapsam ve başlık
 
 ### 25. Your title promises autonomous trading and risk optimisation. Where are they?
-**Answer.** The completed evidence is a measured six-household community in Ireland with simulated batteries. Autonomous trading in the Polish day-ahead market is the intended application: its scheduling model, data contract and clock checks are implemented and tested, but no market data have been scored. Risk appears as a diagnostic CVaR, not an enforced constraint.
+**Answer.** The completed evidence is a measured six-household community in Ireland with simulated batteries. Autonomous trading in the Polish day-ahead market is the intended application: the scheduling model, forecasts and a learned policy have been run on development data (October 2025 to June 2026), but the test on unseen months has not been run. Risk appears as a diagnostic CVaR, not an enforced constraint.
 **Türkçe.** Başlık, tamamlanan işten büyük. Bunu saklamıyoruz, ayırıyoruz. Başlık K0 kararına göre değişebilir.
 **Kanıt.** `docs/SCIENTIFIC_RELEASE.md` §01; `docs/POLISH_MARKET_STUDY.md`. **Sorumlu:** Taha
 
@@ -69,7 +69,25 @@
 
 ### 36. Why is July–August 2026 locked?
 **Answer.** It is the untouched test window of the proposed design. Download and analysis code refuse any range that touches it until the protocol is frozen, so the final comparison can be run once on data nobody has seen.
-**Kanıt.** `polish_pilot.refuse_test_window`. **Sorumlu:** Serhat
+**Kanıt.** `polish_pilot.refuse_test_window`; `configs/polish_test_protocol.json`. **Sorumlu:** Serhat
+
+### 45. PPO and the optimiser see the same forecast. Why does PPO earn less?
+**Answer.** For a given forecast, the MILP finds the best schedule for the whole day exactly. PPO has to learn that mapping by trial and error from 150 training days. It does learn to trade: it moves about as much energy as the MILP and beats a threshold rule by 47 EUR/day. But it times the trades worse. In June it earns 214 EUR/day against 236 for the MILP; all five seeds are below, with every interval below zero. Longer training helps with diminishing returns: 195, 210 and 214 EUR/day for 300, 1,000 and 2,000 updates.
+**Türkçe.** Bu, bilgi değil öğrenme farkı. Aynı bilgiyle optimizer kesin çözüyor; PPO yaklaşıyor. June doğrulama ayı, test değil.
+**Kanıt.** `results/polish_rl`, `results/polish_rl_ablation`, `docs/POLISH_MARKET_STUDY.md`. **Sorumlu:** Serhat
+
+### 46. A seven-day average has more error than LEAR but earns the same. Does that undermine your forecasting work?
+**Answer.** It shows which yardstick matters. The MILP only needs to know when prices are low and high; error measures the level. LEAR's errors keep the daily shape, so at about the same error size they cost 51 EUR/day where random noise costs 171. We added the seven-day average after seeing the first results, so we label it exploratory, keep LEAR as the forecast fixed in the protocol, and add the average as a secondary comparator. Forecasters are compared by the profit of their schedules.
+**Türkçe.** Bunu sonradan bulduk ve saklamıyoruz; sunumdaki eski "daha iyi tahmin daha çok kazandırır" cümlesini bu yüzden düzelttik.
+**Kanıt.** `results/polish_profile`, `results/polish_controls`. **Sorumlu:** Cem
+
+### 47. Why not keep tuning PPO until it beats the optimiser?
+**Answer.** Every choice made by looking at June makes June less informative. A policy tuned until it wins on the validation month would win there by construction and tell us nothing about new months. So the five checkpoints are fixed now, by file hash, in the test protocol, and the test is run once on months nobody has looked at. If PPO still loses, that is the result.
+**Kanıt.** `configs/polish_test_protocol.json`, `docs/PROTOCOL_POLISH_TEST_DRAFT.md`. **Sorumlu:** Serhat
+
+### 48. Where are the Polish raw data?
+**Answer.** ENTSO-E puts only the items on its open-data list under CC-BY 4.0. The day-ahead load forecast is on that list; day-ahead prices, actual load and generation are not. So we do not redistribute them. The repository keeps the SHA-256 of every raw response and day file; anyone with a free API token downloads the same data with our fetch scripts and checks it with `verify_polish_data.py`.
+**Kanıt.** `data/polish/*/provenance.json`, `scripts/verify_polish_data.py`. **Sorumlu:** Serhat
 
 ## D · İstatistik
 
