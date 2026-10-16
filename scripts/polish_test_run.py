@@ -111,6 +111,8 @@ def summarize(frame, excluded, skipped, through, protocol):
                                        for k in frame if k.startswith('ppo_') and k != 'ppo_mean'},
         'secondary_minus_milp': {k: contrast((frame[k] - frame['milp_lear']).to_numpy())
                                  for k in frame if not k.startswith(('ppo', 'milp_lear', 'bound'))},
+        'ppo_mean_minus_secondary': {k: contrast((frame['ppo_mean'] - frame[k]).to_numpy())
+                                     for k in frame if not k.startswith(('ppo', 'milp_lear', 'bound'))},
         'ppo_throughput_mwh_per_day': through,
     }
 

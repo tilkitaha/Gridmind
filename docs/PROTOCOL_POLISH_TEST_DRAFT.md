@@ -51,7 +51,7 @@ The policies are not retrained after the freeze; the checkpoint files are the tr
 | PPO worse | upper bound < 0 |
 | No demonstrated gain | otherwise |
 
-**Secondary, exploratory:** each checkpoint minus MILP; each secondary controller minus MILP; share of the realized-price bound; losing days; throughput; results by month. With 62 days, a CVaR95 rests on about three tail days, so tail risk is described, not tested.
+**Secondary, exploratory:** each checkpoint minus MILP; each secondary controller minus MILP; PPO (seed mean) minus each secondary controller; share of the realized-price bound; losing days; throughput; results by month. With 62 days, a CVaR95 rests on about three tail days, so tail risk is described, not tested.
 
 ## 6. Execution
 

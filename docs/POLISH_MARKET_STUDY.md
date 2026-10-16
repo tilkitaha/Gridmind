@@ -127,7 +127,7 @@ The same script measures how forecast error turns into lost profit, over all 180
 | 2,000 updates | **214.37** | −17.4 to −29.7, every interval below zero | 710–1,750 |
 | 300 updates, no forecast | −12.09 | −228 to −262 | 10–20 |
 
-- A longer budget helps, with diminishing returns: +15.2 EUR/day from 300 to 1,000 updates, +4.4 from 1,000 to 2,000. The weakest seed of the original run (seed 44, 160.56) reaches 214.84. No seed reaches MILP with the same forecast.
+- A longer budget helps, with diminishing returns: +15.2 EUR/day from 300 to 1,000 updates, +4.4 from 1,000 to 2,000. The weakest seed of the original run (seed 44, 160.56) reaches 214.84. No seed reaches MILP with the same forecast. The 2,000-update seed mean beats the threshold rule by 46.62 EUR/day (33.57 to 61.73; `results/polish_test_rehearsal`).
 - Without the forecast, PPO sees only the battery level and the time of day and loses money; its best checkpoints are the first ones. The information was not the problem: one fixed schedule, planned once on the January–May mean price per quarter-hour and repeated every June day, earns 156.96 EUR/day, and one planned on the May mean earns 243.34 (`results/polish_profile`). With this reward and budget PPO did not find a profitable fixed pattern; this is a learning failure, so the arm does not measure the value of the forecast.
 
 ## Mean-profile forecasts (15 October 2026, exploratory)

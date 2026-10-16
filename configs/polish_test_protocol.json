@@ -38,7 +38,7 @@
     "ppo_worse": "upper 95 percent bound below zero",
     "no_demonstrated_gain": "otherwise"
   },
-  "secondary_endpoints": ["each checkpoint minus MILP with the same bootstrap", "share of the realized-price bound", "losing days", "battery throughput MWh/day", "result by month", "all secondary controllers against MILP"],
+  "secondary_endpoints": ["each checkpoint minus MILP with the same bootstrap", "share of the realized-price bound", "losing days", "battery throughput MWh/day", "result by month", "all secondary controllers against MILP", "PPO (mean of the five checkpoints) against each secondary controller"],
   "multiplicity": "One primary contrast; everything else is labelled exploratory",
   "access_declaration": {"question": "Have you looked at Polish day-ahead prices for July-August 2026 (any source) or at any result computed on them?", "Serhat Yigit": null, "Cem Yilmaz": null, "Taha Can Tilkioglu": null},
   "execution": "scripts/polish_test_run.py: lock (hashes of this file, code commit, checkpoints and test data) then run once; both refuse to overwrite",
