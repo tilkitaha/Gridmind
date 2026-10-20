@@ -63,6 +63,12 @@ full-acceptance, cost, and market assumptions; they are not observed trading rev
 
 ## Next research step
 
+A [matched profit-versus-error comparison](FORECAST_SELECTION_COMPARISON.md) now uses
+the four candidates with retained daily MAE and profit. On 166 reused dates, rolling
+profit selection earns 179.66 EUR/day versus 181.70 for error selection; the exploratory
+interval for the difference includes zero. The candidate set differs from the first
+run above. Both January-May objectives select LEAR for a fixed June strategy.
+
 Keep the current Polish test protocol unchanged. A separate future protocol could
 compare profit-based selection with error-based selection and a forecaster trained
 with a scheduling-regret objective, fixing candidates and tuning budgets before new

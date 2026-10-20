@@ -1,0 +1,218 @@
+{
+  "status": "Exploratory comparison on previously inspected development dates",
+  "candidates": [
+    "lear",
+    "gbm",
+    "naive_d1",
+    "naive_d7"
+  ],
+  "window_calendar_days": 28,
+  "min_observed_days": 14,
+  "excluded_warmup_dates": [
+    "2026-01-01",
+    "2026-01-02",
+    "2026-01-03",
+    "2026-01-04",
+    "2026-01-05",
+    "2026-01-06",
+    "2026-01-07",
+    "2026-01-08",
+    "2026-01-09",
+    "2026-01-10",
+    "2026-01-11",
+    "2026-01-12",
+    "2026-01-13",
+    "2026-01-14"
+  ],
+  "missing_input_dates": [
+    "2026-03-29"
+  ],
+  "all_scored_days": {
+    "days": 166,
+    "methods": {
+      "rolling_profit": {
+        "eur_per_day": 179.65949893139046,
+        "mae_eur_mwh": 23.684516299819588,
+        "losing_days": 11
+      },
+      "rolling_mae": {
+        "eur_per_day": 181.70439274855661,
+        "mae_eur_mwh": 23.4934108375885,
+        "losing_days": 12
+      },
+      "lear": {
+        "eur_per_day": 181.82858379490963,
+        "mae_eur_mwh": 23.020205638172786,
+        "losing_days": 12
+      },
+      "gbm": {
+        "eur_per_day": 174.63134487534634,
+        "mae_eur_mwh": 27.230662853914247,
+        "losing_days": 11
+      },
+      "naive_d1": {
+        "eur_per_day": 161.91332925514394,
+        "mae_eur_mwh": 28.758738077309236,
+        "losing_days": 16
+      },
+      "naive_d7": {
+        "eur_per_day": 152.41817591164528,
+        "mae_eur_mwh": 35.982990712851404,
+        "losing_days": 21
+      }
+    },
+    "comparisons": {
+      "rolling_profit_minus_rolling_mae": {
+        "mean_eur_per_day": -2.0448938171661704,
+        "lower95": -6.095226807867726,
+        "upper95": 1.2965241811724078,
+        "block_observations": 7,
+        "draws": 10000,
+        "seed": 20102026,
+        "interpretation": "Exploratory conditional interval; selection is not refit in draws"
+      },
+      "rolling_profit_minus_lear": {
+        "mean_eur_per_day": -2.1690848635191733,
+        "lower95": -6.148453375793688,
+        "upper95": 1.081397792999385,
+        "block_observations": 7,
+        "draws": 10000,
+        "seed": 20102026,
+        "interpretation": "Exploratory conditional interval; selection is not refit in draws"
+      },
+      "rolling_mae_minus_lear": {
+        "mean_eur_per_day": -0.12419104635300267,
+        "lower95": -0.7126785432319667,
+        "upper95": 0.3163329173689212,
+        "block_observations": 7,
+        "draws": 10000,
+        "seed": 20102026,
+        "interpretation": "Exploratory conditional interval; selection is not refit in draws"
+      }
+    }
+  },
+  "june_validation": {
+    "days": 30,
+    "methods": {
+      "rolling_profit": {
+        "eur_per_day": 232.4188517278394,
+        "mae_eur_mwh": 27.42184972989235,
+        "losing_days": 0
+      },
+      "rolling_mae": {
+        "eur_per_day": 236.08298164589115,
+        "mae_eur_mwh": 25.364465637170202,
+        "losing_days": 1
+      },
+      "lear": {
+        "eur_per_day": 236.08298164589115,
+        "mae_eur_mwh": 25.364465637170202,
+        "losing_days": 1
+      },
+      "gbm": {
+        "eur_per_day": 220.66065432536942,
+        "mae_eur_mwh": 28.544105412491014,
+        "losing_days": 0
+      },
+      "naive_d1": {
+        "eur_per_day": 210.3088537777009,
+        "mae_eur_mwh": 32.955243055555556,
+        "losing_days": 2
+      },
+      "naive_d7": {
+        "eur_per_day": 205.20290450946453,
+        "mae_eur_mwh": 34.938222222222215,
+        "losing_days": 1
+      },
+      "frozen_profit": {
+        "eur_per_day": 236.08298164589115,
+        "mae_eur_mwh": 25.364465637170202,
+        "losing_days": 1
+      },
+      "frozen_mae": {
+        "eur_per_day": 236.08298164589115,
+        "mae_eur_mwh": 25.364465637170202,
+        "losing_days": 1
+      }
+    },
+    "comparisons": {
+      "rolling_profit_minus_rolling_mae": {
+        "mean_eur_per_day": -3.664129918051713,
+        "lower95": -9.707562645790054,
+        "upper95": 1.9754681765927873,
+        "block_observations": 7,
+        "draws": 10000,
+        "seed": 20102026,
+        "interpretation": "Exploratory conditional interval; selection is not refit in draws"
+      },
+      "rolling_profit_minus_lear": {
+        "mean_eur_per_day": -3.664129918051713,
+        "lower95": -9.707562645790054,
+        "upper95": 1.9754681765927873,
+        "block_observations": 7,
+        "draws": 10000,
+        "seed": 20102026,
+        "interpretation": "Exploratory conditional interval; selection is not refit in draws"
+      },
+      "rolling_mae_minus_lear": {
+        "mean_eur_per_day": 0.0,
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "block_observations": 7,
+        "draws": 10000,
+        "seed": 20102026,
+        "interpretation": "Exploratory conditional interval; selection is not refit in draws"
+      },
+      "frozen_profit_minus_frozen_mae": {
+        "mean_eur_per_day": 0.0,
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "block_observations": 7,
+        "draws": 10000,
+        "seed": 20102026,
+        "interpretation": "Exploratory conditional interval; selection is not refit in draws"
+      }
+    }
+  },
+  "frozen_choices_from_january_may": {
+    "profit": {
+      "candidate": "lear",
+      "scores": {
+        "lear": 163.5347798979687,
+        "gbm": 157.86722644078955,
+        "naive_d1": 144.0937425979918,
+        "naive_d7": 136.80376470106194
+      },
+      "history_days": 150,
+      "history_first": "2026-01-01",
+      "history_last": "2026-05-31"
+    },
+    "mae": {
+      "candidate": "lear",
+      "scores": {
+        "lear": 25.171636358700027,
+        "gbm": 28.77531031463263,
+        "naive_d1": 30.811139583333333,
+        "naive_d7": 38.915917361111106
+      },
+      "history_days": 150,
+      "history_first": "2026-01-01",
+      "history_last": "2026-05-31"
+    }
+  },
+  "rolling_disagreement_days": 51,
+  "limits": [
+    "Same candidate panel for both objectives; mean profiles lack retained daily MAE",
+    "No new model training or dispatch execution; recorded counterfactual profits reused",
+    "June is reused validation data, not an untouched test",
+    "Bootstrap blocks count observations, bridging missing calendar dates",
+    "Bootstrap conditions on recorded choices; no policy refitting or multiplicity adjustment"
+  ],
+  "inputs_sha256": {
+    "results/polish_forecast/daily.csv": "a0494ab2751efd0e193b775e909becf2228821cfc38daa775c0113d4abfb593f"
+  },
+  "code_sha256": {
+    "src/gridmind_research/forecast_selection.py": "1c1dd8cd648a87dd4096149b6f5d7e3d0407e15a46ea4317b7b33e65ebc8de52",
+    "scripts/compare_forecast_selection.py": "7a77533863bb7dac05c6a3f78a928d3e42a706955548818311033875477912a1"
+  }
+}

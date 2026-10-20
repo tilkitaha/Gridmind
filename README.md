@@ -50,6 +50,11 @@ versus 181.83 for always-LEAR and 183.08 for the seven-day mean profile. These a
 development outcomes, not independent evidence of improvement. No new forecast is trained.
 See [method, limits and reproduction](docs/PROFIT_ORIENTED_FORECASTING.md).
 
+A [matched profit-versus-error comparison](docs/FORECAST_SELECTION_COMPARISON.md)
+holds four candidate forecasts and their history fixed. Profit selection earns
+179.66 EUR/day versus 181.70 for error selection; the exploratory difference interval
+includes zero. This uses a different candidate panel from the five-model experiment above.
+
 ## Reproduction
 
 Python 3.12 and the pinned research dependencies are used. Included StoreNet data and saved results require no API key.

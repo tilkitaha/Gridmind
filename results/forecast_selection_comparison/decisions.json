@@ -1,0 +1,5490 @@
+[
+  {
+    "day": "2026-01-15",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 102.0829660083598,
+      "gbm": 93.65002475514451,
+      "naive_d1": 74.69388190542153,
+      "naive_d7": 98.23104565072228
+    },
+    "history_days": 14,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-14"
+  },
+  {
+    "day": "2026-01-15",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 51.09466335595909,
+      "gbm": 46.59497684427574,
+      "naive_d1": 59.74126488095238,
+      "naive_d7": 65.16841517857144
+    },
+    "history_days": 14,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-14"
+  },
+  {
+    "day": "2026-01-16",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 108.24251326061875,
+      "gbm": 99.34906303093267,
+      "naive_d1": 74.91274942751625,
+      "naive_d7": 101.37453484418292
+    },
+    "history_days": 15,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-15"
+  },
+  {
+    "day": "2026-01-16",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 50.17910832422279,
+      "gbm": 46.1052686754219,
+      "naive_d1": 59.01407638888889,
+      "naive_d7": 63.25369444444445
+    },
+    "history_days": 15,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-15"
+  },
+  {
+    "day": "2026-01-17",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 102.39989674623452,
+      "gbm": 93.41016435465727,
+      "naive_d1": 69.76352374480618,
+      "naive_d7": 93.04832455094365
+    },
+    "history_days": 16,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-16"
+  },
+  {
+    "day": "2026-01-17",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 47.924935348249825,
+      "gbm": 45.33548317358428,
+      "naive_d1": 58.213932291666666,
+      "naive_d7": 60.7617578125
+    },
+    "history_days": 16,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-16"
+  },
+  {
+    "day": "2026-01-18",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 95.56750251038791,
+      "gbm": 86.02501629664339,
+      "naive_d1": 65.12977281244916,
+      "naive_d7": 85.34672527395315
+    },
+    "history_days": 17,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-17"
+  },
+  {
+    "day": "2026-01-18",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 45.98524593001953,
+      "gbm": 43.4845664743066,
+      "naive_d1": 55.76372549019608,
+      "naive_d7": 58.06096200980392
+    },
+    "history_days": 17,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-17"
+  },
+  {
+    "day": "2026-01-19",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 90.01525898834265,
+      "gbm": 81.50391325311641,
+      "naive_d1": 61.57824342105271,
+      "naive_d7": 80.2469740891429
+    },
+    "history_days": 18,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-18"
+  },
+  {
+    "day": "2026-01-19",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 43.88985442540396,
+      "gbm": 41.469898153828964,
+      "naive_d1": 53.191059027777776,
+      "naive_d7": 55.759670138888886
+    },
+    "history_days": 18,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-18"
+  },
+  {
+    "day": "2026-01-20",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 91.46972619186481,
+      "gbm": 82.72437654450364,
+      "naive_d1": 60.26864691828263,
+      "naive_d7": 82.29644044776944
+    },
+    "history_days": 19,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-19"
+  },
+  {
+    "day": "2026-01-20",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 42.3122196939826,
+      "gbm": 40.27561807864824,
+      "naive_d1": 51.90350328947369,
+      "naive_d7": 59.394742324561406
+    },
+    "history_days": 19,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-19"
+  },
+  {
+    "day": "2026-01-21",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 93.48415454986159,
+      "gbm": 86.1008567633311,
+      "naive_d1": 66.51807348684218,
+      "naive_d7": 74.08816453427985
+    },
+    "history_days": 20,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-20"
+  },
+  {
+    "day": "2026-01-21",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 41.39032757613503,
+      "gbm": 39.97911922890019,
+      "naive_d1": 50.142354166666664,
+      "naive_d7": 62.98491145833333
+    },
+    "history_days": 20,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-20"
+  },
+  {
+    "day": "2026-01-22",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 108.88522739084563,
+      "gbm": 101.04129674597687,
+      "naive_d1": 81.4891445554677,
+      "naive_d7": 81.92016622312369
+    },
+    "history_days": 21,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-21"
+  },
+  {
+    "day": "2026-01-22",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 41.301401805960104,
+      "gbm": 39.59629159168301,
+      "naive_d1": 49.112718253968254,
+      "naive_d7": 62.08937996031746
+    },
+    "history_days": 21,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-21"
+  },
+  {
+    "day": "2026-01-23",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 114.67382160035267,
+      "gbm": 107.42956651111189,
+      "naive_d1": 87.43718823973819,
+      "naive_d7": 85.5549264086503
+    },
+    "history_days": 22,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-22"
+  },
+  {
+    "day": "2026-01-23",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 39.91224749678235,
+      "gbm": 38.331746475756766,
+      "naive_d1": 48.34421875,
+      "naive_d7": 60.97011837121212
+    },
+    "history_days": 22,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-22"
+  },
+  {
+    "day": "2026-01-24",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 113.70532523786592,
+      "gbm": 108.20321625090337,
+      "naive_d1": 88.80549149704936,
+      "naive_d7": 84.19712365861744
+    },
+    "history_days": 23,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-23"
+  },
+  {
+    "day": "2026-01-24",
+    "arm": "rolling_mae",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 39.26966245628082,
+      "gbm": 37.47137535969332,
+      "naive_d1": 47.06820652173913,
+      "naive_d7": 59.23742300724638
+    },
+    "history_days": 23,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-23"
+  },
+  {
+    "day": "2026-01-25",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 109.087408835411,
+      "gbm": 103.30920503376046,
+      "naive_d1": 82.03314124826879,
+      "naive_d7": 80.7667547019276
+    },
+    "history_days": 24,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-24"
+  },
+  {
+    "day": "2026-01-25",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 38.01054435986138,
+      "gbm": 38.65872985733809,
+      "naive_d1": 46.04018229166667,
+      "naive_d7": 57.29878038194445
+    },
+    "history_days": 24,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-24"
+  },
+  {
+    "day": "2026-01-26",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 104.48971682409982,
+      "gbm": 98.55336926662058,
+      "naive_d1": 78.1077244404433,
+      "naive_d7": 76.87688732963997
+    },
+    "history_days": 25,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-25"
+  },
+  {
+    "day": "2026-01-26",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 36.704622721268194,
+      "gbm": 37.80515783411417,
+      "naive_d1": 44.64834583333333,
+      "naive_d7": 55.3657625
+    },
+    "history_days": 25,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-25"
+  },
+  {
+    "day": "2026-01-27",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 106.02486071143201,
+      "gbm": 102.23127845727687,
+      "naive_d1": 79.36615619273395,
+      "naive_d7": 80.34460260694127
+    },
+    "history_days": 26,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-26"
+  },
+  {
+    "day": "2026-01-27",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 36.70191510110788,
+      "gbm": 37.448240955848284,
+      "naive_d1": 45.21493189102564,
+      "naive_d7": 54.58287259615384
+    },
+    "history_days": 26,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-26"
+  },
+  {
+    "day": "2026-01-28",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 123.34383010028738,
+      "gbm": 112.83594715361147,
+      "naive_d1": 90.81434084397773,
+      "naive_d7": 97.8376870081821
+    },
+    "history_days": 27,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-27"
+  },
+  {
+    "day": "2026-01-28",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 38.001054135643415,
+      "gbm": 38.11939344559593,
+      "naive_d1": 45.48644675925926,
+      "naive_d7": 55.60092592592592
+    },
+    "history_days": 27,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-27"
+  },
+  {
+    "day": "2026-01-29",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 128.49333898768313,
+      "gbm": 115.59871362843796,
+      "naive_d1": 95.07616976899496,
+      "naive_d7": 101.51666599352008
+    },
+    "history_days": 28,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-28"
+  },
+  {
+    "day": "2026-01-29",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 37.49640815200683,
+      "gbm": 37.704213853813584,
+      "naive_d1": 45.73872023809524,
+      "naive_d7": 55.48872767857143
+    },
+    "history_days": 28,
+    "history_first": "2026-01-01",
+    "history_last": "2026-01-28"
+  },
+  {
+    "day": "2026-01-30",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 128.7669463067621,
+      "gbm": 115.69041795174624,
+      "naive_d1": 95.2302120245104,
+      "naive_d7": 98.02553554239228
+    },
+    "history_days": 28,
+    "history_first": "2026-01-02",
+    "history_last": "2026-01-29"
+  },
+  {
+    "day": "2026-01-30",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 35.10009256582455,
+      "gbm": 36.30695480378547,
+      "naive_d1": 44.082366071428574,
+      "naive_d7": 54.04274925595238
+    },
+    "history_days": 28,
+    "history_first": "2026-01-02",
+    "history_last": "2026-01-29"
+  },
+  {
+    "day": "2026-01-31",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 128.71368948110418,
+      "gbm": 115.12410329009211,
+      "naive_d1": 100.55564567112694,
+      "naive_d7": 95.58928072566296
+    },
+    "history_days": 28,
+    "history_first": "2026-01-03",
+    "history_last": "2026-01-30"
+  },
+  {
+    "day": "2026-01-31",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 34.78472055506681,
+      "gbm": 35.427160441308494,
+      "naive_d1": 42.018515625,
+      "naive_d7": 53.25224330357143
+    },
+    "history_days": 28,
+    "history_first": "2026-01-03",
+    "history_last": "2026-01-30"
+  },
+  {
+    "day": "2026-02-01",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 128.04388390940355,
+      "gbm": 114.84984829033944,
+      "naive_d1": 99.23918683654047,
+      "naive_d7": 95.51835516175319
+    },
+    "history_days": 28,
+    "history_first": "2026-01-04",
+    "history_last": "2026-01-31"
+  },
+  {
+    "day": "2026-02-01",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 34.867392182828475,
+      "gbm": 35.256047929036846,
+      "naive_d1": 42.13841145833333,
+      "naive_d7": 53.27575148809524
+    },
+    "history_days": 28,
+    "history_first": "2026-01-04",
+    "history_last": "2026-01-31"
+  },
+  {
+    "day": "2026-02-02",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 128.04434825385846,
+      "gbm": 114.66423212492589,
+      "naive_d1": 99.62548311918788,
+      "naive_d7": 96.05985784032461
+    },
+    "history_days": 28,
+    "history_first": "2026-01-05",
+    "history_last": "2026-02-01"
+  },
+  {
+    "day": "2026-02-02",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 34.90946346265482,
+      "gbm": 35.16053417403929,
+      "naive_d1": 41.990037202380954,
+      "naive_d7": 53.30412202380952
+    },
+    "history_days": 28,
+    "history_first": "2026-01-05",
+    "history_last": "2026-02-01"
+  },
+  {
+    "day": "2026-02-03",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 132.58789411171855,
+      "gbm": 118.33831346891087,
+      "naive_d1": 98.43612618779689,
+      "naive_d7": 97.42719764295619
+    },
+    "history_days": 28,
+    "history_first": "2026-01-06",
+    "history_last": "2026-02-02"
+  },
+  {
+    "day": "2026-02-03",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 34.21215306792794,
+      "gbm": 34.400081578131946,
+      "naive_d1": 41.57303199404762,
+      "naive_d7": 53.12970238095238
+    },
+    "history_days": 28,
+    "history_first": "2026-01-06",
+    "history_last": "2026-02-02"
+  },
+  {
+    "day": "2026-02-04",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 134.83040350032164,
+      "gbm": 122.6947509225367,
+      "naive_d1": 101.54036750593598,
+      "naive_d7": 100.96837437240315
+    },
+    "history_days": 28,
+    "history_first": "2026-01-07",
+    "history_last": "2026-02-03"
+  },
+  {
+    "day": "2026-02-04",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 34.2109805251831,
+      "gbm": 34.337423060389476,
+      "naive_d1": 41.31799107142857,
+      "naive_d7": 54.81062872023809
+    },
+    "history_days": 28,
+    "history_first": "2026-01-07",
+    "history_last": "2026-02-03"
+  },
+  {
+    "day": "2026-02-05",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 129.1821510764989,
+      "gbm": 115.87443400524346,
+      "naive_d1": 94.73442315678186,
+      "naive_d7": 91.14063352109726
+    },
+    "history_days": 28,
+    "history_first": "2026-01-08",
+    "history_last": "2026-02-04"
+  },
+  {
+    "day": "2026-02-05",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 32.086798785578864,
+      "gbm": 32.598349236190884,
+      "naive_d1": 39.57752232142857,
+      "naive_d7": 53.28069568452381
+    },
+    "history_days": 28,
+    "history_first": "2026-01-08",
+    "history_last": "2026-02-04"
+  },
+  {
+    "day": "2026-02-06",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 122.35842908401773,
+      "gbm": 109.05192484418292,
+      "naive_d1": 87.38775095221615,
+      "naive_d7": 93.88839866442433
+    },
+    "history_days": 28,
+    "history_first": "2026-01-09",
+    "history_last": "2026-02-05"
+  },
+  {
+    "day": "2026-02-06",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.953182843551648,
+      "gbm": 31.07245136232458,
+      "naive_d1": 39.23574776785714,
+      "naive_d7": 48.354605654761905
+    },
+    "history_days": 28,
+    "history_first": "2026-01-09",
+    "history_last": "2026-02-05"
+  },
+  {
+    "day": "2026-02-07",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 123.6297672344926,
+      "gbm": 109.81963969380698,
+      "naive_d1": 89.52676764196683,
+      "naive_d7": 94.91736802532658
+    },
+    "history_days": 28,
+    "history_first": "2026-01-10",
+    "history_last": "2026-02-06"
+  },
+  {
+    "day": "2026-02-07",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.026940895216118,
+      "gbm": 30.753729083651184,
+      "naive_d1": 37.73318452380953,
+      "naive_d7": 46.62980282738095
+    },
+    "history_days": 28,
+    "history_first": "2026-01-10",
+    "history_last": "2026-02-06"
+  },
+  {
+    "day": "2026-02-08",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 123.85524505404146,
+      "gbm": 109.81519552087465,
+      "naive_d1": 89.65819669568667,
+      "naive_d7": 94.96356103395837
+    },
+    "history_days": 28,
+    "history_first": "2026-01-11",
+    "history_last": "2026-02-07"
+  },
+  {
+    "day": "2026-02-08",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.59220285406002,
+      "gbm": 30.65215714170515,
+      "naive_d1": 38.01670386904762,
+      "naive_d7": 45.26399553571429
+    },
+    "history_days": 28,
+    "history_first": "2026-01-11",
+    "history_last": "2026-02-07"
+  },
+  {
+    "day": "2026-02-09",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 123.69469832867541,
+      "gbm": 109.57893363548683,
+      "naive_d1": 90.63179049267914,
+      "naive_d7": 94.77455917775536
+    },
+    "history_days": 28,
+    "history_first": "2026-01-12",
+    "history_last": "2026-02-08"
+  },
+  {
+    "day": "2026-02-09",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.17380959250169,
+      "gbm": 30.23252098270143,
+      "naive_d1": 37.04435267857143,
+      "naive_d7": 45.26722470238095
+    },
+    "history_days": 28,
+    "history_first": "2026-01-12",
+    "history_last": "2026-02-08"
+  },
+  {
+    "day": "2026-02-10",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 109.14341915376447,
+      "gbm": 97.29931625321537,
+      "naive_d1": 77.89124505094982,
+      "naive_d7": 78.79730673414632
+    },
+    "history_days": 28,
+    "history_first": "2026-01-13",
+    "history_last": "2026-02-09"
+  },
+  {
+    "day": "2026-02-10",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.451493173299195,
+      "gbm": 26.267398446856806,
+      "naive_d1": 32.35821428571428,
+      "naive_d7": 41.693054315476196
+    },
+    "history_days": 28,
+    "history_first": "2026-01-13",
+    "history_last": "2026-02-09"
+  },
+  {
+    "day": "2026-02-11",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 96.11493679944114,
+      "gbm": 86.56762659156122,
+      "naive_d1": 68.8590293307282,
+      "naive_d7": 63.32676775388315
+    },
+    "history_days": 28,
+    "history_first": "2026-01-14",
+    "history_last": "2026-02-10"
+  },
+  {
+    "day": "2026-02-11",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 19.7503029296806,
+      "gbm": 23.06384825620147,
+      "naive_d1": 30.366986607142856,
+      "naive_d7": 37.52385788690476
+    },
+    "history_days": 28,
+    "history_first": "2026-01-14",
+    "history_last": "2026-02-10"
+  },
+  {
+    "day": "2026-02-12",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 96.57699234579057,
+      "gbm": 86.18277546374169,
+      "naive_d1": 69.923074544915,
+      "naive_d7": 63.59498478123773
+    },
+    "history_days": 28,
+    "history_first": "2026-01-15",
+    "history_last": "2026-02-11"
+  },
+  {
+    "day": "2026-02-12",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 17.88321341306819,
+      "gbm": 22.921788265586475,
+      "naive_d1": 26.11602306547619,
+      "naive_d7": 35.67180059523809
+    },
+    "history_days": 28,
+    "history_first": "2026-01-15",
+    "history_last": "2026-02-11"
+  },
+  {
+    "day": "2026-02-13",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 90.20710901204502,
+      "gbm": 80.91575049342114,
+      "naive_d1": 67.96196909378718,
+      "naive_d7": 59.275487703428055
+    },
+    "history_days": 28,
+    "history_first": "2026-01-16",
+    "history_last": "2026-02-12"
+  },
+  {
+    "day": "2026-02-13",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.91367996465421,
+      "gbm": 21.91942070130967,
+      "naive_d1": 24.67771205357143,
+      "naive_d7": 34.68967261904762
+    },
+    "history_days": 28,
+    "history_first": "2026-01-16",
+    "history_last": "2026-02-12"
+  },
+  {
+    "day": "2026-02-14",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 90.0262999301297,
+      "gbm": 81.48764155990315,
+      "naive_d1": 68.61524307479232,
+      "naive_d7": 61.13282391979134
+    },
+    "history_days": 28,
+    "history_first": "2026-01-17",
+    "history_last": "2026-02-13"
+  },
+  {
+    "day": "2026-02-14",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.872666585152043,
+      "gbm": 21.19701285175714,
+      "naive_d1": 23.580416666666668,
+      "naive_d7": 34.96999255952381
+    },
+    "history_days": 28,
+    "history_first": "2026-01-17",
+    "history_last": "2026-02-13"
+  },
+  {
+    "day": "2026-02-15",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 91.16066308802444,
+      "gbm": 82.70743299243183,
+      "naive_d1": 69.1155861199051,
+      "naive_d7": 62.671198355881565
+    },
+    "history_days": 28,
+    "history_first": "2026-01-18",
+    "history_last": "2026-02-14"
+  },
+  {
+    "day": "2026-02-15",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.58464129625713,
+      "gbm": 20.976504175060292,
+      "naive_d1": 23.384799107142857,
+      "naive_d7": 34.75969494047619
+    },
+    "history_days": 28,
+    "history_first": "2026-01-18",
+    "history_last": "2026-02-14"
+  },
+  {
+    "day": "2026-02-16",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 92.10070742419381,
+      "gbm": 82.97400579553334,
+      "naive_d1": 69.02611275227551,
+      "naive_d7": 63.392897557009384
+    },
+    "history_days": 28,
+    "history_first": "2026-01-19",
+    "history_last": "2026-02-15"
+  },
+  {
+    "day": "2026-02-16",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.578792444772997,
+      "gbm": 20.99774706032235,
+      "naive_d1": 23.411316964285714,
+      "naive_d7": 34.45969494047619
+    },
+    "history_days": 28,
+    "history_first": "2026-01-19",
+    "history_last": "2026-02-15"
+  },
+  {
+    "day": "2026-02-17",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 88.96505050455094,
+      "gbm": 80.22903424824406,
+      "naive_d1": 67.28799663385445,
+      "naive_d7": 59.88952657362989
+    },
+    "history_days": 28,
+    "history_first": "2026-01-20",
+    "history_last": "2026-02-16"
+  },
+  {
+    "day": "2026-02-17",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 17.112508635634985,
+      "gbm": 21.593649342633878,
+      "naive_d1": 22.84943080357143,
+      "naive_d7": 30.895799851190475
+    },
+    "history_days": 28,
+    "history_first": "2026-01-20",
+    "history_last": "2026-02-16"
+  },
+  {
+    "day": "2026-02-18",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 88.97634519192728,
+      "gbm": 79.7535197931095,
+      "naive_d1": 64.37175292961028,
+      "naive_d7": 67.70500900524345
+    },
+    "history_days": 28,
+    "history_first": "2026-01-21",
+    "history_last": "2026-02-17"
+  },
+  {
+    "day": "2026-02-18",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.832619076554852,
+      "gbm": 20.92117291026214,
+      "naive_d1": 22.93978794642857,
+      "naive_d7": 26.816502976190474
+    },
+    "history_days": 28,
+    "history_first": "2026-01-21",
+    "history_last": "2026-02-17"
+  },
+  {
+    "day": "2026-02-19",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 77.4586336762961,
+      "gbm": 69.95553454380203,
+      "naive_d1": 55.12498030953213,
+      "naive_d7": 61.49750205035623
+    },
+    "history_days": 28,
+    "history_first": "2026-01-22",
+    "history_last": "2026-02-18"
+  },
+  {
+    "day": "2026-02-19",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 15.97582662867273,
+      "gbm": 20.323861276057222,
+      "naive_d1": 22.463630952380953,
+      "naive_d7": 25.865316220238096
+    },
+    "history_days": 28,
+    "history_first": "2026-01-22",
+    "history_last": "2026-02-18"
+  },
+  {
+    "day": "2026-02-20",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 75.68175284922843,
+      "gbm": 68.30153755132082,
+      "naive_d1": 54.18208762799276,
+      "naive_d7": 61.32655486990511
+    },
+    "history_days": 28,
+    "history_first": "2026-01-23",
+    "history_last": "2026-02-19"
+  },
+  {
+    "day": "2026-02-20",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.062049926627406,
+      "gbm": 20.338770119510965,
+      "naive_d1": 21.78658482142857,
+      "naive_d7": 25.199099702380952
+    },
+    "history_days": 28,
+    "history_first": "2026-01-23",
+    "history_last": "2026-02-19"
+  },
+  {
+    "day": "2026-02-21",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 78.39954627028105,
+      "gbm": 69.66112721297496,
+      "naive_d1": 55.88664815430854,
+      "naive_d7": 61.842632501484054
+    },
+    "history_days": 28,
+    "history_first": "2026-01-24",
+    "history_last": "2026-02-20"
+  },
+  {
+    "day": "2026-02-21",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 15.641597016357125,
+      "gbm": 20.192696816830303,
+      "naive_d1": 21.69991443452381,
+      "naive_d7": 25.08267485119048
+    },
+    "history_days": 28,
+    "history_first": "2026-01-24",
+    "history_last": "2026-02-20"
+  },
+  {
+    "day": "2026-02-22",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 76.90900096952917,
+      "gbm": 69.14385163113384,
+      "naive_d1": 56.83814134039876,
+      "naive_d7": 61.4689392585082
+    },
+    "history_days": 28,
+    "history_first": "2026-01-25",
+    "history_last": "2026-02-21"
+  },
+  {
+    "day": "2026-02-22",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 15.961336249711252,
+      "gbm": 18.549546639530046,
+      "naive_d1": 21.970967261904764,
+      "naive_d7": 25.615435267857144
+    },
+    "history_days": 28,
+    "history_first": "2026-01-25",
+    "history_last": "2026-02-21"
+  },
+  {
+    "day": "2026-02-23",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 77.80064482711722,
+      "gbm": 71.2595416569797,
+      "naive_d1": 58.88158715806793,
+      "naive_d7": 61.61959797561345
+    },
+    "history_days": 28,
+    "history_first": "2026-01-26",
+    "history_last": "2026-02-22"
+  },
+  {
+    "day": "2026-02-23",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.198924831496473,
+      "gbm": 18.38199991855825,
+      "naive_d1": 21.925736607142856,
+      "naive_d7": 26.348649553571427
+    },
+    "history_days": 28,
+    "history_first": "2026-01-26",
+    "history_last": "2026-02-22"
+  },
+  {
+    "day": "2026-02-24",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 75.06936174441046,
+      "gbm": 66.9007487763406,
+      "naive_d1": 57.15915454528598,
+      "naive_d7": 57.444589950410645
+    },
+    "history_days": 28,
+    "history_first": "2026-01-27",
+    "history_last": "2026-02-23"
+  },
+  {
+    "day": "2026-02-24",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 15.294468827401731,
+      "gbm": 17.953616226507155,
+      "naive_d1": 20.425736607142856,
+      "naive_d7": 25.793385416666666
+    },
+    "history_days": 28,
+    "history_first": "2026-01-27",
+    "history_last": "2026-02-23"
+  },
+  {
+    "day": "2026-02-25",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 57.097968241120974,
+      "gbm": 55.34927809903054,
+      "naive_d1": 45.309468090868684,
+      "naive_d7": 39.93666709351511
+    },
+    "history_days": 28,
+    "history_first": "2026-01-28",
+    "history_last": "2026-02-24"
+  },
+  {
+    "day": "2026-02-25",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 13.23080412659149,
+      "gbm": 16.65559101946328,
+      "naive_d1": 19.338898809523812,
+      "naive_d7": 23.504869791666664
+    },
+    "history_days": 28,
+    "history_first": "2026-01-28",
+    "history_last": "2026-02-24"
+  },
+  {
+    "day": "2026-02-26",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 51.759703015557065,
+      "gbm": 52.572475541650256,
+      "naive_d1": 41.31414560187481,
+      "naive_d7": 37.033749850366114
+    },
+    "history_days": 28,
+    "history_first": "2026-01-29",
+    "history_last": "2026-02-25"
+  },
+  {
+    "day": "2026-02-26",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 12.84093030637378,
+      "gbm": 16.278445326206555,
+      "naive_d1": 17.95013392857143,
+      "naive_d7": 22.29552455357143
+    },
+    "history_days": 28,
+    "history_first": "2026-01-29",
+    "history_last": "2026-02-25"
+  },
+  {
+    "day": "2026-02-27",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 55.320262038113455,
+      "gbm": 56.428813511575065,
+      "naive_d1": 43.689778346359375,
+      "naive_d7": 41.68294609096761
+    },
+    "history_days": 28,
+    "history_first": "2026-01-30",
+    "history_last": "2026-02-26"
+  },
+  {
+    "day": "2026-02-27",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 13.206232548810423,
+      "gbm": 16.036183848635087,
+      "naive_d1": 17.790189732142856,
+      "naive_d7": 22.881450892857142
+    },
+    "history_days": 28,
+    "history_first": "2026-01-30",
+    "history_last": "2026-02-26"
+  },
+  {
+    "day": "2026-02-28",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 61.92535306254954,
+      "gbm": 61.214899225860776,
+      "naive_d1": 47.86996060669772,
+      "naive_d7": 47.67475880243377
+    },
+    "history_days": 28,
+    "history_first": "2026-01-31",
+    "history_last": "2026-02-27"
+  },
+  {
+    "day": "2026-02-28",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 13.27289895434934,
+      "gbm": 16.008157176855942,
+      "naive_d1": 17.95296130952381,
+      "naive_d7": 23.541231398809522
+    },
+    "history_days": 28,
+    "history_first": "2026-01-31",
+    "history_last": "2026-02-27"
+  },
+  {
+    "day": "2026-03-01",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 65.94617778059465,
+      "gbm": 64.50286848164828,
+      "naive_d1": 51.62221394316389,
+      "naive_d7": 47.709097582978885
+    },
+    "history_days": 28,
+    "history_first": "2026-02-01",
+    "history_last": "2026-02-28"
+  },
+  {
+    "day": "2026-03-01",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 13.449740454561278,
+      "gbm": 16.706487773180964,
+      "naive_d1": 17.875632440476192,
+      "naive_d7": 24.172488839285712
+    },
+    "history_days": 28,
+    "history_first": "2026-02-01",
+    "history_last": "2026-02-28"
+  },
+  {
+    "day": "2026-03-02",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 69.82918959920367,
+      "gbm": 67.24783888813324,
+      "naive_d1": 55.341274175776675,
+      "naive_d7": 48.03216647395633
+    },
+    "history_days": 28,
+    "history_first": "2026-02-02",
+    "history_last": "2026-03-01"
+  },
+  {
+    "day": "2026-03-02",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 13.888355371934171,
+      "gbm": 17.35001719907816,
+      "naive_d1": 18.202987351190476,
+      "naive_d7": 24.98221726190476
+    },
+    "history_days": 28,
+    "history_first": "2026-02-02",
+    "history_last": "2026-03-01"
+  },
+  {
+    "day": "2026-03-03",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 73.27885359801648,
+      "gbm": 69.74044151971218,
+      "naive_d1": 58.47709364921355,
+      "naive_d7": 51.356520292713746
+    },
+    "history_days": 28,
+    "history_first": "2026-02-03",
+    "history_last": "2026-03-02"
+  },
+  {
+    "day": "2026-03-03",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 14.267672003882739,
+      "gbm": 17.709286104851248,
+      "naive_d1": 18.822872023809527,
+      "naive_d7": 24.93200148809524
+    },
+    "history_days": 28,
+    "history_first": "2026-02-03",
+    "history_last": "2026-03-02"
+  },
+  {
+    "day": "2026-03-04",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 79.31603125123671,
+      "gbm": 74.48854136698662,
+      "naive_d1": 63.66263109047297,
+      "naive_d7": 54.411660854644886
+    },
+    "history_days": 28,
+    "history_first": "2026-02-04",
+    "history_last": "2026-03-03"
+  },
+  {
+    "day": "2026-03-04",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 14.302255044872032,
+      "gbm": 17.981291298208326,
+      "naive_d1": 18.764010416666668,
+      "naive_d7": 22.328377976190474
+    },
+    "history_days": 28,
+    "history_first": "2026-02-04",
+    "history_last": "2026-03-03"
+  },
+  {
+    "day": "2026-03-05",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 98.08707262440647,
+      "gbm": 91.73287368606556,
+      "naive_d1": 85.39195818163839,
+      "naive_d7": 70.04834324730417
+    },
+    "history_days": 28,
+    "history_first": "2026-02-05",
+    "history_last": "2026-03-04"
+  },
+  {
+    "day": "2026-03-05",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 15.186505802939976,
+      "gbm": 19.19711954231519,
+      "naive_d1": 19.27289806547619,
+      "naive_d7": 22.348069196428572
+    },
+    "history_days": 28,
+    "history_first": "2026-02-05",
+    "history_last": "2026-03-04"
+  },
+  {
+    "day": "2026-03-06",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 112.42860045570349,
+      "gbm": 105.39427665586672,
+      "naive_d1": 99.6422880094975,
+      "naive_d7": 81.95725204664627
+    },
+    "history_days": 28,
+    "history_first": "2026-02-06",
+    "history_last": "2026-03-05"
+  },
+  {
+    "day": "2026-03-06",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 15.858243532493379,
+      "gbm": 20.325914741545233,
+      "naive_d1": 19.480703124999998,
+      "naive_d7": 22.900576636904763
+    },
+    "history_days": 28,
+    "history_first": "2026-02-06",
+    "history_last": "2026-03-05"
+  },
+  {
+    "day": "2026-03-07",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 121.77788073493775,
+      "gbm": 115.06645057503965,
+      "naive_d1": 109.17011578638217,
+      "naive_d7": 91.8096970301989
+    },
+    "history_days": 28,
+    "history_first": "2026-02-07",
+    "history_last": "2026-03-06"
+  },
+  {
+    "day": "2026-03-07",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.1219129879773,
+      "gbm": 20.656705665137444,
+      "naive_d1": 19.286681547619047,
+      "naive_d7": 23.33129836309524
+    },
+    "history_days": 28,
+    "history_first": "2026-02-07",
+    "history_last": "2026-03-06"
+  },
+  {
+    "day": "2026-03-08",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 129.2776829670806,
+      "gbm": 122.9051759509795,
+      "naive_d1": 116.39750007914532,
+      "naive_d7": 98.65299462183425
+    },
+    "history_days": 28,
+    "history_first": "2026-02-08",
+    "history_last": "2026-03-07"
+  },
+  {
+    "day": "2026-03-08",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.246523719491314,
+      "gbm": 21.343269733989754,
+      "naive_d1": 18.871253720238094,
+      "naive_d7": 24.455156249999998
+    },
+    "history_days": 28,
+    "history_first": "2026-02-08",
+    "history_last": "2026-03-07"
+  },
+  {
+    "day": "2026-03-09",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 137.01323855918588,
+      "gbm": 130.26503386550266,
+      "naive_d1": 124.42453336218846,
+      "naive_d7": 105.95806538880102
+    },
+    "history_days": 28,
+    "history_first": "2026-02-09",
+    "history_last": "2026-03-08"
+  },
+  {
+    "day": "2026-03-09",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 16.887600415575566,
+      "gbm": 22.669327926925053,
+      "naive_d1": 19.31459449404762,
+      "naive_d7": 25.556294642857143
+    },
+    "history_days": 28,
+    "history_first": "2026-02-09",
+    "history_last": "2026-03-08"
+  },
+  {
+    "day": "2026-03-10",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 145.92390482291262,
+      "gbm": 135.23282297252186,
+      "naive_d1": 133.88320711688772,
+      "naive_d7": 117.35059057677095
+    },
+    "history_days": 28,
+    "history_first": "2026-02-10",
+    "history_last": "2026-03-09"
+  },
+  {
+    "day": "2026-03-10",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 17.345661868873755,
+      "gbm": 23.305866474707422,
+      "naive_d1": 19.503515625000002,
+      "naive_d7": 25.87182663690476
+    },
+    "history_days": 28,
+    "history_first": "2026-02-10",
+    "history_last": "2026-03-09"
+  },
+  {
+    "day": "2026-03-11",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 151.17616287222998,
+      "gbm": 142.26647756603688,
+      "naive_d1": 142.60163539461328,
+      "naive_d7": 126.53295053917695
+    },
+    "history_days": 28,
+    "history_first": "2026-02-11",
+    "history_last": "2026-03-10"
+  },
+  {
+    "day": "2026-03-11",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 17.617703702151694,
+      "gbm": 23.5180389265711,
+      "naive_d1": 19.65382068452381,
+      "naive_d7": 25.84421130952381
+    },
+    "history_days": 28,
+    "history_first": "2026-02-11",
+    "history_last": "2026-03-10"
+  },
+  {
+    "day": "2026-03-12",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 156.86244832805707,
+      "gbm": 146.89925731042254,
+      "naive_d1": 148.44916675343796,
+      "naive_d7": 131.92069319722012
+    },
+    "history_days": 28,
+    "history_first": "2026-02-12",
+    "history_last": "2026-03-11"
+  },
+  {
+    "day": "2026-03-12",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 17.83756158638652,
+      "gbm": 23.984773672872308,
+      "naive_d1": 19.780200892857145,
+      "naive_d7": 26.980293898809524
+    },
+    "history_days": 28,
+    "history_first": "2026-02-12",
+    "history_last": "2026-03-11"
+  },
+  {
+    "day": "2026-03-13",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 166.1405791316285,
+      "gbm": 155.31516936028402,
+      "naive_d1": 157.32900596928184,
+      "naive_d7": 141.90421526328163
+    },
+    "history_days": 28,
+    "history_first": "2026-02-13",
+    "history_last": "2026-03-12"
+  },
+  {
+    "day": "2026-03-13",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 18.8865745706293,
+      "gbm": 24.447345017710173,
+      "naive_d1": 21.037049851190478,
+      "naive_d7": 28.142377232142856
+    },
+    "history_days": 28,
+    "history_first": "2026-02-13",
+    "history_last": "2026-03-12"
+  },
+  {
+    "day": "2026-03-14",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 173.0405586929908,
+      "gbm": 161.76257862274937,
+      "naive_d1": 163.85935071787208,
+      "naive_d7": 148.176608167417
+    },
+    "history_days": 28,
+    "history_first": "2026-02-14",
+    "history_last": "2026-03-13"
+  },
+  {
+    "day": "2026-03-14",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 19.483549172744002,
+      "gbm": 24.931680028398336,
+      "naive_d1": 22.244534970238096,
+      "naive_d7": 27.979017857142857
+    },
+    "history_days": 28,
+    "history_first": "2026-02-14",
+    "history_last": "2026-03-13"
+  },
+  {
+    "day": "2026-03-15",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 180.2244298161111,
+      "gbm": 169.79390255676205,
+      "naive_d1": 171.0567272921202,
+      "naive_d7": 155.79066508273158
+    },
+    "history_days": 28,
+    "history_first": "2026-02-15",
+    "history_last": "2026-03-14"
+  },
+  {
+    "day": "2026-03-15",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 19.948011051487192,
+      "gbm": 25.325510840364338,
+      "naive_d1": 22.374255952380953,
+      "naive_d7": 28.502421875
+    },
+    "history_days": 28,
+    "history_first": "2026-02-15",
+    "history_last": "2026-03-14"
+  },
+  {
+    "day": "2026-03-16",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 183.35434571131785,
+      "gbm": 173.05679325225077,
+      "naive_d1": 174.00046863375556,
+      "naive_d7": 157.38325042107746
+    },
+    "history_days": 28,
+    "history_first": "2026-02-16",
+    "history_last": "2026-03-15"
+  },
+  {
+    "day": "2026-03-16",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.323794800287054,
+      "gbm": 26.230901696816506,
+      "naive_d1": 23.13278273809524,
+      "naive_d7": 29.47016369047619
+    },
+    "history_days": 28,
+    "history_first": "2026-02-16",
+    "history_last": "2026-03-15"
+  },
+  {
+    "day": "2026-03-17",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 188.29249692941244,
+      "gbm": 178.29568270367537,
+      "naive_d1": 176.44792349747735,
+      "naive_d7": 162.8526454163782
+    },
+    "history_days": 28,
+    "history_first": "2026-02-17",
+    "history_last": "2026-03-16"
+  },
+  {
+    "day": "2026-03-17",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.078054649400297,
+      "gbm": 25.760881753300843,
+      "naive_d1": 23.832083333333333,
+      "naive_d7": 29.577258184523807
+    },
+    "history_days": 28,
+    "history_first": "2026-02-17",
+    "history_last": "2026-03-16"
+  },
+  {
+    "day": "2026-03-18",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 189.51663960353196,
+      "gbm": 179.14505784959943,
+      "naive_d1": 178.2196275635636,
+      "naive_d7": 162.87328479607746
+    },
+    "history_days": 28,
+    "history_first": "2026-02-18",
+    "history_last": "2026-03-17"
+  },
+  {
+    "day": "2026-03-18",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.1542685044581,
+      "gbm": 25.625231717136494,
+      "naive_d1": 23.664531250000003,
+      "naive_d7": 30.053697916666664
+    },
+    "history_days": 28,
+    "history_first": "2026-02-18",
+    "history_last": "2026-03-17"
+  },
+  {
+    "day": "2026-03-19",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 196.79149463420072,
+      "gbm": 185.54257670966075,
+      "naive_d1": 183.81163279147714,
+      "naive_d7": 170.3029668913238
+    },
+    "history_days": 28,
+    "history_first": "2026-02-19",
+    "history_last": "2026-03-18"
+  },
+  {
+    "day": "2026-03-19",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.846516470400882,
+      "gbm": 26.558463727624417,
+      "naive_d1": 24.64297619047619,
+      "naive_d7": 30.263474702380954
+    },
+    "history_days": 28,
+    "history_first": "2026-02-19",
+    "history_last": "2026-03-18"
+  },
+  {
+    "day": "2026-03-20",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 201.5771229681936,
+      "gbm": 189.63124627028105,
+      "naive_d1": 188.28612522259604,
+      "naive_d7": 174.59820014839738
+    },
+    "history_days": 28,
+    "history_first": "2026-02-20",
+    "history_last": "2026-03-19"
+  },
+  {
+    "day": "2026-03-20",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.02500532864197,
+      "gbm": 26.875873388922958,
+      "naive_d1": 25.142176339285715,
+      "naive_d7": 31.12061011904762
+    },
+    "history_days": 28,
+    "history_first": "2026-02-20",
+    "history_last": "2026-03-19"
+  },
+  {
+    "day": "2026-03-21",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 201.23882011340038,
+      "gbm": 189.25905580975473,
+      "naive_d1": 187.83640397024644,
+      "naive_d7": 176.41630105300266
+    },
+    "history_days": 28,
+    "history_first": "2026-02-21",
+    "history_last": "2026-03-20"
+  },
+  {
+    "day": "2026-03-21",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.60127053850124,
+      "gbm": 28.346471501264897,
+      "naive_d1": 25.67569568452381,
+      "naive_d7": 32.836808035714284
+    },
+    "history_days": 28,
+    "history_first": "2026-02-21",
+    "history_last": "2026-03-20"
+  },
+  {
+    "day": "2026-03-22",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 211.3158374888703,
+      "gbm": 197.02399819820943,
+      "naive_d1": 196.98194481907905,
+      "naive_d7": 183.86230104125454
+    },
+    "history_days": 28,
+    "history_first": "2026-02-22",
+    "history_last": "2026-03-21"
+  },
+  {
+    "day": "2026-03-22",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.948698163954248,
+      "gbm": 28.660893040666853,
+      "naive_d1": 26.153798363095238,
+      "naive_d7": 32.78900669642857
+    },
+    "history_days": 28,
+    "history_first": "2026-02-22",
+    "history_last": "2026-03-21"
+  },
+  {
+    "day": "2026-03-23",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 217.72423117827472,
+      "gbm": 203.44947638256832,
+      "naive_d1": 203.4860029487783,
+      "naive_d7": 190.33160917095378
+    },
+    "history_days": 28,
+    "history_first": "2026-02-23",
+    "history_last": "2026-03-22"
+  },
+  {
+    "day": "2026-03-23",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.236269807742584,
+      "gbm": 28.96387261313613,
+      "naive_d1": 26.788917410714284,
+      "naive_d7": 32.9388244047619
+    },
+    "history_days": 28,
+    "history_first": "2026-02-23",
+    "history_last": "2026-03-22"
+  },
+  {
+    "day": "2026-03-24",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 225.98988523137623,
+      "gbm": 211.99866370634655,
+      "naive_d1": 212.54589967105272,
+      "naive_d7": 199.53285327463405
+    },
+    "history_days": 28,
+    "history_first": "2026-02-24",
+    "history_last": "2026-03-23"
+  },
+  {
+    "day": "2026-03-24",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.535852554526183,
+      "gbm": 29.576282500934315,
+      "naive_d1": 27.953288690476192,
+      "naive_d7": 33.350342261904764
+    },
+    "history_days": 28,
+    "history_first": "2026-02-24",
+    "history_last": "2026-03-23"
+  },
+  {
+    "day": "2026-03-25",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 231.50784114068074,
+      "gbm": 216.8690177940741,
+      "naive_d1": 217.11489904840235,
+      "naive_d7": 203.28493938835587
+    },
+    "history_days": 28,
+    "history_first": "2026-02-25",
+    "history_last": "2026-03-24"
+  },
+  {
+    "day": "2026-03-25",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.291581033037144,
+      "gbm": 30.72670047571949,
+      "naive_d1": 28.77489955357143,
+      "naive_d7": 34.36447544642857
+    },
+    "history_days": 28,
+    "history_first": "2026-02-25",
+    "history_last": "2026-03-24"
+  },
+  {
+    "day": "2026-03-26",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 234.54048374431153,
+      "gbm": 220.2850020046004,
+      "naive_d1": 220.72852252238337,
+      "naive_d7": 207.32589736965775
+    },
+    "history_days": 28,
+    "history_first": "2026-02-26",
+    "history_last": "2026-03-25"
+  },
+  {
+    "day": "2026-03-26",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.23847402860266,
+      "gbm": 32.06469668751321,
+      "naive_d1": 30.26860863095238,
+      "naive_d7": 35.25704985119047
+    },
+    "history_days": 28,
+    "history_first": "2026-02-26",
+    "history_last": "2026-03-25"
+  },
+  {
+    "day": "2026-03-27",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 231.60200648867243,
+      "gbm": 217.5089968589237,
+      "naive_d1": 217.48116829306005,
+      "naive_d7": 202.60325771975175
+    },
+    "history_days": 28,
+    "history_first": "2026-02-27",
+    "history_last": "2026-03-26"
+  },
+  {
+    "day": "2026-03-27",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.995340751130243,
+      "gbm": 32.23395472715654,
+      "naive_d1": 31.648214285714285,
+      "naive_d7": 35.061681547619045
+    },
+    "history_days": 28,
+    "history_first": "2026-02-27",
+    "history_last": "2026-03-26"
+  },
+  {
+    "day": "2026-03-28",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 230.50827415784536,
+      "gbm": 215.97698137490116,
+      "naive_d1": 214.09835875111307,
+      "naive_d7": 201.54360408896426
+    },
+    "history_days": 28,
+    "history_first": "2026-02-28",
+    "history_last": "2026-03-27"
+  },
+  {
+    "day": "2026-03-28",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.010521676170868,
+      "gbm": 32.25046150875831,
+      "naive_d1": 31.84948288690476,
+      "naive_d7": 35.291927083333334
+    },
+    "history_days": 28,
+    "history_first": "2026-02-28",
+    "history_last": "2026-03-27"
+  },
+  {
+    "day": "2026-03-30",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 236.58540810954662,
+      "gbm": 222.67886177990673,
+      "naive_d1": 219.339435256361,
+      "naive_d7": 214.83342425746392
+    },
+    "history_days": 27,
+    "history_first": "2026-03-02",
+    "history_last": "2026-03-28"
+  },
+  {
+    "day": "2026-03-30",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.035140206112576,
+      "gbm": 32.11230372434093,
+      "naive_d1": 32.426685956790124,
+      "naive_d7": 34.94782793209876
+    },
+    "history_days": 27,
+    "history_first": "2026-03-02",
+    "history_last": "2026-03-28"
+  },
+  {
+    "day": "2026-03-31",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 233.05210752475134,
+      "gbm": 222.23851327844474,
+      "naive_d1": 217.0900571913154,
+      "naive_d7": 211.59018991228078
+    },
+    "history_days": 27,
+    "history_first": "2026-03-03",
+    "history_last": "2026-03-30"
+  },
+  {
+    "day": "2026-03-31",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.68321210998183,
+      "gbm": 31.910627224034286,
+      "naive_d1": 31.49511959876543,
+      "naive_d7": 35.024494598765436
+    },
+    "history_days": 27,
+    "history_first": "2026-03-03",
+    "history_last": "2026-03-30"
+  },
+  {
+    "day": "2026-04-01",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 228.30435211539458,
+      "gbm": 217.3998761657434,
+      "naive_d1": 212.95525371909315,
+      "naive_d7": 203.41249353134305
+    },
+    "history_days": 27,
+    "history_first": "2026-03-04",
+    "history_last": "2026-03-31"
+  },
+  {
+    "day": "2026-04-01",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.091608311200226,
+      "gbm": 31.3186171469514,
+      "naive_d1": 31.763105709876545,
+      "naive_d7": 36.08898148148148
+    },
+    "history_days": 27,
+    "history_first": "2026-03-04",
+    "history_last": "2026-03-31"
+  },
+  {
+    "day": "2026-04-02",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 214.52378018557,
+      "gbm": 204.9308161389403,
+      "naive_d1": 195.99103492036022,
+      "naive_d7": 185.22910208397462
+    },
+    "history_days": 27,
+    "history_first": "2026-03-05",
+    "history_last": "2026-04-01"
+  },
+  {
+    "day": "2026-04-02",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.21730270444546,
+      "gbm": 30.53949522345631,
+      "naive_d1": 31.231701388888887,
+      "naive_d7": 37.40908950617284
+    },
+    "history_days": 27,
+    "history_first": "2026-03-05",
+    "history_last": "2026-04-01"
+  },
+  {
+    "day": "2026-04-03",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 207.9322673694471,
+      "gbm": 199.58658459526018,
+      "naive_d1": 188.77333232597218,
+      "naive_d7": 175.25778776161903
+    },
+    "history_days": 27,
+    "history_first": "2026-03-06",
+    "history_last": "2026-04-02"
+  },
+  {
+    "day": "2026-04-03",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.721139855678597,
+      "gbm": 29.627808024028724,
+      "naive_d1": 31.45871913580247,
+      "naive_d7": 37.079039351851854
+    },
+    "history_days": 27,
+    "history_first": "2026-03-06",
+    "history_last": "2026-04-02"
+  },
+  {
+    "day": "2026-04-04",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 203.42567129244907,
+      "gbm": 196.2618801849288,
+      "naive_d1": 184.40964957166318,
+      "naive_d7": 167.3730342688777
+    },
+    "history_days": 27,
+    "history_first": "2026-03-07",
+    "history_last": "2026-04-03"
+  },
+  {
+    "day": "2026-04-04",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.72702830302143,
+      "gbm": 29.58567891585871,
+      "naive_d1": 31.605725308641972,
+      "naive_d7": 36.754448302469136
+    },
+    "history_days": 27,
+    "history_first": "2026-03-07",
+    "history_last": "2026-04-03"
+  },
+  {
+    "day": "2026-04-05",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 199.89739892402798,
+      "gbm": 193.54065842310465,
+      "naive_d1": 182.91846652623894,
+      "naive_d7": 166.76638993408235
+    },
+    "history_days": 27,
+    "history_first": "2026-03-08",
+    "history_last": "2026-04-04"
+  },
+  {
+    "day": "2026-04-05",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.95480699013919,
+      "gbm": 29.698059811246395,
+      "naive_d1": 32.604749228395065,
+      "naive_d7": 36.66927469135803
+    },
+    "history_days": 27,
+    "history_first": "2026-03-08",
+    "history_last": "2026-04-04"
+  },
+  {
+    "day": "2026-04-06",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 202.25837109751726,
+      "gbm": 199.49368482417674,
+      "naive_d1": 188.52971729314157,
+      "naive_d7": 167.5906721747718
+    },
+    "history_days": 27,
+    "history_first": "2026-03-09",
+    "history_last": "2026-04-05"
+  },
+  {
+    "day": "2026-04-06",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 26.315493705370145,
+      "gbm": 31.46071908507768,
+      "naive_d1": 34.161265432098766,
+      "naive_d7": 39.05595293209876
+    },
+    "history_days": 27,
+    "history_first": "2026-03-09",
+    "history_last": "2026-04-05"
+  },
+  {
+    "day": "2026-04-07",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 194.53026646724643,
+      "gbm": 197.31550147545406,
+      "naive_d1": 187.21068629898951,
+      "naive_d7": 160.92843320060024
+    },
+    "history_days": 27,
+    "history_first": "2026-03-10",
+    "history_last": "2026-04-06"
+  },
+  {
+    "day": "2026-04-07",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.421561896183874,
+      "gbm": 33.47880306685999,
+      "naive_d1": 34.2894212962963,
+      "naive_d7": 42.18578703703703
+    },
+    "history_days": 27,
+    "history_first": "2026-03-10",
+    "history_last": "2026-04-06"
+  },
+  {
+    "day": "2026-04-08",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 193.34730958179446,
+      "gbm": 195.88850783317955,
+      "naive_d1": 180.03528034908183,
+      "naive_d7": 159.5994297527445
+    },
+    "history_days": 27,
+    "history_first": "2026-03-11",
+    "history_last": "2026-04-07"
+  },
+  {
+    "day": "2026-04-08",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.893679574035602,
+      "gbm": 34.80513458502524,
+      "naive_d1": 36.957827932098766,
+      "naive_d7": 43.23532407407407
+    },
+    "history_days": 27,
+    "history_first": "2026-03-11",
+    "history_last": "2026-04-07"
+  },
+  {
+    "day": "2026-04-09",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 194.18495794090498,
+      "gbm": 198.16809334923576,
+      "naive_d1": 183.55500634490107,
+      "naive_d7": 162.38651157471537
+    },
+    "history_days": 27,
+    "history_first": "2026-03-12",
+    "history_last": "2026-04-08"
+  },
+  {
+    "day": "2026-04-09",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.62989863760245,
+      "gbm": 33.85439000268141,
+      "naive_d1": 36.99949459876543,
+      "naive_d7": 42.63400462962963
+    },
+    "history_days": 27,
+    "history_first": "2026-03-12",
+    "history_last": "2026-04-08"
+  },
+  {
+    "day": "2026-04-10",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 193.7505228653689,
+      "gbm": 198.34167475954146,
+      "naive_d1": 183.38528858687297,
+      "naive_d7": 160.75061466284504
+    },
+    "history_days": 27,
+    "history_first": "2026-03-13",
+    "history_last": "2026-04-09"
+  },
+  {
+    "day": "2026-04-10",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.8409896466559,
+      "gbm": 33.64458391037251,
+      "naive_d1": 35.976720679012345,
+      "naive_d7": 41.78075617283951
+    },
+    "history_days": 27,
+    "history_first": "2026-03-13",
+    "history_last": "2026-04-09"
+  },
+  {
+    "day": "2026-04-11",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 191.86940660972616,
+      "gbm": 198.22959839501905,
+      "naive_d1": 184.0149340348313,
+      "naive_d7": 160.4681097202986
+    },
+    "history_days": 27,
+    "history_first": "2026-03-14",
+    "history_last": "2026-04-10"
+  },
+  {
+    "day": "2026-04-11",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.892828781684646,
+      "gbm": 34.04121613420208,
+      "naive_d1": 35.63507716049383,
+      "naive_d7": 42.22799382716049
+    },
+    "history_days": 27,
+    "history_first": "2026-03-14",
+    "history_last": "2026-04-10"
+  },
+  {
+    "day": "2026-04-12",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 191.26691550348835,
+      "gbm": 197.6087039018417,
+      "naive_d1": 182.87694901764655,
+      "naive_d7": 160.04206015120042
+    },
+    "history_days": 27,
+    "history_first": "2026-03-15",
+    "history_last": "2026-04-11"
+  },
+  {
+    "day": "2026-04-12",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 30.15951558250502,
+      "gbm": 34.27771591789097,
+      "naive_d1": 36.81575617283951,
+      "naive_d7": 42.55903163580247
+    },
+    "history_days": 27,
+    "history_first": "2026-03-15",
+    "history_last": "2026-04-11"
+  },
+  {
+    "day": "2026-04-13",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 192.59023382707508,
+      "gbm": 199.17121394082804,
+      "naive_d1": 184.71976502449482,
+      "naive_d7": 163.1061399270289
+    },
+    "history_days": 27,
+    "history_first": "2026-03-16",
+    "history_last": "2026-04-12"
+  },
+  {
+    "day": "2026-04-13",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 30.110963279456993,
+      "gbm": 33.57595514116874,
+      "naive_d1": 36.21590277777778,
+      "naive_d7": 44.26210262345679
+    },
+    "history_days": 27,
+    "history_first": "2026-03-16",
+    "history_last": "2026-04-12"
+  },
+  {
+    "day": "2026-04-14",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 193.74674016620506,
+      "gbm": 199.59877271275784,
+      "naive_d1": 188.56680557030376,
+      "naive_d7": 160.51727265953633
+    },
+    "history_days": 27,
+    "history_first": "2026-03-17",
+    "history_last": "2026-04-13"
+  },
+  {
+    "day": "2026-04-14",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 30.031678971257374,
+      "gbm": 33.75704399538489,
+      "naive_d1": 35.95048225308642,
+      "naive_d7": 47.17854938271606
+    },
+    "history_days": 27,
+    "history_first": "2026-03-17",
+    "history_last": "2026-04-13"
+  },
+  {
+    "day": "2026-04-15",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 191.7818387003694,
+      "gbm": 199.9898638920951,
+      "naive_d1": 188.8381491619217,
+      "naive_d7": 161.06696420437063
+    },
+    "history_days": 27,
+    "history_first": "2026-03-18",
+    "history_last": "2026-04-14"
+  },
+  {
+    "day": "2026-04-15",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 30.946047579534024,
+      "gbm": 34.77262457526161,
+      "naive_d1": 36.726273148148145,
+      "naive_d7": 47.95237268518518
+    },
+    "history_days": 27,
+    "history_first": "2026-03-18",
+    "history_last": "2026-04-14"
+  },
+  {
+    "day": "2026-04-16",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 185.82900643916085,
+      "gbm": 193.11033692995287,
+      "naive_d1": 182.92183337244802,
+      "naive_d7": 155.55494725748954
+    },
+    "history_days": 27,
+    "history_first": "2026-03-19",
+    "history_last": "2026-04-15"
+  },
+  {
+    "day": "2026-04-16",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 30.134082082974917,
+      "gbm": 33.99874718787401,
+      "naive_d1": 35.89649691358025,
+      "naive_d7": 47.947052469135805
+    },
+    "history_days": 27,
+    "history_first": "2026-03-19",
+    "history_last": "2026-04-15"
+  },
+  {
+    "day": "2026-04-17",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 179.86254313763217,
+      "gbm": 186.85836011465074,
+      "naive_d1": 176.81834492536174,
+      "naive_d7": 150.41408803285634
+    },
+    "history_days": 27,
+    "history_first": "2026-03-20",
+    "history_last": "2026-04-16"
+  },
+  {
+    "day": "2026-04-17",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.811858959140594,
+      "gbm": 33.579976862250454,
+      "naive_d1": 35.29287422839506,
+      "naive_d7": 47.43247299382716
+    },
+    "history_days": 27,
+    "history_first": "2026-03-20",
+    "history_last": "2026-04-16"
+  },
+  {
+    "day": "2026-04-18",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 182.73767416833394,
+      "gbm": 189.9513020018981,
+      "naive_d1": 180.11571238393876,
+      "naive_d7": 154.62261513414393
+    },
+    "history_days": 27,
+    "history_first": "2026-03-21",
+    "history_last": "2026-04-17"
+  },
+  {
+    "day": "2026-04-18",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.735026527359267,
+      "gbm": 32.43907458739005,
+      "naive_d1": 35.13440200617284,
+      "naive_d7": 46.4520987654321
+    },
+    "history_days": 27,
+    "history_first": "2026-03-21",
+    "history_last": "2026-04-17"
+  },
+  {
+    "day": "2026-04-19",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 178.70123827716228,
+      "gbm": 188.0787360578897,
+      "naive_d1": 176.65025589027402,
+      "naive_d7": 152.56977029150002
+    },
+    "history_days": 27,
+    "history_first": "2026-03-22",
+    "history_last": "2026-04-18"
+  },
+  {
+    "day": "2026-04-19",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.31289518577844,
+      "gbm": 32.24688000108111,
+      "naive_d1": 34.25479166666667,
+      "naive_d7": 46.05394290123457
+    },
+    "history_days": 27,
+    "history_first": "2026-03-22",
+    "history_last": "2026-04-18"
+  },
+  {
+    "day": "2026-04-20",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 173.93512640556074,
+      "gbm": 179.8867113130964,
+      "naive_d1": 168.75986134836367,
+      "naive_d7": 147.89021987727
+    },
+    "history_days": 27,
+    "history_first": "2026-03-23",
+    "history_last": "2026-04-19"
+  },
+  {
+    "day": "2026-04-20",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.509413553004425,
+      "gbm": 32.366440652525746,
+      "naive_d1": 34.2306674382716,
+      "naive_d7": 45.798344907407404
+    },
+    "history_days": 27,
+    "history_first": "2026-03-23",
+    "history_last": "2026-04-19"
+  },
+  {
+    "day": "2026-04-21",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 166.83475007758804,
+      "gbm": 172.03374028483128,
+      "naive_d1": 157.3309770769212,
+      "naive_d7": 140.04360177298148
+    },
+    "history_days": 27,
+    "history_first": "2026-03-24",
+    "history_last": "2026-04-20"
+  },
+  {
+    "day": "2026-04-21",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.04231814243921,
+      "gbm": 31.800288388036833,
+      "naive_d1": 33.23511188271605,
+      "naive_d7": 45.49987268518518
+    },
+    "history_days": 27,
+    "history_first": "2026-03-24",
+    "history_last": "2026-04-20"
+  },
+  {
+    "day": "2026-04-22",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 167.657649723633,
+      "gbm": 173.05636697509496,
+      "naive_d1": 159.47942094298253,
+      "naive_d7": 141.42621385875148
+    },
+    "history_days": 27,
+    "history_first": "2026-03-25",
+    "history_last": "2026-04-21"
+  },
+  {
+    "day": "2026-04-22",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 29.038313984946488,
+      "gbm": 31.278372865048855,
+      "naive_d1": 32.84972993827161,
+      "naive_d7": 45.833236882716044
+    },
+    "history_days": 27,
+    "history_first": "2026-03-25",
+    "history_last": "2026-04-21"
+  },
+  {
+    "day": "2026-04-23",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 169.65746445060026,
+      "gbm": 173.75394249063822,
+      "naive_d1": 160.792674919206,
+      "naive_d7": 142.53455723876584
+    },
+    "history_days": 27,
+    "history_first": "2026-03-26",
+    "history_last": "2026-04-22"
+  },
+  {
+    "day": "2026-04-23",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.28769042261881,
+      "gbm": 30.436767727198486,
+      "naive_d1": 31.270821759259256,
+      "naive_d7": 45.814344135802465
+    },
+    "history_days": 27,
+    "history_first": "2026-03-26",
+    "history_last": "2026-04-22"
+  },
+  {
+    "day": "2026-04-24",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 178.94682222671085,
+      "gbm": 183.48458018557,
+      "naive_d1": 171.89589303567772,
+      "naive_d7": 153.25068081332725
+    },
+    "history_days": 27,
+    "history_first": "2026-03-27",
+    "history_last": "2026-04-23"
+  },
+  {
+    "day": "2026-04-24",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.226358735627745,
+      "gbm": 30.068078109690674,
+      "naive_d1": 29.38073302469136,
+      "naive_d7": 46.255713734567905
+    },
+    "history_days": 27,
+    "history_first": "2026-03-27",
+    "history_last": "2026-04-23"
+  },
+  {
+    "day": "2026-04-25",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 179.6127585173644,
+      "gbm": 183.43747343413364,
+      "naive_d1": 174.1473934845338,
+      "naive_d7": 154.78191332653643
+    },
+    "history_days": 27,
+    "history_first": "2026-03-28",
+    "history_last": "2026-04-24"
+  },
+  {
+    "day": "2026-04-25",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.69123238273184,
+      "gbm": 29.980154754889735,
+      "naive_d1": 29.78244984567901,
+      "naive_d7": 45.405466820987655
+    },
+    "history_days": 27,
+    "history_first": "2026-03-28",
+    "history_last": "2026-04-24"
+  },
+  {
+    "day": "2026-04-26",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 187.53327310710995,
+      "gbm": 185.16616134451633,
+      "naive_d1": 173.81487134823544,
+      "naive_d7": 156.20126712770602
+    },
+    "history_days": 27,
+    "history_first": "2026-03-30",
+    "history_last": "2026-04-25"
+  },
+  {
+    "day": "2026-04-26",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 30.51768908572313,
+      "gbm": 31.471514964004058,
+      "naive_d1": 31.969741512345678,
+      "naive_d7": 47.02551697530865
+    },
+    "history_days": 27,
+    "history_first": "2026-03-30",
+    "history_last": "2026-04-25"
+  },
+  {
+    "day": "2026-04-27",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 205.337416621117,
+      "gbm": 204.76392339236256,
+      "naive_d1": 195.35480709895634,
+      "naive_d7": 168.53428995350222
+    },
+    "history_days": 28,
+    "history_first": "2026-03-30",
+    "history_last": "2026-04-26"
+  },
+  {
+    "day": "2026-04-27",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 31.75789443255503,
+      "gbm": 33.081471735457704,
+      "naive_d1": 32.76815104166666,
+      "naive_d7": 48.9323400297619
+    },
+    "history_days": 28,
+    "history_first": "2026-03-30",
+    "history_last": "2026-04-26"
+  },
+  {
+    "day": "2026-04-28",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 208.60896003227649,
+      "gbm": 208.0417097527949,
+      "naive_d1": 199.63388565183527,
+      "naive_d7": 174.6084723956273
+    },
+    "history_days": 28,
+    "history_first": "2026-03-31",
+    "history_last": "2026-04-27"
+  },
+  {
+    "day": "2026-04-28",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 31.639195756230233,
+      "gbm": 34.32287674646615,
+      "naive_d1": 35.20134672619047,
+      "naive_d7": 48.71274181547619
+    },
+    "history_days": 28,
+    "history_first": "2026-03-31",
+    "history_last": "2026-04-27"
+  },
+  {
+    "day": "2026-04-29",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 213.3144301920509,
+      "gbm": 212.23662204194702,
+      "naive_d1": 203.32274405916112,
+      "naive_d7": 183.65197740898307
+    },
+    "history_days": 28,
+    "history_first": "2026-04-01",
+    "history_last": "2026-04-28"
+  },
+  {
+    "day": "2026-04-29",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 31.422272472898047,
+      "gbm": 34.67098595818653,
+      "naive_d1": 34.83754464285714,
+      "naive_d7": 47.334940476190475
+    },
+    "history_days": 28,
+    "history_first": "2026-04-01",
+    "history_last": "2026-04-28"
+  },
+  {
+    "day": "2026-04-30",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 214.22703362002878,
+      "gbm": 214.63597561337562,
+      "naive_d1": 205.92149698444308,
+      "naive_d7": 193.22626138454694
+    },
+    "history_days": 28,
+    "history_first": "2026-04-02",
+    "history_last": "2026-04-29"
+  },
+  {
+    "day": "2026-04-30",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 31.51791324821763,
+      "gbm": 34.236530067701565,
+      "naive_d1": 34.51454613095238,
+      "naive_d7": 44.88418898809523
+    },
+    "history_days": 28,
+    "history_first": "2026-04-02",
+    "history_last": "2026-04-29"
+  },
+  {
+    "day": "2026-05-01",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 214.41744629563226,
+      "gbm": 215.41244529333207,
+      "naive_d1": 206.6846740502573,
+      "naive_d7": 200.10342641472107
+    },
+    "history_days": 28,
+    "history_first": "2026-04-03",
+    "history_last": "2026-04-30"
+  },
+  {
+    "day": "2026-05-01",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 31.70506676130504,
+      "gbm": 34.17149065255425,
+      "naive_d1": 33.90311755952381,
+      "naive_d7": 44.4548474702381
+    },
+    "history_days": 28,
+    "history_first": "2026-04-03",
+    "history_last": "2026-04-30"
+  },
+  {
+    "day": "2026-05-02",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 239.44667552742882,
+      "gbm": 235.66273800022265,
+      "naive_d1": 218.5675446137961,
+      "naive_d7": 211.99071385227055
+    },
+    "history_days": 28,
+    "history_first": "2026-04-04",
+    "history_last": "2026-05-01"
+  },
+  {
+    "day": "2026-05-02",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 33.55680503734566,
+      "gbm": 36.5187168863896,
+      "naive_d1": 36.02705357142857,
+      "naive_d7": 46.88672991071429
+    },
+    "history_days": 28,
+    "history_first": "2026-04-04",
+    "history_last": "2026-05-01"
+  },
+  {
+    "day": "2026-05-03",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 250.65784209598837,
+      "gbm": 244.6494280285418,
+      "naive_d1": 228.56532483923633,
+      "naive_d7": 220.4232033611991
+    },
+    "history_days": 28,
+    "history_first": "2026-04-05",
+    "history_last": "2026-05-02"
+  },
+  {
+    "day": "2026-05-03",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 33.27967929461296,
+      "gbm": 35.94727154195084,
+      "naive_d1": 36.39450148809524,
+      "naive_d7": 47.26505580357143
+    },
+    "history_days": 28,
+    "history_first": "2026-04-05",
+    "history_last": "2026-05-02"
+  },
+  {
+    "day": "2026-05-04",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 247.0660576035072,
+      "gbm": 238.47538671163937,
+      "naive_d1": 220.67174209969832,
+      "naive_d7": 218.3812655953206
+    },
+    "history_days": 28,
+    "history_first": "2026-04-06",
+    "history_last": "2026-05-03"
+  },
+  {
+    "day": "2026-05-04",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 31.098380256289357,
+      "gbm": 33.350274858086955,
+      "naive_d1": 35.11613467261905,
+      "naive_d7": 46.26865699404762
+    },
+    "history_days": 28,
+    "history_first": "2026-04-06",
+    "history_last": "2026-05-03"
+  },
+  {
+    "day": "2026-05-05",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 251.95167392102798,
+      "gbm": 243.51179916835682,
+      "naive_d1": 217.88544006727352,
+      "naive_d7": 222.3963632327118
+    },
+    "history_days": 28,
+    "history_first": "2026-04-07",
+    "history_last": "2026-05-04"
+  },
+  {
+    "day": "2026-05-05",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.75963836961335,
+      "gbm": 30.744959293516285,
+      "naive_d1": 35.48482886904762,
+      "naive_d7": 43.24967633928571
+    },
+    "history_days": 28,
+    "history_first": "2026-04-07",
+    "history_last": "2026-05-04"
+  },
+  {
+    "day": "2026-05-06",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 248.8142888399041,
+      "gbm": 237.49960088296407,
+      "naive_d1": 217.1514815307183,
+      "naive_d7": 216.25614974586966
+    },
+    "history_days": 28,
+    "history_first": "2026-04-08",
+    "history_last": "2026-05-05"
+  },
+  {
+    "day": "2026-05-06",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 28.354327915063994,
+      "gbm": 29.741407339892586,
+      "naive_d1": 33.258054315476194,
+      "naive_d7": 43.06703869047619
+    },
+    "history_days": 28,
+    "history_first": "2026-04-08",
+    "history_last": "2026-05-05"
+  },
+  {
+    "day": "2026-05-07",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 244.29870312129015,
+      "gbm": 231.78569085006933,
+      "naive_d1": 209.55350895268606,
+      "naive_d7": 209.87898659415814
+    },
+    "history_days": 28,
+    "history_first": "2026-04-09",
+    "history_last": "2026-05-06"
+  },
+  {
+    "day": "2026-05-07",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 27.612304641219172,
+      "gbm": 29.960881793318663,
+      "naive_d1": 32.874348958333336,
+      "naive_d7": 43.22725074404762
+    },
+    "history_days": 28,
+    "history_first": "2026-04-09",
+    "history_last": "2026-05-06"
+  },
+  {
+    "day": "2026-05-08",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 237.9844529388851,
+      "gbm": 225.11502859677987,
+      "naive_d1": 202.16502742258612,
+      "naive_d7": 202.9633340070984
+    },
+    "history_days": 28,
+    "history_first": "2026-04-10",
+    "history_last": "2026-05-07"
+  },
+  {
+    "day": "2026-05-08",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 27.67842728129826,
+      "gbm": 30.410326926596102,
+      "naive_d1": 33.007831101190476,
+      "naive_d7": 44.346964285714286
+    },
+    "history_days": 28,
+    "history_first": "2026-04-10",
+    "history_last": "2026-05-07"
+  },
+  {
+    "day": "2026-05-09",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 233.63805716697178,
+      "gbm": 218.69553119311445,
+      "naive_d1": 195.3654868804413,
+      "naive_d7": 196.35942665277508
+    },
+    "history_days": 28,
+    "history_first": "2026-04-11",
+    "history_last": "2026-05-08"
+  },
+  {
+    "day": "2026-05-09",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.981838146218177,
+      "gbm": 30.137233877581195,
+      "naive_d1": 32.17215029761905,
+      "naive_d7": 47.121168154761904
+    },
+    "history_days": 28,
+    "history_first": "2026-04-11",
+    "history_last": "2026-05-08"
+  },
+  {
+    "day": "2026-05-10",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 229.81139381121395,
+      "gbm": 214.19256407795814,
+      "naive_d1": 191.20651196453312,
+      "naive_d7": 191.00986564849632
+    },
+    "history_days": 28,
+    "history_first": "2026-04-12",
+    "history_last": "2026-05-09"
+  },
+  {
+    "day": "2026-05-10",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.498965320447827,
+      "gbm": 29.715007293614168,
+      "naive_d1": 31.064088541666667,
+      "naive_d7": 48.151253720238095
+    },
+    "history_days": 28,
+    "history_first": "2026-04-12",
+    "history_last": "2026-05-09"
+  },
+  {
+    "day": "2026-05-11",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 230.15815590868624,
+      "gbm": 215.05066877720625,
+      "naive_d1": 192.37536605473397,
+      "naive_d7": 191.2325302396617
+    },
+    "history_days": 28,
+    "history_first": "2026-04-13",
+    "history_last": "2026-05-10"
+  },
+  {
+    "day": "2026-05-11",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 26.11586810644054,
+      "gbm": 30.50791373010336,
+      "naive_d1": 31.758072916666666,
+      "naive_d7": 45.7838244047619
+    },
+    "history_days": 28,
+    "history_first": "2026-04-13",
+    "history_last": "2026-05-10"
+  },
+  {
+    "day": "2026-05-12",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 222.7142826591562,
+      "gbm": 208.01985573679272,
+      "naive_d1": 186.08779876150086,
+      "naive_d7": 186.8830460093491
+    },
+    "history_days": 28,
+    "history_first": "2026-04-14",
+    "history_last": "2026-05-11"
+  },
+  {
+    "day": "2026-05-12",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 26.142475401074908,
+      "gbm": 30.871722588233894,
+      "naive_d1": 32.58671875,
+      "naive_d7": 43.35418154761904
+    },
+    "history_days": 28,
+    "history_first": "2026-04-14",
+    "history_last": "2026-05-11"
+  },
+  {
+    "day": "2026-05-13",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 219.11999964941143,
+      "gbm": 203.3631537451772,
+      "naive_d1": 181.753435812599,
+      "naive_d7": 182.96541102901173
+    },
+    "history_days": 28,
+    "history_first": "2026-04-15",
+    "history_last": "2026-05-12"
+  },
+  {
+    "day": "2026-05-13",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.115304144380993,
+      "gbm": 30.058089281904014,
+      "naive_d1": 32.07649925595238,
+      "naive_d7": 42.39883184523809
+    },
+    "history_days": 28,
+    "history_first": "2026-04-15",
+    "history_last": "2026-05-12"
+  },
+  {
+    "day": "2026-05-14",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 217.50661917478737,
+      "gbm": 202.09453775660376,
+      "naive_d1": 180.58801065430853,
+      "naive_d7": 181.42909340559464
+    },
+    "history_days": 28,
+    "history_first": "2026-04-16",
+    "history_last": "2026-05-13"
+  },
+  {
+    "day": "2026-05-14",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.90305930474196,
+      "gbm": 29.876078143867726,
+      "naive_d1": 31.911543898809523,
+      "naive_d7": 41.836748511904766
+    },
+    "history_days": 28,
+    "history_first": "2026-04-16",
+    "history_last": "2026-05-13"
+  },
+  {
+    "day": "2026-05-15",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 219.65720075373474,
+      "gbm": 203.05249847088947,
+      "naive_d1": 182.339653422413,
+      "naive_d7": 182.9803774974031
+    },
+    "history_days": 28,
+    "history_first": "2026-04-17",
+    "history_last": "2026-05-14"
+  },
+  {
+    "day": "2026-05-15",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.575250698733388,
+      "gbm": 30.469949709431067,
+      "naive_d1": 32.44398809523809,
+      "naive_d7": 42.09978794642858
+    },
+    "history_days": 28,
+    "history_first": "2026-04-17",
+    "history_last": "2026-05-14"
+  },
+  {
+    "day": "2026-05-16",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 212.42478393537303,
+      "gbm": 195.56692998985957,
+      "naive_d1": 174.5601669364613,
+      "naive_d7": 175.20735641509208
+    },
+    "history_days": 28,
+    "history_first": "2026-04-18",
+    "history_last": "2026-05-15"
+  },
+  {
+    "day": "2026-05-16",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.30935348017021,
+      "gbm": 30.804949120524522,
+      "naive_d1": 32.54946056547619,
+      "naive_d7": 41.08946428571429
+    },
+    "history_days": 28,
+    "history_first": "2026-04-18",
+    "history_last": "2026-05-15"
+  },
+  {
+    "day": "2026-05-17",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 207.84939656398404,
+      "gbm": 190.76230366355864,
+      "naive_d1": 170.70007618903352,
+      "naive_d7": 169.79072834512274
+    },
+    "history_days": 28,
+    "history_first": "2026-04-19",
+    "history_last": "2026-05-16"
+  },
+  {
+    "day": "2026-05-17",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.100154402721973,
+      "gbm": 30.524330641638805,
+      "naive_d1": 32.44301711309524,
+      "naive_d7": 41.12676339285714
+    },
+    "history_days": 28,
+    "history_first": "2026-04-19",
+    "history_last": "2026-05-16"
+  },
+  {
+    "day": "2026-05-18",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 207.63797899374268,
+      "gbm": 195.50038956581426,
+      "naive_d1": 174.51555889580044,
+      "naive_d7": 171.95248391373178
+    },
+    "history_days": 28,
+    "history_first": "2026-04-20",
+    "history_last": "2026-05-17"
+  },
+  {
+    "day": "2026-05-18",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.093296966253188,
+      "gbm": 30.47650785403152,
+      "naive_d1": 32.39454613095238,
+      "naive_d7": 41.11528273809524
+    },
+    "history_days": 28,
+    "history_first": "2026-04-20",
+    "history_last": "2026-05-17"
+  },
+  {
+    "day": "2026-05-19",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 208.04663049750204,
+      "gbm": 194.98341925640588,
+      "naive_d1": 177.99809287136435,
+      "naive_d7": 171.1133926555699
+    },
+    "history_days": 28,
+    "history_first": "2026-04-21",
+    "history_last": "2026-05-18"
+  },
+  {
+    "day": "2026-05-19",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.412589408563928,
+      "gbm": 30.87688839970782,
+      "naive_d1": 33.20444568452381,
+      "naive_d7": 41.1431212797619
+    },
+    "history_days": 28,
+    "history_first": "2026-04-21",
+    "history_last": "2026-05-18"
+  },
+  {
+    "day": "2026-05-20",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 205.01915883149493,
+      "gbm": 191.76702979570646,
+      "naive_d1": 175.75069922586076,
+      "naive_d7": 167.1145071787199
+    },
+    "history_days": 28,
+    "history_first": "2026-04-22",
+    "history_last": "2026-05-19"
+  },
+  {
+    "day": "2026-05-20",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.59838176738835,
+      "gbm": 30.09081978298471,
+      "naive_d1": 32.54140997023809,
+      "naive_d7": 40.38303943452381
+    },
+    "history_days": 28,
+    "history_first": "2026-04-22",
+    "history_last": "2026-05-19"
+  },
+  {
+    "day": "2026-05-21",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 199.7680620090523,
+      "gbm": 188.57649062376345,
+      "naive_d1": 172.14501073345377,
+      "naive_d7": 162.66041915932934
+    },
+    "history_days": 28,
+    "history_first": "2026-04-23",
+    "history_last": "2026-05-20"
+  },
+  {
+    "day": "2026-05-21",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.421799491921224,
+      "gbm": 29.73485872159813,
+      "naive_d1": 32.976681547619044,
+      "naive_d7": 39.30255208333334
+    },
+    "history_days": 28,
+    "history_first": "2026-04-23",
+    "history_last": "2026-05-20"
+  },
+  {
+    "day": "2026-05-22",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 199.29948524374262,
+      "gbm": 187.78777492332816,
+      "naive_d1": 171.1554374839237,
+      "naive_d7": 161.75556149151672
+    },
+    "history_days": 28,
+    "history_first": "2026-04-24",
+    "history_last": "2026-05-21"
+  },
+  {
+    "day": "2026-05-22",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.50873787140102,
+      "gbm": 29.267447456482266,
+      "naive_d1": 32.95315476190476,
+      "naive_d7": 37.885364583333335
+    },
+    "history_days": 28,
+    "history_first": "2026-04-24",
+    "history_last": "2026-05-21"
+  },
+  {
+    "day": "2026-05-23",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 202.34692468527413,
+      "gbm": 192.57658719269398,
+      "naive_d1": 175.5487870331669,
+      "naive_d7": 162.13805065974978
+    },
+    "history_days": 28,
+    "history_first": "2026-04-25",
+    "history_last": "2026-05-22"
+  },
+  {
+    "day": "2026-05-23",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.043985480419412,
+      "gbm": 29.454893232615596,
+      "naive_d1": 32.179534970238095,
+      "naive_d7": 38.46152529761905
+    },
+    "history_days": 28,
+    "history_first": "2026-04-25",
+    "history_last": "2026-05-22"
+  },
+  {
+    "day": "2026-05-24",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 196.10517280742982,
+      "gbm": 193.0455174366839,
+      "naive_d1": 177.72929801765935,
+      "naive_d7": 160.0903734041107
+    },
+    "history_days": 28,
+    "history_first": "2026-04-26",
+    "history_last": "2026-05-23"
+  },
+  {
+    "day": "2026-05-24",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.49895490797518,
+      "gbm": 27.910678890936673,
+      "naive_d1": 29.930978422619045,
+      "naive_d7": 37.548854166666665
+    },
+    "history_days": 28,
+    "history_first": "2026-04-26",
+    "history_last": "2026-05-23"
+  },
+  {
+    "day": "2026-05-25",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 182.07266977455984,
+      "gbm": 178.2920977585824,
+      "naive_d1": 155.44512544086373,
+      "naive_d7": 150.16850325608434
+    },
+    "history_days": 28,
+    "history_first": "2026-04-27",
+    "history_last": "2026-05-24"
+  },
+  {
+    "day": "2026-05-25",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.291873648561186,
+      "gbm": 25.881241106608297,
+      "naive_d1": 29.057697172619047,
+      "naive_d7": 35.2956212797619
+    },
+    "history_days": 28,
+    "history_first": "2026-04-27",
+    "history_last": "2026-05-24"
+  },
+  {
+    "day": "2026-05-26",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 178.52151877411464,
+      "gbm": 174.4812088030521,
+      "naive_d1": 155.1540762112931,
+      "naive_d7": 147.3457044370796
+    },
+    "history_days": 28,
+    "history_first": "2026-04-28",
+    "history_last": "2026-05-25"
+  },
+  {
+    "day": "2026-05-26",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.99143622055875,
+      "gbm": 25.452469348447938,
+      "naive_d1": 26.469281994047616,
+      "naive_d7": 36.02489955357143
+    },
+    "history_days": 28,
+    "history_first": "2026-04-28",
+    "history_last": "2026-05-25"
+  },
+  {
+    "day": "2026-05-27",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 179.38448862843794,
+      "gbm": 176.2813127188861,
+      "naive_d1": 156.07846757889797,
+      "naive_d7": 149.5327891669965
+    },
+    "history_days": 28,
+    "history_first": "2026-04-29",
+    "history_last": "2026-05-26"
+  },
+  {
+    "day": "2026-05-27",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.78997359709794,
+      "gbm": 24.8790412943634,
+      "naive_d1": 26.258385416666666,
+      "naive_d7": 37.13565476190477
+    },
+    "history_days": 28,
+    "history_first": "2026-04-29",
+    "history_last": "2026-05-26"
+  },
+  {
+    "day": "2026-05-28",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 179.12547144341121,
+      "gbm": 176.05160764369813,
+      "naive_d1": 155.36510335377926,
+      "naive_d7": 149.09046670459048
+    },
+    "history_days": 28,
+    "history_first": "2026-04-30",
+    "history_last": "2026-05-27"
+  },
+  {
+    "day": "2026-05-28",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.64826793617015,
+      "gbm": 24.72721121030909,
+      "naive_d1": 26.375866815476193,
+      "naive_d7": 37.756603422619044
+    },
+    "history_days": 28,
+    "history_first": "2026-04-30",
+    "history_last": "2026-05-27"
+  },
+  {
+    "day": "2026-05-29",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 189.35913770775628,
+      "gbm": 185.71061979372783,
+      "naive_d1": 161.27338826733782,
+      "naive_d7": 157.4425056162199
+    },
+    "history_days": 28,
+    "history_first": "2026-05-01",
+    "history_last": "2026-05-28"
+  },
+  {
+    "day": "2026-05-29",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.295027914663624,
+      "gbm": 25.645914337529877,
+      "naive_d1": 27.38705357142857,
+      "naive_d7": 38.07401413690476
+    },
+    "history_days": 28,
+    "history_first": "2026-05-01",
+    "history_last": "2026-05-28"
+  },
+  {
+    "day": "2026-05-30",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 167.37671002671158,
+      "gbm": 167.23233969257032,
+      "naive_d1": 151.4807915228038,
+      "naive_d7": 153.20587717402063
+    },
+    "history_days": 28,
+    "history_first": "2026-05-02",
+    "history_last": "2026-05-29"
+  },
+  {
+    "day": "2026-05-30",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.131349284473455,
+      "gbm": 22.906734948040107,
+      "naive_d1": 25.33533482142857,
+      "naive_d7": 35.08093005952381
+    },
+    "history_days": 28,
+    "history_first": "2026-05-02",
+    "history_last": "2026-05-29"
+  },
+  {
+    "day": "2026-05-31",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 158.55810931811445,
+      "gbm": 159.60319475601017,
+      "naive_d1": 141.83918302396623,
+      "naive_d7": 139.1890686337555
+    },
+    "history_days": 28,
+    "history_first": "2026-05-03",
+    "history_last": "2026-05-30"
+  },
+  {
+    "day": "2026-05-31",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 19.617193184381925,
+      "gbm": 22.749092015061535,
+      "naive_d1": 24.170375744047618,
+      "naive_d7": 34.30251488095238
+    },
+    "history_days": 28,
+    "history_first": "2026-05-03",
+    "history_last": "2026-05-30"
+  },
+  {
+    "day": "2026-06-01",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 158.13619862856163,
+      "gbm": 159.8087074192472,
+      "naive_d1": 142.06614495758316,
+      "naive_d7": 140.33986936955884
+    },
+    "history_days": 28,
+    "history_first": "2026-05-04",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-01",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 19.30405861660935,
+      "gbm": 23.51381742610511,
+      "naive_d1": 23.914866071428573,
+      "naive_d7": 32.62961681547619
+    },
+    "history_days": 28,
+    "history_first": "2026-05-04",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-01",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-01",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-02",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 155.75677537964984,
+      "gbm": 156.90658545830044,
+      "naive_d1": 141.62467130861702,
+      "naive_d7": 137.16049789090332
+    },
+    "history_days": 28,
+    "history_first": "2026-05-05",
+    "history_last": "2026-06-01"
+  },
+  {
+    "day": "2026-06-02",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.076519841911843,
+      "gbm": 24.401121416638183,
+      "naive_d1": 24.486387648809522,
+      "naive_d7": 34.13885044642857
+    },
+    "history_days": 28,
+    "history_first": "2026-05-05",
+    "history_last": "2026-06-01"
+  },
+  {
+    "day": "2026-06-02",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-02",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-03",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 151.4345569388109,
+      "gbm": 154.3970225464979,
+      "naive_d1": 137.4326387020183,
+      "naive_d7": 134.15332002559862
+    },
+    "history_days": 28,
+    "history_first": "2026-05-06",
+    "history_last": "2026-06-02"
+  },
+  {
+    "day": "2026-06-03",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.19745123328761,
+      "gbm": 24.68404443389627,
+      "naive_d1": 24.847916666666666,
+      "naive_d7": 34.01611979166667
+    },
+    "history_days": 28,
+    "history_first": "2026-05-06",
+    "history_last": "2026-06-02"
+  },
+  {
+    "day": "2026-06-03",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-03",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-04",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 152.12587856524542,
+      "gbm": 156.14344732328362,
+      "naive_d1": 138.44537268747533,
+      "naive_d7": 133.10545268599137
+    },
+    "history_days": 28,
+    "history_first": "2026-05-07",
+    "history_last": "2026-06-03"
+  },
+  {
+    "day": "2026-06-04",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 19.989664434257595,
+      "gbm": 24.439469507280837,
+      "naive_d1": 24.886796874999998,
+      "naive_d7": 34.258545386904764
+    },
+    "history_days": 28,
+    "history_first": "2026-05-07",
+    "history_last": "2026-06-03"
+  },
+  {
+    "day": "2026-06-04",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-04",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-05",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 154.15054257518804,
+      "gbm": 157.97177759138808,
+      "naive_d1": 141.17802968193516,
+      "naive_d7": 134.97574666786215
+    },
+    "history_days": 28,
+    "history_first": "2026-05-08",
+    "history_last": "2026-06-04"
+  },
+  {
+    "day": "2026-06-05",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.605699760704635,
+      "gbm": 25.10829046581912,
+      "naive_d1": 25.724155505952382,
+      "naive_d7": 34.16886904761905
+    },
+    "history_days": 28,
+    "history_first": "2026-05-08",
+    "history_last": "2026-06-04"
+  },
+  {
+    "day": "2026-06-05",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-05",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-06",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 153.0365302526465,
+      "gbm": 157.54293270182043,
+      "naive_d1": 140.36487792280874,
+      "naive_d7": 134.66289915475372
+    },
+    "history_days": 28,
+    "history_first": "2026-05-09",
+    "history_last": "2026-06-05"
+  },
+  {
+    "day": "2026-06-06",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.3705800700243,
+      "gbm": 24.573261710575043,
+      "naive_d1": 26.97158854166667,
+      "naive_d7": 31.568590029761904
+    },
+    "history_days": 28,
+    "history_first": "2026-05-09",
+    "history_last": "2026-06-05"
+  },
+  {
+    "day": "2026-06-06",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-06",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-07",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 155.95220294815994,
+      "gbm": 161.05576494855566,
+      "naive_d1": 137.86641588160376,
+      "naive_d7": 138.0452972478483
+    },
+    "history_days": 28,
+    "history_first": "2026-05-10",
+    "history_last": "2026-06-06"
+  },
+  {
+    "day": "2026-06-07",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.034038464535193,
+      "gbm": 24.974163107747565,
+      "naive_d1": 28.201183035714287,
+      "naive_d7": 30.147916666666667
+    },
+    "history_days": 28,
+    "history_first": "2026-05-10",
+    "history_last": "2026-06-06"
+  },
+  {
+    "day": "2026-06-07",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-07",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-08",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 155.69100539486058,
+      "gbm": 160.47136419667598,
+      "naive_d1": 137.56018734541954,
+      "naive_d7": 138.56400300442726
+    },
+    "history_days": 28,
+    "history_first": "2026-05-11",
+    "history_last": "2026-06-07"
+  },
+  {
+    "day": "2026-06-08",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.707017324711057,
+      "gbm": 25.17448059497223,
+      "naive_d1": 27.790178571428573,
+      "naive_d7": 30.569114583333334
+    },
+    "history_days": 28,
+    "history_first": "2026-05-11",
+    "history_last": "2026-06-07"
+  },
+  {
+    "day": "2026-06-08",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-08",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-09",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 162.09702864439063,
+      "gbm": 165.55242298426995,
+      "naive_d1": 140.0891983769045,
+      "naive_d7": 143.6164643339435
+    },
+    "history_days": 28,
+    "history_first": "2026-05-12",
+    "history_last": "2026-06-08"
+  },
+  {
+    "day": "2026-06-09",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.429409925258234,
+      "gbm": 24.32801367453786,
+      "naive_d1": 27.971302083333335,
+      "naive_d7": 30.570338541666665
+    },
+    "history_days": 28,
+    "history_first": "2026-05-12",
+    "history_last": "2026-06-08"
+  },
+  {
+    "day": "2026-06-09",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-09",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-10",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 165.19004680822127,
+      "gbm": 166.08056018500204,
+      "naive_d1": 142.12487098276125,
+      "naive_d7": 145.98999748157408
+    },
+    "history_days": 28,
+    "history_first": "2026-05-13",
+    "history_last": "2026-06-09"
+  },
+  {
+    "day": "2026-06-10",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.421195468380827,
+      "gbm": 24.54149944315375,
+      "naive_d1": 27.788218005952384,
+      "naive_d7": 30.07469494047619
+    },
+    "history_days": 28,
+    "history_first": "2026-05-13",
+    "history_last": "2026-06-09"
+  },
+  {
+    "day": "2026-06-10",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-10",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-11",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 164.13190898051056,
+      "gbm": 165.47646887861106,
+      "naive_d1": 140.70321385350718,
+      "naive_d7": 144.8542004791997
+    },
+    "history_days": 28,
+    "history_first": "2026-05-14",
+    "history_last": "2026-06-10"
+  },
+  {
+    "day": "2026-06-11",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.87867807476693,
+      "gbm": 24.92908082665402,
+      "naive_d1": 27.881956845238097,
+      "naive_d7": 30.551290922619046
+    },
+    "history_days": 28,
+    "history_first": "2026-05-14",
+    "history_last": "2026-06-10"
+  },
+  {
+    "day": "2026-06-11",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-11",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-12",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 158.20718731450344,
+      "gbm": 160.76642289523156,
+      "naive_d1": 134.91302734282257,
+      "naive_d7": 139.48520410813225
+    },
+    "history_days": 28,
+    "history_first": "2026-05-15",
+    "history_last": "2026-06-11"
+  },
+  {
+    "day": "2026-06-12",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.222729375168196,
+      "gbm": 24.518336047752207,
+      "naive_d1": 27.61413318452381,
+      "naive_d7": 30.963887648809525
+    },
+    "history_days": 28,
+    "history_first": "2026-05-15",
+    "history_last": "2026-06-11"
+  },
+  {
+    "day": "2026-06-12",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-12",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-13",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 159.03752512613778,
+      "gbm": 161.86383711045713,
+      "naive_d1": 136.26052341524047,
+      "naive_d7": 139.01166027651374
+    },
+    "history_days": 28,
+    "history_first": "2026-05-16",
+    "history_last": "2026-06-12"
+  },
+  {
+    "day": "2026-06-13",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 20.923706895331627,
+      "gbm": 23.769092313494692,
+      "naive_d1": 27.040636160714286,
+      "naive_d7": 31.278976934523808
+    },
+    "history_days": 28,
+    "history_first": "2026-05-16",
+    "history_last": "2026-06-12"
+  },
+  {
+    "day": "2026-06-13",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-13",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-14",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 163.5398369447468,
+      "gbm": 166.8011686189158,
+      "naive_d1": 139.0904388565988,
+      "naive_d7": 144.47874362942724
+    },
+    "history_days": 28,
+    "history_first": "2026-05-17",
+    "history_last": "2026-06-13"
+  },
+  {
+    "day": "2026-06-14",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 21.787033799700907,
+      "gbm": 24.022685538474153,
+      "naive_d1": 28.06225446428572,
+      "naive_d7": 31.640859374999998
+    },
+    "history_days": 28,
+    "history_first": "2026-05-17",
+    "history_last": "2026-06-13"
+  },
+  {
+    "day": "2026-06-14",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-14",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-15",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 165.47143937846266,
+      "gbm": 164.7761533463594,
+      "naive_d1": 136.34657574569655,
+      "naive_d7": 144.82566737237838
+    },
+    "history_days": 28,
+    "history_first": "2026-05-18",
+    "history_last": "2026-06-14"
+  },
+  {
+    "day": "2026-06-15",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.576070556529192,
+      "gbm": 25.378004551659238,
+      "naive_d1": 28.326982886904762,
+      "naive_d7": 31.76864583333333
+    },
+    "history_days": 28,
+    "history_first": "2026-05-18",
+    "history_last": "2026-06-14"
+  },
+  {
+    "day": "2026-06-15",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-15",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-16",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 166.21057963370603,
+      "gbm": 166.62985235766232,
+      "naive_d1": 138.16249426073415,
+      "naive_d7": 147.87556180253273
+    },
+    "history_days": 28,
+    "history_first": "2026-05-19",
+    "history_last": "2026-06-15"
+  },
+  {
+    "day": "2026-06-16",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.304112407379336,
+      "gbm": 25.67557865993916,
+      "naive_d1": 28.193880208333333,
+      "naive_d7": 32.39185639880952
+    },
+    "history_days": 28,
+    "history_first": "2026-05-19",
+    "history_last": "2026-06-15"
+  },
+  {
+    "day": "2026-06-16",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-16",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-17",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 164.64374144118526,
+      "gbm": 166.57013572417893,
+      "naive_d1": 136.87818607909585,
+      "naive_d7": 148.92917689021078
+    },
+    "history_days": 28,
+    "history_first": "2026-05-20",
+    "history_last": "2026-06-16"
+  },
+  {
+    "day": "2026-06-17",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.215236050939815,
+      "gbm": 25.675857814512604,
+      "naive_d1": 28.62192336309524,
+      "naive_d7": 31.917987351190476
+    },
+    "history_days": 28,
+    "history_first": "2026-05-20",
+    "history_last": "2026-06-16"
+  },
+  {
+    "day": "2026-06-17",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-17",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-18",
+    "arm": "rolling_profit",
+    "candidate": "gbm",
+    "scores": {
+      "lear": 164.15706360185007,
+      "gbm": 165.4485293332015,
+      "naive_d1": 136.0437875123665,
+      "naive_d7": 145.3484226843837
+    },
+    "history_days": 28,
+    "history_first": "2026-05-21",
+    "history_last": "2026-06-17"
+  },
+  {
+    "day": "2026-06-18",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.10430688690741,
+      "gbm": 25.682355092452962,
+      "naive_d1": 28.266517857142855,
+      "naive_d7": 32.331000744047614
+    },
+    "history_days": 28,
+    "history_first": "2026-05-21",
+    "history_last": "2026-06-17"
+  },
+  {
+    "day": "2026-06-18",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-18",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-19",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 171.68976739649293,
+      "gbm": 170.79442359517222,
+      "naive_d1": 140.1939386049417,
+      "naive_d7": 153.085681292046
+    },
+    "history_days": 28,
+    "history_first": "2026-05-22",
+    "history_last": "2026-06-18"
+  },
+  {
+    "day": "2026-06-19",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.79396172631923,
+      "gbm": 26.622152701131302,
+      "naive_d1": 29.011979166666666,
+      "naive_d7": 33.33484375
+    },
+    "history_days": 28,
+    "history_first": "2026-05-22",
+    "history_last": "2026-06-18"
+  },
+  {
+    "day": "2026-06-19",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-19",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-20",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 171.23525517844783,
+      "gbm": 170.061854065468,
+      "naive_d1": 139.8713463556095,
+      "naive_d7": 152.83448893265242
+    },
+    "history_days": 28,
+    "history_first": "2026-05-23",
+    "history_last": "2026-06-19"
+  },
+  {
+    "day": "2026-06-20",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.840529640442696,
+      "gbm": 26.3279930430792,
+      "naive_d1": 29.826889880952383,
+      "naive_d7": 33.273902529761905
+    },
+    "history_days": 28,
+    "history_first": "2026-05-23",
+    "history_last": "2026-06-19"
+  },
+  {
+    "day": "2026-06-20",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-20",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-21",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 173.4945156930155,
+      "gbm": 171.4560847868026,
+      "naive_d1": 141.96803493643657,
+      "naive_d7": 151.93861356846068
+    },
+    "history_days": 28,
+    "history_first": "2026-05-24",
+    "history_last": "2026-06-20"
+  },
+  {
+    "day": "2026-06-21",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.90997819031967,
+      "gbm": 26.6708711644483,
+      "naive_d1": 29.976941964285714,
+      "naive_d7": 33.21352306547619
+    },
+    "history_days": 28,
+    "history_first": "2026-05-24",
+    "history_last": "2026-06-20"
+  },
+  {
+    "day": "2026-06-21",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-21",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-22",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 169.763865002968,
+      "gbm": 166.92908395268606,
+      "naive_d1": 142.4623611143402,
+      "naive_d7": 150.4611631572765
+    },
+    "history_days": 28,
+    "history_first": "2026-05-25",
+    "history_last": "2026-06-21"
+  },
+  {
+    "day": "2026-06-22",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 23.488681030099464,
+      "gbm": 26.73075743073362,
+      "naive_d1": 29.558147321428574,
+      "naive_d7": 33.631071428571424
+    },
+    "history_days": 28,
+    "history_first": "2026-05-25",
+    "history_last": "2026-06-21"
+  },
+  {
+    "day": "2026-06-22",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-22",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-23",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 173.00797484789283,
+      "gbm": 169.77852402428775,
+      "naive_d1": 143.434667540562,
+      "naive_d7": 150.2839661765434
+    },
+    "history_days": 28,
+    "history_first": "2026-05-26",
+    "history_last": "2026-06-22"
+  },
+  {
+    "day": "2026-06-23",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 22.84220131435323,
+      "gbm": 25.773278223439387,
+      "naive_d1": 30.2421875,
+      "naive_d7": 33.36315104166666
+    },
+    "history_days": 28,
+    "history_first": "2026-05-26",
+    "history_last": "2026-06-22"
+  },
+  {
+    "day": "2026-06-23",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-23",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-24",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 184.40626287655823,
+      "gbm": 182.1739061300456,
+      "naive_d1": 156.00907618903352,
+      "naive_d7": 158.19830102146824
+    },
+    "history_days": 28,
+    "history_first": "2026-05-27",
+    "history_last": "2026-06-23"
+  },
+  {
+    "day": "2026-06-24",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.21646652629866,
+      "gbm": 27.11130373752167,
+      "naive_d1": 31.573619791666665,
+      "naive_d7": 34.06957217261905
+    },
+    "history_days": 28,
+    "history_first": "2026-05-27",
+    "history_last": "2026-06-23"
+  },
+  {
+    "day": "2026-06-24",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-24",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-25",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 209.30511931452816,
+      "gbm": 198.14449621710534,
+      "naive_d1": 181.05203638454697,
+      "naive_d7": 174.79777158067876
+    },
+    "history_days": 28,
+    "history_first": "2026-05-28",
+    "history_last": "2026-06-24"
+  },
+  {
+    "day": "2026-06-25",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.457955041127434,
+      "gbm": 28.641606593285168,
+      "naive_d1": 31.95849330357143,
+      "naive_d7": 35.52578125
+    },
+    "history_days": 28,
+    "history_first": "2026-05-28",
+    "history_last": "2026-06-24"
+  },
+  {
+    "day": "2026-06-25",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-25",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-26",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 206.8952759120252,
+      "gbm": 192.62340168740116,
+      "naive_d1": 182.08054821861404,
+      "naive_d7": 171.4849014097745
+    },
+    "history_days": 28,
+    "history_first": "2026-05-29",
+    "history_last": "2026-06-25"
+  },
+  {
+    "day": "2026-06-26",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.867563677171947,
+      "gbm": 28.874154312362627,
+      "naive_d1": 32.13720982142857,
+      "naive_d7": 35.42457589285714
+    },
+    "history_days": 28,
+    "history_first": "2026-05-29",
+    "history_last": "2026-06-25"
+  },
+  {
+    "day": "2026-06-26",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-26",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-27",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 213.9154098875891,
+      "gbm": 200.62296934482598,
+      "naive_d1": 190.72262944697277,
+      "naive_d7": 178.44760717810158
+    },
+    "history_days": 28,
+    "history_first": "2026-05-30",
+    "history_last": "2026-06-26"
+  },
+  {
+    "day": "2026-06-27",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.049832668537622,
+      "gbm": 29.310272042666035,
+      "naive_d1": 31.92328125,
+      "naive_d7": 36.077433035714286
+    },
+    "history_days": 28,
+    "history_first": "2026-05-30",
+    "history_last": "2026-06-26"
+  },
+  {
+    "day": "2026-06-27",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-27",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-28",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 219.51385047734476,
+      "gbm": 205.76902506616054,
+      "naive_d1": 196.56043580270585,
+      "naive_d7": 188.82940558344882
+    },
+    "history_days": 28,
+    "history_first": "2026-05-31",
+    "history_last": "2026-06-27"
+  },
+  {
+    "day": "2026-06-28",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.728847212226807,
+      "gbm": 29.051695307684955,
+      "naive_d1": 32.32531994047619,
+      "naive_d7": 35.88842261904762
+    },
+    "history_days": 28,
+    "history_first": "2026-05-31",
+    "history_last": "2026-06-27"
+  },
+  {
+    "day": "2026-06-28",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-28",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-29",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 221.0567873887021,
+      "gbm": 206.08401013429963,
+      "naive_d1": 197.42428929189757,
+      "naive_d7": 189.04428041897515
+    },
+    "history_days": 28,
+    "history_first": "2026-06-01",
+    "history_last": "2026-06-28"
+  },
+  {
+    "day": "2026-06-29",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.697624971079495,
+      "gbm": 28.03738217977585,
+      "naive_d1": 32.3239099702381,
+      "naive_d7": 35.2464025297619
+    },
+    "history_days": 28,
+    "history_first": "2026-06-01",
+    "history_last": "2026-06-28"
+  },
+  {
+    "day": "2026-06-29",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-29",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-30",
+    "arm": "rolling_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 225.1067405446182,
+      "gbm": 208.72327404221912,
+      "naive_d1": 200.32378092723593,
+      "naive_d7": 193.87055406052144
+    },
+    "history_days": 28,
+    "history_first": "2026-06-02",
+    "history_last": "2026-06-29"
+  },
+  {
+    "day": "2026-06-30",
+    "arm": "rolling_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 24.40355040727613,
+      "gbm": 28.057157887667444,
+      "naive_d1": 32.19793526785714,
+      "naive_d7": 33.79176339285714
+    },
+    "history_days": 28,
+    "history_first": "2026-06-02",
+    "history_last": "2026-06-29"
+  },
+  {
+    "day": "2026-06-30",
+    "arm": "frozen_profit",
+    "candidate": "lear",
+    "scores": {
+      "lear": 163.5347798979687,
+      "gbm": 157.86722644078955,
+      "naive_d1": 144.0937425979918,
+      "naive_d7": 136.80376470106194
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  },
+  {
+    "day": "2026-06-30",
+    "arm": "frozen_mae",
+    "candidate": "lear",
+    "scores": {
+      "lear": 25.171636358700027,
+      "gbm": 28.77531031463263,
+      "naive_d1": 30.811139583333333,
+      "naive_d7": 38.915917361111106
+    },
+    "history_days": 150,
+    "history_first": "2026-01-01",
+    "history_last": "2026-05-31"
+  }
+]
