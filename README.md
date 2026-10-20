@@ -42,6 +42,19 @@ See [episode-length exploration](docs/EPISODE_LENGTH_EXPLORATION.md), `scripts/e
 
 The StoreNet collection has twenty households; this repository uses only H1–H6. A [draft protocol](docs/PROTOCOL_24H_HOLDOUT_DRAFT.md) tests 24-hour Ridge MPC once on H7–H20. Its pipeline (`src/gridmind_research/holdout.py`, `scripts/holdout_*.py`) refuses to download or evaluate held-out households until the protocol is frozen, and locks protocol, data and code hashes between stages. A dry run on H1–H6 (`results/holdout_24h_dry_run/`) reproduces the exploratory numbers exactly. No held-out meter data have been read.
 
+## Profit-oriented forecast selection (October 2026)
+
+An exploratory selector chooses among LEAR and simple forecasts using only their past
+28-calendar-day MILP profit. On 166 common development days it averages 183.91 EUR/day,
+versus 181.83 for always-LEAR and 183.08 for the seven-day mean profile. These are reused
+development outcomes, not independent evidence of improvement. No new forecast is trained.
+See [method, limits and reproduction](docs/PROFIT_ORIENTED_FORECASTING.md).
+
+A [matched profit-versus-error comparison](docs/FORECAST_SELECTION_COMPARISON.md)
+holds four candidate forecasts and their history fixed. Profit selection earns
+179.66 EUR/day versus 181.70 for error selection; the exploratory difference interval
+includes zero. This uses a different candidate panel from the five-model experiment above.
+
 ## Reproduction
 
 Python 3.12 and the pinned research dependencies are used. Included StoreNet data and saved results require no API key.
