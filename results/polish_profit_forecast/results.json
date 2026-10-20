@@ -1,0 +1,87 @@
+{
+  "status": "Exploratory retrospective selection on reused development dates; not a test",
+  "window_calendar_days": 28,
+  "minimum_observed_days": 14,
+  "candidate_order": [
+    "lear",
+    "naive_d1",
+    "profile_7d",
+    "profile_14d",
+    "profile_28d"
+  ],
+  "evaluated_days": 166,
+  "warmup_or_insufficient_history_days": [
+    "2026-01-01",
+    "2026-01-02",
+    "2026-01-03",
+    "2026-01-04",
+    "2026-01-05",
+    "2026-01-06",
+    "2026-01-07",
+    "2026-01-08",
+    "2026-01-09",
+    "2026-01-10",
+    "2026-01-11",
+    "2026-01-12",
+    "2026-01-13",
+    "2026-01-14"
+  ],
+  "methods_on_identical_days": {
+    "selected_profit": {
+      "eur_per_day": 183.90976527707096,
+      "total_eur": 30529.021035993777,
+      "losing_days": 11
+    },
+    "lear": {
+      "eur_per_day": 181.82858379490963,
+      "total_eur": 30183.544909955,
+      "losing_days": 12
+    },
+    "naive_d1": {
+      "eur_per_day": 161.91332925514394,
+      "total_eur": 26877.612656353893,
+      "losing_days": 16
+    },
+    "profile_7d": {
+      "eur_per_day": 183.08277616445707,
+      "total_eur": 30391.740843299875,
+      "losing_days": 14
+    },
+    "profile_14d": {
+      "eur_per_day": 181.5228585247848,
+      "total_eur": 30132.794515114278,
+      "losing_days": 16
+    },
+    "profile_28d": {
+      "eur_per_day": 177.05515647705096,
+      "total_eur": 29391.155975190457,
+      "losing_days": 15
+    }
+  },
+  "selected_minus_baseline_eur_per_day": {
+    "lear": 2.0811814821613206,
+    "naive_d1": 21.996436021927035,
+    "profile_7d": 0.8269891126138871,
+    "profile_14d": 2.3869067522861456,
+    "profile_28d": 6.854608800020022
+  },
+  "selection_counts": {
+    "lear": 48,
+    "naive_d1": 0,
+    "profile_7d": 46,
+    "profile_14d": 38,
+    "profile_28d": 34
+  },
+  "limits": [
+    "No new forecast training or dispatch execution",
+    "No independent test or statistical superiority claim",
+    "Input profits inherit the original battery and market assumptions"
+  ],
+  "inputs_sha256": {
+    "results/polish_profile/daily.csv": "f121988f7767d7d8106f56f8adc3006fdb58220da30dc0d0583c23eaf3b51927"
+  },
+  "code_sha256": {
+    "src/gridmind_research/profit_forecast.py": "13c8a37d357d011b3e2a2519cd0e22dffc12d3dab30ff1156ce1599d0725e565",
+    "scripts/polish_profit_forecast_eval.py": "ba7058b93c0eb1b7dd082a8ff208cde5e14f87dfd6b9d6befe455249d2f30e7e"
+  }
+}
