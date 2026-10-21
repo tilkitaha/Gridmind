@@ -1,0 +1,41 @@
+name: SIM31 Opportunity Gap Reproduction
+
+on:
+  push:
+    branches: [SIMULATIONS31]
+  workflow_dispatch:
+
+jobs:
+  gap-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: pip install -e '.[dev,research]' -r requirements-extension.txt --extra-index-url https://download.pytorch.org/whl/cpu
+      - name: Validate new exact decomposition tests
+        run: python -m pytest -q research_tests/test_simulations31_gap_decomposition.py research_tests/test_simulations31_ppo_audit.py
+      - name: Audit five hashed real PPO models on development day 2026-06-30
+        run: python scripts/simulations31_ppo_audit.py --repo . --day 2026-06-30 --out "$RUNNER_TEMP/sim31-real"
+      - name: Decompose the 96 forecast-price profit gaps
+        run: python scripts/simulations31_gap_decomposition.py --actions "$RUNNER_TEMP/sim31-real/96_interval_actions.csv" --out "$RUNNER_TEMP/sim31-gap"
+      - name: Confirm exact gap against independent source summary
+        run: |
+          python - <<'PY'
+          import json, math, os
+          from pathlib import Path
+          root = Path(os.environ["RUNNER_TEMP"])
+          a = json.loads((root / 'sim31-real/summary.json').read_text())
+          b = json.loads((root / 'sim31-gap/forecast_gap_summary.json').read_text())
+          expected = a['milp_forecast_price_objective_eur'] - a['ppo_mean_forecast_price_objective_eur']
+          assert math.isclose(expected, b['forecast_milp_minus_ppo_eur'], abs_tol=1e-7), (expected, b)
+          assert b['slots'] == 96 and b['ppo_models'] == 5
+          print('Reconciled forecast opportunity gap, EUR:', round(expected, 6))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sim31-real-model-opportunity-gap
+          path: ${{ runner.temp }}/sim31-gap
+          if-no-files-found: error
