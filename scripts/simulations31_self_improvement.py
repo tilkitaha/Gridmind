@@ -10,7 +10,6 @@ import argparse
 import hashlib
 import json
 import sys
-from datetime import date
 from pathlib import Path
 
 import numpy as np
@@ -36,13 +35,12 @@ def daily_metrics(values):
     x = np.asarray(values, dtype=float)
     if x.ndim != 1 or not len(x) or not np.isfinite(x).all():
         raise ValueError("Expected nonempty finite one-dimensional profits")
-    losses = -x
     tail_n = max(1, int(np.ceil(len(x) * 0.2)))
     return {
         "mean_profit": float(x.mean()),
         "worst20_mean_profit": float(np.sort(x)[:tail_n].mean()),
         "losing_days": int(np.sum(x < 0)),
-        "days": int(len(x)),
+        "days": len(x),
     }
 
 
@@ -84,9 +82,10 @@ def main():
         raise ValueError("Updates outside approved range")
     sys.dont_write_bytecode = True
     sys.path.insert(0, str(repo / "src"))
-    from gridmind_research.polish_forecast import price_matrix
-    from gridmind_research.polish_rl import PPO, train, run_days, Policy
     import torch
+
+    from gridmind_research.polish_forecast import price_matrix
+    from gridmind_research.polish_rl import PPO, Policy, run_days, train
 
     fpath = repo / "results/polish_rl/lear_forecasts.csv"
     frame = pd.read_csv(fpath, index_col=0, parse_dates=True)
