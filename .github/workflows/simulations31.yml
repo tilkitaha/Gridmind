@@ -1,0 +1,27 @@
+name: SIMULATIONS31 audit verification
+
+on:
+  push:
+    branches: [SIMULATIONS31]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade pip
+      - run: pip install -e '.[dev,research]' -r requirements-extension.txt --extra-index-url https://download.pytorch.org/whl/cpu
+      - run: ruff check .
+      - run: pytest -q
+      - run: python -m unittest discover -s research_tests -v
+      - name: Replay actual June 30 PPO checkpoints without touching the repository
+        run: python scripts/simulations31_ppo_audit.py --repo . --day 2026-06-30 --out "$RUNNER_TEMP/sim31-june30"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sim31-verified-june30-decision-trace
+          path: ${{ runner.temp }}/sim31-june30
+          if-no-files-found: error
