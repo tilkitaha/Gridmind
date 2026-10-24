@@ -1,0 +1,50 @@
+% Examples of every formatting rule of edition 12. Delete this appendix
+% and its \femappendix line in main.tex before submission.
+
+\section{Figure}
+A figure is introduced in the text before it appears (Figure~\ref{fig:example}).
+
+\begin{figure}[ht]
+  \centering
+  \framebox[0.6\textwidth]{\rule{0pt}{3cm}Figure content}
+  \caption{Isosceles triangle}\label{fig:example}
+  \figsource{\cite[123]{Nowak2007}; \cite[22]{Kowalski2009}}
+\end{figure}
+
+\section{Table}
+The table title is placed above the table and the source below it
+(Table~\ref{tab:example}).
+
+\begin{table}[ht]
+  \caption{Analysis of employment size}\label{tab:example}
+  \centering
+  \begin{tabular}{llll}
+    \toprule
+    Column 1 & Column 2 & Column 3 & Column 4 \\
+    \midrule
+    a & b & c & d \\
+    \bottomrule
+  \end{tabular}
+  \tabsource{own elaboration}
+\end{table}
+
+\section{Formula}
+Formulas are centred and numbered on the right, with a source:
+\begin{equation}
+  (a+b)^2 = a^2 + 2ab + b^2
+  \label{eq:example}
+\end{equation}
+\eqsource{own elaboration}
+
+\section{References}
+One author \parencite[22]{Kowalski2001}; two authors
+\parencite[13]{Antczak1994}; three authors \parencite[145]{Malinowski1999};
+more than three \parencite[12]{Marczak2005}; an organisation
+\parencite{GUS2009}; several sources in chronological order
+\parencites[22]{Nowak1973}[55]{Malinowski1980}[47]{Adamski1999}.
+A direct quotation: even very rapidly developing enterprises should
+\femquote{analyse the risk of the business processes being carried out at
+every step} \parencite[306]{Niedbala2010}. A book and an article
+\parencite{Kowalski2011,Krol2009}, a chapter in an edited book
+\parencite{Krol2011} and an internet source \parencite{audytor}.
+Emphasis uses \femem{bold only}.

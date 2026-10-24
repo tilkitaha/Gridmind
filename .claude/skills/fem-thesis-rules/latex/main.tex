@@ -1,0 +1,60 @@
+% FEM PUT engineering thesis, regulations edition 12 (02.10.2025).
+% Overleaf: compiler pdfLaTeX; the bibliography is built with Biber.
+% For an engine without Biber add the option: \documentclass[english,localcheck]{fem_thesis}
+\documentclass[english]{fem_thesis}
+
+\addbibresource{references.bib}
+
+% Title without a full stop at the end (APD guidelines).
+\title{Title of the engineering thesis}
+\author{%
+  Taha Can Tilkioğlu \album{000000} \and
+  Cem Yılmaz \album{000000} \and
+  Serhat Yiğit \album{000000}}
+\femfield{Engineering Management}
+\femsupervisor{dr Fredrick Mumali}
+\femyear{20XX}                       % year of submission
+
+\begin{document}
+
+% 6.2 Structure: title page, contents, Polish abstract, English abstract,
+% symbols and abbreviations (only if justified), body, bibliography,
+% list of tables, list of figures, list of appendices, appendices.
+\femtitlepage
+
+\tableofcontents*
+\clearpage
+
+\begin{femabstractpl}{Streszczenie}{\textbf{Słowa kluczowe:} ...}
+Streszczenie pracy w języku polskim.
+\end{femabstractpl}
+
+\begin{femabstract}{Abstract}{\textbf{Keywords:} ...}
+Abstract of the thesis in English.
+\end{femabstract}
+
+% Keep only if a list of symbols and abbreviations is justified.
+\chapter*{List of symbols and abbreviations}
+\addcontentsline{toc}{chapter}{List of symbols and abbreviations}
+\begin{description}
+  \item[MILP] mixed-integer linear programming
+\end{description}
+
+\input{chapters/01-introduction}
+\input{chapters/02-literature}
+\input{chapters/03-methodology}
+\input{chapters/04-analysis}
+\input{chapters/05-solution}
+\input{chapters/06-conclusion}
+
+\femreferences
+
+\listoftables
+\listoffigures
+\listofappendices
+
+\femappendices
+\femappendix{Examples of the formatting rules (delete before submission)}
+\input{chapters/examples}
+
+\end{document}
