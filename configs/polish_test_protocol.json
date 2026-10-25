@@ -8,7 +8,7 @@
   "source": "ENTSO-E Transparency Platform, day-ahead prices 12.1.D (A44), EUR/MWh, published values at retrieval",
   "development": ["2025-10-01", "2026-06-30"],
   "candidate_test": ["2026-07-01", "2026-08-31"],
-  "fallback_test": {"window": ["2026-09-01", "2026-10-31"], "use_if": "any signer of access_declaration has looked at July-August 2026 Polish day-ahead prices"},
+  "fallback_test": {"window": ["2026-09-01", "2026-10-24"], "use_if": "any signer of access_declaration has looked at July-August 2026 Polish day-ahead prices", "window_change": "2026-10-25: end moved from 2026-10-31 to 2026-10-24 so the live paper test can start with delivery day 2026-10-26; prices from 2026-10-25 on are read by the live test, 2026-09-01 to 2026-10-24 stay unread"},
   "battery": "polish_market.BESS defaults: 1 MW, 2 MWh, 10-90 percent, start and end 50 percent, 0.95 and 0.95, 10 EUR/MWh wear, binary MILP",
   "decision": "One full daily schedule fixed before 12:00 on D-1; prices up to and including D-1 are known at that time",
   "eligible_days": "Test days with 96 market time units that pass polish_market.validate_day; every method is scored on the same days; excluded days are listed",

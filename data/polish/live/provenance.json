@@ -1,0 +1,21 @@
+{
+  "source": "ENTSO-E Transparency Platform, day-ahead prices 12.1.D (A44)",
+  "note": "Live days; published values at retrieval time.",
+  "requests": [
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202610242200",
+        "periodEnd": "202610252300"
+      },
+      "retrieved_utc": "2026-10-25T10:10:35.538330+00:00",
+      "raw_file": "2026-10-25_2026-10-25_20261025T101032.xml",
+      "raw_sha256": "c9bb3b4bb568639ba3381c3862033bed00f8609d1a5f95b6ae9cb7effab54ee9",
+      "days": {
+        "2026-10-25": "2c04303999f4e1c739607cdaa95da0014f8409f72393ef0cce5937242cad4cab"
+      }
+    }
+  ]
+}

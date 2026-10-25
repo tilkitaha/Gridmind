@@ -18,7 +18,7 @@ For a price-taking 1 MW / 2 MWh battery trader in the Polish day-ahead market, d
 | Source | ENTSO-E 12.1.D day-ahead prices (A44), zone `10YPL-AREA-----S`, EUR/MWh, PT15M, value published at retrieval |
 | History | From 1 October 2025; every forecast uses only days before the delivery day |
 | Test window | 1 July–31 August 2026, 62 days |
-| Fallback window | 1 September–31 October 2026, only if a signer has looked at July–August prices (section 8) |
+| Fallback window | 1 September–24 October 2026, only if a signer has looked at July–August prices (section 8). Shortened on 25 October 2026 (was to 31 October) so the live paper test could start with delivery day 26 October; prices from 25 October on are read by the live test, 1 September–24 October stay unread |
 | Eligible days | 96 market time units and `validate_day` passes; all methods on the same days; exclusions listed |
 | Download | `scripts/fetch_entsoe_prices.py` after the freeze; it refuses the test window before. The provenance is appended to `data/polish/prices/provenance.json` |
 
@@ -81,4 +81,4 @@ The policies are not retrained after the freeze; the checkpoint files are the tr
 | Margin M (EUR/day) | Team with the supervisor | Asked on slide 14 of the supervisor deck; a day's profit is about 200–270 EUR, so 5 EUR/day is about 2% |
 | Access declaration | Serhat, Cem, Taha, each in writing | Has anyone looked at July–August 2026 Polish prices, from any source? |
 | Treatment arm | Team | Proposed: 2,000-update checkpoints; alternative: the original 300-update run, whose settings were fixed before any June result (its checkpoints were still selected on June) |
-| Fallback window | Team | Usable only after 31 October 2026 is published |
+| Fallback window | Team | Usable only after 24 October 2026 is published (end moved from 31 October on 25 October 2026) |
