@@ -2,7 +2,7 @@
 
 Engineering Management thesis by Taha Can Tilkioğlu, Cem Yılmaz and Serhat Yiğit. Scientific results recomputed 28 September 2026; manuscript and defense revision 29 September 2026.
 
-The completed empirical study uses six Irish StoreNet households and explicit tariff/battery assumptions. The intended application is a Polish BESS trader; its separate market dataset and empirical validation remain pending. Do not report Irish community savings as Polish arbitrage profit.
+The completed empirical study uses six Irish StoreNet households and explicit tariff/battery assumptions. The intended application is a Polish BESS trader: its development study (October 2025–June 2026) is done, its confirmatory test is drafted and locked, and an exploratory live paper test runs from 26 October 2026 (see below). Do not report Irish community savings as Polish arbitrage profit.
 
 ## Read the thesis
 
@@ -55,6 +55,17 @@ holds four candidate forecasts and their history fixed. Profit selection earns
 179.66 EUR/day versus 181.70 for error selection; the exploratory difference interval
 includes zero. This uses a different candidate panel from the five-model experiment above.
 
+## Polish day-ahead study (October 2026)
+
+A 1 MW / 2 MWh price-taking battery on the Polish day-ahead market (ENTSO-E 12.1.D, 96 quarter-hours a day). Each schedule is fixed before the 12:00 gate on D−1 and scored at realized prices. In June 2026, the validation month, MILP on the LEAR forecast earns 236.08 EUR/day (86.1% of the 274.32 EUR/day perfect-foresight bound), MILP on a 7-day mean 237.22, MILP on yesterday's prices 210.31, the five PPO checkpoints 206.33–218.64 and a threshold rule 167.75. A forecaster with 24% more error than LEAR earns as much, so forecasters are compared by the profit of their schedules. On 25 October 2026 every experiment was re-run: 4,506 of 4,506 recorded numbers were identical, and the retrained PPO checkpoints match their protocol hashes bit for bit.
+
+- [Study, results and data license](docs/POLISH_MARKET_STUDY.md) and [draft test protocol](docs/PROTOCOL_POLISH_TEST_DRAFT.md); the July–August 2026 test stays locked until the protocol is frozen.
+- [Live paper test](results/live_paper_trading/README.md): 15 delivery days from 26 October 2026, hash-chained ledger, standings and public daily reports, updated every day.
+- [GridMind Lab](docs/GRIDMIND_LAB.md): the desktop workbench that runs the simulations, the live test, the finance view, the experiment re-runs and the figures, with screenshots.
+- [Thesis figures](docs/thesis_figures/) with their LaTeX blocks.
+
+ENTSO-E prices are not redistributed: only their SHA-256 hashes are committed (`data/polish/*/provenance.json`), and `scripts/verify_polish_data.py` checks a fresh download against them.
+
 ## Reproduction
 
 Python 3.12 and the pinned research dependencies are used. Included StoreNet data and saved results require no API key.
@@ -79,7 +90,7 @@ See [original reproduction](docs/EXTENSION_REPRODUCTION.md), [follow-up reproduc
 
 ## Evidence boundary
 
-The input contains measured consumption and PV, not observed retail bills or market trades. Tariffs, batteries and the single-bus model are assumptions. Forecast/control uses the source clock without an external market-price join. The independent test, daily risk constraint and Polish forecast-conditioned PPO are unfinished. The 52 research tests establish specific invariants; they do not validate profitability or deployment.
+The input contains measured consumption and PV, not observed retail bills or market trades. Tariffs, batteries and the single-bus model are assumptions. Forecast/control uses the source clock without an external market-price join. The independent Irish test and a daily risk constraint are unfinished; the Polish confirmatory test is locked and the live paper test is exploratory. The 52 research tests establish specific invariants; they do not validate profitability or deployment.
 
 ## Source
 

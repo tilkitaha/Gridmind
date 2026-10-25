@@ -1,6 +1,6 @@
 # Polish market study boundary and reproducible interface
 
-22 September 2026. Intended application: a price-taking BESS trader in the PL bidding zone. Updated 15 October 2026: the sections below report development-period results (October 2025 to June 2026). No test result exists; the test plan is `configs/polish_test_protocol.json` and `docs/PROTOCOL_POLISH_TEST_DRAFT.md`.
+22 September 2026. Intended application: a price-taking BESS trader in the PL bidding zone. Updated 15 October 2026: the sections below report development-period results (October 2025 to June 2026). No confirmatory test result exists; the test plan is `configs/polish_test_protocol.json` and `docs/PROTOCOL_POLISH_TEST_DRAFT.md`. Updated 25 October 2026: every experiment re-run and matched, and an exploratory live paper test started (sections at the end).
 
 ## Implemented
 
@@ -146,6 +146,14 @@ Added after the no-forecast result: `scripts/polish_profile_eval.py` forecasts d
 - This corrects the earlier reading that better forecasts earn more. Forecasters should be compared by the profit of the schedule they produce, and any forecaster must beat a recent-mean profile, not only naive D−1.
 - The test protocol keeps LEAR as the forecast (fixed before these results) and adds the 7-day profile as a secondary comparator.
 
+## Re-run of every experiment (25 October 2026)
+
+All unlocked experiments above were re-run from the repository code: 4,506 of 4,506 recorded numbers were identical, and the five protocol PPO checkpoints, retrained from scratch, have the registered SHA-256 and bit-identical weights. Details: [GridMind Lab](GRIDMIND_LAB.md#re-run-of-every-experiment-25-october-2026).
+
+## Live paper test (from 26 October 2026)
+
+A paper-trading test runs the same agents on live prices for 15 delivery days, 26 October–9 November 2026. Each morning every agent fixes its schedule before the 12:00 gate; after publication the schedule is scored. Schedules and scores are kept in the hash-chained `results/live_paper_trading/ledger.jsonl`, without prices. To start the test on 25 October, the fallback window of the test protocol now ends on 24 October 2026 instead of 31 October; 1 September–24 October stays unread. The test uses fresh prices only, so the yesterday's-prices MILP trades from 26 October and the agents that need a week of history (7-day mean, LEAR, PPO, threshold rule) from 1 November. This is exploratory evidence; the confirmatory test is still the locked July–August window. Standings: [results/live_paper_trading](../results/live_paper_trading/README.md); method: [GridMind Lab](GRIDMIND_LAB.md#the-live-paper-test).
+
 ## Data and sources
 
 ENTSO-E zone `10YPL-AREA-----S`: day-ahead prices 12.1.D, load forecast 6.1.B, actual load 6.1.A, generation per type 16.1.B&C. Downloaded for 2025-09-20 to 2026-06-30; July–August 2026 not requested. API access requires registration and a security token; the token is read only from `ENTSOE_TOKEN` and never stored.
@@ -160,6 +168,6 @@ Redistribution: ENTSO-E's “List of data available for free re-use” (version 
 
 ## Remaining research
 
-Done on development data: price download, pilot, naive/LEAR/boosting forecasts with and without exogenous inputs, mean-profile forecasts, threshold rule, forecast-conditioned PPO with budget and no-forecast arms, and the test pipeline (`scripts/polish_test_run.py`, rehearsed on June). Not done: the test itself (needs the freeze), audit of earlier publication versions of the load forecast, Transformer forecast, risk-constrained optimization, partial order acceptance and imbalance charges, ten-owner physical disaggregation and settlement, escrow and validator governance. Synthetic analytical tests of the scheduling module are not backtests. A daily policy must not consume realized intraday prices when scoring a schedule that was fixed on D-1.
+Done on development data: price download, pilot, naive/LEAR/boosting forecasts with and without exogenous inputs, mean-profile forecasts, threshold rule, forecast-conditioned PPO with budget and no-forecast arms, and the test pipeline (`scripts/polish_test_run.py`, rehearsed on June). Running: the 15-day live paper test (from 26 October 2026). Not done: the test itself (needs the freeze), audit of earlier publication versions of the load forecast, Transformer forecast, risk-constrained optimization, partial order acceptance and imbalance charges, ten-owner physical disaggregation and settlement, escrow and validator governance. Synthetic analytical tests of the scheduling module are not backtests. A daily policy must not consume realized intraday prices when scoring a schedule that was fixed on D-1.
 
 The original Irish data evaluate a different community and tariff model. Do not join their unverified source clock to Polish prices or rescale their savings to the 1 MW system.

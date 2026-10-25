@@ -1,0 +1,93 @@
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/forecast_profit.pdf}
+  \caption{MILP profit by forecaster, January–June 2026, with the mean absolute error}\label{fig:forecast_profit}
+  \figsource{own study based on ENTSO-E Transparency Platform 12.1.D}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/error_vs_profit.pdf}
+  \caption{Forecast error against MILP profit: scaled LEAR error, independent noise and the forecasters}\label{fig:error_vs_profit}
+  \figsource{own study based on ENTSO-E Transparency Platform 12.1.D}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/ppo_budget.pdf}
+  \caption{Profit of PPO by training budget against MILP and the threshold rule, June 2026 (validation)}\label{fig:ppo_budget}
+  \figsource{own study}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/monthly_profit.pdf}
+  \caption{Mean daily MILP profit by month and forecaster, January–June 2026}\label{fig:monthly_profit}
+  \figsource{own study based on ENTSO-E Transparency Platform 12.1.D}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/pilot_spread.pdf}
+  \caption{Daily spread of Polish day-ahead prices, October 2025 – June 2026}\label{fig:pilot_spread}
+  \figsource{own study based on ENTSO-E Transparency Platform 12.1.D}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/data_windows.pdf}
+  \caption{Data windows of the study: development, locked confirmatory test, reserved fallback and live paper test}\label{fig:data_windows}
+  \figsource{own study based on the test protocol}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/live_agent_start.pdf}
+  \caption{First live delivery day of each agent: the reserved windows leave no earlier prices to forecast from}\label{fig:live_agent_start}
+  \figsource{own study}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/june_cumulative_profit.pdf}
+  \caption{Cumulative profit by agent in June 2026 (validation month), 1 MW / 2 MWh battery}\label{fig:june_cumulative_profit}
+  \figsource{own study based on ENTSO-E Transparency Platform 12.1.D}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/june_share_of_bound.pdf}
+  \caption{Profit of each agent as a share of the perfect-foresight bound, June 2026 (validation month)}\label{fig:june_share_of_bound}
+  \figsource{own study based on ENTSO-E Transparency Platform 12.1.D}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/june_30_day.png}
+  \caption{Realized price, LEAR forecast and stored energy of four agents on 30 June 2026}\label{fig:june_30_day}
+  \figsource{own study based on ENTSO-E Transparency Platform 12.1.D}
+\end{figure}
+
+\begin{table}[ht]
+  \centering
+  \caption{Re-run of the recorded experiments: numbers identical to the recorded results}\label{tab:reproduction}
+  \begin{tabular}{lrr}
+    \hline
+    Experiment & Numbers compared & Identical \\
+    \hline
+    Development-period pilot & 23 & 23 \\
+    Mean-profile forecasts & 85 & 85 \\
+    Simple controllers and error sensitivity & 120 & 120 \\
+    Past-profit forecast selection (Cem) & 31 & 31 \\
+    Selection by profit vs. by error (Cem) & 99 & 99 \\
+    Test pipeline rehearsal (June) & 96 & 96 \\
+    Walk-forward forecast comparison & 92 & 92 \\
+    Forecasts with load and generation inputs & 156 & 156 \\
+    PPO against MILP (300 updates) & 387 & 387 \\
+    PPO budget and no-forecast arms & 3417 & 3417 \\
+    \hline
+    Total & 4506 & 4506 \\
+    \hline
+  \end{tabular}
+  \tabsource{own study}
+\end{table}
