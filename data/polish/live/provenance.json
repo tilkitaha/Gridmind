@@ -31,6 +31,21 @@
       "days": {
         "2026-10-26": "80fd2496429a99e67f87ab83e7be8629cfe502c97f3d2599bee908c5f6cf1c07"
       }
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202610262300",
+        "periodEnd": "202610272300"
+      },
+      "retrieved_utc": "2026-10-26T13:30:08.993427+00:00",
+      "raw_file": "2026-10-27_2026-10-27_20261026T133004.xml",
+      "raw_sha256": "76d49fbfaed44775ed44d989a5347a6c4426c6ce17cf9ab5b3916cf12f0162db",
+      "days": {
+        "2026-10-27": "cfaa64dfc5172f395eedf3aba1f2d52415ddf15b5de7f75d61ae575107727bed"
+      }
     }
   ]
 }
