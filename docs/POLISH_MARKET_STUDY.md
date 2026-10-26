@@ -146,6 +146,31 @@ Added after the no-forecast result: `scripts/polish_profile_eval.py` forecasts d
 - This corrects the earlier reading that better forecasts earn more. Forecasters should be compared by the profit of the schedule they produce, and any forecaster must beat a recent-mean profile, not only naive D−1.
 - The test protocol keeps LEAR as the forecast (fixed before these results) and adds the 7-day profile as a secondary comparator.
 
+## Confirmatory test and second untouched period (26 October 2026)
+
+The protocol was frozen on 26 October 2026 (`configs/polish_test_protocol.json`, `FROZEN_2026-10-26`) with a margin of 2.36 EUR/day, the access declaration answered no by all three signers, hypothesis H1 added and 1 September–24 October 2026 registered as a second untouched period. The prices of each window were downloaded only after the freeze, hashed in an execution lock and scored once (`scripts/polish_test_run.py`; `results/polish_test/`, `results/polish_test_extension/`). No day was excluded.
+
+| Period | Days | Role | Bound | MILP, LEAR | MILP, 7-day mean | MILP, D−1 | PPO (mean of 5) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Jan–Jun 2026 | 180 | development | 226.88 | 175.63 | 177.16 | 155.13 | (training months) |
+| June 2026 | 30 | validation | 274.32 | 236.08 | 237.22 | 210.31 | 214.37 |
+| Jul–Aug 2026 | 62 | **confirmatory test** | 260.10 | 213.87 | 212.67 | 174.83 | 191.95 |
+| 1 Sep–24 Oct 2026 | 54 | second untouched period | 342.84 | 264.16 | 268.65 | 202.63 | 211.95 |
+
+Mean EUR/day at realized prices, 1 MW / 2 MWh battery.
+
+| Endpoint | Jul–Aug (test) | Sep–Oct | Both, 116 days |
+| --- | --- | --- | --- |
+| **Primary:** PPO minus MILP, EUR/day | −21.92 (−29.84 to −14.20): **PPO worse** | −52.21 (−66.10 to −35.72): PPO worse | – |
+| **H1:** LEAR minus D−1, mean EUR/day | +39.05 (26.70 to 53.25) | +61.53 (46.52 to 77.68) | +49.52 (38.47 to 61.45) |
+| **H1:** LEAR minus D−1, CVaR 5% EUR/day | +84.94 (15.20 to 136.62) | +41.09 (−6.36 to 88.52) | +69.76 (13.96 to 121.53) |
+| H1 decision | **supported** | not demonstrated | supported |
+
+- The learned policy does not beat the optimizer on unseen months: the validation result (−21.71 EUR/day in June) is confirmed on July–August and widens in the autumn. All five checkpoints are below MILP in both windows.
+- H1 is confirmed on the test window: the forecast-informed schedule earns more and loses less on its worst days than planning on yesterday's prices. In September–October the mean difference is larger still, but with three tail days the CVaR interval includes zero, as the protocol's power note anticipated; pooled over both windows, as pre-registered, H1 is supported.
+- MILP on the 7-day mean earns as much as MILP on LEAR in both windows (−1.21 and +4.48 EUR/day, intervals containing zero), as in development.
+- This is a price-taker paper evaluation: full acceptance at the zonal price, no imbalance costs, and a wear cost of 10 EUR/MWh.
+
 ## Downside risk (exploratory, 26 October 2026)
 
 `scripts/polish_risk_eval.py` adds risk measures to the recorded daily profits, without new data: CVaR 5% (mean profit on the worst ceil(0.05 n) days; Rockafellar and Uryasev, 2000), the 5th percentile, the standard deviation, losing days and the worst day, with the paired circular block bootstrap of the other Polish evaluations (blocks of 7 days, 10,000 draws, seed 15102026). Results in `results/polish_risk/`.

@@ -2,7 +2,7 @@
 
 Engineering Management thesis by Taha Can Tilkioğlu, Cem Yılmaz and Serhat Yiğit. Scientific results recomputed 28 September 2026; manuscript and defense revision 29 September 2026.
 
-The completed empirical study uses six Irish StoreNet households and explicit tariff/battery assumptions. The intended application is a Polish BESS trader: its development study (October 2025–June 2026) is done, its confirmatory test is drafted and locked, and an exploratory live paper test runs from 26 October 2026 (see below). Do not report Irish community savings as Polish arbitrage profit.
+The completed empirical study uses six Irish StoreNet households and explicit tariff/battery assumptions. The intended application is a Polish BESS trader: its development study (October 2025–June 2026) and its confirmatory test (July–August 2026) are done, and an exploratory live paper test runs from 26 October 2026 (see below). Do not report Irish community savings as Polish arbitrage profit.
 
 ## Read the thesis
 
@@ -59,7 +59,9 @@ includes zero. This uses a different candidate panel from the five-model experim
 
 A 1 MW / 2 MWh price-taking battery on the Polish day-ahead market (ENTSO-E 12.1.D, 96 quarter-hours a day). Each schedule is fixed before the 12:00 gate on D−1 and scored at realized prices. In June 2026, the validation month, MILP on the LEAR forecast earns 236.08 EUR/day (86.1% of the 274.32 EUR/day perfect-foresight bound), MILP on a 7-day mean 237.22, MILP on yesterday's prices 210.31, the five PPO checkpoints 206.33–218.64 and a threshold rule 167.75. A forecaster with 24% more error than LEAR earns as much, so forecasters are compared by the profit of their schedules. On 25 October 2026 every experiment was re-run: 4,506 of 4,506 recorded numbers were identical, and the retrained PPO checkpoints match their protocol hashes bit for bit.
 
-- [Study, results and data license](docs/POLISH_MARKET_STUDY.md) and [draft test protocol](docs/PROTOCOL_POLISH_TEST_DRAFT.md); the July–August 2026 test stays locked until the protocol is frozen.
+The test protocol was frozen on 26 October 2026 and the confirmatory test run once on July–August 2026 (62 days). Hypothesis H1 is supported: schedules on the LEAR forecast earn 39.05 EUR/day more than schedules on yesterday's prices (26.70 to 53.25) and lose less on their worst days (CVaR 5% +84.94 EUR/day, 15.20 to 136.62). PPO earns 21.92 EUR/day less than MILP on the same forecast (−29.84 to −14.20). A second untouched period, 1 September–24 October 2026, confirms both directions; its CVaR interval alone includes zero, and H1 pooled over both periods is supported. Details: [test results](docs/POLISH_MARKET_STUDY.md#confirmatory-test-and-second-untouched-period-26-october-2026).
+
+- [Study, results and data license](docs/POLISH_MARKET_STUDY.md) and [test protocol](docs/PROTOCOL_POLISH_TEST_DRAFT.md), frozen on 26 October 2026; results in `results/polish_test/` and `results/polish_test_extension/`.
 - [Live paper test](results/live_paper_trading/README.md): 15 delivery days from 26 October 2026, hash-chained ledger, standings and public daily reports, updated every day.
 - [GridMind Lab](docs/GRIDMIND_LAB.md): the desktop workbench that runs the simulations, the live test, the finance view, the experiment re-runs and the figures, with screenshots.
 - [Thesis figures](docs/thesis_figures/) with their LaTeX blocks.
@@ -90,7 +92,7 @@ See [original reproduction](docs/EXTENSION_REPRODUCTION.md), [follow-up reproduc
 
 ## Evidence boundary
 
-The input contains measured consumption and PV, not observed retail bills or market trades. Tariffs, batteries and the single-bus model are assumptions. Forecast/control uses the source clock without an external market-price join. The independent Irish test and a daily risk constraint are unfinished; the Polish confirmatory test is locked and the live paper test is exploratory. The 52 research tests establish specific invariants; they do not validate profitability or deployment.
+The input contains measured consumption and PV, not observed retail bills or market trades. Tariffs, batteries and the single-bus model are assumptions. Forecast/control uses the source clock without an external market-price join. The independent Irish test and a daily risk constraint are unfinished; the Polish confirmatory test is done (price-taker paper evaluation) and the live paper test is exploratory. The 52 research tests establish specific invariants; they do not validate profitability or deployment.
 
 ## Source
 
