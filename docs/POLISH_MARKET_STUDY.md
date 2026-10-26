@@ -146,6 +146,23 @@ Added after the no-forecast result: `scripts/polish_profile_eval.py` forecasts d
 - This corrects the earlier reading that better forecasts earn more. Forecasters should be compared by the profit of the schedule they produce, and any forecaster must beat a recent-mean profile, not only naive D−1.
 - The test protocol keeps LEAR as the forecast (fixed before these results) and adds the 7-day profile as a secondary comparator.
 
+## Downside risk (exploratory, 26 October 2026)
+
+`scripts/polish_risk_eval.py` adds risk measures to the recorded daily profits, without new data: CVaR 5% (mean profit on the worst ceil(0.05 n) days; Rockafellar and Uryasev, 2000), the 5th percentile, the standard deviation, losing days and the worst day, with the paired circular block bootstrap of the other Polish evaluations (blocks of 7 days, 10,000 draws, seed 15102026). Results in `results/polish_risk/`.
+
+| January–June 2026, 180 days | Mean (EUR/day) | CVaR 5% (EUR/day) | Losing days |
+| --- | --- | --- | --- |
+| MILP, LEAR | 175.63 | −18.55 | 17 |
+| MILP, 7-day mean | 177.16 | −50.62 | 18 |
+| MILP, naive D−1 | 155.13 | −42.96 | 23 |
+| Threshold rule, LEAR | 121.19 | −21.63 | 17 |
+
+- LEAR minus naive D−1: mean +20.50 (12.32 to 28.92), CVaR 5% +24.42 (6.74 to 47.00). LEAR raises the profit and lowers the downside risk.
+- LEAR minus the 7-day mean: mean −1.54 (−6.19 to 3.27), CVaR 5% +32.08 (8.29 to 57.43). The 7-day mean earns as much on average, but its worst days are much worse: the more accurate forecast pays off through lower risk.
+- June 2026, PPO (mean of the five checkpoints) minus MILP with LEAR: mean −21.71 (−33.69 to −10.61), CVaR 5% +1.92 (−20.02 to 15.51).
+
+The analysis was chosen after the mean-profit results were known, and the 5% tail holds only nine of 180 days (two of 30 in June), so it is exploratory.
+
 ## Re-run of every experiment (25 October 2026)
 
 All unlocked experiments above were re-run from the repository code: 4,506 of 4,506 recorded numbers were identical, and the five protocol PPO checkpoints, retrained from scratch, have the registered SHA-256 and bit-identical weights. Details: [GridMind Lab](GRIDMIND_LAB.md#re-run-of-every-experiment-25-october-2026).

@@ -1,0 +1,232 @@
+{
+  "note": "Exploratory: computed from recorded daily profits of the development period; no new data. January-May are PPO training months, so PPO is evaluated on June only.",
+  "definitions": {
+    "cvar5": "mean daily profit on the worst ceil(0.05 n) days (expected shortfall)",
+    "bootstrap": {
+      "block": 7,
+      "draws": 10000,
+      "seed": 15102026,
+      "kind": "circular moving block"
+    }
+  },
+  "january_june": {
+    "days": 180,
+    "controllers": {
+      "perfect_foresight": {
+        "days": 180,
+        "mean_eur_per_day": 226.87874678901207,
+        "sd_eur": 172.76890030147115,
+        "cvar5_eur": 8.986776098414936,
+        "p5_eur": 19.400172500000046,
+        "losing_days": 0,
+        "worst_day_eur": 2.7154250000000038
+      },
+      "milp_lear": {
+        "days": 180,
+        "mean_eur_per_day": 175.62614685595574,
+        "sd_eur": 158.38815169838145,
+        "cvar5_eur": -18.5460828620344,
+        "p5_eur": -9.193051003289426,
+        "losing_days": 17,
+        "worst_day_eur": -38.85993684210521
+      },
+      "milp_profile_7d": {
+        "days": 180,
+        "mean_eur_per_day": 177.16166356667446,
+        "sd_eur": 166.5792218901565,
+        "cvar5_eur": -50.62231728993528,
+        "p5_eur": -27.726350309037375,
+        "losing_days": 18,
+        "worst_day_eur": -89.81267368421042
+      },
+      "milp_naive_d1": {
+        "days": 180,
+        "mean_eur_per_day": 155.12959446127664,
+        "sd_eur": 150.46480864344102,
+        "cvar5_eur": -42.96478120190823,
+        "p5_eur": -16.169526315789433,
+        "losing_days": 23,
+        "worst_day_eur": -106.5567736842105
+      },
+      "threshold_rule_k10": {
+        "days": 180,
+        "mean_eur_per_day": 121.19497061326562,
+        "sd_eur": 120.71118693213042,
+        "cvar5_eur": -21.630628362573084,
+        "p5_eur": -4.705999736842086,
+        "losing_days": 17,
+        "worst_day_eur": -62.51924736842102
+      }
+    }
+  },
+  "june": {
+    "days": 30,
+    "controllers": {
+      "perfect_foresight": {
+        "days": 30,
+        "mean_eur_per_day": 274.3224682675439,
+        "sd_eur": 205.93485980095753,
+        "cvar5_eur": 65.02852927631584,
+        "p5_eur": 88.05250971606654,
+        "losing_days": 0,
+        "worst_day_eur": 43.555390131579
+      },
+      "milp_lear": {
+        "days": 30,
+        "mean_eur_per_day": 236.08298164589115,
+        "sd_eur": 199.19209758157157,
+        "cvar5_eur": 11.653015988573495,
+        "p5_eur": 37.41855566482005,
+        "losing_days": 1,
+        "worst_day_eur": -0.7841430921052108
+      },
+      "milp_naive_d1": {
+        "days": 30,
+        "mean_eur_per_day": 210.3088537777009,
+        "sd_eur": 207.37602017152628,
+        "cvar5_eur": -6.548208717105201,
+        "p5_eur": 5.335937364092888,
+        "losing_days": 2,
+        "worst_day_eur": -10.607923026315746
+      },
+      "ppo_mean_of_5": {
+        "days": 30,
+        "mean_eur_per_day": 214.36848916692608,
+        "sd_eur": 180.86000452810546,
+        "cvar5_eur": 13.574916804449408,
+        "p5_eur": 39.01304522860158,
+        "losing_days": 1,
+        "worst_day_eur": -6.537364558630893
+      },
+      "forecast_2000_seed11": {
+        "days": 30,
+        "mean_eur_per_day": 206.33320452690947,
+        "sd_eur": 175.10554405694563,
+        "cvar5_eur": 9.731826770062256,
+        "p5_eur": 30.28981745935311,
+        "losing_days": 1,
+        "worst_day_eur": -7.344211928327681
+      },
+      "forecast_2000_seed22": {
+        "days": 30,
+        "mean_eur_per_day": 218.51510911712955,
+        "sd_eur": 182.45985671114673,
+        "cvar5_eur": 16.700035048127013,
+        "p5_eur": 40.86370122430934,
+        "losing_days": 1,
+        "worst_day_eur": -4.828945990345176
+      },
+      "forecast_2000_seed33": {
+        "days": 30,
+        "mean_eur_per_day": 213.5208082861974,
+        "sd_eur": 179.79656844406603,
+        "cvar5_eur": 9.890336150543954,
+        "p5_eur": 36.559836961974284,
+        "losing_days": 1,
+        "worst_day_eur": -8.615316794492983
+      },
+      "forecast_2000_seed44": {
+        "days": 30,
+        "mean_eur_per_day": 214.83573322927933,
+        "sd_eur": 183.7957660154239,
+        "cvar5_eur": 11.943816785186657,
+        "p5_eur": 33.7547203007991,
+        "losing_days": 1,
+        "worst_day_eur": -6.948936043927006
+      },
+      "forecast_2000_seed55": {
+        "days": 30,
+        "mean_eur_per_day": 218.6375906751149,
+        "sd_eur": 183.69639420667542,
+        "cvar5_eur": 16.366179616661853,
+        "p5_eur": 39.65939784840477,
+        "losing_days": 1,
+        "worst_day_eur": -4.9494120360616165
+      },
+      "milp_profile_7d": {
+        "days": 30,
+        "mean_eur_per_day": 237.21919683748854,
+        "sd_eur": 199.58314975765634,
+        "cvar5_eur": 27.709501315789524,
+        "p5_eur": 49.147592846260444,
+        "losing_days": 0,
+        "worst_day_eur": 6.711026315789525
+      },
+      "threshold_rule_k10": {
+        "days": 30,
+        "mean_eur_per_day": 167.75203464450604,
+        "sd_eur": 169.48079423511007,
+        "cvar5_eur": 6.57878684210527,
+        "p5_eur": 28.156823975069273,
+        "losing_days": 1,
+        "worst_day_eur": -7.846389473684212
+      }
+    }
+  },
+  "paired": {
+    "january_june_milp_lear_minus_naive_d1": {
+      "mean": {
+        "estimate_eur": 20.496552394679135,
+        "lower95": 12.315190426835658,
+        "upper95": 28.921166941248753
+      },
+      "cvar5": {
+        "estimate_eur": 24.41869833987383,
+        "lower95": 6.735233062961709,
+        "upper95": 46.996376420437066
+      },
+      "losing_days": {
+        "a": 17,
+        "b": 23
+      }
+    },
+    "january_june_milp_lear_minus_profile_7d": {
+      "mean": {
+        "estimate_eur": -1.5355167107186747,
+        "lower95": -6.186488731172085,
+        "upper95": 3.2654394625822443
+      },
+      "cvar5": {
+        "estimate_eur": 32.076234427900886,
+        "lower95": 8.291323912405735,
+        "upper95": 57.43370250957024
+      },
+      "losing_days": {
+        "a": 17,
+        "b": 18
+      }
+    },
+    "january_june_milp_lear_minus_rule_k10": {
+      "mean": {
+        "estimate_eur": 54.43117624269012,
+        "lower95": 40.144944690746264,
+        "upper95": 70.33423587660873
+      },
+      "cvar5": {
+        "estimate_eur": 3.0845455005386846,
+        "lower95": -8.566094422610762,
+        "upper95": 17.19411813202141
+      },
+      "losing_days": {
+        "a": 17,
+        "b": 17
+      }
+    },
+    "june_ppo_mean_minus_milp_lear": {
+      "mean": {
+        "estimate_eur": -21.714492478965003,
+        "lower95": -33.687371194471396,
+        "upper95": -10.614941633919035
+      },
+      "cvar5": {
+        "estimate_eur": 1.9219008158759134,
+        "lower95": -20.021600447428817,
+        "upper95": 15.514630943912916
+      },
+      "losing_days": {
+        "a": 1,
+        "b": 1
+      }
+    }
+  }
+}
