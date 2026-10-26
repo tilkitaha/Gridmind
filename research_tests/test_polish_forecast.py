@@ -1,6 +1,7 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 import numpy as np
 import pandas as pd
@@ -77,7 +78,10 @@ class PolishForecastTests(unittest.TestCase):
         self.assertLess(np.abs(f - m.loc[m.index[85]].to_numpy()).mean(), np.abs(m.loc[m.index[85]].to_numpy() - m.values.mean()).mean())
 
     def test_price_matrix_refuses_the_test_window(self):
-        with tempfile.TemporaryDirectory() as d, self.assertRaises(PermissionError):
+        # Independent of the repository protocol's status: a draft protocol keeps July-August closed.
+        draft = (pd.Timestamp('2026-07-01'), pd.Timestamp('2026-08-31'), False)
+        with tempfile.TemporaryDirectory() as d, self.assertRaises(PermissionError), \
+                mock.patch('gridmind_research.polish_pilot.candidate_test_window', return_value=draft):
             price_matrix(Path(d), '2026-06-01', '2026-07-10')
 
     def test_diebold_mariano_signs(self):

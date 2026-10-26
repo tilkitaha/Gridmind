@@ -1,7 +1,7 @@
 {
-  "version": "0.3",
-  "date": "2026-10-15",
-  "status": "DRAFT_NOT_FROZEN",
+  "version": "1.0",
+  "date": "2026-10-26",
+  "status": "FROZEN_2026-10-26",
   "freeze_instructions": "Set margin_eur_per_day and sign access_declaration, then set status to FROZEN_<date> in one commit; see docs/PROTOCOL_POLISH_TEST_DRAFT.md",
   "record_of_proposal": "configs/polish_market_protocol.json (22 September 2026, as shown to the supervisor) is kept unchanged; this file carries the test plan",
   "zone": "10YPL-AREA-----S",
@@ -9,6 +9,7 @@
   "development": ["2025-10-01", "2026-06-30"],
   "candidate_test": ["2026-07-01", "2026-08-31"],
   "fallback_test": {"window": ["2026-09-01", "2026-10-24"], "use_if": "any signer of access_declaration has looked at July-August 2026 Polish day-ahead prices", "window_change": "2026-10-25: end moved from 2026-10-31 to 2026-10-24 so the live paper test can start with delivery day 2026-10-26; prices from 2026-10-25 on are read by the live test, 2026-09-01 to 2026-10-24 stay unread"},
+  "extension_test": {"window": ["2026-09-01", "2026-10-24"], "run_after": "the candidate test, with the same frozen code, checkpoints and decision rules, under its own execution lock (scripts/polish_test_run.py --extension)", "role": "second untouched period, reported next to the candidate test as a replication; not used when the fallback replaces the candidate test", "added": "2026-10-26, before the freeze"},
   "battery": "polish_market.BESS defaults: 1 MW, 2 MWh, 10-90 percent, start and end 50 percent, 0.95 and 0.95, 10 EUR/MWh wear, binary MILP",
   "decision": "One full daily schedule fixed before 12:00 on D-1; prices up to and including D-1 are known at that time",
   "eligible_days": "Test days with 96 market time units that pass polish_market.validate_day; every method is scored on the same days; excluded days are listed",
@@ -32,18 +33,30 @@
   "treatment_choice": "2000-update arm, highest June validation mean (214.37 EUR/day against 210.01 for 1000 and 194.83 for 300). Chosen on June, which is what the validation month is for; no retraining after the freeze",
   "primary_endpoint": "Mean over eligible test days of (PPO daily profit averaged over the five checkpoints) minus (MILP daily profit), EUR/day, realized prices",
   "inference": {"method": "circular moving-block bootstrap over test days", "block_days": 7, "draws": 10000, "seed": 15102026, "interval": "95 percent percentile"},
-  "margin_eur_per_day": null,
+  "margin_eur_per_day": 2.36,
+  "margin_basis": "1 percent of the June 2026 MILP-on-LEAR mean (236.08 EUR/day), the same relative threshold as the household holdout protocol; set on 2026-10-26 before any test price was read",
   "decision_rule": {
     "ppo_better": "lower 95 percent bound above margin_eur_per_day",
     "ppo_worse": "upper 95 percent bound below zero",
     "no_demonstrated_gain": "otherwise"
   },
+  "hypothesis_h1": {
+    "statement": "A forecast-informed scheduling policy raises the day-ahead arbitrage value of a constrained battery and reduces its downside risk, compared with a policy that plans on the previous day's prices",
+    "endpoint": "milp_lear minus milp_naive_d1 on the same eligible test days: (a) mean daily profit, EUR/day; (b) CVaR 5 percent, the mean daily profit on the worst ceil(0.05 n) days, EUR/day; same bootstrap as the primary endpoint",
+    "decision_rule": {"supported": "lower 95 percent bounds of (a) and (b) both above zero", "contradicted": "upper 95 percent bound of (a) below zero", "not_demonstrated": "otherwise"},
+    "added": "2026-10-26, before the freeze. Its January-June 2026 result was known when it was added (scripts/polish_risk_eval.py: mean +20.50, CVaR 5 percent +24.42 EUR/day), so only the test windows can confirm it",
+    "judged_on": "the candidate test",
+    "pooled_secondary": "after the extension_test, the same endpoint and rule on the candidate and extension days together (about 116 days, 6 tail days), reported as hypothesis_h1_pooled",
+    "power_note": "62 test days give 4 tail days for CVaR 5 percent, so (b) has a wide interval and not_demonstrated is a likely outcome even when (a) is clear"
+  },
   "secondary_endpoints": ["each checkpoint minus MILP with the same bootstrap", "share of the realized-price bound", "losing days", "battery throughput MWh/day", "result by month", "all secondary controllers against MILP", "PPO (mean of the five checkpoints) against each secondary controller"],
-  "multiplicity": "One primary contrast; everything else is labelled exploratory",
-  "access_declaration": {"question": "Have you looked at Polish day-ahead prices for July-August 2026 (any source) or at any result computed on them?", "Serhat Yigit": null, "Cem Yilmaz": null, "Taha Can Tilkioglu": null},
-  "execution": "scripts/polish_test_run.py: lock (hashes of this file, code commit, checkpoints and test data) then run once; both refuse to overwrite",
+  "multiplicity": "Two hypotheses, each judged by its own decision rule at the 95 percent level: the primary PPO contrast and hypothesis_h1; no adjustment across the two; everything else is labelled exploratory",
+  "access_declaration": {"question": "Have you looked at Polish day-ahead prices for July-August 2026 (any source) or at any result computed on them?", "Serhat Yigit": false, "Cem Yilmaz": false, "Taha Can Tilkioglu": false},
+  "access_declaration_record": "Answered on 2026-10-26; Serhat Yigit reported the answers of all three signers",
+  "execution": "scripts/polish_test_run.py: lock (hashes of this file, code commit, checkpoints and test data) then run once; both refuse to overwrite. The extension_test follows the same two steps with --extension, only after the candidate test",
   "development_reference": {
     "june_2026_eur_per_day": {"bound": 274.32, "milp_lear": 236.08, "milp_profile_7d": 237.22, "milp_naive_d1": 210.31, "ppo_2000_mean": 214.37, "rule_k10": 167.75, "do_nothing": 0.0},
+    "june_2026_hypothesis_h1": {"mean_difference": 25.77, "mean_ci95": [13.56, 38.89], "cvar5_difference": 18.20, "cvar5_ci95": [5.45, 44.18]},
     "note": "Validation values, not test results; the test can differ"
   }
 }

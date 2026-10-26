@@ -6,6 +6,10 @@ Three modes:
   lock      after the freeze and the test-data download: records the hashes of the protocol,
             the code commit, the checkpoints and every test day, before any score exists
   run       verifies the lock and scores the test window exactly once
+  --extension (with lock and run, only after the confirmatory test) does the same for the
+            second untouched period of the protocol (extension_test), into results/polish_test_extension
+Every result includes the protocol's hypothesis H1 (MILP on LEAR against MILP on D-1 prices,
+mean profit and CVaR 5%) next to the primary PPO endpoint.
 Run from project root with PYTHONPATH=src:
   python scripts/polish_test_run.py rehearse --days data/polish/prices/days --out results/polish_test_rehearsal
   python scripts/polish_test_run.py lock --days data/polish/prices/days
@@ -29,6 +33,7 @@ from gridmind_research.polish_rl import PPO, Policy, rule_profit, run_days
 
 PROTOCOL = Path('configs/polish_test_protocol.json')
 OUT = Path('results/polish_test')
+EXTENSION = Path('results/polish_test_extension')
 REHEARSAL = ('2026-06-01', '2026-06-30')
 
 
@@ -89,6 +94,37 @@ def contrast(x):
     return {'estimate': ci['estimate'], 'ci95': [ci['lower95'], ci['upper95']]}
 
 
+def cvar5(x):
+    """Mean daily profit on the worst ceil(0.05 n) days (expected shortfall)."""
+    x = np.sort(np.asarray(x, dtype=float))
+    return float(x[:int(np.ceil(0.05 * len(x)))].mean())
+
+
+def cvar_contrast(a, b, block=7, draws=10000, seed=15102026):
+    """CVaR 5% of a minus CVaR 5% of b, with the circular moving-block bootstrap over the same days."""
+    a, b = np.asarray(a, dtype=float), np.asarray(b, dtype=float)
+    n, m = len(a), int(np.ceil(0.05 * len(a)))
+    rng = np.random.default_rng(seed)
+    idx = ((rng.integers(0, n, (draws, int(np.ceil(n / block))))[:, :, None] + np.arange(block)) % n).reshape(draws, -1)[:, :n]
+    d = np.sort(a[idx], 1)[:, :m].mean(1) - np.sort(b[idx], 1)[:, :m].mean(1)
+    lo, hi = np.percentile(d, [2.5, 97.5])
+    return {'estimate': cvar5(a) - cvar5(b), 'ci95': [float(lo), float(hi)]}
+
+
+def hypothesis_h1(frame):
+    """H1: MILP on LEAR against MILP on D-1 prices, in mean profit and in CVaR 5% (protocol, hypothesis_h1)."""
+    mean = contrast((frame['milp_lear'] - frame['milp_naive_d1']).to_numpy())
+    tail = cvar_contrast(frame['milp_lear'], frame['milp_naive_d1'])
+    if mean['ci95'][0] > 0 and tail['ci95'][0] > 0:
+        decision = 'supported'
+    elif mean['ci95'][1] < 0:
+        decision = 'contradicted'
+    else:
+        decision = 'not_demonstrated'
+    return {'mean_difference': mean, 'cvar5_difference': tail, 'decision': decision,
+            'cvar5_eur': {k: cvar5(frame[k]) for k in ('milp_lear', 'milp_naive_d1')}}
+
+
 def summarize(frame, excluded, skipped, through, protocol):
     p = frame['ppo_mean'] - frame['milp_lear']
     primary = contrast(p.to_numpy())
@@ -103,6 +139,7 @@ def summarize(frame, excluded, skipped, through, protocol):
     return {
         'days': len(frame), 'excluded_days': excluded, 'skipped_reasons': skipped,
         'primary': {**primary, 'margin_eur_per_day': margin, 'decision': decision},
+        'hypothesis_h1': hypothesis_h1(frame),
         'eur_per_day': {k: float(v.mean()) for k, v in frame.items()},
         'share_of_bound_pct': {k: float(100 * v.sum() / frame['bound'].sum()) for k, v in frame.items()},
         'losing_days': {k: int((v < -1e-9).sum()) for k, v in frame.items()},
@@ -129,6 +166,7 @@ def main():
     ap.add_argument('--days', required=True)
     ap.add_argument('--out', default=None)
     ap.add_argument('--fallback', action='store_true')
+    ap.add_argument('--extension', action='store_true', help='the second untouched period, after the confirmatory test')
     args = ap.parse_args()
     protocol = json.loads(PROTOCOL.read_text(encoding='utf-8'))
     policies = checkpoints(protocol)
@@ -149,8 +187,17 @@ def main():
         raise SystemExit('The protocol is not frozen')
     if protocol['margin_eur_per_day'] is None:
         raise SystemExit('margin_eur_per_day is not set')
-    first, last = test_window(protocol, args.fallback)
-    lock_path = OUT / 'execution_lock.json'
+    if args.extension:
+        if args.fallback:
+            raise SystemExit('The extension follows the candidate test; it is not used with --fallback')
+        if not (OUT / 'results.json').exists():
+            raise SystemExit('Run the confirmatory test before the extension')
+        first, last = protocol['extension_test']['window']
+        out = EXTENSION
+    else:
+        first, last = test_window(protocol, args.fallback)
+        out = OUT
+    lock_path = out / 'execution_lock.json'
 
     if args.mode == 'lock':
         if lock_path.exists():
@@ -164,16 +211,17 @@ def main():
             if not h.startswith('excluded') and (not path.exists() or sha(path) != h):
                 raise SystemExit(f'{path} does not match provenance')
         lock = {'created_utc': dt.datetime.now(dt.UTC).isoformat(), 'window': [first, last],
-                'fallback': args.fallback, 'protocol_sha256': sha(PROTOCOL), 'code_commit': git('rev-parse', 'HEAD'),
+                'fallback': args.fallback, 'extension': args.extension, 'protocol_sha256': sha(PROTOCOL),
+                'code_commit': git('rev-parse', 'HEAD'),
                 'checkpoints': protocol['treatment_checkpoints'], 'test_days_sha256': recorded}
-        OUT.mkdir(parents=True, exist_ok=True)
+        out.mkdir(parents=True, exist_ok=True)
         lock_path.write_text(json.dumps(lock, indent=2), newline='\n')
         print('Locked', len(recorded), 'test days; commit the lock, then run once')
         return
 
     if not lock_path.exists():
         raise SystemExit('No execution lock; run the lock mode first')
-    if (OUT / 'results.json').exists():
+    if (out / 'results.json').exists():
         raise SystemExit('The test has already been run')
     lock = json.loads(lock_path.read_text(encoding='utf-8'))
     if lock['protocol_sha256'] != sha(PROTOCOL) or lock['window'] != [first, last]:
@@ -185,9 +233,13 @@ def main():
             raise SystemExit(f'Test data for {day} changed after the lock')
     frame, excluded, skipped, through = evaluate(args.days, first, last, policies)
     result = summarize(frame, excluded, skipped, through, protocol)
-    result = {'status': 'CONFIRMATORY test, run once under the execution lock', 'window': [first, last],
-              'lock_sha256': sha(lock_path), **result}
-    write(OUT, frame, result)
+    status = ('Second untouched period (extension_test), run once under its own lock after the confirmatory test'
+              if args.extension else 'CONFIRMATORY test, run once under the execution lock')
+    result = {'status': status, 'window': [first, last], 'lock_sha256': sha(lock_path), **result}
+    if args.extension:                    # pre-registered secondary: H1 on both untouched periods together
+        pooled = pd.concat([pd.read_csv(OUT / 'daily.csv', index_col='day'), frame])
+        result['hypothesis_h1_pooled'] = {'days': len(pooled), **hypothesis_h1(pooled)}
+    write(out, frame, result)
     print(json.dumps(result['primary']))
 
 

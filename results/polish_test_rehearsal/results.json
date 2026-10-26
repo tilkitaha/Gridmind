@@ -4,7 +4,7 @@
     "2026-06-01",
     "2026-06-30"
   ],
-  "protocol_sha256": "7b77c14bfeaa4d10fb77f21c5a5fa6f46af697da1fc9f983dc162f8821d4c5d3",
+  "protocol_sha256": "23b7f76008476076300e569de050db98f5577ae73b65fbed1b13ef992dcc2df1",
   "days": 30,
   "excluded_days": [],
   "skipped_reasons": {},
@@ -14,8 +14,29 @@
       -33.68737119447139,
       -10.614941633919038
     ],
-    "margin_eur_per_day": null,
+    "margin_eur_per_day": 2.36,
     "decision": "ppo_worse"
+  },
+  "hypothesis_h1": {
+    "mean_difference": {
+      "estimate": 25.774127868190227,
+      "ci95": [
+        13.555203905932606,
+        38.888227470827566
+      ]
+    },
+    "cvar5_difference": {
+      "estimate": 18.201224705678694,
+      "ci95": [
+        5.447697316481992,
+        44.17685133310249
+      ]
+    },
+    "decision": "supported",
+    "cvar5_eur": {
+      "milp_lear": 11.653015988573493,
+      "milp_naive_d1": -6.548208717105201
+    }
   },
   "eur_per_day": {
     "bound": 274.3224682675439,

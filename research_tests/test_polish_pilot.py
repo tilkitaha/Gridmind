@@ -23,14 +23,14 @@ def daily_shape(n):
 
 class PolishPilotTests(unittest.TestCase):
     def test_test_window_is_closed_until_frozen(self):
-        with self.assertRaises(PermissionError):
-            refuse_test_window('2026-06-20', '2026-07-02')
-        refuse_test_window('2025-10-01', '2026-06-30')
         with tempfile.TemporaryDirectory() as d:
             p = json.loads(Path('configs/polish_test_protocol.json').read_text(encoding='utf-8'))
-            p['status'] = 'FROZEN_2026-11-01'
-            frozen = Path(d) / 'protocol.json'
-            frozen.write_text(json.dumps(p))
+            draft, frozen = Path(d) / 'draft.json', Path(d) / 'frozen.json'
+            draft.write_text(json.dumps({**p, 'status': 'DRAFT_NOT_FROZEN'}))
+            frozen.write_text(json.dumps({**p, 'status': 'FROZEN_2026-11-01'}))
+            with self.assertRaises(PermissionError):
+                refuse_test_window('2026-06-20', '2026-07-02', draft)
+            refuse_test_window('2025-10-01', '2026-06-30', draft)
             refuse_test_window('2026-07-01', '2026-08-31', frozen)
 
     def test_pilot_profits_and_clock_change_days(self):
