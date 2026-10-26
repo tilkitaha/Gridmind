@@ -65,6 +65,7 @@ The test protocol was frozen on 26 October 2026 and the confirmatory test run on
 - [Live paper test](results/live_paper_trading/README.md): 15 delivery days from 26 October 2026, hash-chained ledger, standings and public daily reports, updated every day.
 - [GridMind Lab](docs/GRIDMIND_LAB.md): the desktop workbench that runs the simulations, the live test, the finance view, the experiment re-runs and the figures, with screenshots.
 - [Thesis figures](docs/thesis_figures/) with their LaTeX blocks.
+- [Risk-averse scheduling](docs/RISK_AVERSE_SCHEDULING.md) (exploratory, added after the test): a mean-CVaR MILP on LEAR error scenarios. With the weight picked on development data (0.25), mean profit and CVaR 5% do not differ detectably from the risk-neutral MILP in any period; results in `results/polish_cvar/`.
 
 ENTSO-E prices are not redistributed: only their SHA-256 hashes are committed (`data/polish/*/provenance.json`), and `scripts/verify_polish_data.py` checks a fresh download against them.
 

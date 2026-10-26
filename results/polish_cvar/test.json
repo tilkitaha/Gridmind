@@ -1,0 +1,282 @@
+{
+  "status": "Exploratory; the test windows were scored before this model existed",
+  "picked_weight": 0.25,
+  "periods": {
+    "july_august": {
+      "days": 62,
+      "milp_lear_reproduced_max_abs_diff_eur": 5.684341886080802e-14,
+      "policies": {
+        "milp_lear": {
+          "mean_eur_per_day": 213.87343175040223,
+          "cvar5_eur": 10.153794879674601,
+          "tail_days": 4,
+          "losing_days": 1,
+          "worst_day_eur": -26.377554276315653
+        },
+        "milp_naive_d1": {
+          "mean_eur_per_day": 174.82634263247263,
+          "cvar5_eur": -74.78501919581015,
+          "tail_days": 4,
+          "losing_days": 5,
+          "worst_day_eur": -149.98570869113559
+        },
+        "cvar_w0.00": {
+          "mean_eur_per_day": 212.16020236099322,
+          "cvar5_eur": 7.378693966412828,
+          "tail_days": 4,
+          "losing_days": 1,
+          "worst_day_eur": -18.20190723684205,
+          "throughput_mwh_per_day": 4.993658743633275
+        },
+        "cvar_w0.25": {
+          "mean_eur_per_day": 210.84411490475662,
+          "cvar5_eur": 7.659570884126413,
+          "tail_days": 4,
+          "losing_days": 2,
+          "worst_day_eur": -9.380598159872264,
+          "throughput_mwh_per_day": 4.881517300439885
+        },
+        "cvar_w0.50": {
+          "mean_eur_per_day": 207.54082996548996,
+          "cvar5_eur": 4.984569126518462,
+          "tail_days": 4,
+          "losing_days": 3,
+          "worst_day_eur": -7.253526315789422,
+          "throughput_mwh_per_day": 4.70219579016984
+        },
+        "cvar_w0.75": {
+          "mean_eur_per_day": 200.97400786821407,
+          "cvar5_eur": 7.181233924561513,
+          "tail_days": 4,
+          "losing_days": 2,
+          "worst_day_eur": -16.85354952192203,
+          "throughput_mwh_per_day": 4.460349749438838
+        },
+        "cvar_w1.00": {
+          "mean_eur_per_day": 194.51471283488632,
+          "cvar5_eur": 7.79924273378397,
+          "tail_days": 4,
+          "losing_days": 2,
+          "worst_day_eur": -12.546660105110398,
+          "throughput_mwh_per_day": 4.270906824358384
+        }
+      },
+      "picked_minus_milp_lear": {
+        "mean": {
+          "estimate": -3.029316845645559,
+          "ci95": [
+            -6.700475000115281,
+            0.7226661866931235
+          ]
+        },
+        "cvar5": {
+          "estimate": -2.4942239955481877,
+          "ci95": [
+            -10.608043515037332,
+            13.950827455357343
+          ]
+        },
+        "days": 62
+      },
+      "picked_minus_milp_naive_d1": {
+        "mean": {
+          "estimate": 36.01777227228403,
+          "ci95": [
+            23.851691001879587,
+            50.001422868585315
+          ]
+        },
+        "cvar5": {
+          "estimate": 82.44459007993656,
+          "ci95": [
+            13.484565776044935,
+            141.22593862007776
+          ]
+        },
+        "days": 62
+      }
+    },
+    "september_october": {
+      "days": 54,
+      "milp_lear_reproduced_max_abs_diff_eur": 5.684341886080802e-14,
+      "policies": {
+        "milp_lear": {
+          "mean_eur_per_day": 264.16316685710996,
+          "cvar5_eur": -72.62274912280691,
+          "tail_days": 3,
+          "losing_days": 3,
+          "worst_day_eur": -122.72771052631563
+        },
+        "milp_naive_d1": {
+          "mean_eur_per_day": 202.628685121063,
+          "cvar5_eur": -113.71757061403497,
+          "tail_days": 3,
+          "losing_days": 4,
+          "worst_day_eur": -160.95379802631572
+        },
+        "cvar_w0.00": {
+          "mean_eur_per_day": 272.5248378613293,
+          "cvar5_eur": -61.241289473684084,
+          "tail_days": 3,
+          "losing_days": 3,
+          "worst_day_eur": -92.71700526315772,
+          "throughput_mwh_per_day": 5.95207089360829
+        },
+        "cvar_w0.25": {
+          "mean_eur_per_day": 267.3934627361784,
+          "cvar5_eur": -58.103216756645594,
+          "tail_days": 3,
+          "losing_days": 3,
+          "worst_day_eur": -71.47040158572645,
+          "throughput_mwh_per_day": 5.851963713193804
+        },
+        "cvar_w0.50": {
+          "mean_eur_per_day": 255.85784325162797,
+          "cvar5_eur": -56.08182615887427,
+          "tail_days": 3,
+          "losing_days": 3,
+          "worst_day_eur": -85.31288866884856,
+          "throughput_mwh_per_day": 5.740085902833516
+        },
+        "cvar_w0.75": {
+          "mean_eur_per_day": 245.00107936192126,
+          "cvar5_eur": -41.550775935653625,
+          "tail_days": 3,
+          "losing_days": 2,
+          "worst_day_eur": -94.0036273762698,
+          "throughput_mwh_per_day": 5.582873882814029
+        },
+        "cvar_w1.00": {
+          "mean_eur_per_day": 225.65749802680244,
+          "cvar5_eur": -46.314970902490614,
+          "tail_days": 3,
+          "losing_days": 2,
+          "worst_day_eur": -94.81493056093589,
+          "throughput_mwh_per_day": 5.3761108067182715
+        }
+      },
+      "picked_minus_milp_lear": {
+        "mean": {
+          "estimate": 3.230295879068389,
+          "ci95": [
+            -1.4126680771600733,
+            7.940536840975426
+          ]
+        },
+        "cvar5": {
+          "estimate": 14.519532366161314,
+          "ci95": [
+            -10.036463157894715,
+            51.2573089405892
+          ]
+        },
+        "days": 54
+      },
+      "picked_minus_milp_naive_d1": {
+        "mean": {
+          "estimate": 64.76477761511534,
+          "ci95": [
+            49.94776738083259,
+            80.52121212490783
+          ]
+        },
+        "cvar5": {
+          "estimate": 55.614353857389375,
+          "ci95": [
+            -3.128184447302658,
+            107.43204672458603
+          ]
+        },
+        "days": 54
+      }
+    }
+  },
+  "pooled": {
+    "days": 116,
+    "policies": {
+      "milp_lear": {
+        "mean_eur_per_day": 237.28417050697308,
+        "cvar5_eur": -39.29432797495372,
+        "tail_days": 6,
+        "losing_days": 4,
+        "worst_day_eur": -122.72771052631563
+      },
+      "milp_naive_d1": {
+        "mean_eur_per_day": 187.768812411644,
+        "cvar5_eur": -109.05814120498603,
+        "tail_days": 6,
+        "losing_days": 9,
+        "worst_day_eur": -160.95379802631572
+      },
+      "cvar_w0.00": {
+        "mean_eur_per_day": 240.26098095597723,
+        "cvar5_eur": -32.72840032894725,
+        "tail_days": 6,
+        "losing_days": 4,
+        "worst_day_eur": -92.71700526315772
+      },
+      "cvar_w0.25": {
+        "mean_eur_per_day": 237.1688113090392,
+        "cvar5_eur": -30.346359367852575,
+        "tail_days": 6,
+        "losing_days": 5,
+        "worst_day_eur": -71.47040158572645
+      },
+      "cvar_w0.50": {
+        "mean_eur_per_day": 230.03323270214037,
+        "cvar5_eur": -31.462305194256533,
+        "tail_days": 6,
+        "losing_days": 6,
+        "worst_day_eur": -85.31288866884856
+      },
+      "cvar_w0.75": {
+        "mean_eur_per_day": 221.46936873597426,
+        "cvar5_eur": -23.678381694942782,
+        "tail_days": 6,
+        "losing_days": 4,
+        "worst_day_eur": -94.0036273762698
+      },
+      "cvar_w1.00": {
+        "mean_eur_per_day": 209.01221628629563,
+        "cvar5_eur": -25.14356920541252,
+        "tail_days": 6,
+        "losing_days": 4,
+        "worst_day_eur": -94.81493056093589
+      }
+    },
+    "picked_minus_milp_lear": {
+      "mean": {
+        "estimate": -0.11535919793389372,
+        "ci95": [
+          -3.4139139493685957,
+          3.3028095366435375
+        ]
+      },
+      "cvar5": {
+        "estimate": 8.947968607101142,
+        "ci95": [
+          -6.695815230385874,
+          32.340475522926184
+        ]
+      },
+      "days": 116
+    },
+    "picked_minus_milp_naive_d1": {
+      "mean": {
+        "estimate": 49.39999889739516,
+        "ci95": [
+          37.787712618106454,
+          61.93720773292082
+        ]
+      },
+      "cvar5": {
+        "estimate": 78.71178183713346,
+        "ci95": [
+          20.864321806255973,
+          127.7117870838423
+        ]
+      },
+      "days": 116
+    }
+  }
+}
