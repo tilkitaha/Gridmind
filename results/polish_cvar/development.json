@@ -1,0 +1,108 @@
+{
+  "status": "Exploratory; development days only (January-June 2026); weight picked here, before the test stage",
+  "design": {
+    "error_days": 28,
+    "alpha": 0.2,
+    "weights": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "rule": "highest CVaR 5% among weights whose mean profit is at least 95% of MILP on LEAR"
+  },
+  "milp_lear_reproduced_max_abs_diff_eur": 5.684341886080802e-14,
+  "days": 180,
+  "picked_weight": 0.25,
+  "policies": {
+    "milp_lear": {
+      "mean_eur_per_day": 175.62614685595574,
+      "cvar5_eur": -18.5460828620344,
+      "tail_days": 9,
+      "losing_days": 17,
+      "worst_day_eur": -38.85993684210521
+    },
+    "milp_naive_d1": {
+      "mean_eur_per_day": 155.12959446127664,
+      "cvar5_eur": -42.96478120190823,
+      "tail_days": 9,
+      "losing_days": 23,
+      "worst_day_eur": -106.5567736842105
+    },
+    "cvar_w0.00": {
+      "mean_eur_per_day": 176.13118981946374,
+      "cvar5_eur": -25.304136882502235,
+      "tail_days": 9,
+      "losing_days": 22,
+      "worst_day_eur": -51.17985559210517,
+      "throughput_mwh_per_day": 5.470075436672824
+    },
+    "cvar_w0.25": {
+      "mean_eur_per_day": 172.04623333751454,
+      "cvar5_eur": -22.358460590634913,
+      "tail_days": 9,
+      "losing_days": 18,
+      "worst_day_eur": -37.04513684210521,
+      "throughput_mwh_per_day": 5.281253817265301
+    },
+    "cvar_w0.50": {
+      "mean_eur_per_day": 164.1615922568563,
+      "cvar5_eur": -19.991811383240357,
+      "tail_days": 9,
+      "losing_days": 16,
+      "worst_day_eur": -28.065218426146245,
+      "throughput_mwh_per_day": 5.040738522355599
+    },
+    "cvar_w0.75": {
+      "mean_eur_per_day": 154.9458151186446,
+      "cvar5_eur": -16.267260261397713,
+      "tail_days": 9,
+      "losing_days": 16,
+      "worst_day_eur": -29.177839639492845,
+      "throughput_mwh_per_day": 4.7071435897346054
+    },
+    "cvar_w1.00": {
+      "mean_eur_per_day": 141.16905384898152,
+      "cvar5_eur": -17.760229892353124,
+      "tail_days": 9,
+      "losing_days": 14,
+      "worst_day_eur": -42.23564261599984,
+      "throughput_mwh_per_day": 4.350526702772632
+    }
+  },
+  "picked_minus_milp_lear": {
+    "mean": {
+      "estimate": -3.579913518441208,
+      "ci95": [
+        -7.80623045863552,
+        0.21847612082709733
+      ]
+    },
+    "cvar5": {
+      "estimate": -3.812377728600513,
+      "ci95": [
+        -8.987433942099017,
+        3.3507867988852227
+      ]
+    },
+    "days": 180
+  },
+  "picked_minus_milp_naive_d1": {
+    "mean": {
+      "estimate": 16.91663887623793,
+      "ci95": [
+        9.516380123244508,
+        24.326676087493272
+      ]
+    },
+    "cvar5": {
+      "estimate": 20.60632061127332,
+      "ci95": [
+        5.585125538968462,
+        42.558055370156765
+      ]
+    },
+    "days": 180
+  }
+}
