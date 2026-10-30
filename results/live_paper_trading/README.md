@@ -1,6 +1,6 @@
 # Live paper test
 
-Day 4 of 15 · last scored delivery day: **October 29, 2026** · ledger intact (52 entries) · updated October 28, 2026, 2:30 PM (Warsaw)
+Day 5 of 15 · last scored delivery day: **October 30, 2026** · ledger intact (65 entries) · updated October 29, 2026, 2:31 PM (Warsaw)
 
 Every morning, each agent fixes its schedule for the next day before the 12:00 day-ahead gate. Once the prices are published, the schedule is scored. Nothing is sent to the market: this is paper trading with a 1 MW / 2 MWh battery, and profits include a wear cost of €10 per MWh moved. The test started from fresh prices on October 26, 2026, so the agents that need a week of history joined later (see the Days column).
 
@@ -8,9 +8,9 @@ Every morning, each agent fixes its schedule for the next day before the 12:00 d
 
 | Agent | Days | Total (EUR) | Per day (EUR) | % of bound | Losing days |
 |---|---:|---:|---:|---:|---:|
-| Perfect foresight (bound) | 4 | 2,568.35 | 642.09 | 100.0 | 0 |
-| MILP, yesterday's prices | 4 | 1,550.68 | 387.67 | 60.4 | 0 |
-| Do nothing | 4 | 0.00 | 0.00 | 0.0 | 0 |
+| Perfect foresight (bound) | 5 | 2,838.20 | 567.64 | 100.0 | 0 |
+| MILP, yesterday's prices | 5 | 1,755.63 | 351.13 | 61.9 | 0 |
+| Do nothing | 5 | 0.00 | 0.00 | 0.0 | 0 |
 
 "% of bound" compares an agent with perfect foresight on the same days.
 
@@ -20,6 +20,7 @@ Every morning, each agent fixes its schedule for the next day before the 12:00 d
 
 ## Daily reports
 
+- [Friday, October 30, 2026](reports/GridMind_daily_report_2026-10-30.pdf)
 - [Thursday, October 29, 2026](reports/GridMind_daily_report_2026-10-29.pdf)
 - [Wednesday, October 28, 2026](reports/GridMind_daily_report_2026-10-28.pdf)
 - [Tuesday, October 27, 2026](reports/GridMind_daily_report_2026-10-27.pdf)
