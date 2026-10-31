@@ -1,6 +1,6 @@
 # Live paper test
 
-Day 6 of 15 · last scored delivery day: **October 31, 2026** · ledger intact (78 entries) · updated October 30, 2026, 2:31 PM (Warsaw)
+Day 6 of 15 · last scored delivery day: **October 31, 2026** · ledger intact (88 entries) · updated October 31, 2026, 10:22 AM (Warsaw)
 
 Every morning, each agent fixes its schedule for the next day before the 12:00 day-ahead gate. Once the prices are published, the schedule is scored. Nothing is sent to the market: this is paper trading with a 1 MW / 2 MWh battery, and profits include a wear cost of €10 per MWh moved. The test started from fresh prices on October 26, 2026, so the agents that need a week of history joined later (see the Days column).
 

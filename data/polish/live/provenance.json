@@ -120,6 +120,20 @@
       "days": {
         "2026-10-31": "452623f123dea3dd49cbaa1ef8cc5e93c3f451256d41b6736d30234f9e89a367"
       }
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202610312300",
+        "periodEnd": "202611012300"
+      },
+      "retrieved_utc": "2026-10-31T09:22:25.847459+00:00",
+      "raw_file": "2026-11-01_2026-11-01_20261031T092224.xml",
+      "raw_sha256": "36b3ededbcea81ee99dbd5e170f9b5d1354d154a200ed464a81b0cfab0d5de2e",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-10-31T23:00:00Z/2026-11-01T23:00:00Z."
     }
   ]
 }
