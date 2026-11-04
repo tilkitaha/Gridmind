@@ -291,6 +291,161 @@
       "raw_sha256": "4bdcab08f871ebb3d8c1aebd580350911bb7b64072a9375f21d9abab1f4b7f78",
       "days": {},
       "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-02T17:11:35.607360+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261102T171133.xml",
+      "raw_sha256": "72377c18a7813fb8aa8a4a0ab4403da53a25eb27f5a9cbb5b88aa26449860aaf",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-02T18:34:27.072124+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261102T183425.xml",
+      "raw_sha256": "b76f16ce174838319e8c352e0afc1520d73fc59c6d6474219c8883ea6551ebf7",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-03T00:21:17.650016+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261103T002113.xml",
+      "raw_sha256": "ff19da23f6745ee8b2ddc34c71894d95a0320f25ed45e1e3c04efaf57a03f494",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-03T08:51:20.704032+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261103T085112.xml",
+      "raw_sha256": "f568f5f1d8df0f3ec17e6da82793f5114ca72cad54dbb3e46ef40f57e35ffcfc",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-03T11:34:08.921805+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261103T113406.xml",
+      "raw_sha256": "3ee684b6aa50d1ab6d93fe3f7d9537158dc748d5561e831773ff1e8ea1fbdfc4",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-03T11:34:17.559373+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261103T113406.xml",
+      "raw_sha256": "0ddd5063cd05fb71caf9d261aea7a6a921dd58ff53a04ef7b1617c5b78c0b52f",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-03T12:17:07.663809+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261103T121703.xml",
+      "raw_sha256": "a6b74e8d6840b00673e9e7a0f846683fa93347639434dc0e8e64c7726c5a5459",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-03T12:17:07.840361+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261103T121703.xml",
+      "raw_sha256": "3010c407fd54bf692b2f26eb18c1182ad1081559ace44e6d5362848a99b870b3",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-03T23:00:00Z/2026-11-04T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611032300",
+        "periodEnd": "202611042300"
+      },
+      "retrieved_utc": "2026-11-03T14:40:58.658761+00:00",
+      "raw_file": "2026-11-04_2026-11-04_20261103T144044.xml",
+      "raw_sha256": "b36c39a3c86afabcfc37cae5f7d394fd3a9b7e9d9b7809e2b6c4d377f7967d47",
+      "days": {
+        "2026-11-04": "f420e285c06d94ad75127f14df555c30a611e39aee1abcf55367aed8f50ffc37"
+      }
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611042300",
+        "periodEnd": "202611052300"
+      },
+      "retrieved_utc": "2026-11-03T15:36:36.573740+00:00",
+      "raw_file": "2026-11-05_2026-11-05_20261103T153626.xml",
+      "raw_sha256": "43c3d10a6abd4397d5f84f325c04a94c17c09275072ba84e74c28d568189641b",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-04T23:00:00Z/2026-11-05T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611042300",
+        "periodEnd": "202611052300"
+      },
+      "retrieved_utc": "2026-11-04T08:27:41.054075+00:00",
+      "raw_file": "2026-11-05_2026-11-05_20261104T082732.xml",
+      "raw_sha256": "21a5ac0dcf973dda61f98ed1baf8506b728399e2dfc384e1345276562df5355d",
+      "days": {},
+      "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-04T23:00:00Z/2026-11-05T23:00:00Z."
     }
   ]
 }
