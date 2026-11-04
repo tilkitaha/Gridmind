@@ -1,6 +1,6 @@
 # Live paper test
 
-Day 10 of 15 · last scored delivery day: **November 4, 2026** · ledger intact (172 entries) · updated November 4, 2026, 9:27 AM (Warsaw)
+Day 11 of 15 · last scored delivery day: **November 5, 2026** · ledger intact (183 entries) · updated November 4, 2026, 2:44 PM (Warsaw)
 
 Every morning, each agent fixes its schedule for the next day before the 12:00 day-ahead gate. Once the prices are published, the schedule is scored. Nothing is sent to the market: this is paper trading with a 1 MW / 2 MWh battery, and profits include a wear cost of €10 per MWh moved. The test started from fresh prices on October 26, 2026, so the agents that need a week of history joined later (see the Days column).
 
@@ -8,17 +8,17 @@ Every morning, each agent fixes its schedule for the next day before the 12:00 d
 
 | Agent | Days | Total (EUR) | Per day (EUR) | % of bound | Losing days |
 |---|---:|---:|---:|---:|---:|
-| Perfect foresight (bound) | 10 | 4,524.32 | 452.43 | 100.0 | 0 |
-| MILP, yesterday's prices | 10 | 2,152.70 | 215.27 | 47.6 | 1 |
-| PPO seed 55, LEAR | 4 | 845.14 | 211.29 | 55.8 | 0 |
-| PPO seed 44, LEAR | 4 | 842.57 | 210.64 | 55.6 | 0 |
-| PPO seed 22, LEAR | 4 | 809.43 | 202.36 | 53.4 | 0 |
-| PPO seed 33, LEAR | 4 | 781.99 | 195.50 | 51.6 | 0 |
-| PPO seed 11, LEAR | 4 | 678.03 | 169.51 | 44.7 | 0 |
-| Threshold rule, LEAR | 4 | 613.80 | 153.45 | 40.5 | 0 |
-| MILP, 7-day average | 4 | 583.24 | 145.81 | 38.5 | 0 |
-| MILP, LEAR forecast | 4 | 549.60 | 137.40 | 36.3 | 0 |
-| Do nothing | 10 | 0.00 | 0.00 | 0.0 | 0 |
+| Perfect foresight (bound) | 11 | 5,271.63 | 479.24 | 100.0 | 0 |
+| MILP, yesterday's prices | 11 | 2,690.36 | 244.58 | 51.0 | 1 |
+| PPO seed 11, LEAR | 5 | 1,130.63 | 226.13 | 50.0 | 0 |
+| MILP, LEAR forecast | 5 | 1,070.15 | 214.03 | 47.3 | 0 |
+| PPO seed 55, LEAR | 5 | 1,059.94 | 211.99 | 46.8 | 0 |
+| PPO seed 44, LEAR | 5 | 1,054.10 | 210.82 | 46.6 | 0 |
+| PPO seed 22, LEAR | 5 | 1,027.32 | 205.46 | 45.4 | 0 |
+| PPO seed 33, LEAR | 5 | 1,007.53 | 201.51 | 44.5 | 0 |
+| MILP, 7-day average | 5 | 1,006.96 | 201.39 | 44.5 | 0 |
+| Threshold rule, LEAR | 5 | 722.88 | 144.58 | 32.0 | 0 |
+| Do nothing | 11 | 0.00 | 0.00 | 0.0 | 0 |
 
 "% of bound" compares an agent with perfect foresight on the same days.
 
@@ -28,6 +28,7 @@ Every morning, each agent fixes its schedule for the next day before the 12:00 d
 
 ## Daily reports
 
+- [Thursday, November 5, 2026](reports/GridMind_daily_report_2026-11-05.pdf)
 - [Wednesday, November 4, 2026](reports/GridMind_daily_report_2026-11-04.pdf)
 - [Tuesday, November 3, 2026](reports/GridMind_daily_report_2026-11-03.pdf)
 - [Monday, November 2, 2026](reports/GridMind_daily_report_2026-11-02.pdf)
