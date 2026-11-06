@@ -1,6 +1,6 @@
 # Live paper test
 
-Day 11 of 15 · last scored delivery day: **November 5, 2026** · ledger intact (183 entries) · updated November 4, 2026, 2:44 PM (Warsaw)
+Day 12 of 15 · last scored delivery day: **November 6, 2026** · ledger intact (214 entries) · updated November 6, 2026, 9:40 AM (Warsaw)
 
 Every morning, each agent fixes its schedule for the next day before the 12:00 day-ahead gate. Once the prices are published, the schedule is scored. Nothing is sent to the market: this is paper trading with a 1 MW / 2 MWh battery, and profits include a wear cost of €10 per MWh moved. The test started from fresh prices on October 26, 2026, so the agents that need a week of history joined later (see the Days column).
 
@@ -8,17 +8,17 @@ Every morning, each agent fixes its schedule for the next day before the 12:00 d
 
 | Agent | Days | Total (EUR) | Per day (EUR) | % of bound | Losing days |
 |---|---:|---:|---:|---:|---:|
-| Perfect foresight (bound) | 11 | 5,271.63 | 479.24 | 100.0 | 0 |
-| MILP, yesterday's prices | 11 | 2,690.36 | 244.58 | 51.0 | 1 |
-| PPO seed 11, LEAR | 5 | 1,130.63 | 226.13 | 50.0 | 0 |
-| MILP, LEAR forecast | 5 | 1,070.15 | 214.03 | 47.3 | 0 |
-| PPO seed 55, LEAR | 5 | 1,059.94 | 211.99 | 46.8 | 0 |
-| PPO seed 44, LEAR | 5 | 1,054.10 | 210.82 | 46.6 | 0 |
-| PPO seed 22, LEAR | 5 | 1,027.32 | 205.46 | 45.4 | 0 |
-| PPO seed 33, LEAR | 5 | 1,007.53 | 201.51 | 44.5 | 0 |
-| MILP, 7-day average | 5 | 1,006.96 | 201.39 | 44.5 | 0 |
-| Threshold rule, LEAR | 5 | 722.88 | 144.58 | 32.0 | 0 |
-| Do nothing | 11 | 0.00 | 0.00 | 0.0 | 0 |
+| Perfect foresight (bound) | 12 | 5,910.13 | 492.51 | 100.0 | 0 |
+| MILP, yesterday's prices | 12 | 3,216.02 | 268.00 | 54.4 | 1 |
+| PPO seed 11, LEAR | 6 | 1,610.61 | 268.43 | 55.5 | 0 |
+| MILP, LEAR forecast | 6 | 1,572.92 | 262.15 | 54.2 | 0 |
+| MILP, 7-day average | 6 | 1,523.04 | 253.84 | 52.5 | 0 |
+| PPO seed 44, LEAR | 6 | 1,416.83 | 236.14 | 48.8 | 0 |
+| PPO seed 33, LEAR | 6 | 1,346.96 | 224.49 | 46.4 | 0 |
+| PPO seed 55, LEAR | 6 | 1,343.20 | 223.87 | 46.3 | 0 |
+| PPO seed 22, LEAR | 6 | 1,286.82 | 214.47 | 44.4 | 0 |
+| Threshold rule, LEAR | 6 | 1,093.67 | 182.28 | 37.7 | 0 |
+| Do nothing | 12 | 0.00 | 0.00 | 0.0 | 0 |
 
 "% of bound" compares an agent with perfect foresight on the same days.
 
@@ -28,6 +28,7 @@ Every morning, each agent fixes its schedule for the next day before the 12:00 d
 
 ## Daily reports
 
+- [Friday, November 6, 2026](reports/GridMind_daily_report_2026-11-06.pdf)
 - [Thursday, November 5, 2026](reports/GridMind_daily_report_2026-11-05.pdf)
 - [Wednesday, November 4, 2026](reports/GridMind_daily_report_2026-11-04.pdf)
 - [Tuesday, November 3, 2026](reports/GridMind_daily_report_2026-11-03.pdf)
