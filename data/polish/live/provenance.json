@@ -716,6 +716,21 @@
       "raw_sha256": "af9a7a73d9595d9b825c63883079e2aa49e9f192334df8b822f58d4bb168dcf3",
       "days": {},
       "error": "ENTSO-E acknowledgement: No matching data found for Data item ENERGY_PRICES [12.1.D] (10YPL-AREA-----S, 10YPL-AREA-----S) and interval 2026-11-08T23:00:00Z/2026-11-09T23:00:00Z."
+    },
+    {
+      "query": {
+        "documentType": "A44",
+        "in_Domain": "10YPL-AREA-----S",
+        "out_Domain": "10YPL-AREA-----S",
+        "periodStart": "202611082300",
+        "periodEnd": "202611092300"
+      },
+      "retrieved_utc": "2026-11-08T13:31:06.777905+00:00",
+      "raw_file": "2026-11-09_2026-11-09_20261108T133054.xml",
+      "raw_sha256": "a7b08ba9584d4da2a16ab38445696fbc0536ea21161bd48a21b29fbf08e8f707",
+      "days": {
+        "2026-11-09": "c42a6c5f303ab902aa39b534bbdbe4c5919d76460e2015974afc223276526780"
+      }
     }
   ]
 }
