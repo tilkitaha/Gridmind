@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 # Complete research release
 
 Start with `GridMind_Complete_PDF_Package.pdf`: 124 bookmarked pages (5-page scientific addendum, 80-page manuscript, 20 defense slides and 19-page guide). The addendum is also available as `GridMind_Scientific_Addendum.pdf`. New descriptive calculations can be regenerated with `python scripts/release_analysis.py` from the project root. This does not run new experiments.

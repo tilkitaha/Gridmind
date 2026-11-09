@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 > HISTORICAL WORKING TEXT. The current manuscript is defense/GridMind_Thesis_Development.docx and its PDF. Sections 4.7 and 6.12–6.14 now report the July–December frozen-model evaluation; see docs/LATER_PERIOD_REPRODUCTION.md. This note predates the 60-run study, forecast-to-MPC experiment and Polish scheduling components. It is not the current evidence statement.
 
 # AI and Blockchain Integration in Smart Grids for Autonomous Energy Trading and Risk Optimization

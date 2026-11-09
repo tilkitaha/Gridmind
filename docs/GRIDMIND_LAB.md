@@ -32,7 +32,7 @@ Every battery parameter is entered by hand (capacity, power, grid limit, charge 
 
 ### Live test
 
-The countdown to the next gate, the state of the hash-chained ledger, the daily Windows Task Scheduler entries and the standings. Two tasks run every day and two minutes after every sign-in: commit at 10:00 Warsaw time (download missing prices, fix the next open day's schedules) and score at 14:30 (download published days, score open schedules, write the daily reports). A commit after the gate, or a second commit for the same day, is refused, so extra runs are harmless.
+The countdown to the next gate, the state of the hash-chained ledger, the daily Windows Task Scheduler entries and the standings. During the test, two tasks ran every day and two minutes after every sign-in: commit at 10:00 Warsaw time (download missing prices, fix the next open day's schedules) and score at 14:30 (download published days, score open schedules, write the daily reports). A commit after the gate, or a second commit for the same day, is refused, so extra runs are harmless. After the fifteenth delivery day the commit task stops by itself and the score task finds nothing left to score.
 
 ![Live test](images/gridmind_lab/live_test.png)
 
@@ -62,7 +62,7 @@ Thesis figures in one style (Times New Roman, 15 cm text width, 300 dpi PNG and 
 
 ## The live paper test
 
-The test began with delivery day 26 October 2026 and is planned for 15 delivery days (26 October–9 November 2026). To start it, the end of the protocol's fallback window was moved from 31 October to 24 October 2026 (`configs/polish_test_protocol.json`, `window_change`): prices from 25 October on are read by the live test, and 1 September–24 October 2026 stays unread. No order is ever sent to a market; this is paper trading.
+The test ran for 15 delivery days, 26 October–9 November 2026, and is complete. To start it, the end of the protocol's fallback window was moved from 31 October to 24 October 2026 (`configs/polish_test_protocol.json`, `window_change`): prices from 25 October on are read by the live test, and 1 September–24 October 2026 stays unread. No order is ever sent to a market; this is paper trading.
 
 Each ledger line in `results/live_paper_trading/ledger.jsonl` is one of:
 
@@ -71,9 +71,9 @@ Each ledger line in `results/live_paper_trading/ledger.jsonl` is one of:
 - `score`: the realized EUR of a commitment, with the SHA-256 of the price file
 - `bound`: the perfect-foresight profit of that day
 
-Every entry stores the SHA-256 of the entry before it (`prev`) and its own (`hash`, over the entry without this field), so changing, removing or reordering any earlier entry breaks every later hash. Pushing the ledger before noon adds an outside timestamp: the GitHub commit.
+Every entry stores the SHA-256 of the entry before it (`prev`) and its own (`hash`, over the entry without this field), so changing, removing or reordering any earlier entry breaks every later hash. Pushing the ledger before noon adds an outside timestamp: the GitHub commit. For 12 of the 15 delivery days the push came before the gate; for three it came later, and all 102 schedules were then recomputed from the price history before their delivery day and matched the ledger exactly (timing record in [results/live_paper_trading](../results/live_paper_trading/README.md#timing-of-the-schedules)).
 
-The standings, a cumulative-profit chart and the public daily reports are in [results/live_paper_trading](../results/live_paper_trading/README.md), updated after every scored day.
+The standings, a cumulative-profit chart and the public daily reports are in [results/live_paper_trading](../results/live_paper_trading/README.md), which was updated after every scored day.
 
 ## Daily reports
 
@@ -101,7 +101,7 @@ The five PPO checkpoints retrained from scratch have the same SHA-256 as those r
 
 ## Thesis figures
 
-`docs/thesis_figures/` holds the figures (PNG, and PDF where the figure carries no raw price series), one LaTeX block per figure and `all_figures.tex`; `reproduction_table.tex` is the table above. Learning agents appear for June 2026 only. The 30 June 2026 figure is kept as PNG only, because its vector PDF would carry that day's prices exactly; the PDF can be exported locally in Chart studio.
+`docs/thesis_figures/` holds the figures (PNG, and PDF where the figure carries no raw price series), one LaTeX block per figure and `all_figures.tex`; `reproduction_table.tex` is the table above. Learning agents appear for June 2026 and for the live test only. The 30 June 2026 figure is kept as PNG only, because its vector PDF would carry that day's prices exactly; the PDF can be exported locally in Chart studio.
 
 ## Data and license
 
@@ -110,6 +110,6 @@ ENTSO-E day-ahead prices (12.1.D) are not on ENTSO-E's list of data for free re-
 ## Limits
 
 - Paper trading assumes a price taker: the battery's own bids do not move the price, and every order is accepted in full.
-- Fifteen days are a short sample; in the first six days only the yesterday's-prices agent trades.
-- The live test is exploratory. The confirmatory test is the July–August 2026 window, still locked.
+- Fifteen days are a short sample; in the first six days only the yesterday's-prices agent traded, so the forecast-based agents have nine days.
+- The live test is descriptive. The evidence with intervals is the confirmatory test of July–August 2026 and the second untouched period, both scored on 26 October 2026.
 - Finance results depend on placeholder inputs until each input has a cited source.

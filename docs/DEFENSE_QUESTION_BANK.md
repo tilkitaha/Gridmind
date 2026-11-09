@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 # Savunma soru bankası (ek sorular 25–48)
 
 14 Ekim 2026. `defense/GridMind_Defense_Guide.docx` içindeki 1–24 numaralı jüri sorularının devamıdır. İş planındaki 1.4 maddesi.

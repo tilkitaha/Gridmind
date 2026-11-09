@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 # GridMind iş planı
 
 14 Ekim 2026. Kurallar için `docs/MANIFESTO.md`. Takvim, danışmanın konu kararını vereceği toplantıya göre yazılmıştır (Hafta 0). Teslim tarihi: **[__ / __ / 2026, fakülte takviminden doldurulacak]**. Sorumlular birer öneridir; ekip ilk toplantıda kesinleştirir.

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "gridmind"
 version = "0.3.0"
-description = "AI energy autopilot for homes, batteries, EVs and prosumers."
+description = "Research code of the GridMind engineering thesis: battery trading on the Polish day-ahead market with price forecasts, reinforcement learning and smart-contract settlement."
 requires-python = ">=3.12"
 dependencies = [
   "fastapi>=0.116,<1",

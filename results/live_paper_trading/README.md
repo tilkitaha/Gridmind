@@ -1,8 +1,8 @@
 # Live paper test
 
-Day 15 of 15 · last scored delivery day: **November 9, 2026** · ledger intact (267 entries) · updated November 8, 2026, 2:31 PM (Warsaw)
+**Complete:** 15 of 15 delivery days, October 26–November 9, 2026 · ledger intact (267 entries) · last scored on November 8, 2026, 2:31 PM (Warsaw)
 
-Every morning, each agent fixes its schedule for the next day before the 12:00 day-ahead gate. Once the prices are published, the schedule is scored. Nothing is sent to the market: this is paper trading with a 1 MW / 2 MWh battery, and profits include a wear cost of €10 per MWh moved. The test started from fresh prices on October 26, 2026, so the agents that need a week of history joined later (see the Days column).
+Every morning, each agent fixed its schedule for the next day before the 12:00 day-ahead gate. Once the prices were published, the schedule was scored. Nothing is sent to the market: this is paper trading with a 1 MW / 2 MWh battery, and profits include a wear cost of €10 per MWh moved. The test started from fresh prices on October 26, 2026, so the agents that need a week of history joined later (see the Days column).
 
 ## Standings
 
@@ -22,9 +22,35 @@ Every morning, each agent fixes its schedule for the next day before the 12:00 d
 
 "% of bound" compares an agent with perfect foresight on the same days.
 
+## Result
+
+On the nine days on which every agent traded, November 1–9, 2026:
+
+| Agent | Per day (EUR) | % of bound | Lowest day (EUR) |
+|---|---:|---:|---:|
+| MILP, LEAR forecast | 352.09 | 64.5 | 27.77 |
+| MILP, 7-day average | 351.98 | 64.5 | 40.19 |
+| MILP, yesterday's prices | 325.97 | 59.8 | 36.84 |
+| PPO, LEAR, mean of five seeds | 267.62 | 49.1 | 68.08 to 104.20 |
+| Threshold rule, LEAR | 243.81 | 44.7 | 16.39 |
+
+MILP on the LEAR forecast earned 26.12 EUR/day more than MILP on yesterday's prices and more on six of the nine days. The PPO seeds stayed below MILP on the same forecast; the best seed (seed 11) came within 0.18 EUR/day of it. No agent that uses a forecast lost money on any day; over its 15 days, MILP on yesterday's prices lost money once (−23.11 EUR on October 31, 2026). Nine days are too few for intervals, so these numbers are descriptive; the evidence with intervals is the confirmatory test of July–August 2026.
+
 ## Cumulative profit
 
 ![Cumulative profit by agent](cumulative_profit.png)
+
+## Timing of the schedules
+
+Every schedule entry records when it was made (`created_utc`) and its gate (`gate_utc`); every one was made before its gate. The push to GitHub adds an outside timestamp. For 12 of the 15 delivery days it came before the gate; for three it came later:
+
+| Delivery day | Schedules in the ledger (UTC) | Pushed to GitHub (Warsaw) | Commit |
+|---|---|---|---|
+| October 28, 2026 | October 27, 09:00 | October 27, 21:58 | 1bb4c80 |
+| October 30, 2026 | October 29, 09:24 | October 30, 10:06 | 964a99e |
+| November 9, 2026 | November 7, 18:24 | November 8, 12:26, before the prices of November 9 were published | 5500a58 |
+
+On October 28 and 30 only MILP on yesterday's prices and "do nothing" traded. To check that no schedule used the prices of its own delivery day, all 102 schedules were recomputed on November 9, 2026 from the price history up to the day before delivery: for every entry, the hash of that history, the hash of the forecast and all 96 power values matched the ledger exactly.
 
 ## Daily reports
 

@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 # Academic submission status
 
 28 September 2026. The manuscript, defense material and computational archive

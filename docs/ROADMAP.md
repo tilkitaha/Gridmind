@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 # Scientific completion roadmap
 
 28 September 2026, updated 14 October 2026. Replaces the historical product roadmap.

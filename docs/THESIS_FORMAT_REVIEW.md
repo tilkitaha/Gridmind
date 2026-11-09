@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 # Thesis review against the FEM seminar rules
 
 14 October 2026. `defense/GridMind_Thesis_Development.docx` checked against `.claude/skills/fem-thesis-rules/SKILL.md` (diploma seminar rules). Formatting was read from the document's styles and section settings; content items were checked by locating the relevant chapters. Nothing in the thesis was changed. The faculty template and regulations take precedence over this review.

@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 # Draft text for the FEM review items
 
 14 October 2026. Proposed wording for the gaps in `docs/THESIS_FORMAT_REVIEW.md`. Nothing has been inserted into the manuscript. The team chooses, edits and takes responsibility for any text it adopts, and records the assistance in the GenAI declaration. Numbers below are copied from the retained evidence; recheck them against the final manuscript before use.

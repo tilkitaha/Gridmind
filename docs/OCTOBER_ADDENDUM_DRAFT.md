@@ -1,3 +1,5 @@
+> **Earlier stage of the project.** This file records the work before the thesis was focused on the Polish day-ahead market and is kept for reproducibility; its status lines are not current. The current thesis, its results and the repository map are in the [README](../README.md).
+
 # October 2026 exploratory addendum (draft for supervisor review)
 
 **Status: draft.** Prepared 14 October 2026 for discussion with the supervisor. Nothing here has been added to the submitted manuscript, slides or PDF package. All analyses use previously inspected data and are exploratory. The analysis and drafting were AI-assisted; the team must review them and record that assistance in the GenAI declaration (Section 1.3 and Appendix B).
